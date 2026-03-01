@@ -1,0 +1,15 @@
+.proj_env
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.log
+*.pot
+*.mo
+*.swp
+.DS_Store
+.idea/
+.vscode/     
