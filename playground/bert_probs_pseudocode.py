@@ -13,9 +13,11 @@ tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-large-uncased-whole-
 model = AutoModelForMaskedLM.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
 
 # ------ Function to get next word probabilities ------
-def get_next_word_probability_distribution(text):
+def get_next_word_probability_distribution(sentence):
+    '''return the probs of all next tokens/words wiht their associated probs gdiven"
+    the input sentence with a [MASK] token at the end. '''
     # Returns all next tokens and their probabilities.
-    inputs = tokenizer(text, return_tensors="pt")
+    inputs = tokenizer(sentence + " [MASK].", return_tensors="pt")
     
     with torch.no_grad():
         logits = model(**inputs).logits
@@ -26,7 +28,7 @@ def get_next_word_probability_distribution(text):
     predicted_tokens = tokenizer.convert_ids_to_tokens(range(len(mask_token_logits)))
 
     # Return the results as a list of (token, probability) tuples
-    return list(zip(predicted_tokens, probs.tolist()))
+    return list(predicted_tokens)
 
 # ------ Helper function to extract specific word probabilities from BERT ------
 def get_specific_word_probability(word, next_word_probabilities):
@@ -35,11 +37,25 @@ def get_specific_word_probability(word, next_word_probabilities):
             return prob
     return 0.0
 
+    # TODO: HERE IS THE TODO FOR THIS PROJECT
+    # Use Peelle data and BERT probability distribution function 
+    # For each sentence in Peellee data, put a [MASK] at the end. Then pass this to BERT function. 
+    # Then you have a distribution over the entire vocab for that sentence. Write a function that searches this 
+    # distribution for only the words/specific sentence from Peelle and gets the word and the bert_prob.
+    # When passing sentence to BERT, make sure it has this structure <space>[MASK]<period> - “He hated bees and 
+    # feared encountering a [MASK].”
+    # Results dataframe: Sentence, word, human_cloze, bert_prob
+    # Sentence, word, human_cloze - from peelle data. 
+    # Push to git. 
+    # Put paper notes in lit review doc. 
+
+
+
 # Pseudocode pipeline 
-for sentence in Peelle_data:
-    bert_prompt = sentence + " [MASK]."
-    bert_next_word_probabilities = get_next_word_probability_distribution(bert_prompt)
+# for sentence in Peelle_data:
+#     bert_prompt = sentence + " [MASK]."
+#     bert_next_word_probabilities = get_next_word_probability_distribution(bert_prompt)
 
-    # Search bert_next_word_probabilities to get only the words that are associated with the sentence from Peelle_data. 
+#     # Search bert_next_word_probabilities to get only the words that are associated with the sentence from Peelle_data. 
 
-df_results = pd.DataFrame(columns=["sentence", "word", "human_cloze_probability", "bert_probability"])
+# df_results = pd.DataFrame(columns=["sentence", "word", "human_cloze_probability", "bert_probability"])
