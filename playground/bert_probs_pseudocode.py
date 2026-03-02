@@ -3,13 +3,12 @@
 
 # ------ Necessary imports ------
 import torch
-
-# pip install transformers
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 
 # ------ Load the model and tokenizer ------
 tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
 model = AutoModelForMaskedLM.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
+
 
 # ------ Function to get next word probabilities ------
 def get_next_word_probability_distribution(sentence):
@@ -29,6 +28,7 @@ def get_next_word_probability_distribution(sentence):
     # Return the results as a list of (token, probability) tuples
     return list(zip(predicted_tokens, probs.tolist()))
 
+
 # ------ Helper function to extract specific word probabilities from BERT ------
 def get_specific_word_probability(sentence_num, sentence 
                                   ,word_list, next_word_probabilities, outputfile_path):
@@ -41,11 +41,3 @@ def get_specific_word_probability(sentence_num, sentence
             with open(outputfile_path, "a", encoding="utf-8") as f:
                 f.write(f"{sentence_num},{sentence},{token},{prob}\n")
                
-# Pseudocode pipeline 
-# for sentence in Peelle_data:
-#     bert_prompt = sentence + " [MASK]."
-#     bert_next_word_probabilities = get_next_word_probability_distribution(bert_prompt)
-
-#     # Search bert_next_word_probabilities to get only the words that are associated with the sentence from Peelle_data. 
-
-# df_results = pd.DataFrame(columns=["sentence", "word", "human_cloze_probability", "bert_probability"])
