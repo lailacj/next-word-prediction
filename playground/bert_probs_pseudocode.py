@@ -28,7 +28,7 @@ def get_next_word_probability_distribution(sentence):
     predicted_tokens = tokenizer.convert_ids_to_tokens(range(len(mask_token_logits)))
 
     # Return the results as a list of (token, probability) tuples
-    return list(predicted_tokens)
+    return list(zip(predicted_tokens, probs.tolist()))
 
 # ------ Helper function to extract specific word probabilities from BERT ------
 def get_specific_word_probability(word, next_word_probabilities):
