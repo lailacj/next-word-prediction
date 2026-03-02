@@ -32,15 +32,16 @@ def get_next_word_probability_distribution(sentence):
 
 # ------ Helper function to extract specific word probabilities from BERT ------
 def get_specific_word_probability(sentence_num, sentence 
-                                  ,word_list, next_word_probabilities, outpufile_path):
+                                  ,word_list, next_word_probabilities, outputfile_path):
     '''This function searches the BERT probability distribution for specific words and 
     stores the results in a dictionary.'''
-
     for token, prob in next_word_probabilities:
-        if token in word_list:
-            with open(outpufile_path, "a", encoding="utf-8") as f:
+        if token not in word_list:
+            continue
+        else:
+            with open(outputfile_path, "a", encoding="utf-8") as f:
                 f.write(f"{sentence_num},{sentence},{token},{prob}\n")
-           
+               
 # Pseudocode pipeline 
 # for sentence in Peelle_data:
 #     bert_prompt = sentence + " [MASK]."

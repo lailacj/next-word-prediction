@@ -28,6 +28,6 @@ def get_human_masked_data(data):
         
         else:
             masked_words[row['sentence_number']].append(tuple([row["word"], row["cloze_prob"]]))
-        sentences.append(row['sentence_number'])   
+      
 
     return masked_words, sentences
