@@ -31,26 +31,16 @@ def get_next_word_probability_distribution(sentence):
     return list(zip(predicted_tokens, probs.tolist()))
 
 # ------ Helper function to extract specific word probabilities from BERT ------
-def get_specific_word_probability(word, next_word_probabilities):
+def get_specific_word_probability(sentence_num, sentence 
+                                  ,word_list, next_word_probabilities, outpufile_path):
+    '''This function searches the BERT probability distribution for specific words and 
+    stores the results in a dictionary.'''
+
     for token, prob in next_word_probabilities:
-        if token == word:
-            return prob
-    return 0.0
-
-    # TODO: HERE IS THE TODO FOR THIS PROJECT
-    # Use Peelle data and BERT probability distribution function 
-    # For each sentence in Peellee data, put a [MASK] at the end. Then pass this to BERT function. 
-    # Then you have a distribution over the entire vocab for that sentence. Write a function that searches this 
-    # distribution for only the words/specific sentence from Peelle and gets the word and the bert_prob.
-    # When passing sentence to BERT, make sure it has this structure <space>[MASK]<period> - “He hated bees and 
-    # feared encountering a [MASK].”
-    # Results dataframe: Sentence, word, human_cloze, bert_prob
-    # Sentence, word, human_cloze - from peelle data. 
-    # Push to git. 
-    # Put paper notes in lit review doc. 
-
-
-
+        if token in word_list:
+            with open(outpufile_path, "a", encoding="utf-8") as f:
+                f.write(f"{sentence_num},{sentence},{token},{prob}\n")
+           
 # Pseudocode pipeline 
 # for sentence in Peelle_data:
 #     bert_prompt = sentence + " [MASK]."
