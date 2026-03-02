@@ -3,7 +3,6 @@
 
 # ------ Necessary imports ------
 import torch
-import torch.nn.functional as F
 
 # pip install transformers
 from transformers import AutoTokenizer, AutoModelForMaskedLM
