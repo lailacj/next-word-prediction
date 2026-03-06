@@ -1,3 +1,4 @@
+sentence_number,sentence,word,cloze_prob
 1,He hated bees and feared encountering a,disease,0.0002792536106426269
 1,He hated bees and feared encountering a,nest,0.05878365784883499
 1,He hated bees and feared encountering a,bee,0.0074289413169026375
