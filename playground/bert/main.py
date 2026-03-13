@@ -1,6 +1,6 @@
 ### FILES IMPORTS
 import csv_parser
-from bert_probs_pseudocode import get_next_word_probability_distribution, get_specific_word_probability
+from bert_code import get_next_word_probability_distribution, get_specific_word_probability
 
 
 def main():
