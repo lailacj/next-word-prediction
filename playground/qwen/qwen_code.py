@@ -1,7 +1,6 @@
 import torch
 import torch.nn.functional as F
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from torchview import draw_graph
 import math
 
 # Load model and tokenizer
@@ -10,11 +9,11 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
 
+@torch.no_grad()
 def get_word_probabilities(sentence: str, word: str) -> float:
     # 1. Prepare input
     prompt = sentence.strip() + " "  # Ensure there's a space before the sentence
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    print(inputs.keys())
     input_ids = inputs["input_ids"]  # Shape: [1, sequence_length]
 
     # 1. Tokenize the target word with a leading space
@@ -31,7 +30,7 @@ def get_word_probabilities(sentence: str, word: str) -> float:
         for token_id in target_ids:
             # We pass the full input_ids each time
             outputs = model(input_ids=input_ids)
-            logits = outputs.logits[0, -1, :] # Last token distribution
+            logits = outputs.logits[0, -1, :] 
             
             # Use log_softmax for better stability
             log_probs = F.log_softmax(logits, dim=-1)
@@ -43,18 +42,6 @@ def get_word_probabilities(sentence: str, word: str) -> float:
             new_id = torch.tensor([[token_id]], device=model.device)
             input_ids = torch.cat([input_ids, new_id], dim=1)
         
-    # before you leave create a graph
-    visualize_the_graph(inputs)
-    return {
-        "prob": math.exp(total_logp),  # Convert log probability back to regular probability
-        "log_prob": total_logp,
-        "sentence": sentence,
-        "word": word,
-    }
 
-
-def visualize_the_graph(inputs):
-    # This will show the high-level hierarchy of Qwen's 28 layers
-    model_graph = draw_graph(model, input_data=inputs["input_ids"], expand_nested=False)
-    model_graph.visual_graph.render("qwen_hierarchy", format="png")
-
+    # Return the total log probability of the target word given the sentence
+    return total_logp  
