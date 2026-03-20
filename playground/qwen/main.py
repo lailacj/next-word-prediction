@@ -4,7 +4,7 @@ import os
 # Add the parent directory (playground) to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from qwen_code import get_word_probabilities
+from qwen_code import *
 import csv_parser
 
 def get_list_words_given_sentence(my_list):
