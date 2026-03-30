@@ -45,6 +45,5 @@ def main():
             with open(output_path, "a", encoding="utf-8") as f:
                 f.write(f"{idx},{sentence},{word},{qwen_prob}\n")
 
-
 if __name__ == "__main__":
     main()

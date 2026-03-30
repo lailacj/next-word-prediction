@@ -31,3 +31,6 @@ def get_human_masked_data(data):
       
 
     return masked_words, sentences
+
+    # masked words schema: {sentence_number: [(word, cloze_prob), (word, cloze_prob), ...], ...}
+    # sentences schema: [sentence1, sentence2, ...]
