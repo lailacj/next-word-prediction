@@ -1,4 +1,4 @@
-.proj_env
+.env.proj_env
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
@@ -13,3 +13,5 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/     
+.env
+venv/

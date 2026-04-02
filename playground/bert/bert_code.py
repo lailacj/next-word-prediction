@@ -39,5 +39,5 @@ def get_specific_word_probability(sentence_num, sentence
             continue
         else:
             with open(outputfile_path, "a", encoding="utf-8") as f:
-                f.write(f"{sentence_num},{sentence},{token},{prob}\n")
+                f.write(f"{sentence_num},'{sentence}',{token},{prob}\n")
                

@@ -1,3 +1,4 @@
+
 import pandas as pd
 
 def parse_csv(file_path):
@@ -5,7 +6,7 @@ def parse_csv(file_path):
     this function parses a csv and file and returns a list of dictionaries,
     where each dictionary represents a row in the csv file.
     '''
-    data = pd.read_csv(file_path, dtype=str)  # Read the CSV file into a DataFrame
+    data = pd.read_csv(file_path, sep=',', quotechar='"', skipinitialspace=True, dtype=str)  # Read the CSV file into a DataFrame
     return data.to_dict(orient='records')
 
 def get_human_masked_data(data):

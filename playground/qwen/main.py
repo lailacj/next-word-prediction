@@ -43,7 +43,7 @@ def main():
             #computer the probabiliry of this word given the tokenize_sentence space
             qwen_prob = get_word_probabilities(sentenc_token_ids, word_token_ids)
             with open(output_path, "a", encoding="utf-8") as f:
-                f.write(f"{idx},{sentence},{word},{qwen_prob}\n")
+                f.write(f"{idx},'{sentence}',{word},{qwen_prob}\n")
 
 if __name__ == "__main__":
     main()
