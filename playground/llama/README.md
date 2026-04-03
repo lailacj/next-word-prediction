@@ -10,7 +10,16 @@ Before running the LLaMA model, you must log in to your Hugging Face account. Wi
 ```bash
 huggingface-cli login
 ```
+and then you will prompted to enter your LLMA_TOKEK
 
+Or another way you can do it in you code direction, is by adding this like right above before you load your model:
+
+```bash
+LLAMA_TOKEN = os.getenv("LLAMA_TOKEN")
+
+# Paste your token here
+login(token=LLAMA_TOKEN)
+```
 You will be prompted to enter your Hugging Face API token. Get your token from [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens).
 
 ## Running the Model

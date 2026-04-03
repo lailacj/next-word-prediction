@@ -6,11 +6,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from llama_code import *
 
-# or from the terminal, you can run:
-# huggingface-cli login
-
 from csv_parser import *
-
 
 def get_list_words_given_sentence(my_list):
     words = []
