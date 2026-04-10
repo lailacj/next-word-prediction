@@ -7,7 +7,7 @@ from huggingface_hub import login
 import os
 from dotenv import load_dotenv
 
-
+# ABSTRACT INTERFACE FOR LANGUAGE MODELS
 class LanguageModel(ABC):
     @abstractmethod
     def tokenize_sentense(self, sentence: str):
@@ -26,12 +26,23 @@ class LanguageModel(ABC):
     def predict_next_word(self, sentence_token_ids, word_token_ids):
         pass
 
+    @abstractmethod
+    def get_ouptut_file(self):
+        pass
 
+
+# QWEN MODEL IMPLEMENTATION
 class QwenModel(LanguageModel):
     def __init__(self):
+        # initilialize the qwen model and the tokenizer
         self.model_name = "Qwen/Qwen2.5-7B"
+        self.output_file = "../data/qwen/qwen_data.csv"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
+
+        # write up the header of the outpul as you initialized the model
+        with open(self.output_file, "w", encoding="utf-8") as f:
+            f.write("sentence_num,sentence,word,qwen_prob\n")
 
     @property
     def priority(self):
@@ -89,11 +100,16 @@ class QwenModel(LanguageModel):
         # Return the total log probability of the target word given the sentence
         return total_logp
 
+    def get_ouptut_file(self):
+        return self.output_file
 
+
+# BERT MODEL IMPLEMENTATION
 class BertModel(LanguageModel):
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
         self.model = AutoModelForMaskedLM.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
+        self.output_file = "../data/bert_data/bert_cloze_output.csv"
 
     @property
     def priority(self):
@@ -126,26 +142,36 @@ class BertModel(LanguageModel):
         # Return the results as a list of (token, probability) tuples
         return list(zip(predicted_tokens, probs.tolist()))
 
-    def get_specific_word_probability(self, sentence_num, sentence, word_list, next_word_probabilities, outputfile_path):
+    def get_specific_word_probability(self, sentence_num, sentence, word_list, next_word_probabilities):
         '''This function searches the BERT probability distribution for specific words and
         stores the results in a dictionary.'''
         for token, prob in next_word_probabilities:
             if token not in word_list:
                 continue
             else:
-                with open(outputfile_path, "a", encoding="utf-8") as f:
-                    f.write(f"{sentence_num},'{sentence}',{token},{prob}\n")
+                with open(self.output_file, "a", encoding="utf-8") as f:
+                    f.write(f"{sentence_num},{sentence},{token},{prob}\n")
 
     def predict_next_word(self, sentence_token_ids, word_token_ids):
         return self.get_next_word_probability_distribution(sentence_token_ids)
 
+    
 
+
+# DEEPSEEK MODEL IMPLEMENTATION
 class DeepSeekModel(LanguageModel):
     def __init__(self):
         # initilialize the deepseek model and the tokenizer
         self.model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name, trust_remote_code=True)
+        self.output_file = "../deepseek/deepseek_data.csv"
+
+        # write up the header of the outpul as you initialized the model
+        with open(self.output_file, "w", encoding="utf-8") as f:
+            f.write("sentence_num,sentence,word,deepseek_prob\n")
+       
+        
 
     @property
     def priority(self):
@@ -192,20 +218,30 @@ class DeepSeekModel(LanguageModel):
 
         return total_logp
 
+    def get_ouptut_file(self):
+        return self.output_file
 
+
+# LLAMA MODEL IMPLEMENTATION
 class LlamaModel(LanguageModel):
     def __init__(self):
         # Load variables from .env into the environment
         load_dotenv()
 
+        # connect/login to the llam model using huggingface
         LLAMA_TOKEN = os.getenv("LLAMA_TOKEN")
-
         # Paste your token here
         login(token=LLAMA_TOKEN)
 
+        # initialize the model and its tokenize
         self.model_name = "meta-llama/Llama-3.2-1B"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
+        self.output_file = "../data/llama/llama_data.csv"
+
+        # write up the header of the outpul as you initialized the model
+        with open(self.output_file, "w", encoding="utf-8") as f:
+            f.write("sentence_num,sentence,word,llama_prob\n")
 
     @property
     def priority(self):
@@ -260,3 +296,6 @@ class LlamaModel(LanguageModel):
             input_ids = torch.tensor([[token_id]], device=input_ids.device)
 
         return total_log_prob
+
+    def get_ouptut_file(self):
+        return self.output_file

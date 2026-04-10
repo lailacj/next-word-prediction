@@ -1,4 +1,4 @@
-from language_models import QwenModel
+from language_models import QwenModel, LlamaModel, DeepSeekModel
 from data_organization import load_cloze_data
 
 
@@ -15,18 +15,25 @@ def main():
     file_path = "../data/peelle_data/cloze_data.csv"
     masked, sentences = load_cloze_data(file_path)
 
-    model = QwenModel()
+    #Initialize the language models list
+    models = [QwenModel(), LlamaModel(), DeepSeekModel()]
 
-    for idx, sentence in enumerate(sentences, start=1):
-        word_list = get_list_words_given_sentence(masked[str(idx)])
-        sentence_token_ids = model.tokenize_sentense(sentence)
+    # write up the header of the output file for each model
+   
+    for model in models:
+        for idx, sentence in enumerate(sentences, start=1):
+            word_list = get_list_words_given_sentence(masked[str(idx)])
+            sentence_token_ids = model.tokenize_sentense(sentence)
 
-        for word in word_list:
-            word_token_ids = model.tokenize_word(word)
-            if not word_token_ids:
-                continue
-            qwen_prob = model.predict_next_word(sentence_token_ids, word_token_ids)
-            print(f"{idx},'{sentence}',{word},{qwen_prob}")
+            for word in word_list:
+                word_token_ids = model.tokenize_word(word)
+                if not word_token_ids:
+                    continue
+                # get the prob numbers
+                prob = model.predict_next_word(sentence_token_ids, word_token_ids)
+
+                # write in the output file 
+                print(f"{idx},{sentence},{word},{prob}")
 
 
 if __name__ == "__main__":
