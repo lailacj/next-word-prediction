@@ -1,0 +1,2 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:18<00:54, 18.29s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:36<00:36, 18.06s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:55<00:18, 18.51s/it]/var/spool/slurmd/job1635889/slurm_script: line 15: 3798488 Killed                  python /users/diriho/data/diriho/next-word-prediction/pipeline/run_pipeline.py
+[2026-04-13T10:44:55.581] error: Detected 1 oom_kill event in StepId=1635889.batch. Some of the step tasks have been OOM Killed.

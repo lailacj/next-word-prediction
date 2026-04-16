@@ -165,7 +165,7 @@ class DeepSeekModel(LanguageModel):
         self.model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name, trust_remote_code=True)
-        self.output_file = "../deepseek/deepseek_data.csv"
+        self.output_file = "../data/deepseek/deepseek_data.csv"
 
         # write up the header of the outpul as you initialized the model
         with open(self.output_file, "w", encoding="utf-8") as f:
