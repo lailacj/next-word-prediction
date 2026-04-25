@@ -1,2 +1,0 @@
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:17<00:53, 17.73s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:35<00:35, 17.56s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:53<00:17, 17.76s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:56<00:00, 11.97s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:56<00:00, 14.07s/it]
-[2026-04-16T18:20:40.022] error: *** JOB 1703941 ON gpu3002 CANCELLED AT 2026-04-16T18:20:40 DUE TO TIME LIMIT ***

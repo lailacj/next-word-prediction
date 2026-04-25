@@ -1,2 +1,0 @@
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:19<00:59, 19.84s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:38<00:38, 19.36s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:57<00:19, 19.21s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:14<00:00, 18.31s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:14<00:00, 18.71s/it]
-[2026-04-16T10:20:01.677] error: *** JOB 1703875 ON gpu3003 CANCELLED AT 2026-04-16T10:20:01 DUE to SIGNAL Terminated ***

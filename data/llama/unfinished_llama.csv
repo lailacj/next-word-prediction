@@ -1,0 +1,103 @@
+sentence_num,sentence,word,llama_prob
+2192,'The woman wasn't sure when the baby was',due,-3.6535394191741943
+2192,'The woman wasn't sure when the baby was',born,-0.6575238704681396
+2192,'The woman wasn't sure when the baby was',hungry,-11.333789825439453
+2192,'The woman wasn't sure when the baby was',sleeping,-7.812753677368164
+2192,'The woman wasn't sure when the baby was',awake,-10.369549751281738
+2192,'The woman wasn't sure when the baby was',conceived,-1.282562017440796
+2192,'The woman wasn't sure when the baby was',alive,-7.477309226989746
+2192,'The woman wasn't sure when the baby was',healthy,-9.757648468017578
+2192,'The woman wasn't sure when the baby was',bed,-13.141685485839844
+2192,'The woman wasn't sure when the baby was',crying,-6.766481399536133
+2192,'The woman wasn't sure when the baby was',coming,-5.24969482421875
+2192,'The woman wasn't sure when the baby was',happy,-11.744019508361816
+2192,'The woman wasn't sure when the baby was',arriving,-8.067647933959961
+2192,'The woman wasn't sure when the baby was',asleep,-7.999652862548828
+2192,'The woman wasn't sure when the baby was',dead,-8.08870792388916
+2192,'The woman wasn't sure when the baby was',gone,-8.08776569366455
+2193,'During this season the adult deer usually',mate,-4.814037322998047
+2193,'During this season the adult deer usually',hide,-6.19123649597168
+2193,'During this season the adult deer usually',molt,-7.121637344360352
+2193,'During this season the adult deer usually',rut,-6.656548500061035
+2193,'During this season the adult deer usually',roam,-5.582515716552734
+2193,'During this season the adult deer usually',mates,-9.159587860107422
+2193,'During this season the adult deer usually',run,-5.986376762390137
+2193,'During this season the adult deer usually',hid,-11.000731468200684
+2193,'During this season the adult deer usually',sleep,-7.852156639099121
+2193,'During this season the adult deer usually',scavenges,-12.905149772763252
+2193,'During this season the adult deer usually',scatter,-8.655264854431152
+2193,'During this season the adult deer usually',hunts,-8.503829002380371
+2193,'During this season the adult deer usually',breed,-5.491678237915039
+2193,'During this season the adult deer usually',appear,-6.025842666625977
+2193,'During this season the adult deer usually',binge,-11.736871719360352
+2193,'During this season the adult deer usually',forage,-5.701833225786686
+2193,'During this season the adult deer usually',comes out,-7.572437882423401
+2193,'During this season the adult deer usually',migrate,-4.652462005615234
+2193,'During this season the adult deer usually',hibernate,-6.699610471725464
+2193,'During this season the adult deer usually',feed,-3.848268508911133
+2193,'During this season the adult deer usually',pranced,-15.564351558685303
+2193,'During this season the adult deer usually',died,-10.937679290771484
+2193,'During this season the adult deer usually',retreats,-9.545035600662231
+2194,'The child was very excited to get a pet',dog,-3.4873552322387695
+2194,'The child was very excited to get a pet',hamster,-3.7184456321410835
+2194,'The child was very excited to get a pet',rabbit,-3.088658332824707
+2194,'The child was very excited to get a pet',cat,-4.286620140075684
+2194,'The child was very excited to get a pet',turtle,-4.129570960998535
+2194,'The child was very excited to get a pet',bunny,-4.659646034240723
+2194,'The child was very excited to get a pet',snake,-4.14211368560791
+2194,'The child was very excited to get a pet',fish,-4.721426963806152
+2194,'The child was very excited to get a pet',iguana,-6.709335365099832
+2194,'The child was very excited to get a pet',rat,-4.971360206604004
+2194,'The child was very excited to get a pet',monkey,-5.01969051361084
+2194,'The child was very excited to get a pet',deer,-8.24490737915039
+2194,'The child was very excited to get a pet',parakeet,-7.443074431270361
+2194,'The child was very excited to get a pet',puppy,-5.240541458129883
+2194,'The child was very excited to get a pet',rock,-7.691037178039551
+2194,'The child was very excited to get a pet',ferret,-6.817642196081579
+2194,'The child was very excited to get a pet',bird,-4.342099189758301
+2194,'The child was very excited to get a pet',lizard,-5.082381248474121
+2194,'The child was very excited to get a pet',gerbil,-8.298288974910975
+2194,'The child was very excited to get a pet',chameleon,-7.859424829483032
+2194,'The child was very excited to get a pet',frog,-5.189133644104004
+2194,'The child was very excited to get a pet',kitten,-4.858138084411621
+2195,'The rock band celebrated after their first',concert,-4.352937698364258
+2195,'The rock band celebrated after their first',gig,-4.105352401733398
+2195,'The rock band celebrated after their first',album,-3.001302719116211
+2195,'The rock band celebrated after their first',show,-3.435396194458008
+2195,'The rock band celebrated after their first',hit,-3.721385955810547
+2195,'The rock band celebrated after their first',tour,-4.670886993408203
+2195,'The rock band celebrated after their first',performance,-3.6638927459716797
+2195,'The rock band celebrated after their first',record,-5.452651023864746
+2195,'The rock band celebrated after their first',anniversary,-6.310969352722168
+2195,'The rock band celebrated after their first',recording,-7.004253387451172
+2195,'The rock band celebrated after their first',job,-9.354475021362305
+2195,'The rock band celebrated after their first',single,-3.766263961791992
+2196,'To tend to the wound he applied a gauze',bandage,-1.6688368543982506
+2196,'To tend to the wound he applied a gauze',pad,-1.8963476419448853
+2196,'To tend to the wound he applied a gauze',wrap,-6.553515911102295
+2196,'To tend to the wound he applied a gauze',patch,-5.684957027435303
+2196,'To tend to the wound he applied a gauze',strip,-4.9446282386779785
+2196,'To tend to the wound he applied a gauze',tightly,-7.632343769073486
+2196,'To tend to the wound he applied a gauze',carefully,-9.506162643432617
+2196,'To tend to the wound he applied a gauze',dressing,-2.6789822578430176
+2196,'To tend to the wound he applied a gauze',gently,-9.601587295532227
+2196,'To tend to the wound he applied a gauze',liberally,-10.409710813080892
+2196,'To tend to the wound he applied a gauze',wrapping,-8.553725242614746
+2196,'To tend to the wound he applied a gauze',on top,-7.647167682647705
+2196,'To tend to the wound he applied a gauze',quickly,-9.312577247619629
+2196,'To tend to the wound he applied a gauze',securely,-11.757486343383789
+2196,'To tend to the wound he applied a gauze',tape,-7.887945652008057
+2196,'To tend to the wound he applied a gauze',material,-7.5573039054870605
+2196,'To tend to the wound he applied a gauze',layer,-8.682807922363281
+2196,'To tend to the wound he applied a gauze',bandaid,-9.13157856464386
+2197,'Karen lost lots of money after losing a foolish',bet,-0.6727764010429382
+2197,'Karen lost lots of money after losing a foolish',wager,-2.3063881397247314
+2197,'Karen lost lots of money after losing a foolish',gamble,-3.782010316848755
+2197,'Karen lost lots of money after losing a foolish',investment,-1.9989979267120361
+2198,'The generous boy always racked up a large',debt,-4.534416198730469
+2198,'The generous boy always racked up a large',bill,-2.0098648071289062
+2198,'The generous boy always racked up a large',tab,-3.8898448944091797
+2198,'The generous boy always racked up a large',following,-7.054507255554199
+2198,'The generous boy always racked up a large',donation,-4.974363327026367
+2198,'The generous boy always racked up a large',collection,-4.248363494873047
+2198,'The generous boy always racked up a large',audience,-8.628691673278809
