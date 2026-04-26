@@ -39800,3 +39800,822 @@ sentence_num,sentence,word,deepseek_prob
 2190,'The old barge could be seen moving through the',straits,-25.829628944396973
 2191,'The lawyer shredded the contract after it was declared',void,-4.532635688781738
 2191,'The lawyer shredded the contract after it was declared',invalid,-2.083885431289673
+sentence_num,sentence,word,deepseek_prob
+2192,'The woman wasn't sure when the baby was',due,-8.010719299316406
+2192,'The woman wasn't sure when the baby was',born,-0.05227302014827728
+2192,'The woman wasn't sure when the baby was',hungry,-11.24200439453125
+2192,'The woman wasn't sure when the baby was',sleeping,-8.231833457946777
+2192,'The woman wasn't sure when the baby was',awake,-11.946008682250977
+2192,'The woman wasn't sure when the baby was',conceived,-9.46051025390625
+2192,'The woman wasn't sure when the baby was',alive,-7.314406394958496
+2192,'The woman wasn't sure when the baby was',healthy,-10.762310028076172
+2192,'The woman wasn't sure when the baby was',bed,-11.506197929382324
+2192,'The woman wasn't sure when the baby was',crying,-10.106807708740234
+2192,'The woman wasn't sure when the baby was',coming,-8.240447998046875
+2192,'The woman wasn't sure when the baby was',happy,-12.035295486450195
+2192,'The woman wasn't sure when the baby was',arriving,-8.517258644104004
+2192,'The woman wasn't sure when the baby was',asleep,-8.284980773925781
+2192,'The woman wasn't sure when the baby was',dead,-10.98525619506836
+2192,'The woman wasn't sure when the baby was',gone,-8.654467582702637
+2193,'During this season the adult deer usually',mate,-12.420270919799805
+2193,'During this season the adult deer usually',hide,-11.218172073364258
+2193,'During this season the adult deer usually',molt,-14.637174606323242
+2193,'During this season the adult deer usually',rut,-13.949102401733398
+2193,'During this season the adult deer usually',roam,-7.372842788696289
+2193,'During this season the adult deer usually',mates,-11.697149276733398
+2193,'During this season the adult deer usually',run,-7.856053352355957
+2193,'During this season the adult deer usually',hid,-13.871380805969238
+2193,'During this season the adult deer usually',sleep,-7.032977104187012
+2193,'During this season the adult deer usually',scavenges,-42.65068340301514
+2193,'During this season the adult deer usually',scatter,-11.518342971801758
+2193,'During this season the adult deer usually',hunts,-10.5811767578125
+2193,'During this season the adult deer usually',breed,-10.8779878616333
+2193,'During this season the adult deer usually',appear,-5.924971580505371
+2193,'During this season the adult deer usually',binge,-15.007181167602539
+2193,'During this season the adult deer usually',forage,-24.084486961364746
+2193,'During this season the adult deer usually',comes out,-14.842842102050781
+2193,'During this season the adult deer usually',migrate,-7.428200721740723
+2193,'During this season the adult deer usually',hibernate,-22.39915180206299
+2193,'During this season the adult deer usually',feed,-10.106120109558105
+2193,'During this season the adult deer usually',pranced,-24.462139129638672
+2193,'During this season the adult deer usually',died,-7.915463447570801
+2193,'During this season the adult deer usually',retreats,-22.194626808166504
+2194,'The child was very excited to get a pet',dog,-5.543601989746094
+2194,'The child was very excited to get a pet',hamster,-25.338123321533203
+2194,'The child was very excited to get a pet',rabbit,-6.090100288391113
+2194,'The child was very excited to get a pet',cat,-7.412454605102539
+2194,'The child was very excited to get a pet',turtle,-10.708365440368652
+2194,'The child was very excited to get a pet',bunny,-12.907548904418945
+2194,'The child was very excited to get a pet',snake,-8.69620418548584
+2194,'The child was very excited to get a pet',fish,-7.8137054443359375
+2194,'The child was very excited to get a pet',iguana,-39.27464962005615
+2194,'The child was very excited to get a pet',rat,-11.245720863342285
+2194,'The child was very excited to get a pet',monkey,-11.402436256408691
+2194,'The child was very excited to get a pet',deer,-13.384864807128906
+2194,'The child was very excited to get a pet',parakeet,-40.11620044708252
+2194,'The child was very excited to get a pet',puppy,-11.228446006774902
+2194,'The child was very excited to get a pet',rock,-8.18592357635498
+2194,'The child was very excited to get a pet',ferret,-27.540435791015625
+2194,'The child was very excited to get a pet',bird,-7.005622863769531
+2194,'The child was very excited to get a pet',lizard,-12.511347770690918
+2194,'The child was very excited to get a pet',gerbil,-29.03475570678711
+2194,'The child was very excited to get a pet',chameleon,-30.809292793273926
+2194,'The child was very excited to get a pet',frog,-9.520981788635254
+2194,'The child was very excited to get a pet',kitten,-10.390250205993652
+2195,'The rock band celebrated after their first',concert,-5.74210262298584
+2195,'The rock band celebrated after their first',gig,-9.261953353881836
+2195,'The rock band celebrated after their first',album,-4.04904842376709
+2195,'The rock band celebrated after their first',show,-5.410931587219238
+2195,'The rock band celebrated after their first',hit,-9.220653533935547
+2195,'The rock band celebrated after their first',tour,-6.143080711364746
+2195,'The rock band celebrated after their first',performance,-5.696575164794922
+2195,'The rock band celebrated after their first',record,-8.36883544921875
+2195,'The rock band celebrated after their first',anniversary,-6.195267677307129
+2195,'The rock band celebrated after their first',recording,-9.065062522888184
+2195,'The rock band celebrated after their first',job,-8.778888702392578
+2195,'The rock band celebrated after their first',single,-6.191361427307129
+2196,'To tend to the wound he applied a gauze',bandage,-19.469149589538574
+2196,'To tend to the wound he applied a gauze',pad,-4.120697021484375
+2196,'To tend to the wound he applied a gauze',wrap,-6.030448913574219
+2196,'To tend to the wound he applied a gauze',patch,-6.061498641967773
+2196,'To tend to the wound he applied a gauze',strip,-5.836307525634766
+2196,'To tend to the wound he applied a gauze',tightly,-8.918301582336426
+2196,'To tend to the wound he applied a gauze',carefully,-10.85731029510498
+2196,'To tend to the wound he applied a gauze',dressing,-8.964151382446289
+2196,'To tend to the wound he applied a gauze',gently,-13.091619491577148
+2196,'To tend to the wound he applied a gauze',liberally,-37.39308166503906
+2196,'To tend to the wound he applied a gauze',wrapping,-8.661360740661621
+2196,'To tend to the wound he applied a gauze',on top,-12.543570756912231
+2196,'To tend to the wound he applied a gauze',quickly,-14.212896347045898
+2196,'To tend to the wound he applied a gauze',securely,-18.281076431274414
+2196,'To tend to the wound he applied a gauze',tape,-7.679318428039551
+2196,'To tend to the wound he applied a gauze',material,-10.806090354919434
+2196,'To tend to the wound he applied a gauze',layer,-9.286865234375
+2196,'To tend to the wound he applied a gauze',bandaid,-18.610502243041992
+2197,'Karen lost lots of money after losing a foolish',bet,-6.667699813842773
+2197,'Karen lost lots of money after losing a foolish',wager,-7.127157211303711
+2197,'Karen lost lots of money after losing a foolish',gamble,-9.916691780090332
+2197,'Karen lost lots of money after losing a foolish',investment,-6.962396144866943
+2198,'The generous boy always racked up a large',debt,-7.247378349304199
+2198,'The generous boy always racked up a large',bill,-6.6019086837768555
+2198,'The generous boy always racked up a large',tab,-9.601167678833008
+2198,'The generous boy always racked up a large',following,-11.035218238830566
+2198,'The generous boy always racked up a large',donation,-9.351507186889648
+2198,'The generous boy always racked up a large',collection,-5.580375671386719
+2198,'The generous boy always racked up a large',audience,-12.28552532196045
+2198,'The generous boy always racked up a large',amount,-0.644646406173706
+2198,'The generous boy always racked up a large',fortune,-8.343972206115723
+2198,'The generous boy always racked up a large',charge,-8.717366218566895
+2198,'The generous boy always racked up a large',pot,-10.359722137451172
+2198,'The generous boy always racked up a large',sum,-4.64138126373291
+2198,'The generous boy always racked up a large',list,-9.100956916809082
+2198,'The generous boy always racked up a large',score,-8.77551555633545
+2198,'The generous boy always racked up a large',balance,-5.009922981262207
+2198,'The generous boy always racked up a large',bonus,-7.96446418762207
+2198,'The generous boy always racked up a large',crowd,-8.503366470336914
+2198,'The generous boy always racked up a large',number,-1.0259559154510498
+2198,'The generous boy always racked up a large',wound,-15.309706687927246
+2198,'The generous boy always racked up a large',reward,-10.088370323181152
+2198,'The generous boy always racked up a large',stash,-10.363245010375977
+2198,'The generous boy always racked up a large',prize,-10.186126708984375
+2198,'The generous boy always racked up a large',tip,-12.910894393920898
+2198,'The generous boy always racked up a large',amount of things to donate to charity,-79.3940818309784
+2198,'The generous boy always racked up a large',favor,-10.606927871704102
+2199,'The elite country club was luxurious and',expensive,-4.628592014312744
+2199,'The elite country club was luxurious and',posh,-24.740031719207764
+2199,'The elite country club was luxurious and',exclusive,-1.6207233667373657
+2199,'The elite country club was luxurious and',elegant,-3.868809223175049
+2199,'The elite country club was luxurious and',spacious,-6.418961524963379
+2199,'The elite country club was luxurious and',fancy,-7.908998966217041
+2199,'The elite country club was luxurious and',opulent,-22.001320838928223
+2199,'The elite country club was luxurious and',comfortable,-6.944890975952148
+2199,'The elite country club was luxurious and',nice,-7.465485572814941
+2199,'The elite country club was luxurious and',plush,-10.57079792022705
+2199,'The elite country club was luxurious and',beautiful,-5.072460651397705
+2199,'The elite country club was luxurious and',private,-2.9631505012512207
+2199,'The elite country club was luxurious and',rich,-6.328145503997803
+2199,'The elite country club was luxurious and',pricey,-8.887079238891602
+2199,'The elite country club was luxurious and',extravagent,-31.19098949432373
+2199,'The elite country club was luxurious and',wealthy,-8.235349655151367
+2199,'The elite country club was luxurious and',old,-7.918015003204346
+2199,'The elite country club was luxurious and',snobby,-26.97768497467041
+2199,'The elite country club was luxurious and',stylish,-5.560815334320068
+2199,'The elite country club was luxurious and',isolating,-35.469786643981934
+2199,'The elite country club was luxurious and',exotic,-5.1201491355896
+2199,'The elite country club was luxurious and',swanky,-28.975093841552734
+2199,'The elite country club was luxurious and',secluded,-9.434008598327637
+2199,'The elite country club was luxurious and',vast,-7.651665687561035
+2199,'The elite country club was luxurious and',elite,-7.551523208618164
+2199,'The elite country club was luxurious and',pompous,-28.873525619506836
+2199,'The elite country club was luxurious and',grand,-2.7139487266540527
+2199,'The elite country club was luxurious and',priceless,-14.229969024658203
+2199,'The elite country club was luxurious and',cool,-9.4631986618042
+2199,'The elite country club was luxurious and',packed,-10.67623519897461
+2199,'The elite country club was luxurious and',unique,-6.108400821685791
+2199,'The elite country club was luxurious and',swank,-25.176332473754883
+2199,'The elite country club was luxurious and',ornate,-26.342496871948242
+2199,'The elite country club was luxurious and',upscale,-5.980535984039307
+2199,'The elite country club was luxurious and',glamorous,-7.703174591064453
+2199,'The elite country club was luxurious and',gorgeous,-12.41731071472168
+2199,'The elite country club was luxurious and',classy,-7.067796230316162
+2199,'The elite country club was luxurious and',fun,-10.888855934143066
+2199,'The elite country club was luxurious and',big,-7.9421281814575195
+2200,'Jerry wanted to weave yarn so he needed a',loom,-23.823938369750977
+2200,'Jerry wanted to weave yarn so he needed a',needle,-8.297724723815918
+2200,'Jerry wanted to weave yarn so he needed a',hook,-7.5594377517700195
+2200,'Jerry wanted to weave yarn so he needed a',spool,-23.1367826461792
+2200,'Jerry wanted to weave yarn so he needed a',pattern,-4.710353851318359
+2200,'Jerry wanted to weave yarn so he needed a',pin,-9.951784133911133
+2200,'Jerry wanted to weave yarn so he needed a',teacher,-9.820144653320312
+2200,'Jerry wanted to weave yarn so he needed a',spindle,-10.503744125366211
+2200,'Jerry wanted to weave yarn so he needed a',spinningwheel,-25.375900268554688
+2200,'Jerry wanted to weave yarn so he needed a',table,-6.5050859451293945
+2200,'Jerry wanted to weave yarn so he needed a',spinner,-7.341553688049316
+2200,'Jerry wanted to weave yarn so he needed a',string,-4.901493072509766
+2200,'Jerry wanted to weave yarn so he needed a',stick,-7.979167938232422
+2200,'Jerry wanted to weave yarn so he needed a',topic,-13.061123847961426
+2200,'Jerry wanted to weave yarn so he needed a',ball,-6.021045684814453
+2200,'Jerry wanted to weave yarn so he needed a',scane,-24.003451347351074
+2200,'Jerry wanted to weave yarn so he needed a',sheep,-10.673283576965332
+2200,'Jerry wanted to weave yarn so he needed a',hand,-8.007501602172852
+2200,'Jerry wanted to weave yarn so he needed a',threader,-22.936659812927246
+2200,'Jerry wanted to weave yarn so he needed a',reason,-9.045273780822754
+2200,'Jerry wanted to weave yarn so he needed a',machine,-8.526361465454102
+2200,'Jerry wanted to weave yarn so he needed a',rope,-3.6580617427825928
+2200,'Jerry wanted to weave yarn so he needed a',tool,-7.036972999572754
+2200,'Jerry wanted to weave yarn so he needed a',wheel,-7.24901008605957
+2200,'Jerry wanted to weave yarn so he needed a',winder,-22.546011924743652
+2201,'The two young brothers' least favorite drink was',milk,-4.548070907592773
+2201,'The two young brothers' least favorite drink was',water,-6.820303916931152
+2201,'The two young brothers' least favorite drink was',tea,-5.599691390991211
+2201,'The two young brothers' least favorite drink was',coffee,-5.774056434631348
+2201,'The two young brothers' least favorite drink was',lemonade,-20.66734027862549
+2201,'The two young brothers' least favorite drink was',juice,-8.516374588012695
+2201,'The two young brothers' least favorite drink was',beer,-7.26582145690918
+2201,'The two young brothers' least favorite drink was',pop,-10.38133430480957
+2201,'The two young brothers' least favorite drink was',soda,-8.315757751464844
+2201,'The two young brothers' least favorite drink was',coke,-11.830413818359375
+2201,'The two young brothers' least favorite drink was',eggnog,-48.17831802368164
+2201,'The two young brothers' least favorite drink was',cranberry juice,-38.242051124572754
+2201,'The two young brothers' least favorite drink was',scotch,-25.730687141418457
+2201,'The two young brothers' least favorite drink was',rum,-12.050956726074219
+2201,'The two young brothers' least favorite drink was',wine,-7.934218406677246
+2201,'The two young brothers' least favorite drink was',pepsi,-27.509135246276855
+2201,'The two young brothers' least favorite drink was',milk shake,-15.84363842010498
+2201,'The two young brothers' least favorite drink was',applejuice,-29.670194625854492
+2201,'The two young brothers' least favorite drink was',cider,-14.847613334655762
+2201,'The two young brothers' least favorite drink was',castor oil,-44.06036853790283
+2201,'The two young brothers' least favorite drink was',sarsparilla,-54.208313941955566
+2201,'The two young brothers' least favorite drink was',whiskey,-12.14262866973877
+2201,'The two young brothers' least favorite drink was',ale,-12.613402366638184
+2201,'The two young brothers' least favorite drink was',orange juice,-18.09172821044922
+2202,'The scuba divers really enjoyed exploring the',reef,-8.814970970153809
+2202,'The scuba divers really enjoyed exploring the',ocean,-3.9907689094543457
+2202,'The scuba divers really enjoyed exploring the',cave,-5.641869068145752
+2202,'The scuba divers really enjoyed exploring the',sea,-3.003415584564209
+2202,'The scuba divers really enjoyed exploring the',depths,-1.8294557332992554
+2202,'The scuba divers really enjoyed exploring the',water,-3.207547664642334
+2202,'The scuba divers really enjoyed exploring the',shipwreck,-39.516555309295654
+2202,'The scuba divers really enjoyed exploring the',cove,-24.879698753356934
+2202,'The scuba divers really enjoyed exploring the',coral,-8.030475616455078
+2202,'The scuba divers really enjoyed exploring the',deep,-3.62477445602417
+2202,'The scuba divers really enjoyed exploring the',bottom,-8.593404769897461
+2202,'The scuba divers really enjoyed exploring the',bay,-11.913578987121582
+2202,'The scuba divers really enjoyed exploring the',coast,-8.079258918762207
+2203,'She said her grandmothers words were words to',remember,-5.017745018005371
+2203,'She said her grandmothers words were words to',live by,-18.206565856933594
+2203,'She said her grandmothers words were words to',heed,-14.103009223937988
+2203,'She said her grandmothers words were words to',cherish,-10.083767890930176
+2203,'She said her grandmothers words were words to',treasure,-10.845728874206543
+2203,'She said her grandmothers words were words to',ignore,-8.885239601135254
+2203,'She said her grandmothers words were words to',follow,-8.776302337646484
+2203,'She said her grandmothers words were words to',hear,-6.924391746520996
+2203,'She said her grandmothers words were words to',help,-3.983952522277832
+2203,'She said her grandmothers words were words to',harsh,-12.143209457397461
+2203,'She said her grandmothers words were words to',her,-1.8577691316604614
+2203,'She said her grandmothers words were words to',admire,-10.78991985321045
+2203,'She said her grandmothers words were words to',consider,-7.158951759338379
+2203,'She said her grandmothers words were words to',ponder,-9.417774200439453
+2203,'She said her grandmothers words were words to',soft,-11.765480041503906
+2203,'She said her grandmothers words were words to',persevere,-28.89045238494873
+2203,'She said her grandmothers words were words to',hurt,-8.235712051391602
+2203,'She said her grandmothers words were words to',mind,-7.770336151123047
+2203,'She said her grandmothers words were words to',apply,-8.78098201751709
+2203,'She said her grandmothers words were words to',believe,-8.298086166381836
+2203,'She said her grandmothers words were words to',strong,-9.394320487976074
+2203,'She said her grandmothers words were words to',inhale,-27.77470111846924
+2203,'She said her grandmothers words were words to',listen,-5.882769584655762
+2203,'She said her grandmothers words were words to',forget,-8.975805282592773
+2203,'She said her grandmothers words were words to',inspire,-8.005383491516113
+2203,'She said her grandmothers words were words to',obey,-8.377366065979004
+2203,'She said her grandmothers words were words to',kind,-8.218500137329102
+2203,'She said her grandmothers words were words to',love,-6.500763893127441
+2203,'She said her grandmothers words were words to',hurtful,-22.834304809570312
+2203,'She said her grandmothers words were words to',true,-10.612797737121582
+2204,'The wolves approached the campsite in a',pack,-9.707427978515625
+2204,'The wolves approached the campsite in a',hurry,-11.25375747680664
+2204,'The wolves approached the campsite in a',frenzy,-15.737911224365234
+2204,'The wolves approached the campsite in a',circle,-2.8941798210144043
+2204,'The wolves approached the campsite in a',rush,-11.33316421508789
+2204,'The wolves approached the campsite in a',crouch,-24.755054473876953
+2204,'The wolves approached the campsite in a',rage,-16.462703704833984
+2204,'The wolves approached the campsite in a',park,-9.052895545959473
+2204,'The wolves approached the campsite in a',line,-6.170653820037842
+2204,'The wolves approached the campsite in a',forest,-6.854709148406982
+2204,'The wolves approached the campsite in a',hunger,-15.484224319458008
+2204,'The wolves approached the campsite in a',pincher,-31.969926834106445
+2204,'The wolves approached the campsite in a',group,-7.300231456756592
+2204,'The wolves approached the campsite in a',snap,-13.833955764770508
+2204,'The wolves approached the campsite in a',minute,-10.467060089111328
+2204,'The wolves approached the campsite in a',creep,-16.039865493774414
+2204,'The wolves approached the campsite in a',quite manner,-15.861752986907959
+2204,'The wolves approached the campsite in a',woods,-13.833213806152344
+2204,'The wolves approached the campsite in a',slouch,-27.370019912719727
+2204,'The wolves approached the campsite in a',fire,-13.433553695678711
+2204,'The wolves approached the campsite in a',cautious manner,-17.009681224822998
+2205,'The captivated children watched the steam engine',move,-11.089908599853516
+2205,'The captivated children watched the steam engine',chug,-28.343257904052734
+2205,'The captivated children watched the steam engine',run,-8.781997680664062
+2205,'The captivated children watched the steam engine',start,-11.073322296142578
+2205,'The captivated children watched the steam engine',pass,-11.106818199157715
+2205,'The captivated children watched the steam engine',roll,-13.105006217956543
+2205,'The captivated children watched the steam engine',go,-12.0285005569458
+2205,'The captivated children watched the steam engine',puff,-15.394089698791504
+2205,'The captivated children watched the steam engine',work,-9.606527328491211
+2205,'The captivated children watched the steam engine',blow,-14.017111778259277
+2205,'The captivated children watched the steam engine',roar,-11.404763221740723
+2205,'The captivated children watched the steam engine',approach,-12.31253719329834
+2205,'The captivated children watched the steam engine',leave,-13.088898658752441
+2205,'The captivated children watched the steam engine',rumble,-30.02583599090576
+2205,'The captivated children watched the steam engine',left,-10.67948055267334
+2205,'The captivated children watched the steam engine',travel,-12.3899564743042
+2205,'The captivated children watched the steam engine',arrive,-12.472417831420898
+2205,'The captivated children watched the steam engine',smoke,-11.313285827636719
+2205,'The captivated children watched the steam engine',operate,-11.746954917907715
+2205,'The captivated children watched the steam engine',churn,-13.589037895202637
+2205,'The captivated children watched the steam engine',drive,-8.416543960571289
+2205,'The captivated children watched the steam engine',whistle,-13.650432586669922
+2205,'The captivated children watched the steam engine',smoking,-13.182400703430176
+2205,'The captivated children watched the steam engine',start to move,-30.497676849365234
+2205,'The captivated children watched the steam engine',explode,-14.832439422607422
+2205,'The captivated children watched the steam engine',barrel,-13.549881935119629
+2205,'The captivated children watched the steam engine',sail,-15.908957481384277
+2205,'The captivated children watched the steam engine',billow,-26.568533897399902
+2206,'The designer didn't think the model's pants matched the',shirt,-6.057265758514404
+2206,'The designer didn't think the model's pants matched the',top,-4.976027011871338
+2206,'The designer didn't think the model's pants matched the',blouse,-13.293785095214844
+2206,'The designer didn't think the model's pants matched the',shoes,-7.552544116973877
+2206,'The designer didn't think the model's pants matched the',theme,-10.28846549987793
+2206,'The designer didn't think the model's pants matched the',outfit,-4.734652996063232
+2206,'The designer didn't think the model's pants matched the',suit,-7.779813289642334
+2206,'The designer didn't think the model's pants matched the',jacket,-8.15532112121582
+2206,'The designer didn't think the model's pants matched the',scenery,-11.734687805175781
+2206,'The designer didn't think the model's pants matched the',wall,-13.679445266723633
+2206,'The designer didn't think the model's pants matched the',trim,-11.10157585144043
+2206,'The designer didn't think the model's pants matched the',picture,-11.554498672485352
+2206,'The designer didn't think the model's pants matched the',collection,-10.395702362060547
+2206,'The designer didn't think the model's pants matched the',drapes,-28.42345428466797
+2206,'The designer didn't think the model's pants matched the',prototype,-9.420095443725586
+2206,'The designer didn't think the model's pants matched the',blueprint,-10.410530090332031
+2206,'The designer didn't think the model's pants matched the',socks,-9.722465515136719
+2206,'The designer didn't think the model's pants matched the',place,-12.384256362915039
+2206,'The designer didn't think the model's pants matched the',mood,-11.28744125366211
+2207,'For his grandfather's funeral, Oscar composed a',song,-6.140632152557373
+2207,'For his grandfather's funeral, Oscar composed a',eulogy,-44.49653625488281
+2207,'For his grandfather's funeral, Oscar composed a',poem,-9.876795768737793
+2207,'For his grandfather's funeral, Oscar composed a',sonnet,-25.307098388671875
+2207,'For his grandfather's funeral, Oscar composed a',speech,-8.28408432006836
+2207,'For his grandfather's funeral, Oscar composed a',symphony,-22.7575421333313
+2207,'For his grandfather's funeral, Oscar composed a',dirge,-26.566753387451172
+2207,'For his grandfather's funeral, Oscar composed a',sonata,-24.543556213378906
+2207,'For his grandfather's funeral, Oscar composed a',memorial,-12.050455093383789
+2207,'For his grandfather's funeral, Oscar composed a',melody,-8.332563400268555
+2207,'For his grandfather's funeral, Oscar composed a',ballad,-25.503108978271484
+2208,'The teacher was concerned when the star student didn't',show,-3.8050453662872314
+2208,'The teacher was concerned when the star student didn't',pass,-6.0340986251831055
+2208,'The teacher was concerned when the star student didn't',arrive,-6.616095542907715
+2208,'The teacher was concerned when the star student didn't',attend,-4.742985725402832
+2208,'The teacher was concerned when the star student didn't',appear,-6.539375305175781
+2208,'The teacher was concerned when the star student didn't',succeed,-9.203193664550781
+2208,'The teacher was concerned when the star student didn't',excel,-9.39732837677002
+2208,'The teacher was concerned when the star student didn't',win,-5.898129463195801
+2208,'The teacher was concerned when the star student didn't',perform,-4.601580619812012
+2208,'The teacher was concerned when the star student didn't',shine,-10.946134567260742
+2208,'The teacher was concerned when the star student didn't',study,-5.5402326583862305
+2208,'The teacher was concerned when the star student didn't',participate,-2.7370407581329346
+2208,'The teacher was concerned when the star student didn't',come,-4.506168365478516
+2208,'The teacher was concerned when the star student didn't',respond,-4.044175148010254
+2208,'The teacher was concerned when the star student didn't',sing,-11.278111457824707
+2208,'The teacher was concerned when the star student didn't',answer,-3.0980465412139893
+2208,'The teacher was concerned when the star student didn't',learn,-8.35949420928955
+2208,'The teacher was concerned when the star student didn't',achieve,-5.609914779663086
+2208,'The teacher was concerned when the star student didn't',match,-6.7567596435546875
+2208,'The teacher was concerned when the star student didn't',understand,-4.880455017089844
+2208,'The teacher was concerned when the star student didn't',return,-5.115839004516602
+2208,'The teacher was concerned when the star student didn't',compete,-7.816922187805176
+2208,'The teacher was concerned when the star student didn't',excel anymore,-18.83190631866455
+2208,'The teacher was concerned when the star student didn't',know,-3.493419885635376
+2208,'The teacher was concerned when the star student didn't',comply,-7.933274269104004
+2209,'The younger kids couldn't sit still during',class,-2.841019868850708
+2209,'The younger kids couldn't sit still during',church,-10.763715744018555
+2209,'The younger kids couldn't sit still during',lunch,-3.611849069595337
+2209,'The younger kids couldn't sit still during',mass,-12.3092041015625
+2209,'The younger kids couldn't sit still during',assembly,-7.002202033996582
+2209,'The younger kids couldn't sit still during',recess,-2.7020256519317627
+2209,'The younger kids couldn't sit still during',lecture,-10.645227432250977
+2209,'The younger kids couldn't sit still during',show,-10.162506103515625
+2209,'The younger kids couldn't sit still during',dinner,-5.495589256286621
+2209,'The younger kids couldn't sit still during',speech,-11.43922233581543
+2209,'The younger kids couldn't sit still during',the play,-7.066013544797897
+2209,'The younger kids couldn't sit still during',math,-4.292787551879883
+2209,'The younger kids couldn't sit still during',movies,-10.804603576660156
+2209,'The younger kids couldn't sit still during',naptime,-25.940388679504395
+2209,'The younger kids couldn't sit still during',movies,-10.804603576660156
+2209,'The younger kids couldn't sit still during',chapel,-15.407623291015625
+2209,'The younger kids couldn't sit still during',speeches,-11.819007873535156
+2209,'The younger kids couldn't sit still during',lessons,-7.27730655670166
+2209,'The younger kids couldn't sit still during',recital,-27.72681427001953
+2209,'The younger kids couldn't sit still during',reading,-10.312589645385742
+2209,'The younger kids couldn't sit still during',funeral,-17.393295288085938
+2209,'The younger kids couldn't sit still during',it,-12.869111061096191
+2209,'The younger kids couldn't sit still during',meetings,-8.069165229797363
+2209,'The younger kids couldn't sit still during',the performance,-9.635357111692429
+2209,'The younger kids couldn't sit still during',school,-6.257530212402344
+2209,'The younger kids couldn't sit still during',services,-14.781777381896973
+2209,'The younger kids couldn't sit still during',ceremony,-13.531648635864258
+2209,'The younger kids couldn't sit still during',timeout,-12.90882682800293
+2209,'The younger kids couldn't sit still during',concerts,-12.447874069213867
+2209,'The younger kids couldn't sit still during',singing,-13.989903450012207
+2209,'The younger kids couldn't sit still during',theater,-11.505297660827637
+2209,'The younger kids couldn't sit still during',concert,-12.141338348388672
+2210,'Ashley righteously declared that stealing was a',sin,-5.482198238372803
+2210,'Ashley righteously declared that stealing was a',crime,-4.357565402984619
+2210,'Ashley righteously declared that stealing was a',wrong,-4.0135931968688965
+2210,'Ashley righteously declared that stealing was a',right,-4.756707668304443
+2210,'Ashley righteously declared that stealing was a',cookie,-13.39809799194336
+2210,'Ashley righteously declared that stealing was a',travesty,-27.11078643798828
+2210,'Ashley righteously declared that stealing was a',virtue,-8.256875991821289
+2210,'Ashley righteously declared that stealing was a',illegal,-10.21719741821289
+2210,'Ashley righteously declared that stealing was a',plan,-8.258565902709961
+2211,'Ronald went to the mall to buy a baseball',bat,-3.7405338287353516
+2211,'Ronald went to the mall to buy a baseball',glove,-7.606928825378418
+2211,'Ronald went to the mall to buy a baseball',mitt,-11.997125625610352
+2211,'Ronald went to the mall to buy a baseball',hat,-4.136425971984863
+2211,'Ronald went to the mall to buy a baseball',cap,-1.764090657234192
+2211,'Ronald went to the mall to buy a baseball',card,-4.2847089767456055
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',solution,-12.844470977783203
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',spray,-19.851158142089844
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',rinse,-13.778711318969727
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',wash,-15.232433319091797
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',mist,-15.120223999023438
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',douche,-17.27591896057129
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',brush,-16.66857147216797
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',cleanse,-15.596185684204102
+2212,'Ben cleaned out his blocked sinuses with a saline _________.',injection,-14.360491752624512
+2213,'Paul mispronounced the actor's name and laughed off his',mistake,-9.221633911132812
+2213,'Paul mispronounced the actor's name and laughed off his',error,-12.724392890930176
+2213,'Paul mispronounced the actor's name and laughed off his',ass,-13.49336051940918
+2213,'Paul mispronounced the actor's name and laughed off his',head,-7.817950248718262
+2213,'Paul mispronounced the actor's name and laughed off his',embarrassment,-11.91781234741211
+2213,'Paul mispronounced the actor's name and laughed off his',butt,-15.006540298461914
+2213,'Paul mispronounced the actor's name and laughed off his',jokes,-8.065898895263672
+2213,'Paul mispronounced the actor's name and laughed off his',correction,-10.231897354125977
+2213,'Paul mispronounced the actor's name and laughed off his',ignorance,-16.06011199951172
+2213,'Paul mispronounced the actor's name and laughed off his',gaffe,-27.273218154907227
+2213,'Paul mispronounced the actor's name and laughed off his',sillyness,-27.888514518737793
+2213,'Paul mispronounced the actor's name and laughed off his',stage,-7.332965850830078
+2213,'Paul mispronounced the actor's name and laughed off his',hat,-5.376042366027832
+2213,'Paul mispronounced the actor's name and laughed off his',work,-9.324006080627441
+2213,'Paul mispronounced the actor's name and laughed off his',chair,-8.049762725830078
+2213,'Paul mispronounced the actor's name and laughed off his',blunder,-31.280691146850586
+2214,'In the past, the military only enlisted',men,-2.3177218437194824
+2214,'In the past, the military only enlisted',males,-5.798638820648193
+2214,'In the past, the military only enlisted',teenagers,-10.128276824951172
+2214,'In the past, the military only enlisted',whites,-10.422277450561523
+2214,'In the past, the military only enlisted',heterosexuals,-32.02986717224121
+2214,'In the past, the military only enlisted',elite,-9.217529296875
+2214,'In the past, the military only enlisted',adults,-6.896259784698486
+2214,'In the past, the military only enlisted',boys,-4.903257846832275
+2214,'In the past, the military only enlisted',solider,-26.872573852539062
+2214,'In the past, the military only enlisted',soldier,-9.758235931396484
+2214,'In the past, the military only enlisted',abroad,-13.933141708374023
+2215,'The college students were excited to meet the',professor,-6.189061164855957
+2215,'The college students were excited to meet the',dean,-12.67248249053955
+2215,'The college students were excited to meet the',president,-8.38987922668457
+2215,'The college students were excited to meet the',teacher,-7.921780586242676
+2215,'The college students were excited to meet the',speaker,-12.809243202209473
+2215,'The college students were excited to meet the',celebrity,-11.315291404724121
+2215,'The college students were excited to meet the',actor,-16.733257293701172
+2215,'The college students were excited to meet the',mayor,-12.267922401428223
+2215,'The college students were excited to meet the',pope,-15.958056449890137
+2215,'The college students were excited to meet the',politicians,-14.853919982910156
+2215,'The college students were excited to meet the',lecturer,-10.813611030578613
+2215,'The college students were excited to meet the',elders,-12.699629783630371
+2215,'The college students were excited to meet the',roommates,-26.206294059753418
+2215,'The college students were excited to meet the',alumni,-12.708413124084473
+2215,'The college students were excited to meet the',author,-11.941044807434082
+2215,'The college students were excited to meet the',man,-11.499173164367676
+2215,'The college students were excited to meet the',artist,-14.760625839233398
+2215,'The college students were excited to meet the',graduate,-12.457009315490723
+2215,'The college students were excited to meet the',guest,-14.009407043457031
+2215,'The college students were excited to meet the',cheerleaders,-30.922602653503418
+2215,'The college students were excited to meet the',athlete,-11.298115730285645
+2215,'The college students were excited to meet the',standards,-12.052197456359863
+2215,'The college students were excited to meet the',composer,-16.604324340820312
+2216,'Kara couldn't believe that her guess was',right,-4.131993293762207
+2216,'Kara couldn't believe that her guess was',correct,-0.5305555462837219
+2216,'Kara couldn't believe that her guess was',wrong,-6.597724914550781
+2216,'Kara couldn't believe that her guess was',doing,-14.477275848388672
+2216,'Kara couldn't believe that her guess was',leaving,-14.335147857666016
+2216,'Kara couldn't believe that her guess was',obama,-33.24669075012207
+2216,'Kara couldn't believe that her guess was',incorrect,-7.605546951293945
+2216,'Kara couldn't believe that her guess was',bad,-14.556272506713867
+2216,'Kara couldn't believe that her guess was',off,-11.437668800354004
+2217,'The children were quiet after hearing their parents',argue,-9.95108699798584
+2217,'The children were quiet after hearing their parents',fight,-10.087268829345703
+2217,'The children were quiet after hearing their parents',yell,-11.161795616149902
+2217,'The children were quiet after hearing their parents',scream,-9.658105850219727
+2217,'The children were quiet after hearing their parents',voices,-9.914916038513184
+2217,'The children were quiet after hearing their parents',quarrel,-32.59613513946533
+2217,'The children were quiet after hearing their parents',warning,-11.98560905456543
+2217,'The children were quiet after hearing their parents',talk,-6.355564117431641
+2217,'The children were quiet after hearing their parents',admonishion,-51.08028984069824
+2217,'The children were quiet after hearing their parents',died,-6.362700462341309
+2217,'The children were quiet after hearing their parents',concerns,-14.511923789978027
+2217,'The children were quiet after hearing their parents',car,-11.065863609313965
+2217,'The children were quiet after hearing their parents',whisper,-8.720502853393555
+2217,'The children were quiet after hearing their parents',arguing,-9.958333969116211
+2217,'The children were quiet after hearing their parents',lecture,-14.105303764343262
+2217,'The children were quiet after hearing their parents',orders,-13.784363746643066
+2217,'The children were quiet after hearing their parents',crying,-8.832164764404297
+2217,'The children were quiet after hearing their parents',arguement,-48.59919261932373
+2217,'The children were quiet after hearing their parents',footsteps,-14.172764778137207
+2218,'Sharon majored in Education to learn how to',teach,-1.370699167251587
+2218,'Sharon majored in Education to learn how to',sow,-15.985045433044434
+2218,'Sharon majored in Education to learn how to',spell,-12.540952682495117
+2218,'Sharon majored in Education to learn how to',learn,-6.618350982666016
+2218,'Sharon majored in Education to learn how to',read,-6.875546455383301
+2219,'Mitch didn't think he looked formal enough without a',tie,-4.690036773681641
+2219,'Mitch didn't think he looked formal enough without a',suit,-3.6668527126312256
+2219,'Mitch didn't think he looked formal enough without a',tuxedo,-33.64208698272705
+2219,'Mitch didn't think he looked formal enough without a',bowtie,-15.224946975708008
+2219,'Mitch didn't think he looked formal enough without a',jacket,-2.7709310054779053
+2219,'Mitch didn't think he looked formal enough without a',cane,-9.582209587097168
+2219,'Mitch didn't think he looked formal enough without a',hat,-2.541442632675171
+2219,'Mitch didn't think he looked formal enough without a',pair of jeans,-29.173490524291992
+2219,'Mitch didn't think he looked formal enough without a',tux,-21.06443977355957
+2219,'Mitch didn't think he looked formal enough without a',beard,-6.85169792175293
+2219,'Mitch didn't think he looked formal enough without a',teach,-14.859822273254395
+2219,'Mitch didn't think he looked formal enough without a',cummerbund,-67.21500778198242
+2220,'Before the gala, Katie couldn't decide what to',wear,-2.870098114013672
+2220,'Before the gala, Katie couldn't decide what to',do,-0.6166954636573792
+2220,'Before the gala, Katie couldn't decide what to',eat,-3.5525665283203125
+2221,'Young children playing with small toys may potentially',choke,-8.950016975402832
+2221,'Young children playing with small toys may potentially',die,-8.21796703338623
+2221,'Young children playing with small toys may potentially',harm,-5.468767166137695
+2221,'Young children playing with small toys may potentially',learn,-8.593183517456055
+2221,'Young children playing with small toys may potentially',fall,-4.879517555236816
+2221,'Young children playing with small toys may potentially',dangerous,-8.462657928466797
+2221,'Young children playing with small toys may potentially',hurt,-4.43348503112793
+2221,'Young children playing with small toys may potentially',laugh,-12.281692504882812
+2221,'Young children playing with small toys may potentially',swallow,-10.47558879852295
+2221,'Young children playing with small toys may potentially',unsafe,-12.446907997131348
+2221,'Young children playing with small toys may potentially',fight,-9.278470039367676
+2221,'Young children playing with small toys may potentially',harm themselves,-16.267555236816406
+2221,'Young children playing with small toys may potentially',share,-8.265756607055664
+2221,'Young children playing with small toys may potentially',kill,-8.079557418823242
+2221,'Young children playing with small toys may potentially',hurt them,-18.972543716430664
+2221,'Young children playing with small toys may potentially',cry,-9.92465877532959
+2221,'Young children playing with small toys may potentially',self harm,-15.740165710449219
+2221,'Young children playing with small toys may potentially',slip,-6.625107765197754
+2221,'Young children playing with small toys may potentially',be happy,-18.193155527114868
+2221,'Young children playing with small toys may potentially',injure,-23.242032051086426
+2221,'Young children playing with small toys may potentially',run,-6.665932655334473
+2221,'Young children playing with small toys may potentially',hurt themselves,-15.23227310180664
+2222,'The tiny black thing on her cheek was a lash',mark,-4.288082122802734
+2222,'The tiny black thing on her cheek was a lash',hair,-14.15529727935791
+2222,'The tiny black thing on her cheek was a lash',fallen,-18.429847717285156
+2222,'The tiny black thing on her cheek was a lash',speck,-34.306135177612305
+2222,'The tiny black thing on her cheek was a lash',extension,-13.059394836425781
+2222,'The tiny black thing on her cheek was a lash',fragment,-14.8683500289917
+2222,'The tiny black thing on her cheek was a lash',mole,-15.065505027770996
+2222,'The tiny black thing on her cheek was a lash',piece,-15.381871223449707
+2222,'The tiny black thing on her cheek was a lash',from her eye,-32.73077964782715
+2222,'The tiny black thing on her cheek was a lash',bug,-12.934155464172363
+2222,'The tiny black thing on her cheek was a lash',mite,-26.47329330444336
+2222,'The tiny black thing on her cheek was a lash',stuck,-12.631658554077148
+2222,'The tiny black thing on her cheek was a lash',extender,-37.375264167785645
+2222,'The tiny black thing on her cheek was a lash',flake,-27.84117603302002
+2222,'The tiny black thing on her cheek was a lash',eye,-13.943523406982422
+2222,'The tiny black thing on her cheek was a lash',loose,-18.499235153198242
+2222,'The tiny black thing on her cheek was a lash',whip,-15.50529670715332
+2222,'The tiny black thing on her cheek was a lash',burn,-10.925436973571777
+2222,'The tiny black thing on her cheek was a lash',part,-13.153203964233398
+2222,'The tiny black thing on her cheek was a lash',spot,-9.611411094665527
+2222,'The tiny black thing on her cheek was a lash',from her eyelashes,-49.41933345794678
+2222,'The tiny black thing on her cheek was a lash',shed,-12.322222709655762
+2222,'The tiny black thing on her cheek was a lash',cut,-9.962822914123535
+2222,'The tiny black thing on her cheek was a lash',that had fallen out,-45.78549766540527
+2222,'The tiny black thing on her cheek was a lash',enhancer,-33.12346649169922
+2222,'The tiny black thing on her cheek was a lash',tip,-13.80010986328125
+2222,'The tiny black thing on her cheek was a lash',speckle,-51.58459281921387
+2222,'The tiny black thing on her cheek was a lash',thing,-12.317492485046387
+2222,'The tiny black thing on her cheek was a lash',that fell,-18.884262084960938
+2222,'The tiny black thing on her cheek was a lash',smear,-15.009594917297363
+2222,'The tiny black thing on her cheek was a lash',stray,-20.640928268432617
+2222,'The tiny black thing on her cheek was a lash',break,-13.724038124084473
+2222,'The tiny black thing on her cheek was a lash',brush,-10.94096565246582
+2222,'The tiny black thing on her cheek was a lash',dot,-7.773860931396484
+2222,'The tiny black thing on her cheek was a lash',smudge,-30.522164344787598
+2222,'The tiny black thing on her cheek was a lash',blemish,-48.37569236755371
+2222,'The tiny black thing on her cheek was a lash',remnant,-30.584315299987793
+2222,'The tiny black thing on her cheek was a lash',from,-6.0848188400268555
+2222,'The tiny black thing on her cheek was a lash',mistake,-13.023336410522461
+2223,'She never recovered because there was damage to a',nerves,-12.519381523132324
+2223,'She never recovered because there was damage to a',lung,-9.327828407287598
+2223,'She never recovered because there was damage to a',artery,-13.234521865844727
+2223,'She never recovered because there was damage to a',brain,-6.550924301147461
+2223,'She never recovered because there was damage to a',kidney,-7.305842399597168
+2223,'She never recovered because there was damage to a',organ,-10.568490982055664
+2223,'She never recovered because there was damage to a',vein,-8.55949878692627
+2223,'She never recovered because there was damage to a',lobe,-23.13337230682373
+2223,'She never recovered because there was damage to a',valve,-10.268067359924316
+2223,'She never recovered because there was damage to a',limb,-9.034478187561035
+2223,'She never recovered because there was damage to a',bone,-6.865424156188965
+2223,'She never recovered because there was damage to a',relationship,-9.307732582092285
+2223,'She never recovered because there was damage to a',tendon,-12.29574966430664
+2223,'She never recovered because there was damage to a',reputation,-9.092556953430176
+2223,'She never recovered because there was damage to a',nerves,-12.519381523132324
+2223,'She never recovered because there was damage to a',ligament,-22.330477714538574
+2223,'She never recovered because there was damage to a',heart,-7.88265323638916
+2223,'She never recovered because there was damage to a',core,-7.926877021789551
+2223,'She never recovered because there was damage to a',liver,-10.11831283569336
+2223,'She never recovered because there was damage to a',fault,-7.3088178634643555
+2223,'She never recovered because there was damage to a',finger,-8.565323829650879
+2223,'She never recovered because there was damage to a',home,-8.416343688964844
+2223,'She never recovered because there was damage to a',her,-6.382370948791504
+2223,'She never recovered because there was damage to a',degree,-13.925898551940918
+2223,'She never recovered because there was damage to a',part,-3.468266248703003
+2223,'She never recovered because there was damage to a',neuron,-11.183011054992676
+2223,'She never recovered because there was damage to a',major organ,-19.051525115966797
+2223,'She never recovered because there was damage to a',place,-7.556471824645996
+2224,'They discussed whether or not the word was a',noun,-5.6236467361450195
+2224,'They discussed whether or not the word was a',verb,-6.447640419006348
+2224,'They discussed whether or not the word was a',curse,-8.694819450378418
+2224,'They discussed whether or not the word was a',synonym,-4.237022399902344
+2224,'They discussed whether or not the word was a',right,-7.162191390991211
+2224,'They discussed whether or not the word was a',mistake,-6.701845169067383
+2224,'They discussed whether or not the word was a',correct,-5.374826431274414
+2224,'They discussed whether or not the word was a',winner,-8.561408042907715
+2224,'They discussed whether or not the word was a',sin,-10.388809204101562
+2224,'They discussed whether or not the word was a',word,-4.658967971801758
+2224,'They discussed whether or not the word was a',insult,-13.052062034606934
+2224,'They discussed whether or not the word was a',swear,-8.856633186340332
+2224,'They discussed whether or not the word was a',slur,-14.542813301086426
+2224,'They discussed whether or not the word was a',conundrum,-44.451415061950684
+2224,'They discussed whether or not the word was a',title,-7.848529815673828
+2224,'They discussed whether or not the word was a',legitimate,-7.348694801330566
+2224,'They discussed whether or not the word was a',obscenity,-30.282323837280273
+2224,'They discussed whether or not the word was a',profanity,-27.06910800933838
+2224,'They discussed whether or not the word was a',puzzle,-8.343772888183594
+2224,'They discussed whether or not the word was a',acceptable,-10.325374603271484
+2224,'They discussed whether or not the word was a',antonym,-23.666470527648926
+2224,'They discussed whether or not the word was a',promise,-8.41162109375
+2224,'They discussed whether or not the word was a',euphemism,-40.73949718475342
+2224,'They discussed whether or not the word was a',bad,-7.359744071960449
+2224,'They discussed whether or not the word was a',threat,-8.299092292785645
+2224,'They discussed whether or not the word was a',wrong,-10.738585472106934
+2224,'They discussed whether or not the word was a',vowel,-4.623528480529785
+2224,'They discussed whether or not the word was a',homonym,-19.57135009765625
+2224,'They discussed whether or not the word was a',neologism,-39.402371406555176
+2224,'They discussed whether or not the word was a',noun or adjective,-24.790480613708496
+2224,'They discussed whether or not the word was a',crime,-8.94467544555664
+2224,'They discussed whether or not the word was a',good,-4.794957160949707
+2224,'They discussed whether or not the word was a',fact,-7.238067626953125
+2225,'After chugging the soda, Peter let out a loud',burp,-25.135544776916504
+2225,'After chugging the soda, Peter let out a loud',belch,-31.397364616394043
+2225,'After chugging the soda, Peter let out a loud',yell,-9.984984397888184
+2226,'The man had extreme pain in his joints from',arthritis,-10.67642879486084
+2226,'The man had extreme pain in his joints from',running,-7.379009246826172
+2226,'The man had extreme pain in his joints from',working,-5.8595685958862305
+2226,'The man had extreme pain in his joints from',exercising,-10.337932586669922
+2226,'The man had extreme pain in his joints from',surgery,-10.889483451843262
+2226,'The man had extreme pain in his joints from',injury,-10.474905014038086
+2226,'The man had extreme pain in his joints from',sports,-10.706636428833008
+2226,'The man had extreme pain in his joints from',swelling,-15.567839622497559
+2226,'The man had extreme pain in his joints from',injuries,-10.852354049682617
+2226,'The man had extreme pain in his joints from',squatting,-29.155447959899902
+2226,'The man had extreme pain in his joints from',fighting,-8.79706859588623
+2226,'The man had extreme pain in his joints from',sitting,-8.22060489654541
+2226,'The man had extreme pain in his joints from',gout,-25.70821189880371
+2226,'The man had extreme pain in his joints from',old age,-15.265921592712402
+2226,'The man had extreme pain in his joints from',overwork,-17.9577054977417
+2226,'The man had extreme pain in his joints from',stretching,-8.257248878479004
+2226,'The man had extreme pain in his joints from',falling,-9.57740592956543
+2226,'The man had extreme pain in his joints from',accidents,-10.086807250976562
+2226,'The man had extreme pain in his joints from',work,-6.217008590698242
+2226,'The man had extreme pain in his joints from',walking,-6.858122825622559
+2226,'The man had extreme pain in his joints from',carpal tunnel,-39.65842819213867
+2227,'It's pleasant to watch the sunset from the',beach,-0.28170934319496155
+2227,'It's pleasant to watch the sunset from the',hill,-9.014985084533691
+2227,'It's pleasant to watch the sunset from the',porch,-13.053611755371094
+2227,'It's pleasant to watch the sunset from the',shore,-6.621470928192139
+2227,'It's pleasant to watch the sunset from the',balcony,-9.73472785949707
+2227,'It's pleasant to watch the sunset from the',mountains,-6.591946125030518
+2227,'It's pleasant to watch the sunset from the',deck,-10.4647855758667
+2227,'It's pleasant to watch the sunset from the',roof,-12.359854698181152
+2227,'It's pleasant to watch the sunset from the',boat,-7.960647106170654
+2227,'It's pleasant to watch the sunset from the',lake,-7.23124361038208
+2227,'It's pleasant to watch the sunset from the',ocean,-4.483529567718506
+2227,'It's pleasant to watch the sunset from the',dock,-10.83957290649414
+2227,'It's pleasant to watch the sunset from the',pier,-11.746772766113281
+2227,'It's pleasant to watch the sunset from the',cliff,-9.486730575561523
+2227,'It's pleasant to watch the sunset from the',bay,-8.6432523727417
+2227,'It's pleasant to watch the sunset from the',terrace,-12.633956909179688
+2227,'It's pleasant to watch the sunset from the',sea,-6.301415920257568
+2227,'It's pleasant to watch the sunset from the',peak,-9.385557174682617
+2227,'It's pleasant to watch the sunset from the',coast,-7.744785785675049
+2227,'It's pleasant to watch the sunset from the',east,-5.857837200164795
+2227,'It's pleasant to watch the sunset from the',rooftop,-10.075080871582031
+2227,'It's pleasant to watch the sunset from the',sand,-10.071883201599121
+2227,'It's pleasant to watch the sunset from the',patio,-13.759716033935547
+2227,'It's pleasant to watch the sunset from the',tower,-11.644501686096191
+2227,'It's pleasant to watch the sunset from the',country,-8.501516342163086
+2227,'It's pleasant to watch the sunset from the',bridge,-10.361255645751953
+2227,'It's pleasant to watch the sunset from the',veranda,-27.89287281036377
+2227,'It's pleasant to watch the sunset from the',water,-9.430086135864258
+2228,'Isaac didn't know what her behavior could',mean,-3.5251049995422363
+2228,'Isaac didn't know what her behavior could',do,-1.40214204788208
+2228,'Isaac didn't know what her behavior could',cause,-4.62561559677124
+2228,'Isaac didn't know what her behavior could',be,-1.3017220497131348
+2228,'Isaac didn't know what her behavior could',change,-5.62278413772583
+2228,'Isaac didn't know what her behavior could',accomplish,-8.394668579101562
+2228,'Isaac didn't know what her behavior could',entail,-8.123374938964844
+2228,'Isaac didn't know what her behavior could',reveal,-7.620574474334717
+2228,'Isaac didn't know what her behavior could',harm,-8.547744750976562
+2228,'Isaac didn't know what her behavior could',become,-7.418498516082764
+2228,'Isaac didn't know what her behavior could',suggest,-10.202751159667969
+2228,'Isaac didn't know what her behavior could',solve,-9.981042861938477
+2228,'Isaac didn't know what her behavior could',fix,-11.13330078125
+2228,'Isaac didn't know what her behavior could',happen,-6.530503749847412
+2228,'Isaac didn't know what her behavior could',illicit,-17.83570098876953
+2228,'Isaac didn't know what her behavior could',achieve,-6.880436420440674
+2228,'Isaac didn't know what her behavior could',bring,-7.351729869842529
+2228,'Isaac didn't know what her behavior could',tolerate,-9.070638656616211
+2228,'Isaac didn't know what her behavior could',lead,-3.5204834938049316
+2228,'Isaac didn't know what her behavior could',improve,-8.618017196655273
+2229,'What Linda admired most about her mother was her',tenacity,-18.909507751464844
+2229,'What Linda admired most about her mother was her',courage,-6.722579479217529
+2229,'What Linda admired most about her mother was her',honesty,-7.5280938148498535
+2229,'What Linda admired most about her mother was her',determination,-6.248281002044678
+2229,'What Linda admired most about her mother was her',strength,-4.785532474517822
+2229,'What Linda admired most about her mother was her',kindness,-5.685299396514893
+2229,'What Linda admired most about her mother was her',patience,-5.196460247039795
+2229,'What Linda admired most about her mother was her',fortitude,-23.472763061523438
+2229,'What Linda admired most about her mother was her',beauty,-5.209789752960205
+2229,'What Linda admired most about her mother was her',style,-6.73431921005249
+2229,'What Linda admired most about her mother was her',intelligence,-5.230241298675537
+2229,'What Linda admired most about her mother was her',resilience,-5.42598295211792
+2229,'What Linda admired most about her mother was her',work ethic,-21.908842086791992
+2229,'What Linda admired most about her mother was her',spirit,-6.506397724151611
+2229,'What Linda admired most about her mother was her',love,-2.8365254402160645
+2229,'What Linda admired most about her mother was her',cleverness,-19.21109962463379
+2229,'What Linda admired most about her mother was her',hardwork,-23.38153886795044
+2229,'What Linda admired most about her mother was her',confidence,-5.309689044952393
+2229,'What Linda admired most about her mother was her',loyalty,-6.1189799308776855
+2229,'What Linda admired most about her mother was her',traditions,-9.908004760742188
+2229,'What Linda admired most about her mother was her',desires,-12.577754974365234
+2229,'What Linda admired most about her mother was her',spunk,-23.722681999206543
+2229,'What Linda admired most about her mother was her',hair,-6.307718753814697
+2229,'What Linda admired most about her mother was her',resolve,-10.50261116027832
+2229,'What Linda admired most about her mother was her',drive,-8.86111831665039
+2229,'What Linda admired most about her mother was her',firmness,-19.128860473632812
+2229,'What Linda admired most about her mother was her',faith,-10.19287395477295
+2229,'What Linda admired most about her mother was her',charm,-7.032983303070068
+2229,'What Linda admired most about her mother was her',persistance,-28.310422897338867
+2229,'What Linda admired most about her mother was her',independence,-6.09074068069458
+2229,'What Linda admired most about her mother was her',wealth,-8.391592025756836
+2229,'What Linda admired most about her mother was her',outlook,-12.466402053833008
+2229,'What Linda admired most about her mother was her',attitude,-7.109532833099365
+2229,'What Linda admired most about her mother was her',looks,-12.557064056396484
+2229,'What Linda admired most about her mother was her',voice,-7.388302326202393
+2229,'What Linda admired most about her mother was her',manners,-13.99020767211914
+2229,'What Linda admired most about her mother was her',dedication,-7.243969440460205
+2229,'What Linda admired most about her mother was her',passion,-4.907349109649658
+2229,'What Linda admired most about her mother was her',poise,-25.201313018798828
+2229,'What Linda admired most about her mother was her',bravery,-9.269180297851562
+2229,'What Linda admired most about her mother was her',steadfastness,-20.504634857177734
+2229,'What Linda admired most about her mother was her',brains,-12.135246276855469
+2229,'What Linda admired most about her mother was her',grit,-10.757593154907227
+2229,'What Linda admired most about her mother was her',temper,-11.284229278564453
+2229,'What Linda admired most about her mother was her',personality,-5.617126941680908
+2229,'What Linda admired most about her mother was her',composure,-23.189531326293945
+2229,'What Linda admired most about her mother was her',face,-10.093955993652344
+2230,'Zeke's closest friends threw him a giant birthday',party,-0.9553718566894531
+2230,'Zeke's closest friends threw him a giant birthday',bash,-6.254386901855469
+2230,'Zeke's closest friends threw him a giant birthday',celebration,-7.765146255493164
+2231,'The roommates ended their friendship after a silly',argument,-7.474689960479736
+2231,'The roommates ended their friendship after a silly',fight,-7.135763645172119
+2231,'The roommates ended their friendship after a silly',spat,-13.560632705688477
+2231,'The roommates ended their friendship after a silly',quarrel,-25.82364845275879
+2231,'The roommates ended their friendship after a silly',disagreement,-8.971955299377441
+2231,'The roommates ended their friendship after a silly',squabble,-28.221619606018066
+2231,'The roommates ended their friendship after a silly',gag,-14.893818855285645
+2231,'The roommates ended their friendship after a silly',tiff,-23.13129186630249
+2231,'The roommates ended their friendship after a silly',mistake,-4.207611560821533
+2231,'The roommates ended their friendship after a silly',smile,-12.156003952026367
+2231,'The roommates ended their friendship after a silly',misunderstanding,-6.960388660430908
+2231,'The roommates ended their friendship after a silly',feud,-13.008362770080566
+2232,'Jared burned his tongue while drinking the hot',coffee,-7.812052249908447
+2232,'Jared burned his tongue while drinking the hot',tea,-5.416008472442627
+2232,'Jared burned his tongue while drinking the hot',cocoa,-8.754456520080566
+2232,'Jared burned his tongue while drinking the hot',chocolate,-0.11798901110887527
+2232,'Jared burned his tongue while drinking the hot',soup,-8.882112503051758
+2232,'Jared burned his tongue while drinking the hot',cider,-9.572444915771484
+2232,'Jared burned his tongue while drinking the hot',beverage,-9.340356826782227
+2233,'Lyndon hoped there wouldn't be too much garbage to',clean,-5.331361770629883
+2233,'Lyndon hoped there wouldn't be too much garbage to',collect,-1.9717071056365967
+2233,'Lyndon hoped there wouldn't be too much garbage to',haul,-11.742838859558105
+2233,'Lyndon hoped there wouldn't be too much garbage to',carry,-4.822614669799805
+2233,'Lyndon hoped there wouldn't be too much garbage to',remove,-5.969923973083496
+2233,'Lyndon hoped there wouldn't be too much garbage to',sort,-3.0630013942718506
+2233,'Lyndon hoped there wouldn't be too much garbage to',move,-5.879661560058594
+2233,'Lyndon hoped there wouldn't be too much garbage to',gather,-8.675969123840332
+2233,'Lyndon hoped there wouldn't be too much garbage to',dump,-7.829919815063477
+2233,'Lyndon hoped there wouldn't be too much garbage to',take,-5.036626815795898
+2233,'Lyndon hoped there wouldn't be too much garbage to',toss,-7.948888778686523
+2233,'Lyndon hoped there wouldn't be too much garbage to',burn,-7.117074966430664
+2233,'Lyndon hoped there wouldn't be too much garbage to',dispose,-5.858348846435547
+2233,'Lyndon hoped there wouldn't be too much garbage to',empty,-7.117541313171387
+2233,'Lyndon hoped there wouldn't be too much garbage to',throw,-4.00523567199707
+2233,'Lyndon hoped there wouldn't be too much garbage to',pick,-5.56258487701416
+2233,'Lyndon hoped there wouldn't be too much garbage to',discard,-5.430538177490234
+2233,'Lyndon hoped there wouldn't be too much garbage to',throw out,-13.664080619812012
+2233,'Lyndon hoped there wouldn't be too much garbage to',compact,-9.244356155395508
+2233,'Lyndon hoped there wouldn't be too much garbage to',clear,-7.225030899047852
+2233,'Lyndon hoped there wouldn't be too much garbage to',use,-7.885616302490234
+2233,'Lyndon hoped there wouldn't be too much garbage to',take out,-14.69547176361084
+2233,'Lyndon hoped there wouldn't be too much garbage to',trash,-10.130477905273438
+2233,'Lyndon hoped there wouldn't be too much garbage to',bag,-9.325844764709473
+2233,'Lyndon hoped there wouldn't be too much garbage to',pick up,-15.512672424316406
+2234,'In these woods there are no longer animals to',hunt,-7.093498229980469
+2234,'In these woods there are no longer animals to',fear,-5.16196346282959
+2234,'In these woods there are no longer animals to',see,-4.7323455810546875
+2234,'In these woods there are no longer animals to',kill,-3.6993579864501953
+2234,'In these woods there are no longer animals to',eat,-2.7635812759399414
+2234,'In these woods there are no longer animals to',watch,-4.5966386795043945
+2234,'In these woods there are no longer animals to',feed,-5.837007522583008
+2234,'In these woods there are no longer animals to',photograph,-9.988033294677734
+2234,'In these woods there are no longer animals to',observe,-4.617788314819336
+2234,'In these woods there are no longer animals to',foster,-8.298869132995605
+2234,'In these woods there are no longer animals to',shoot,-8.009788513183594
+2234,'In these woods there are no longer animals to',keep,-3.5340499877929688
+2234,'In these woods there are no longer animals to',pet,-8.444799423217773
+2234,'In these woods there are no longer animals to',attack,-6.393756866455078
+2234,'In these woods there are no longer animals to',roam,-4.125767707824707
+2234,'In these woods there are no longer animals to',tame,-10.829880714416504
+2234,'In these woods there are no longer animals to',run,-7.820579528808594
+2234,'In these woods there are no longer animals to',worry about,-15.064313888549805
+2234,'In these woods there are no longer animals to',catch,-6.209875106811523
+2235,'The lawyer found a loophole that made the contract',void,-5.8932600021362305
+2235,'The lawyer found a loophole that made the contract',invalid,-4.016539573669434
