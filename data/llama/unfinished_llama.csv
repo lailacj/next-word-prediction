@@ -1,1 +1,14 @@
 sentence_num,sentence,word,llama_prob
+2500,'Since the child was only seventeen, the contract was',void,-4.728891372680664
+2500,'Since the child was only seventeen, the contract was',null,-5.1390533447265625
+2500,'Since the child was only seventeen, the contract was',invalid,-4.861461639404297
+2500,'Since the child was only seventeen, the contract was',illegal,-5.304882049560547
+2500,'Since the child was only seventeen, the contract was',nonbinding,-10.265678882598877
+2500,'Since the child was only seventeen, the contract was',broken,-5.836891174316406
+2500,'Since the child was only seventeen, the contract was',short,-6.521784782409668
+2500,'Since the child was only seventeen, the contract was',drawn,-4.891908645629883
+2500,'Since the child was only seventeen, the contract was',bad,-9.513842582702637
+2501,'During summer break, the family rented a lake',house,-0.6162505745887756
+2501,'During summer break, the family rented a lake',cabin,-1.4862074851989746
+2501,'During summer break, the family rented a lake',cottage,-2.628261089324951
+2502,'The baseball player was excited when he got a',hit,-5.495872497558594

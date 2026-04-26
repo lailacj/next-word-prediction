@@ -6,7 +6,7 @@ def load_cloze_data(file_path: str):
     this function parses a csv and file and returns a list of dictionaries,
     where each dictionary represents a row in the csv file.
     '''
-    data = pd.read_csv(file_path, sep=',', quotechar='"', skipinitialspace=True, dtype=str)  # Read the CSV file into a DataFrame
+    data = pd.read_csv(file_path, sep=',', quotechar='"', skipinitialspace=True, dtype=str, keep_default_na=False)  # Read the CSV file into a DataFrame
     data = data.to_dict(orient='records')
 
     '''
