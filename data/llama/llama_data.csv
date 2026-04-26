@@ -39800,7 +39800,6 @@ sentence_num,sentence,word,llama_prob
 2190,'The old barge could be seen moving through the',straits,-8.498861312866211
 2191,'The lawyer shredded the contract after it was declared',void,-2.2351372241973877
 2191,'The lawyer shredded the contract after it was declared',invalid,-1.1929848194122314
-sentence_num,sentence,word,llama_prob
 2192,'The woman wasn't sure when the baby was',due,-3.6535394191741943
 2192,'The woman wasn't sure when the baby was',born,-0.6575238704681396
 2192,'The woman wasn't sure when the baby was',hungry,-11.333789825439453
