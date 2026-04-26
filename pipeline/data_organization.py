@@ -24,7 +24,7 @@ def load_cloze_data(file_path: str):
     for row in data:
         if row['sentence_number'] not in masked_words:
             masked_words[row['sentence_number']] = [tuple([row["word"], row["cloze_prob"]])]
-            sentences.append(row['sentence'])
+            sentences.append(row['sentence'].strip("\"'")) #remove the leading and trailing quotes from the sentence to avoid tha they aloso get captured as part of the sentence as well. 
 
         else:
             masked_words[row['sentence_number']].append(tuple([row["word"], row["cloze_prob"]]))
