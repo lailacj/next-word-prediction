@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/users/diriho/data/diriho/next-word-prediction/pipeline/run_pipeline.py", line 56, in <module>
+    main()
+  File "/users/diriho/data/diriho/next-word-prediction/pipeline/run_pipeline.py", line 45, in main
+    word_token_ids = model.tokenize_word(word)
+  File "/users/diriho/.local/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "/oscar/data/rfeiman/diriho/next-word-prediction/pipeline/language_models.py", line 265, in tokenize_word
+    target_word = " " + word.strip()
+AttributeError: 'float' object has no attribute 'strip'
