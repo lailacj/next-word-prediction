@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/users/diriho/data/diriho/next-word-prediction/pipeline/run_pipeline.py", line 56, in <module>
+    main()
+  File "/users/diriho/data/diriho/next-word-prediction/pipeline/run_pipeline.py", line 41, in main
+    word_list = get_list_words_given_sentence(masked[str(idx+i)])
+KeyError: '2236'
