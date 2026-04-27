@@ -35,7 +35,7 @@ def main():
     #             with open(model.get_ouptut_file(), 'a') as f:
     #                 f.write(f"{idx},'{sentence}',{word},{prob}\n")
 
-    model = LlamaModel()
+    model = DeepSeekModel()
     i = 2500
     for idx, sentence in enumerate(sentences, start=0):
         word_list = get_list_words_given_sentence(masked[str(idx+i)])
