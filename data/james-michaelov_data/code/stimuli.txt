@@ -1,0 +1,9 @@
+../stimuli/lago_2019.stims
+../stimuli/luke_2018.stims
+../stimuli/michaelov_2023.stims
+../stimuli/nieuwland_2018_nouns.stims
+../stimuli/ryskin_2021.stims
+../stimuli/smith_2013.stims
+../stimuli/szewczyk_2022.stims
+../stimuli/kennedy_2003.stims
+../stimuli/futrell_2018.stims
