@@ -1,0 +1,501 @@
+FullSentence	TargetWords	CosineSimilarity
+Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major raise	raise	0.536149765094393
+The cigar burned a hole in the couch	couch	0.38678054066917655
+His first film was a failure, but he learned some techniques in that first try	try	0.5449572041816984
+He was hired for the job because of his fresh new look	look	0.6239854776504093
+The journal issue that has the new article about diseases of the eye is still in print	print	0.3973355190661745
+Every spring they held the annual ball	ball	0.37006114243774135
+Penelope started to assemble her new bicycle, but was missing the wheels	wheels	0.35911138608664883
+The restaurant will reopen with new management	management	0.4019639023275763
+Jennifer disliked walking under the trees at the edge of the park because they were always full of bugs	bugs	0.3435487848464793
+The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or pretty	pretty	0.6987777863616826
+I don't know why people like to see their initials in print	print	0.3401103241577852
+The gem cutter examined the ruby very closely before cutting because he knew that one this large was very rare	rare	0.5050894136605305
+They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's temple	temple	0.4772206999035069
+He took a job training dogs for the police	police	0.4559798194896678
+The conductor gave detailed instructions to the orchestra	orchestra	0.3559416596083925
+Down in the basement, Steve and Robert were playing cards	cards	0.28203387912185895
+After the most recent price increase, the small business owner decided to order his office supplies from another company	company	0.6367998723921942
+Sharon was sad that she had lost her dog	dog	0.43352857566796765
+All of armed services will admit women, but females are barred from combat	combat	0.4326005583526231
+After the divorce, she had to move out of the expensive house to an apartment that was cheap	cheap	0.3638749796724562
+His tactics usually turned out to be beneficial for the business, but they often came in conflict with his morals	morals	0.3595618072032287
+Some of his jokes were crummy, but those one-liners were hilarious	hilarious	0.533413683707114
+The inspector from the health department found a roach in a very expensive restaurant	restaurant	0.4380320171857608
+The conductor had no idea that the train had been boarded by a known felon	felon	0.1641601266631677
+The nurse brought him a glass of juice and his medicine	medicine	0.46150300451662285
+The teacher was not looking forward to another year of school	school	0.5843340034950804
+Steve skipped his annual checkup for another year	year	0.6442819191724605
+The candidate wanted to please everyone without making any commitments, so his speech was deliberately vague	vague	0.45173423005842406
+She poured water on the plants	plants	0.3776801718915098
+Mark liked the older houses, but Susan wanted to buy one that was new and modern	modern	0.4770689638625083
+In an old sitcom, he was the wise family doctor	doctor	0.4894128028974214
+The government controlled the news media, so most of the reports from the war zone were censored	censored	0.22707364845661637
+Grinning wherever he went, it was easy to tell that Carl was proud of his new gold medal	medal	0.33683138926866885
+During the summer, the children hung out at the pool	pool	0.4199846478267777
+The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be heroic	heroic	0.38291824863234714
+The little girl kept a lock on her diary	diary	0.35040665989784214
+Flying low above her, Bernice could hear the plane	plane	0.46014203290112277
+Perry heard a grinding noise coming from his car	car	0.42789366044502763
+If Jim's manager is incompetent, he has a legitimate right to complain	complain	0.4870313142178455
+In the best part of the movie, the hero has to impersonate the villain	villain	0.3601316736649328
+The princess wore a crown	crown	0.46490808389373683
+Jason was disappointed when the other scouts scared off the elk by loudly beating the drum	drum	0.30028469712574046
+After the flood, the house smelled of mildew and everything in it was ruined	ruined	0.5205241631573229
+Everyone on the scene gathered around to look at the accident	accident	0.35892016786846925
+The final score of the game was tied	tied	0.43769905283534616
+After swimming the English Channel, Bonita was cold and completely exhausted	exhausted	0.3878405551413522
+She had the data to back up everything she said, so the hostile questions did not shake her confidence	confidence	0.48621615823085707
+The new dress was very pretty, but it was cut from an unusual fabric	fabric	0.37499308205383364
+When the little girl saw the big dog lumbering towards her, she began to run	run	0.5321447323609347
+From her house a half mile away, Diana could still hear the loud cheers coming from the stadium	stadium	0.39009150520721114
+Five ships did not survive the storm	storm	0.44736548443204216
+The paramedics on the scene helped the passengers after the big car accident	accident	0.5335459737718975
+The pilot spoke to an air traffic controller just before the crash	crash	0.46041130584046197
+The boy scouts started a long hike through the forest after having a big lunch	lunch	0.4622664436011763
+When traveling, Roger prefers to stick to major roads	roads	0.4025821985122945
+While hemming a pair of pants, Bridget accidentally dropped her needle	needle	0.36421359118618657
+The rangers say that somewhere in the state park is a bear	bear	0.49112456940954585
+The doctor told him his headaches were due to stress	stress	0.48347739092629993
+The groups in the parade walked by slowly, each waving their hands	hands	0.6182753409487641
+The little girl was very sick, but unfortunately there was no cure	cure	0.3911489201873102
+The meteor shower should have been spectacular, but the city lights blocked the view	view	0.4568785243389628
+She was unsure how the book would end	end	0.6127057319239408
+He was desperate for a job, so finally took something doing door to door sales	sales	0.38938828901689027
+The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical terms	terms	0.5689613465901027
+Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were young	young	0.585422373556775
+In the window, they posted the hours they were open for business	business	0.4728920538419199
+They sent the kids with measles home from school because they were contagious	contagious	0.3169272923842753
+Outside, Cora could hear the running water	water	0.42598751359206
+At night they often took a short walk	walk	0.5836692347289
+The wealthy author always points out that she wrote four novels before one was published	published	0.47106085331062886
+The kitten waited patiently because behind the refrigerator was a mouse	mouse	0.3462775754641768
+Norton hates getting up on winter mornings because it is always cold	cold	0.5965674008535321
+The fertilizer enriched the soil	soil	0.6097817963413532
+The young girl passed her friend a note	note	0.4085837059529618
+He tinkered with the engine every weekend until it was absolutely perfect	perfect	0.566244784105578
+When Diane heard the shark warning, she swam as fast as she could for shore	shore	0.4391933775196999
+Michael could hear the bells ringing in the tower of the church	church	0.526273241070721
+When he got home from work on the construction site, his clothes were always dirty	dirty	0.47326851191500485
+Kevin propped his head up with a pillow as he basked in the hot sun	sun	0.46358060565146864
+He bought it without even asking the price	price	0.4323091254253155
+Barry has considered proposing to his girlfriend, but he wants to wait until he is ready	ready	0.6023301515652678
+John was disappointed to discover a scratch on his new car	car	0.4523802239651439
+He was afraid that doing drugs would damage his brain	brain	0.4893523971332965
+They've been living together for a long time, but don't think they're actually married	married	0.3848801839384577
+Dennis the Menance was known for making trouble	trouble	0.48873505554265484
+When the shooting started they ran for cover	cover	0.3775387989846173
+The federal agents examined the hundred dollar bill with a microscope to see if it was real	real	0.5560982280647707
+Eva turned down the heat and left the sauce on the stove to simmer	simmer	0.34270472253518325
+Alone in the canyon, he was so spooked he was scared by his own shadow	shadow	0.4376080829543818
+Betsy could never tell a lie	lie	0.5377698820482074
+The bad boy was sent to his room	room	0.47611393292570403
+The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his scars	scars	0.2784563177170605
+Trying to evade their captors, the escaped prisoners of war lived in constant fear	fear	0.6622220413244068
+The tip of the knife was sharp	sharp	0.4933958991981927
+The little girl pulled on the rubber band to see how far it would stretch	stretch	0.4726206611204542
+The soldiers had special night vision goggles so they could see the enemy	enemy	0.4645528556548142
+George was born into a wealthy family and has no idea what it's like to be poor	poor	0.5537138603335602
+Looking for bats, Karen descended into the depths of the cave	cave	0.46217256766107395
+We finally got a decent picture on the TV after an hour of adjusting the antenna	antenna	0.258540523463178
+It took a week to get his car fixed because the parts were out of stock	stock	0.39900518905992666
+The dispute was settled by a third party	party	0.43204888467600044
+Our guests should be arriving soon	soon	0.5802297797696289
+The dough was put in the hot oven	oven	0.45546709171275745
+Andrew was glad that the meeting was very short	short	0.5219166639398682
+When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour bus	bus	0.4172268220680495
+Most shark attacks occur very close to shore	shore	0.4271734719020066
+He didn't have to spend much money on the car because he found an incredible deal	deal	0.620168041463922
+The wealthy child went to a private school	school	0.5503719613563911
+When you go to bed, turn off the lights	lights	0.44690718935226414
+George must keep his pet on a leash	leash	0.37719889429582043
+He didn't have time to file everything on his desk, so he organized it into two piles	piles	0.3151905387952567
+The whole town came to hear their mayor speak	speak	0.6048417983054508
+Josie found she could not bend the elbow of her broken arm	arm	0.5595775777089742
+It's hard to admit when one is wrong	wrong	0.6993493781623406
+Vic asked her to repeat what she had said	said	0.6023239966960955
+When they were in London they visited Buckingham palace	palace	0.3813817239926752
+The agent was sent to South America on a secret mission	mission	0.4671331437503823
+Sam knew that rain was coming because he could smell it in the air	air	0.45186793383667734
+His boss refused to give him a raise	raise	0.5371809223820815
+She flew in late last night and really didn't get much sleep	sleep	0.5116091917591074
+After a week, they gave up on the missing hikers and called off the search	search	0.3909493259494403
+Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major bonus	bonus	0.31143499516509854
+The cigar burned a hole in the sofa	sofa	0.29299314571379964
+His first film was a failure, but he learned some techniques in that first effort	effort	0.6125247728141602
+He was hired for the job because of his fresh new image	image	0.3607774460213693
+The journal issue that has the new article about diseases of the eye is still in press	press	0.4366809301408332
+Every spring they held the annual dance	dance	0.3929918221810801
+Penelope started to assemble her new bicycle, but was missing the tires	tires	0.3149782415349589
+The restaurant will reopen with new ownership	ownership	0.38776750838721286
+Jennifer disliked walking under the trees at the edge of the park because they were always full of insects	insects	0.33127200583660854
+The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or attractive	attractive	0.4702416572181044
+I don't know why people like to see their initials in ink	ink	0.18829954712596875
+The gem cutter examined the ruby very closely before cutting because he knew that one this large was very unique	unique	0.5088712008284557
+They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's shrine	shrine	0.37419553749851375
+He took a job training dogs for the military	military	0.46528693800544585
+The conductor gave detailed instructions to the choir	choir	0.30488888559219185
+Down in the basement, Steve and Robert were playing poker	poker	0.27341907092229056
+After the most recent price increase, the small business owner decided to order his office supplies from another business	business	0.6477496465460185
+Sharon was sad that she had lost her puppy	puppy	0.36523200913308274
+All of armed services will admit women, but females are barred from fighting	fighting	0.5330183657027645
+After the divorce, she had to move out of the expensive house to an apartment that was affordable	affordable	0.40038476146799784
+His tactics usually turned out to be beneficial for the business, but they often came in conflict with his values	values	0.39168554427333824
+Some of his jokes were crummy, but those one-liners were humorous	humorous	0.4921836882987711
+The inspector from the health department found a roach in a very expensive cafe	cafe	0.3197760741143184
+The conductor had no idea that the train had been boarded by a known convict	convict	0.24398585129227068
+The nurse brought him a glass of juice and his pills	pills	0.3230755051036611
+The teacher was not looking forward to another year of classes	classes	0.3954924522171501
+Steve skipped his annual checkup for another month	month	0.6151825628113007
+The candidate wanted to please everyone without making any commitments, so his speech was deliberately ambiguous	ambiguous	0.36095463757390034
+She poured water on the roses	roses	0.3016241884949241
+Mark liked the older houses, but Susan wanted to buy one that was new and contemporary	contemporary	0.39666926163880534
+In an old sitcom, he was the wise family physician	physician	0.36277872108079334
+The government controlled the news media, so most of the reports from the war zone were screened	screened	0.2578539949746861
+Grinning wherever he went, it was easy to tell that Carl was proud of his new gold trophy	trophy	0.32101284840938016
+During the summer, the children hung out at the lake	lake	0.39567853717946244
+The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be courageous	courageous	0.36906444524654314
+The little girl kept a lock on her journal	journal	0.2992509774975709
+Flying low above her, Bernice could hear the jet	jet	0.322893697416773
+Perry heard a grinding noise coming from his engine	engine	0.34262038027389696
+If Jim's manager is incompetent, he has a legitimate right to argue	argue	0.5500057125191609
+In the best part of the movie, the hero has to impersonate the criminal	criminal	0.4112359741428653
+The princess wore a hat	hat	0.4770382661815301
+Jason was disappointed when the other scouts scared off the elk by loudly beating the pans	pans	0.20735198400776222
+After the flood, the house smelled of mildew and everything in it was destroyed	destroyed	0.5134088628778297
+Everyone on the scene gathered around to look at the crash	crash	0.3506917678167061
+The final score of the game was even	even	0.5953809376494783
+After swimming the English Channel, Bonita was cold and completely beat	beat	0.4164123074162376
+She had the data to back up everything she said, so the hostile questions did not shake her composure	composure	0.2871376709703988
+The new dress was very pretty, but it was cut from an unusual material	material	0.4202281994291708
+When the little girl saw the big dog lumbering towards her, she began to flee	flee	0.3704957777252016
+From her house a half mile away, Diana could still hear the loud cheers coming from the stands	stands	0.4608154964764639
+Five ships did not survive the tsunami	tsunami	0.26696108566622856
+The paramedics on the scene helped the passengers after the big car wreck	wreck	0.4576171186739386
+The pilot spoke to an air traffic controller just before the collision	collision	0.3654807066705039
+The boy scouts started a long hike through the forest after having a big dinner	dinner	0.44970317058130704
+When traveling, Roger prefers to stick to major streets	streets	0.4143289191346563
+While hemming a pair of pants, Bridget accidentally dropped her pin	pin	0.3618724721257933
+The rangers say that somewhere in the state park is a cub	cub	0.17604130421863906
+The doctor told him his headaches were due to tension	tension	0.3854893877764112
+The groups in the parade walked by slowly, each waving their arms	arms	0.5210688583127382
+The little girl was very sick, but unfortunately there was no remedy	remedy	0.33898062478473323
+The meteor shower should have been spectacular, but the city lights blocked the sight	sight	0.5739548976718225
+She was unsure how the book would conclude	conclude	0.45311407368739554
+He was desperate for a job, so finally took something doing door to door solicitation	solicitation	0.1135680892770371
+The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical words	words	0.5278692292583843
+Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were older	older	0.5502702154172947
+In the window, they posted the hours they were open for service	service	0.4684229477177544
+They sent the kids with measles home from school because they were infectious	infectious	0.3158795078739858
+Outside, Cora could hear the running river	river	0.3747304321882492
+At night they often took a short stroll	stroll	0.3948066428311131
+The wealthy author always points out that she wrote four novels before one was printed	printed	0.3294873738200481
+The kitten waited patiently because behind the refrigerator was a rat	rat	0.3276764514273317
+Norton hates getting up on winter mornings because it is always chilly	chilly	0.40599182021180924
+The fertilizer enriched the dirt	dirt	0.3264206419007746
+The young girl passed her friend a letter	letter	0.44175330373574195
+He tinkered with the engine every weekend until it was absolutely correct	correct	0.4917228424797122
+When Diane heard the shark warning, she swam as fast as she could for land	land	0.41765135310921053
+Michael could hear the bells ringing in the tower of the cathedral	cathedral	0.38836153726081
+When he got home from work on the construction site, his clothes were always filthy	filthy	0.33678614065254897
+Kevin propped his head up with a pillow as he basked in the hot lamp	lamp	0.3249862347845317
+He bought it without even asking the cost	cost	0.5106648699110674
+Barry has considered proposing to his girlfriend, but he wants to wait until he is prepared	prepared	0.5074355099368508
+John was disappointed to discover a scratch on his new truck	truck	0.3839177707953827
+He was afraid that doing drugs would damage his mind	mind	0.7269705882915682
+They've been living together for a long time, but don't think they're actually engaged	engaged	0.4192556251813502
+Dennis the Menance was known for making mischief	mischief	0.24472876179781522
+When the shooting started they ran for shelter	shelter	0.37754825803616754
+The federal agents examined the hundred dollar bill with a microscope to see if it was genuine	genuine	0.3472611671199698
+Eva turned down the heat and left the sauce on the stove to cook	cook	0.5502207633466777
+Alone in the canyon, he was so spooked he was scared by his own reflection	reflection	0.39284516826250626
+Betsy could never tell a fib	fib	0.055283013352838695
+The bad boy was sent to his bedroom	bedroom	0.2996507283931733
+The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his wounds	wounds	0.381576033123068
+Trying to evade their captors, the escaped prisoners of war lived in constant terror	terror	0.5499761637429801
+The tip of the knife was pointed	pointed	0.5274296050364218
+The little girl pulled on the rubber band to see how far it would extend	extend	0.4319590106572859
+The soldiers had special night vision goggles so they could see the invaders	invaders	0.2598535326705994
+George was born into a wealthy family and has no idea what it's like to be needy	needy	0.3020361549731957
+Looking for bats, Karen descended into the depths of the cavern	cavern	0.30468571612462725
+We finally got a decent picture on the TV after an hour of adjusting the wires	wires	0.27942267598635706
+It took a week to get his car fixed because the parts were out of supply	supply	0.4026492383374001
+The dispute was settled by a third person	person	0.4957500260031982
+Our guests should be arriving shortly	shortly	0.4964887592182208
+The dough was put in the hot stove	stove	0.3693047942791794
+Andrew was glad that the meeting was very brief	brief	0.48639163716892186
+When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour van	van	0.2788139788616366
+Most shark attacks occur very close to land	land	0.4216865325765795
+He didn't have to spend much money on the car because he found an incredible bargain	bargain	0.44587282153344066
+The wealthy child went to a private college	college	0.4751541984203109
+When you go to bed, turn off the lamp	lamp	0.2852444103100652
+George must keep his pet on a chain	chain	0.3128906347427376
+He didn't have time to file everything on his desk, so he organized it into two stacks	stacks	0.2889716165673082
+The whole town came to hear their mayor talk	talk	0.6021375588554676
+Josie found she could not bend the elbow of her broken limb	limb	0.41011992163297406
+It's hard to admit when one is incorrect	incorrect	0.3462777331851785
+Vic asked her to repeat what she had uttered	uttered	0.39092456982636903
+When they were in London they visited Buckingham castle	castle	0.3445087907488358
+The agent was sent to South America on a secret assignment	assignment	0.40803290927962066
+Sam knew that rain was coming because he could smell it in the wind	wind	0.468532837169101
+His boss refused to give him a bonus	bonus	0.301386542814841
+She flew in late last night and really didn't get much rest	rest	0.6384972472437264
+After a week, they gave up on the missing hikers and called off the hunt	hunt	0.4430107110800863
+Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major project	project	0.43176017805290123
+The cigar burned a hole in the jacket	jacket	0.31898440948984497
+His first film was a failure, but he learned some techniques in that first role	role	0.5295981774401505
+He was hired for the job because of his fresh new ideas	ideas	0.4751253946113714
+The journal issue that has the new article about diseases of the eye is still in stores	stores	0.3239273876481845
+Every spring they held the annual meeting	meeting	0.5729029911003047
+Penelope started to assemble her new bicycle, but was missing the instructions	instructions	0.3960578887101185
+The restaurant will reopen with new menus	menus	0.3764484534984869
+Jennifer disliked walking under the trees at the edge of the park because they were always full of sap	sap	0.1748018973570178
+The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or abstract	abstract	0.26746344594097826
+I don't know why people like to see their initials in cement	cement	0.21093358270098683
+The gem cutter examined the ruby very closely before cutting because he knew that one this large was very fragile	fragile	0.37770231077564753
+They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's statue	statue	0.3995087711076655
+He took a job training dogs for the disabled	disabled	0.3211485477265509
+The conductor gave detailed instructions to the engineer	engineer	0.35167138393367225
+Down in the basement, Steve and Robert were playing music	music	0.4786811136007775
+After the most recent price increase, the small business owner decided to order his office supplies from another country	country	0.5787960586724326
+Sharon was sad that she had lost her keys	keys	0.26985697646563966
+All of armed services will admit women, but females are barred from ships	ships	0.31191281689469197
+After the divorce, she had to move out of the expensive house to an apartment that was ugly	ugly	0.46516458806473415
+His tactics usually turned out to be beneficial for the business, but they often came in conflict with his marriage	marriage	0.4675400096746585
+Some of his jokes were crummy, but those one-liners were terrible	terrible	0.6103669989541135
+The inspector from the health department found a roach in a very expensive meal	meal	0.41561277233456195
+The conductor had no idea that the train had been boarded by a known politician	politician	0.32951638196072364
+The nurse brought him a glass of juice and his pillow	pillow	0.3456250661906666
+The teacher was not looking forward to another year of chaos	chaos	0.32710401372922937
+Steve skipped his annual checkup for another event	event	0.4956915603379777
+The candidate wanted to please everyone without making any commitments, so his speech was deliberately short	short	0.564846305631488
+She poured water on the dishes	dishes	0.37203329635787197
+Mark liked the older houses, but Susan wanted to buy one that was new and expensive	expensive	0.49366295625075707
+In an old sitcom, he was the wise family neighbor	neighbor	0.48505201500088513
+The government controlled the news media, so most of the reports from the war zone were wrong	wrong	0.5518346127746839
+Grinning wherever he went, it was easy to tell that Carl was proud of his new gold tooth	tooth	0.3130324825181283
+During the summer, the children hung out at the theatre	theatre	0.384450719757069
+The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be king	king	0.4706364686543585
+The little girl kept a lock on her bicycle	bicycle	0.33320115027016795
+Flying low above her, Bernice could hear the bees	bees	0.30331223437240107
+Perry heard a grinding noise coming from his jaw	jaw	0.3804781924710008
+If Jim's manager is incompetent, he has a legitimate right to leave	leave	0.6121233970203099
+In the best part of the movie, the hero has to impersonate the princess	princess	0.28927462410230276
+The princess wore a gown	gown	0.5753065301629647
+Jason was disappointed when the other scouts scared off the elk by loudly beating the bushes	bushes	0.3065410782358373
+After the flood, the house smelled of mildew and everything in it was damp	damp	0.4593450800543748
+Everyone on the scene gathered around to look at the celebrity	celebrity	0.3383540848146185
+The final score of the game was posted	posted	0.30021638445652454
+After swimming the English Channel, Bonita was cold and completely blue	blue	0.36708755175658925
+She had the data to back up everything she said, so the hostile questions did not shake her opinion	opinion	0.5555783113183501
+The new dress was very pretty, but it was cut from an unusual pattern	pattern	0.4380476819064252
+When the little girl saw the big dog lumbering towards her, she began to smile	smile	0.5535811755778279
+From her house a half mile away, Diana could still hear the loud cheers coming from the parade	parade	0.4169778143412435
+Five ships did not survive the battle	battle	0.5230236648480437
+The paramedics on the scene helped the passengers after the big car exploded	exploded	0.3605014902890331
+The pilot spoke to an air traffic controller just before the takeoff	takeoff	0.34981934770274203
+The boy scouts started a long hike through the forest after having a big meeting	meeting	0.48422602105265256
+When traveling, Roger prefers to stick to major airlines	airlines	0.33460420657801637
+While hemming a pair of pants, Bridget accidentally dropped her glasses	glasses	0.42699743569212667
+The rangers say that somewhere in the state park is a mine	mine	0.515022574253929
+The doctor told him his headaches were due to tumors	tumors	0.2740503485893935
+The groups in the parade walked by slowly, each waving their banners	banners	0.3450523786327999
+The little girl was very sick, but unfortunately there was no hospital	hospital	0.4418199329327064
+The meteor shower should have been spectacular, but the city lights blocked the sky	sky	0.5528209147509175
+She was unsure how the book would sell	sell	0.4191663169992277
+He was desperate for a job, so finally took something doing door to door delivery	delivery	0.315497160456216
+The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical procedures	procedures	0.43649131261701724
+Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were female	female	0.4233958002891409
+In the window, they posted the hours they were open for today	today	0.6063499240973702
+They sent the kids with measles home from school because they were scratching	scratching	0.26664642290357476
+Outside, Cora could hear the running horses	horses	0.3749412551343556
+At night they often took a short swim	swim	0.40824689031904193
+The wealthy author always points out that she wrote four novels before one was banned	banned	0.34122748211172926
+The kitten waited patiently because behind the refrigerator was a ball	ball	0.4021182683525957
+Norton hates getting up on winter mornings because it is always dark	dark	0.4855728804879964
+The fertilizer enriched the plants	plants	0.5381974330791919
+The young girl passed her friend a doll	doll	0.4326043715452249
+He tinkered with the engine every weekend until it was absolutely ruined	ruined	0.4865788753535548
+When Diane heard the shark warning, she swam as fast as she could for safety	safety	0.40304664529423095
+Michael could hear the bells ringing in the tower of the castle	castle	0.40468242147471667
+When he got home from work on the construction site, his clothes were always torn	torn	0.399375109810963
+Kevin propped his head up with a pillow as he basked in the hot tub	tub	0.40526771164975794
+He bought it without even asking the boss	boss	0.3884470777848432
+Barry has considered proposing to his girlfriend, but he wants to wait until he is older	older	0.4560999994268323
+John was disappointed to discover a scratch on his new watch	watch	0.460889371478596
+He was afraid that doing drugs would damage his reputation	reputation	0.44267844272081214
+They've been living together for a long time, but don't think they're actually happy	happy	0.6881496230747594
+Dennis the Menance was known for making jokes	jokes	0.31696956866338954
+When the shooting started they ran for help	help	0.5513271527796314
+The federal agents examined the hundred dollar bill with a microscope to see if it was contaminated	contaminated	0.2848311836818258
+Eva turned down the heat and left the sauce on the stove to cool	cool	0.5327965041426647
+Alone in the canyon, he was so spooked he was scared by his own horse	horse	0.46354078831753254
+Betsy could never tell a joke	joke	0.5459397008043935
+The bad boy was sent to his principal	principal	0.37703425035663707
+The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his tattoos	tattoos	0.2733435335986326
+Trying to evade their captors, the escaped prisoners of war lived in constant hiding	hiding	0.617062975702789
+The tip of the knife was broken	broken	0.45781925481725283
+The little girl pulled on the rubber band to see how far it would fly	fly	0.4388242376871727
+The soldiers had special night vision goggles so they could see the camp	camp	0.48394534847449944
+George was born into a wealthy family and has no idea what it's like to be hungry	hungry	0.4251958448742196
+Looking for bats, Karen descended into the depths of the castle	castle	0.3339884773272097
+We finally got a decent picture on the TV after an hour of adjusting the contrast	contrast	0.413673868673301
+It took a week to get his car fixed because the parts were out of state	state	0.5174707304804496
+The dispute was settled by a third vote	vote	0.405519357034938
+Our guests should be arriving separately	separately	0.3668796198915141
+The dough was put in the hot grease	grease	0.3571069115734393
+Andrew was glad that the meeting was very productive	productive	0.36799341953976183
+When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour group	group	0.418760351160796
+Most shark attacks occur very close to dusk	dusk	0.27086421495865287
+He didn't have to spend much money on the car because he found an incredible mechanic	mechanic	0.3349604640663606
+The wealthy child went to a private hospital	hospital	0.49049380224596817
+When you go to bed, turn off the stereo	stereo	0.22033738814377246
+George must keep his pet on a diet	diet	0.35514188022470305
+He didn't have time to file everything on his desk, so he organized it into two boxes	boxes	0.40088819632658823
+The whole town came to hear their mayor resign	resign	0.34230318716543384
+Josie found she could not bend the elbow of her broken doll	doll	0.37345279537775067
+It's hard to admit when one is lonely	lonely	0.42324963416403905
+Vic asked her to repeat what she had heard	heard	0.7022219867935604
+When they were in London they visited Buckingham twice	twice	0.5212921243324435
+The agent was sent to South America on a secret jet	jet	0.2616239953748729
+Sam knew that rain was coming because he could smell it in the morning	morning	0.5885678693315982
+His boss refused to give him a vacation	vacation	0.2944610002324375
+She flew in late last night and really didn't get much dinner	dinner	0.49713735873576004
+After a week, they gave up on the missing hikers and called off the helicopters	helicopters	0.2238293015088325
+Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major pillow	pillow	0.24228457353074206
+The cigar burned a hole in the chaos	chaos	0.30388226806367724
+His first film was a failure, but he learned some techniques in that first umbrella	umbrella	0.24941288578830534
+He was hired for the job because of his fresh new autumn	autumn	0.32361359036482684
+The journal issue that has the new article about diseases of the eye is still in treason	treason	0.16540542439655515
+Every spring they held the annual disorder	disorder	0.1811419836955811
+Penelope started to assemble her new bicycle, but was missing the king	king	0.33746276616777326
+The restaurant will reopen with new treason	treason	0.0631129465917627
+Jennifer disliked walking under the trees at the edge of the park because they were always full of weekends	weekends	0.36524044379333553
+The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or allergic	allergic	0.28174971071990984
+I don't know why people like to see their initials in dusk	dusk	0.17291000998285744
+The gem cutter examined the ruby very closely before cutting because he knew that one this large was very disqualified	disqualified	0.16711013870325309
+They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's bicycle	bicycle	0.25599497358774304
+He took a job training dogs for the blankets	blankets	0.26421344462962515
+The conductor gave detailed instructions to the dishes	dishes	0.2520382379056497
+Down in the basement, Steve and Robert were playing banners	banners	0.17599280537317175
+After the most recent price increase, the small business owner decided to order his office supplies from another gown	gown	0.20934404125400596
+Sharon was sad that she had lost her takeoff	takeoff	0.12753591396610298
+All of armed services will admit women, but females are barred from metal	metal	0.3014501539868859
+After the divorce, she had to move out of the expensive house to an apartment that was fired	fired	0.4030429948875285
+His tactics usually turned out to be beneficial for the business, but they often came in conflict with his ditch	ditch	0.3343262816945306
+Some of his jokes were crummy, but those one-liners were torn	torn	0.3839488789244504
+The inspector from the health department found a roach in a very expensive speech	speech	0.366884774429305
+The conductor had no idea that the train had been boarded by a known bottle	bottle	0.30430017989759084
+The nurse brought him a glass of juice and his taxis	taxis	0.11338309402128488
+The teacher was not looking forward to another year of cargo	cargo	0.2152271936888437
+Steve skipped his annual checkup for another forest	forest	0.21132441825283588
+The candidate wanted to please everyone without making any commitments, so his speech was deliberately endangered	endangered	0.22386832051417138
+She poured water on the takeoff	takeoff	0.1366090559904568
+Mark liked the older houses, but Susan wanted to buy one that was new and embarrassed	embarrassed	0.39027768867110624
+In an old sitcom, he was the wise family highway	highway	0.30596818593462194
+The government controlled the news media, so most of the reports from the war zone were hungry	hungry	0.3464124264428813
+Grinning wherever he went, it was easy to tell that Carl was proud of his new gold pedestrians	pedestrians	0.20733898934850514
+During the summer, the children hung out at the gown	gown	0.2656233388773501
+The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be chilly	chilly	0.29083205535425827
+The little girl kept a lock on her cement	cement	0.25638905358168196
+Flying low above her, Bernice could hear the arena	arena	0.2750271380444933
+Perry heard a grinding noise coming from his cure	cure	0.3598495797127006
+If Jim's manager is incompetent, he has a legitimate right to water	water	0.3643557088139171
+In the best part of the movie, the hero has to impersonate the business	business	0.4608159399229147
+The princess wore a sound	sound	0.31378063134339274
+Jason was disappointed when the other scouts scared off the elk by loudly beating the diamond	diamond	0.22118765077898117
+After the flood, the house smelled of mildew and everything in it was young	young	0.4132947525512427
+Everyone on the scene gathered around to look at the temper	temper	0.20227436257547848
+The final score of the game was bugs	bugs	0.23749408986137777
+After swimming the English Channel, Bonita was cold and completely affordable	affordable	0.2960336682788953
+She had the data to back up everything she said, so the hostile questions did not shake her music	music	0.4225781026483235
+The new dress was very pretty, but it was cut from an unusual porch	porch	0.318742578106026
+When the little girl saw the big dog lumbering towards her, she began to attend	attend	0.3863295140945753
+From her house a half mile away, Diana could still hear the loud cheers coming from the mistakes	mistakes	0.37838289465642727
+Five ships did not survive the eyes	eyes	0.42855781228423706
+The paramedics on the scene helped the passengers after the big car rest	rest	0.6786472008875729
+The pilot spoke to an air traffic controller just before the fortune	fortune	0.3485420601722006
+The boy scouts started a long hike through the forest after having a big end	end	0.702215154660556
+When traveling, Roger prefers to stick to major plants	plants	0.3578041762047075
+While hemming a pair of pants, Bridget accidentally dropped her horse	horse	0.37721260804923706
+The rangers say that somewhere in the state park is a contrast	contrast	0.37761068615897153
+The doctor told him his headaches were due to safety	safety	0.3974440485318199
+The groups in the parade walked by slowly, each waving their jokes	jokes	0.3384349287100319
+The little girl was very sick, but unfortunately there was no joke	joke	0.576181946576325
+The meteor shower should have been spectacular, but the city lights blocked the doll	doll	0.23384375441033656
+She was unsure how the book would camp	camp	0.4017115767521149
+He was desperate for a job, so finally took something doing door to door hiding	hiding	0.5249577668212413
+The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical pedestrians	pedestrians	0.22495623997541148
+Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were bullets	bullets	0.30622536553533397
+In the window, they posted the hours they were open for texture	texture	0.2346375498470098
+They sent the kids with measles home from school because they were hard	hard	0.5714514302755312
+Outside, Cora could hear the running chapel	chapel	0.2552702490486577
+At night they often took a short reputation	reputation	0.34394998237055774
+The wealthy author always points out that she wrote four novels before one was hungry	hungry	0.3957621302633827
+The kitten waited patiently because behind the refrigerator was a savior	savior	0.3105407040231041
+Norton hates getting up on winter mornings because it is always broken	broken	0.518831883046884
+The fertilizer enriched the legs	legs	0.15258198355787989
+The young girl passed her friend a mechanic	mechanic	0.2935490721119478
+He tinkered with the engine every weekend until it was absolutely forgiven	forgiven	0.3331116049556977
+When Diane heard the shark warning, she swam as fast as she could for relaxing	relaxing	0.344914018492526
+Michael could hear the bells ringing in the tower of the deer	deer	0.3131283873593934
+When he got home from work on the construction site, his clothes were always sick	sick	0.5248787588195916
+Kevin propped his head up with a pillow as he basked in the hot size	size	0.32110851313790567
+He bought it without even asking the helicopters	helicopters	0.1955912883405826
+Barry has considered proposing to his girlfriend, but he wants to wait until he is flooded	flooded	0.2772725492488737
+John was disappointed to discover a scratch on his new taxes	taxes	0.31190848257110626
+He was afraid that doing drugs would damage his fever	fever	0.32066153731088887
+They've been living together for a long time, but don't think they're actually people	people	0.7272768702958105
+Dennis the Menance was known for making apples	apples	0.16974948521984523
+When the shooting started they ran for convenience	convenience	0.2929345203062408
+The federal agents examined the hundred dollar bill with a microscope to see if it was quiet	quiet	0.35289541835634053
+Eva turned down the heat and left the sauce on the stove to state	state	0.4348628977698141
+Alone in the canyon, he was so spooked he was scared by his own hospital	hospital	0.43016848777264494
+Betsy could never tell a ditch	ditch	0.3641646770848761
+The bad boy was sent to his dusk	dusk	0.17545496597422217
+The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his boxes	boxes	0.32951676473013025
+Trying to evade their captors, the escaped prisoners of war lived in constant size	size	0.23710324587429366
+The tip of the knife was chatting	chatting	0.18873759053706873
+The little girl pulled on the rubber band to see how far it would yell	yell	0.33566739348041175
+The soldiers had special night vision goggles so they could see the temper	temper	0.2945879592703565
+George was born into a wealthy family and has no idea what it's like to be pointed	pointed	0.4981987075444867
+Looking for bats, Karen descended into the depths of the doll	doll	0.23761056843582695
+We finally got a decent picture on the TV after an hour of adjusting the ceremonies	ceremonies	0.23056894621421276
+It took a week to get his car fixed because the parts were out of bread	bread	0.36939311630448113
+The dispute was settled by a third lifestyle	lifestyle	0.23322693362364866
+Our guests should be arriving disabled	disabled	0.3460150182661659
+The dough was put in the hot project	project	0.3818161135657373
+Andrew was glad that the meeting was very pale	pale	0.27157265914465945
+When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour puppy	puppy	0.2827654943171075
+Most shark attacks occur very close to ideas	ideas	0.40614842249377003
+He didn't have to spend much money on the car because he found an incredible stream	stream	0.31180356203477344
+The wealthy child went to a private material	material	0.2953739240618225
+When you go to bed, turn off the stores	stores	0.3489007157970754
+George must keep his pet on a meeting	meeting	0.4452288717511621
+He didn't have time to file everything on his desk, so he organized it into two cartoons	cartoons	0.27196203159764476
+The whole town came to hear their mayor scratch	scratch	0.3116454536284725
+Josie found she could not bend the elbow of her broken absence	absence	0.49218698085772905
+It's hard to admit when one is screened	screened	0.17671988374027858
+Vic asked her to repeat what she had vanished	vanished	0.3833777944437843
+When they were in London they visited Buckingham bait	bait	0.1833459219693564
+The agent was sent to South America on a secret cow	cow	0.2610535124409006
+Sam knew that rain was coming because he could smell it in the robbery	robbery	0.2819277436574814
+His boss refused to give him a cliff	cliff	0.23898083415754057
+She flew in late last night and really didn't get much music	music	0.4068612789616636
+After a week, they gave up on the missing hikers and called off the boss	boss	0.3412581946031059
+The salesman made the mistake of talking down to Jane because he thought she was stupid	stupid	0.5700052854354103
+Water was leaking out from the hole in the ceiling	ceiling	0.3658802610790214
+Rushing out, he forgot to take his coat	coat	0.2953258803912189
+At that time, the boys lived down by the river in a shack	shack	0.2419832789132007
+The salesman made the mistake of talking down to Jane because he thought she was dumb	dumb	0.512685586133391
+Water was leaking out from the hole in the roof	roof	0.4678947348292828
+Rushing out, he forgot to take his jacket	jacket	0.2449300308975414
+At that time, the boys lived down by the river in a hut	hut	0.3044679026924322
+The salesman made the mistake of talking down to Jane because he thought she was poor	poor	0.5501685348690887
+Water was leaking out from the hole in the balloon	balloon	0.3014895930519126
+Rushing out, he forgot to take his umbrella	umbrella	0.2141015093117068
+At that time, the boys lived down by the river in a van	van	0.23462177733820166
+The salesman made the mistake of talking down to Jane because he thought she was abstract	abstract	0.18720086775326017
+Water was leaking out from the hole in the reward	reward	0.2475129597241803
+Rushing out, he forgot to take his country	country	0.4914465988013841
+At that time, the boys lived down by the river in a letter	letter	0.39833509475721507

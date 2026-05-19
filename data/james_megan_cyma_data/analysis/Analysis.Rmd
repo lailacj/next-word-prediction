@@ -1,0 +1,632 @@
+---
+title: "Strong Prediction: Data Analysis"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Setup
+
+Load correct functions
+
+```{r setup, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(lme4)
+library(lmerTest)
+library(corrr)
+library(colorspace)
+library(gridExtra)
+library(cowplot)
+library(grid)
+set.seed(2021)
+```
+
+
+# Import data
+
+```{r}
+all_data = read_csv("../data/N400_data.csv")
+
+gpt3_surprisal = read_delim('../data/full_stims.surprisal.gpt3_davinci.causal.output',delim='\t')%>%
+  filter(NumTokens==1)%>%
+  select(-Sentence,-NumTokens)%>%
+  mutate(TargetWords=trimws(TargetWords,"left"))%>%
+  rename("Sentence"="FullSentence",
+         "TargetWord" = "TargetWords",
+         "gpt3_surprisal" = "Surprisal")
+
+glove_ccs = read_delim('../data/full_stims.glove_840B_300d',delim='\t')%>%
+  filter(!is.na(CosineSimilarity))%>%
+  rename("Sentence"="FullSentence",
+         "TargetWord" = "TargetWords",
+         "glove_ccs" = "CosineSimilarity")
+
+fasttext_ccs = read_delim('../data/full_stims.crawl_300d_2M',delim='\t')%>%
+  filter(!is.na(CosineSimilarity))%>%
+  rename("Sentence"="FullSentence",
+         "TargetWord" = "TargetWords",
+         "fasttext_ccs" = "CosineSimilarity")
+
+glove_bccs = read_delim('../data/bc_critical_words.glove_840B_300d',delim='\t')%>%
+  filter(!is.na(CosineSimilarity))%>%
+  rename("BC_Crit"="FullSentence",
+         "TargetWord" = "TargetWords",
+         "glove_bccs" = "CosineSimilarity")
+
+fasttext_bccs = read_delim('../data/bc_critical_words.crawl_300d_2M',delim='\t')%>%
+  filter(!is.na(CosineSimilarity))%>%
+  rename("BC_Crit"="FullSentence",
+         "TargetWord" = "TargetWords",
+         "fasttext_bccs" = "CosineSimilarity")
+
+orthographic_neighborhood = read_csv("../data/othographic_neighborhood.csv")%>%
+  select(STRING,Orth)%>%
+  rename("TargetWord"="STRING",
+         "orthographic_neighborhood" = "Orth")
+
+word_frequency = read_csv("../data/wordfreqs.csv")%>%
+  filter(NumTokens==1)%>%
+  rename("TargetWord" = "TargetWords",
+         "zipf_frequency" = "ZipfFrequency")
+
+
+all_data = all_data%>%
+  inner_join(.,gpt3_surprisal, by = c("Sentence","TargetWord"))%>%    
+  inner_join(.,glove_ccs, by = c("Sentence","TargetWord"))%>%  
+  inner_join(.,fasttext_ccs, by = c("Sentence","TargetWord"))%>%  
+  inner_join(.,orthographic_neighborhood, by = c("TargetWord"))  %>%  
+  inner_join(.,word_frequency, by = c("TargetWord"))    
+
+critical_word_df = all_data%>%
+  distinct(ContextCode,Condition,TargetWord)
+
+bc_df = critical_word_df%>%
+  filter(Condition=="BC")%>%
+  select(TargetWord,ContextCode)%>%
+  rename(BCTW = TargetWord)
+
+critical_word_df = critical_word_df%>%
+  left_join(.,bc_df)%>%
+  mutate(BC_Crit = paste(BCTW, TargetWord))%>%
+  select(TargetWord,ContextCode,BC_Crit)
+
+all_data = all_data%>%
+  left_join(.,critical_word_df)%>%
+  left_join(glove_bccs)%>%
+  left_join(fasttext_bccs)%>%
+  distinct()
+
+all_data = all_data%>%
+  mutate(zN400 = as.vector(N400),
+         zgpt3_surprisal = as.vector(scale(gpt3_surprisal)),
+         zglove_ccs = as.vector(scale(glove_ccs)),
+         zfasttext_ccs = as.vector(scale(fasttext_ccs)),
+         zzipf_frequency = as.vector(scale(zipf_frequency)),
+         zorthographic_neighborhood = as.vector(scale(orthographic_neighborhood)),
+         zCloze = as.vector(scale(Cloze)),
+         zPlausibility = as.vector(scale(PlausibilityJudgement)),
+         zglove_bccs = as.vector(scale(glove_bccs)),
+         zfasttext_bccs = as.vector(scale(fasttext_bccs)))%>%
+  mutate(TargetWord = as_factor(TargetWord),
+         Condition = as_factor(Condition),
+         ContextCode = as_factor(ContextCode),
+         Subject = as_factor(Subject),
+         Electrode = as_factor(Electrode))
+```
+
+# Visualize data
+
+```{r}
+all_data%>%distinct(Sentence,Condition,Cloze,PlausibilityJudgement)%>%
+  mutate(Condition = fct_relevel(Condition, "BC","Rel","Unrel","Implaus"))%>%
+  group_by(Condition)%>%
+  summarize(cloze_mean = mean(Cloze), cloze_sd = sd(Cloze), plausibility_mean = mean(PlausibilityJudgement),plausibility_sd = sd(PlausibilityJudgement))%>%
+  knitr::kable()
+```
+
+
+
+
+```{r, fig.dim = c(10, 5), out.width="100%"}
+predictors = all_data%>%
+  distinct(Condition,zCloze,zPlausibility,zgpt3_surprisal,zglove_ccs,zfasttext_ccs,zfasttext_bccs,zglove_bccs,zglove_bccs)%>%
+  mutate(zgpt3_surprisal = -zgpt3_surprisal,
+         zPlausibility = -zPlausibility)%>%
+  pivot_longer(cols= c(zCloze,zPlausibility,zgpt3_surprisal,zglove_ccs,zfasttext_ccs,zfasttext_bccs,zglove_bccs,zglove_bccs),names_to = "Variable",values_to = "Normalized Value")%>%
+  mutate(Variable = fct_relevel(Variable, "zCloze","zglove_ccs","zfasttext_ccs","zPlausibility","zglove_bccs","zfasttext_bccs","zgpt3_surprisal"))%>%
+  mutate(Variable = fct_recode(Variable,
+                               "Cloze Probability"="zCloze",
+                               "GloVe CCS"="zglove_ccs",
+                               "fastText CCS"="zfasttext_ccs",
+                               "Plausibility Judgement"="zPlausibility",
+                               "GloVe BCCS"="zglove_bccs",
+                               "fastText BCCS"="zfasttext_bccs",
+                               "GPT-3 Surprisal"="zgpt3_surprisal"),
+         Condition = fct_recode(Condition,
+                                "Best Completion" = "BC",
+                                "Related" = "Rel",
+                                "Unrelated" = "Unrel",
+                                "Implausible" = "Implaus"))%>%
+  ggplot(aes(x=Condition,y=`Normalized Value`,fill=Condition)) +
+  geom_bar(position = "dodge", stat = "summary", fun.y = "mean") +
+  stat_summary(fun.data = mean_se,geom="errorbar", position=position_dodge(.9), width=.3,size=0.25) +
+  facet_wrap(.~Variable,dir="v") + scale_fill_manual(values=c("#009292","#db6d00","#ff6db6","#6db6ff"))+theme_minimal()+ 
+  theme(axis.title.x=element_blank(), axis.text.x=element_blank(),axis.ticks.x=element_blank())+scale_y_reverse() +coord_cartesian(ylim=c(1.75,-1.75))
+
+ggsave("predictors.pdf",predictors,width=6,height=5)
+
+predictors
+
+# N400 = all_data%>%
+#   mutate(Condition = fct_recode(Condition,
+#                                 "Best Completion" = "BC",
+#                                 "Related" = "Rel",
+#                                 "Unrelated" = "Unrel",
+#                                 "Implausible" = "Implaus"))%>%
+#   ggplot(aes(x=Condition,y=zN400,fill=Condition)) +
+#   geom_bar(position = "dodge", stat = "summary", fun.y = "mean") +
+#   stat_summary(fun.data = mean_se,geom="errorbar", position=position_dodge(.9), width=.3) +
+#   scale_fill_manual(values=c("#009292","#db6d00","#ff6db6","#6db6ff"))+theme_minimal()+scale_y_reverse() +coord_cartesian(ylim=c(1.75,-1.75)) + ylab("Normalized Value")
+# 
+# legend <- get_legend(N400)
+# N400 = N400+theme(legend.position='none',axis.title.x=element_blank(), axis.text.x=element_blank(),axis.ticks.x=element_blank())
+# 
+# values = grid.arrange(textGrob('N400 Amplitude'),textGrob(NULL),N400,legend,textGrob("Predictors"),textGrob(NULL),predictors,legend,ncol=2,heights = c(0.1,0.7,0.1,1),widths=c(1,0.3))
+# 
+# ggsave("all_values.pdf",values,width=6,height=9)
+# 
+# values
+```
+
+
+```{r}
+heatmap = all_data%>%
+  select(Cloze,gpt3_surprisal,glove_ccs,fasttext_ccs,PlausibilityJudgement,glove_bccs,fasttext_bccs)%>%
+  correlate(diagonal=1,quiet = T)%>%
+  pivot_longer(c(Cloze,gpt3_surprisal,glove_ccs,fasttext_ccs,PlausibilityJudgement,glove_bccs,fasttext_bccs),names_to="var2",values_to="Correlation" )%>%
+  mutate(term =fct_relevel(term, "Cloze","PlausibilityJudgement","gpt3_surprisal","glove_ccs","fasttext_ccs","glove_bccs","fasttext_bccs"),
+         term = fct_recode(term,
+         "GloVe\nCCS" = "glove_ccs",
+         "Cloze\nProbability" = "Cloze",
+         "fastText\nCCS" = "fasttext_ccs",
+         "Plausibility\nJudgement" = "PlausibilityJudgement",
+         "GPT-3\n(Davinci)\nSurprisal" = "gpt3_surprisal",
+         "GloVe\nBCCS" = "glove_bccs",
+         "fastText\nBCCS" = "fasttext_bccs"
+         ),
+         var2 =fct_relevel(var2, "Cloze","PlausibilityJudgement","gpt3_surprisal","glove_ccs","fasttext_ccs","glove_bccs","fasttext_bccs"),
+         var2 = fct_recode(var2,
+         "GloVe\nCCS" = "glove_ccs",
+         "Cloze\nProbability" = "Cloze",
+         "fastText\nCCS" = "fasttext_ccs",
+         "Plausibility\nJudgement" = "PlausibilityJudgement",
+         "GPT-3\n(Davinci)\nSurprisal" = "gpt3_surprisal",
+         "GloVe\nBCCS" = "glove_bccs",
+         "fastText\nBCCS" = "fasttext_bccs"
+         ))%>%
+  ggplot(aes(x=term,y=var2,fill=Correlation))+ geom_tile()+ theme_minimal()+
+  geom_text(aes(var2, term, label = round(Correlation,2)), color = "white") + scale_fill_continuous_diverging(palette = "Purple-Green",limits=c(-1,1)) +xlab(NULL) + ylab(NULL)
+
+ggsave("heatmap.pdf",heatmap,width=6.5,height=5.25)
+
+heatmap
+```
+
+# Statistical Analysis
+
+## Create models and compare AICs
+
+One-variable:
+
+```{r}
+model.null  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zorthographic_neighborhood + zzipf_frequency +(1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord),REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zorthographic_neighborhood + zzipf_frequency +(1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord),REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.plausibility  = all_data%>%
+  lmer(data = .,formula = zN400 ~  zPlausibility +zorthographic_neighborhood + zzipf_frequency +(1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord),REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.condition  = all_data%>%
+  lmer(data = .,formula = zN400 ~ Condition + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.gpt3  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.gloveccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zglove_ccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.fasttextccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zfasttext_ccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+```
+
+```{r}
+one_factor_AICs = AIC(model.null,
+    model.cloze,
+    model.plausibility,
+    model.condition,
+    model.gpt3,
+    model.gloveccs,
+    model.fasttextccs)
+
+one_factor_AICs%>%knitr::kable()
+```
+
+```{r}
+one_factor_analyses = one_factor_AICs%>%
+  rownames_to_column("predictor")%>%
+  mutate(normalized_AIC = AIC-max(AIC))%>%
+  filter(predictor!="model.null")%>%
+  mutate(predictor = gsub("^.*\\.","", predictor))%>%
+  mutate(predictor = fct_reorder(predictor, desc(normalized_AIC)))%>%
+  mutate(predictor = fct_recode(predictor,
+         "GloVe\nCCS" = "gloveccs",
+         "Cloze\nProbability" = "cloze",
+         "fastText\nCCS" = "fasttextccs",
+         "Plausibility\nJudgement" = "plausibility",
+         "GPT-3\n(Davinci)\nSurprisal" = "gpt3",
+         "Experimental\nCondition" = "condition"
+         ))%>%
+  ggplot(aes(x=predictor,y=normalized_AIC)) + geom_col() + xlab("Predictor") + ylab("Regression AIC - Null Regression AIC")+theme_minimal()
+
+ggsave("one_factor_analyses.pdf",one_factor_analyses,height=4,width=5.5)
+one_factor_analyses
+```
+
+
+```{r}
+model.gpt3_gloveccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zglove_ccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.gpt3_fasttextccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zfasttext_ccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze_gloveccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zglove_ccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze_fasttextccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zfasttext_ccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+```
+
+```{r}
+two_factor_AICs = AIC(model.null,
+    model.cloze,
+    model.gpt3,
+    model.gloveccs,
+    model.fasttextccs,
+    model.gpt3_gloveccs,
+    model.gpt3_fasttextccs,
+    model.cloze_gloveccs,
+    model.cloze_fasttextccs
+    )
+
+two_factor_AICs%>%knitr::kable()
+```
+
+```{r}
+two_factor_analyses = two_factor_AICs%>%
+  rownames_to_column("predictor")%>%
+  mutate(normalized_AIC = AIC-max(AIC))%>%
+  filter(predictor!="model.null")%>%
+  mutate(predictor = gsub("^.*\\.","", predictor))%>%
+  mutate(predictor = fct_reorder(predictor, desc(normalized_AIC)))%>%
+  mutate(predictor = fct_recode(predictor,
+         "GloVe\nCCS" = "gloveccs",
+         "Cloze" = "cloze",
+         "fastText\nCCS" = "fasttextccs",
+         "GPT-3\nSurprisal" = "gpt3",
+         "Cloze\n+\nGloVe\nCCS" = "cloze_gloveccs",
+         "Cloze\n+\nfastText\nCCS" = "cloze_fasttextccs",
+         "GPT-3\nSurprisal\n+\nGloVe\nCCS" = "gpt3_gloveccs",
+         "GPT-3\nSurprisal\n+\nfastText\nCCS" = "gpt3_fasttextccs"
+         ))%>%
+  ggplot(aes(x=predictor,y=normalized_AIC)) + geom_col() + xlab("Predictor") + ylab("Regression AIC - Null Regression AIC")+theme_minimal()
+
+ggsave("two_factor_analyses.pdf",two_factor_analyses,height=4,width=6)
+two_factor_analyses
+```
+
+```{r}
+model.gpt3_plausibility  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zPlausibility + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze_gloveccs_plausibility  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zglove_ccs + zPlausibility + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze_fasttextccs_plausibility  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zfasttext_ccs + zPlausibility + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+```
+
+
+```{r}
+plaus_AICs = AIC(model.null,
+    model.gpt3,
+    model.cloze_gloveccs,
+    model.cloze_fasttextccs,
+    model.gpt3_plausibility,
+    model.cloze_gloveccs_plausibility,
+    model.cloze_fasttextccs_plausibility
+    )
+
+plaus_AICs%>%knitr::kable()
+
+```
+
+```{r}
+
+plaus_analyses = plaus_AICs%>%
+  rownames_to_column("predictor")%>%
+  mutate(normalized_AIC = AIC-max(AIC))%>%
+  filter(predictor!="model.null")%>%
+  mutate(predictor = gsub("^.*\\.","", predictor))%>%
+  mutate(plaus_status = case_when(predictor == "gpt3_plausibility" ~ "p",
+                                   predictor == "cloze_fasttextccs_plausibility" ~ "p",
+                                   predictor == "cloze_gloveccs_plausibility" ~ "p",
+                                   TRUE ~ "np",
+                                    ))%>%
+  mutate(facet_predictor = predictor)%>%
+    mutate(facet_predictor = fct_recode(facet_predictor,
+                                   "gpt3" = "gpt3_plausibility",
+                                   "cloze_fasttextccs" = "cloze_fasttextccs_plausibility",
+                                   "cloze_gloveccs" = "cloze_gloveccs_plausibility"
+                                   ))%>%
+  mutate(predictor = fct_relevel(predictor, 
+                                 "cloze_gloveccs",
+                                 "cloze_gloveccs_plausibility",
+                                 "cloze_fasttextccs",
+                                 "cloze_fasttextccs_plausibility",
+                                 "gpt3",
+                                 "gpt3_plausibility"
+                                 ))%>%
+  mutate(predictor = fct_recode(predictor,
+                                   "GPT-3\nSurprisal" = "gpt3",
+                                   "Cloze\n+\nGloVe\nCCS" = "cloze_gloveccs",
+                                   "Cloze\n+\nfastText\nCCS" = "cloze_fasttextccs",
+                                   "GPT-3\nSurprisal\n+\nPlausibility" = "gpt3_plausibility",
+                                   "Cloze\n+\nfastText\nCCS\n+\nPlausibility" = "cloze_fasttextccs_plausibility",
+                                   "Cloze\n+\nGloVe\nCCS\n+\nPlausibility" = "cloze_gloveccs_plausibility"
+                                   ))%>%
+  
+  ggplot(aes(x=predictor,y=normalized_AIC,fill=plaus_status)) + geom_col(position="dodge") + xlab("\nPredictors") + ylab("Regression AIC - Null Regression AIC")+theme_minimal() + facet_wrap(.~facet_predictor,scales="free_x")+ 
+theme(
+  strip.background = element_blank(),
+  strip.text.x = element_blank(),
+  legend.position = "none"
+) +scale_fill_manual(values=c("#0072B2","#009E73"))
+
+ggsave("plaus_analyses.pdf",plaus_analyses,height=4,width=6)
+plaus_analyses
+```
+
+
+
+
+```{r}
+model.gpt3_glovebccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zglove_bccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.gpt3_fasttextbccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zfasttext_bccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze_gloveccs_glovebccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zglove_ccs + zglove_bccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze_fasttextccs_glovebccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zfasttext_ccs + zglove_bccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze_gloveccs_fasttextbccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zglove_ccs + zfasttext_bccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model.cloze_fasttextccs_fasttextbccs  = all_data%>%
+  lmer(data = .,formula = zN400 ~ zCloze + zfasttext_ccs + zfasttext_bccs + zorthographic_neighborhood + zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+```
+
+
+```{r}
+bccs_AICs = AIC(model.null,
+    model.gpt3,model.gpt3_glovebccs,model.gpt3_fasttextbccs,
+    model.cloze_gloveccs,model.cloze_gloveccs_glovebccs,model.cloze_gloveccs_fasttextbccs,
+    model.cloze_fasttextccs,model.cloze_fasttextccs_glovebccs,model.cloze_fasttextccs_fasttextbccs
+    )
+
+bccs_AICs%>%knitr::kable()
+```
+
+```{r}
+bccs_analyses = bccs_AICs%>%
+  rownames_to_column("predictor")%>%
+  mutate(normalized_AIC = AIC-max(AIC))%>%
+  filter(predictor!="model.null")%>%
+  mutate(predictor = gsub("^.*\\.","", predictor))%>%
+  mutate(plaus_status = case_when(predictor == "gpt3_glovebccs" ~ "Regression +\n GloVe BCCS",
+                                   predictor == "cloze_gloveccs_glovebccs" ~ "Regression +\n GloVe BCCS",
+                                   predictor == "cloze_fasttextccs_glovebccs" ~ "Regression +\n GloVe BCCS",
+                                   predictor == "gpt3_fasttextbccs" ~ "Regression +\n fastText BCCS",
+                                   predictor == "cloze_gloveccs_fasttextbccs" ~ "Regression +\n fastText BCCS",
+                                   predictor == "cloze_fasttextccs_fasttextbccs" ~ "Regression +\n fastText BCCS",
+                                   TRUE ~ "Regression",
+                                    ))%>%
+  mutate(facet_predictor = predictor)%>%
+    mutate(facet_predictor = fct_recode(facet_predictor,
+                                   "gpt3" = "gpt3_glovebccs",
+                                   "cloze_fasttextccs" = "cloze_fasttextccs_glovebccs",
+                                   "cloze_gloveccs" = "cloze_gloveccs_glovebccs",
+                                   "gpt3" = "gpt3_fasttextbccs",
+                                   "cloze_fasttextccs" = "cloze_fasttextccs_fasttextbccs",
+                                   "cloze_gloveccs" = "cloze_gloveccs_fasttextbccs"
+                                   ))%>%
+  mutate(predictor = fct_relevel(predictor,
+                                 "cloze_gloveccs","cloze_gloveccs_glovebccs","cloze_gloveccs_fasttextbccs",
+                                 "cloze_fasttextccs","cloze_fasttextccs_glovebccs","cloze_fasttextccs_fasttextbccs",
+                                 "gpt3","gpt3_glovebccs","gpt3_fasttextbccs"))%>%
+  mutate(predictor = fct_recode(predictor,
+                                   "GPT-3\nSurprisal\n+\nGlove\nBCCS" = "gpt3_glovebccs",
+                                   "Cloze\n+\nfastText\nCCS\n+\nGlove\nBCCS" = "cloze_fasttextccs_glovebccs",
+                                   "Cloze\n+\nGloVe\nCCS\n+\nGlove\nBCCS" = "cloze_gloveccs_glovebccs",
+                                   "GPT-3\nSurprisal\n+\nfastText\nBCCS" = "gpt3_fasttextbccs",
+                                   "Cloze\n+\nfastText\nCCS\n+\nfastText\nBCCS" = "cloze_fasttextccs_fasttextbccs",
+                                   "Cloze\n+\nGloVe\nCCS\n+\nfastText\nBCCS" = "cloze_gloveccs_fasttextbccs",
+                                   "GPT-3\nSurprisal" = "gpt3",
+                                   "Cloze\n+\nGloVe\nCCS" = "cloze_gloveccs",
+                                   "Cloze\n+\nfastText\nCCS" = "cloze_fasttextccs"
+                                   ))%>%
+  ggplot(aes(x=predictor,y=normalized_AIC,fill=plaus_status)) + geom_col(position="dodge") + xlab("\nPredictors") + ylab("Regression AIC - Null Regression AIC")+theme_minimal()+ facet_wrap(.~facet_predictor,scales="free_x")+ 
+  theme(
+  strip.background = element_blank(),
+  strip.text.x = element_blank(),
+  legend.position = "none") +scale_fill_manual(values=c("#0072B2","#E69F00","#F0E442"))
+
+ggsave("bccs_analyses.pdf",bccs_analyses,height=4,width=6)
+bccs_analyses
+```
+Reanalysis of BCCS addition without BC condition
+
+```{r}
+no_bc_data = all_data%>%
+  filter(Condition!="BC")
+
+model_nobc.gpt3  = no_bc_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zorthographic_neighborhood +
+         zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model_nobc.gpt3_glove_bccs  = no_bc_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zglove_bccs + zorthographic_neighborhood +
+         zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+model_nobc.gpt3_fasttext_bccs  = no_bc_data%>%
+  lmer(data = .,formula = zN400 ~ zgpt3_surprisal + zfasttext_bccs + zorthographic_neighborhood +
+         zzipf_frequency + (1 | Subject) +(1 | ContextCode) + (1|Electrode) + (1|TargetWord) ,REML = FALSE, control=lmerControl(optimizer="bobyqa"))
+
+```
+
+
+## LRTs
+
+```{r}
+anova.null_cloze = anova(model.null,model.cloze)
+anova.null_plausibility = anova(model.null,model.plausibility)
+anova.null_condition = anova(model.null,model.condition)
+anova.null_gpt3 = anova(model.null,model.gpt3)
+anova.null_gloveccs = anova(model.null,model.gloveccs)
+anova.null_fasttextccs = anova(model.null,model.fasttextccs)
+
+anova.gpt3_gloveccs = anova(model.gpt3,model.gpt3_gloveccs)
+anova.gpt3_fasttextccs = anova(model.gpt3,model.gpt3_fasttextccs) 
+anova.cloze_gloveccs = anova(model.cloze,model.cloze_gloveccs) 
+anova.cloze_fasttextccs = anova(model.cloze,model.cloze_fasttextccs) 
+
+anova.gloveccs_gpt3 = anova(model.gloveccs,model.gpt3_gloveccs)
+anova.fasttextccs_gpt3 = anova(model.fasttextccs,model.gpt3_fasttextccs) 
+anova.gloveccs_cloze = anova(model.gloveccs,model.cloze_gloveccs) 
+anova.fasttextccs_cloze = anova(model.fasttextccs,model.cloze_fasttextccs) 
+
+anova.gpt3_plausibility = anova(model.gpt3,model.gpt3_plausibility)
+anova.cloze_gloveccs_plausibility = anova(model.cloze_gloveccs,model.cloze_gloveccs_plausibility)
+anova.cloze_fasttextccs_plausibility = anova(model.cloze_fasttextccs,model.cloze_fasttextccs_plausibility)
+
+anova.gpt3_glovebccs = anova(model.gpt3,model.gpt3_glovebccs)
+anova.gpt3_fasttextbccs = anova(model.gpt3,model.gpt3_fasttextbccs)
+anova.cloze_gloveccs_glovebccs = anova(model.cloze_gloveccs,model.cloze_gloveccs_glovebccs)
+anova.cloze_gloveccs_fasttextbccs = anova(model.cloze_gloveccs,model.cloze_gloveccs_fasttextbccs)
+anova.cloze_fasttextccs_glovebccs = anova(model.cloze_fasttextccs,model.cloze_fasttextccs_glovebccs)
+anova.cloze_fasttextccs_fasttextbccs = anova(model.cloze_fasttextccs,model.cloze_fasttextccs_fasttextbccs)
+
+anova.no_bc.gpt3_glovebccs = anova(model_nobc.gpt3,model_nobc.gpt3_glove_bccs)
+anova.no_bc.gpt3_fasttextbccs = anova(model_nobc.gpt3,model_nobc.gpt3_fasttext_bccs)
+
+lrt_data = tribble(~Comparison,~chisq,~df,~p.raw,
+"Null + Cloze",anova.null_cloze$Chisq[2],anova.null_cloze$Df[2],anova.null_cloze$`Pr(>Chisq)`[2],
+"Null + Plausibility",anova.null_plausibility$Chisq[2],anova.null_plausibility$Df[2],anova.null_plausibility$`Pr(>Chisq)`[2],
+"Null + Condition",anova.null_condition$Chisq[2],anova.null_condition$Df[2],anova.null_condition$`Pr(>Chisq)`[2],
+"Null + GPT-3",anova.null_gpt3$Chisq[2],anova.null_gpt3$Df[2],anova.null_gpt3$`Pr(>Chisq)`[2],
+"Null + GloVe CCS",anova.null_gloveccs$Chisq[2],anova.null_gloveccs$Df[2],anova.null_gloveccs$`Pr(>Chisq)`[2],
+"Null + fastText CCS",anova.null_fasttextccs$Chisq[2],anova.null_fasttextccs$Df[2],anova.null_fasttextccs$`Pr(>Chisq)`[2],
+
+"GPT-3 + GloVe CCS",anova.gpt3_gloveccs$Chisq[2],anova.gpt3_gloveccs$Df[2],anova.gpt3_gloveccs$`Pr(>Chisq)`[2],
+"GPT-3 + fastText CCS",anova.gpt3_fasttextccs$Chisq[2],anova.gpt3_fasttextccs$Df[2],anova.gpt3_fasttextccs$`Pr(>Chisq)`[2],
+"Cloze + GloVe CCS",anova.cloze_gloveccs$Chisq[2],anova.cloze_gloveccs$Df[2],anova.cloze_gloveccs$`Pr(>Chisq)`[2],
+"Cloze + fastText CCS",anova.cloze_fasttextccs$Chisq[2],anova.cloze_fasttextccs$Df[2],anova.cloze_fasttextccs$`Pr(>Chisq)`[2],
+
+"GloVe CCS + GPT-3",anova.gloveccs_gpt3$Chisq[2],anova.gloveccs_gpt3$Df[2],anova.gloveccs_gpt3$`Pr(>Chisq)`[2],
+"fastText CCS + GPT-3",anova.fasttextccs_gpt3$Chisq[2],anova.fasttextccs_gpt3$Df[2],anova.fasttextccs_gpt3$`Pr(>Chisq)`[2],
+"GloVe CCS + Cloze",anova.gloveccs_cloze$Chisq[2],anova.gloveccs_cloze$Df[2],anova.gloveccs_cloze$`Pr(>Chisq)`[2],
+"fastText CCS + Cloze",anova.fasttextccs_cloze$Chisq[2],anova.fasttextccs_cloze$Df[2],anova.fasttextccs_cloze$`Pr(>Chisq)`[2],
+
+
+"GPT-3 + Plausibility",anova.gpt3_plausibility$Chisq[2],anova.gpt3_plausibility$Df[2],anova.gpt3_plausibility$`Pr(>Chisq)`[2],
+"Cloze + GloVe CCS + Plausibility",anova.cloze_gloveccs_plausibility$Chisq[2],anova.cloze_gloveccs_plausibility$Df[2],anova.cloze_gloveccs_plausibility$`Pr(>Chisq)`[2],
+"Cloze + fastText CCS + Plausibility",anova.cloze_fasttextccs_plausibility$Chisq[2],anova.cloze_fasttextccs_plausibility$Df[2],anova.cloze_fasttextccs_plausibility$`Pr(>Chisq)`[2],
+
+
+"GPT-3 + GloVe BCCS",anova.gpt3_glovebccs$Chisq[2],anova.gpt3_glovebccs$Df[2],anova.gpt3_glovebccs$`Pr(>Chisq)`[2],
+"GPT-3 + fastText BCCS",anova.gpt3_fasttextbccs$Chisq[2],anova.gpt3_fasttextbccs$Df[2],anova.gpt3_fasttextbccs$`Pr(>Chisq)`[2],
+"Cloze + GloVe CCS + GloVe BCCS",anova.cloze_gloveccs_glovebccs$Chisq[2],anova.cloze_gloveccs_glovebccs$Df[2],anova.cloze_gloveccs_glovebccs$`Pr(>Chisq)`[2],
+"Cloze + GloVe CCS + fastText BCCS",anova.cloze_gloveccs_fasttextbccs$Chisq[2],anova.cloze_gloveccs_fasttextbccs$Df[2],anova.cloze_gloveccs_fasttextbccs$`Pr(>Chisq)`[2],
+"Cloze + fastText CCS + GloVe BCCS",anova.cloze_fasttextccs_glovebccs$Chisq[2],anova.cloze_fasttextccs_glovebccs$Df[2],anova.cloze_fasttextccs_glovebccs$`Pr(>Chisq)`[2],
+"Cloze + fastText CCS + fastText BCCS",anova.cloze_fasttextccs_fasttextbccs$Chisq[2],anova.cloze_fasttextccs_fasttextbccs$Df[2],anova.cloze_fasttextccs_fasttextbccs$`Pr(>Chisq)`[2],
+
+"No BC: GPT-3 + GloVe BCCS",anova.no_bc.gpt3_glovebccs$Chisq[2],anova.no_bc.gpt3_glovebccs$Df[2],anova.no_bc.gpt3_glovebccs$`Pr(>Chisq)`[2],
+"No BC: GPT-3 + fastText BCCS",anova.no_bc.gpt3_fasttextbccs$Chisq[2],anova.no_bc.gpt3_fasttextbccs$Df[2],anova.no_bc.gpt3_fasttextbccs$`Pr(>Chisq)`[2],
+)
+
+
+
+lrt_data$p.corrected = p.adjust(c(lrt_data$p.raw),method="BY")
+
+# lrt_data = lrt_data%>%
+#   select(-p.raw)
+
+lrt_data%>%knitr::kable()
+```
+
+```{r}
+residuals = all_data%>%
+  select("Sentence","Condition")
+
+residuals$`Null Model` = summary(model.null)$residuals
+residuals$`Cloze` = summary(model.cloze)$residuals
+residuals$`Plausibility` = summary(model.plausibility)$residuals
+residuals$`Experimental Condition` = summary(model.condition)$residuals
+residuals$`GPT-3 Surprisal` = summary(model.gpt3)$residuals
+residuals$`GloVe CCS` = summary(model.gloveccs)$residuals
+residuals$`fastText CCS` = summary(model.fasttextccs)$residuals
+residuals$`GPT-3 Surprisal + GloVe CCS` = summary(model.gpt3_gloveccs)$residuals
+residuals$`GPT-3 Surprisal + fastText CCS` = summary(model.gpt3_fasttextccs)$residuals
+residuals$`Cloze + GloVe CCS` = summary(model.cloze_gloveccs)$residuals
+residuals$`Cloze + fastText CCS` = summary(model.cloze_fasttextccs)$residuals
+residuals$`GPT-3 Surprisal + Plausibility` = summary(model.gpt3_plausibility)$residuals
+residuals$`Cloze + GloVe CCS + Plausibility` = summary(model.cloze_gloveccs_plausibility)$residuals
+residuals$`Cloze + fastText CCS + Plausibility` = summary(model.cloze_fasttextccs_plausibility)$residuals
+residuals$`GPT-3 Surprisal + GloVe BCCS` = summary(model.gpt3_glovebccs)$residuals
+residuals$`GPT-3 Surprisal + fastText BCCS` = summary(model.gpt3_fasttextbccs)$residuals
+residuals$`Cloze + GloVe CCS + GloVe BCCS` = summary(model.cloze_gloveccs_glovebccs)$residuals
+residuals$`Cloze + GloVe CCS + fastText BCCS` = summary(model.cloze_gloveccs_fasttextbccs)$residuals
+residuals$`Cloze + fastText CCS + GloVe BCCS` = summary(model.cloze_fasttextccs_glovebccs)$residuals
+residuals$`Cloze + fastText CCS + fastText BCCS` = summary(model.cloze_fasttextccs_fasttextbccs)$residuals
+
+residuals = residuals%>%
+  pivot_longer(3:length(colnames(residuals)),names_to = "Regression", values_to="Residual")
+
+residuals = residuals%>%
+  mutate(Regression = fct_relevel(Regression, "Null Model", "Plausibility", "Experimental Condition"),
+        Condition = fct_recode(Condition,
+                                "Best Completion" = "BC",
+                                "Related" = "Rel",
+                                "Unrelated" = "Unrel",
+                                "Implausible" = "Implaus"))
+
+resids_graph = residuals%>%
+  ggplot(aes(x=Condition,y=Residual,color=Condition,fill=Condition)) + theme_minimal()+
+  ggdist::stat_halfeye(adjust = .5, width = .3, .width = 0, justification = -.3, point_colour = NA, alpha = .8) + 
+  geom_boxplot(width = .1, outlier.shape = NA, alpha = .5) +
+  gghalves::geom_half_point(side = "l", range_scale = .4, alpha = .2, size=.1) + 
+  scale_fill_manual(values=c("#009292","#db6d00","#ff6db6","#6db6ff")) + scale_color_manual(values=c("#009292","#db6d00","#ff6db6","#6db6ff")) +
+  facet_wrap(.~Regression,ncol=3) + theme(axis.title.x=element_blank(),axis.text.x=element_blank())
+
+
+ggsave(filename = "resids.png",resids_graph,width=8.5,height=11)
+```
+
+
