@@ -58,21 +58,29 @@ def data_parsing() -> None:
 				)
 				writer.writeheader()
 
-				for idx, row in enumerate(reader, start=1):
+				seen_sentences = set()
+				idx = 1
+				for row in reader:
 					full_text = row.get("FullText")
 					target_word = row.get("TargetWords")
 					cloze_value = row.get(cloze_field)
 					if full_text is None or target_word is None or cloze_value is None:
 						continue
+					
+					full_text_clean = full_text.strip()
+					if full_text_clean in seen_sentences:
+						continue
+					seen_sentences.add(full_text_clean)
 
 					writer.writerow(
 						{
 							"sentence_num": idx,
-							"FullText": full_text.strip(),
+							"FullText": full_text_clean,
 							"target_word": target_word.strip(),
 							"cloz": cloze_value,
 						}
 					)
+					idx += 1
 
 
 if __name__ == "__main__":
