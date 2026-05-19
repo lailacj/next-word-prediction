@@ -1,5 +1,8 @@
 # Better Language Models Better Model the N400, but not Reading Time
 
+## Author: James Michaelov
+## Contributors: James A. Michaelov, Benjamin K. Bergen
+
 We provide the code and data for the paper 'Better Language Models Better Model the N400, but not Reading Time.
 
 The contents of this repository are as follows:

@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import Iterable, Optional
 
 
+# sanitize the close_prof field accross all the datasets
 def _pick_cloze_field(fieldnames: Iterable[str]) -> Optional[str]:
 	normalized = {name.strip().lower() for name in fieldnames if name}
 	if "cloze" in normalized:
