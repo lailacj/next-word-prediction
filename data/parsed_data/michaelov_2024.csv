@@ -1,4 +1,4 @@
-sentence_num,FullText,target_word,cloz
+sentence_number,sentence,word,cloze_prob
 1,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major raise",raise,0.2258064516129032
 2,The cigar burned a hole in the couch,couch,0.1875
 3,"His first film was a failure, but he learned some techniques in that first try",try,0.03448275862068965

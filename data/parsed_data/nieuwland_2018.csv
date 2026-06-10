@@ -1,4 +1,4 @@
-sentence_num,FullText,target_word,cloz
+sentence_number,sentence,word,cloze_prob
 1,"When her husband started staying late at the office every night, Joanne began to suspect that he was having an affair",affair,100
 2,"Her grandfather always stressed how important it was for Sophia to go to school, because he had never had the opportunity to receive an education",education,90
 3,"Betsy had no desire to enter the working world, so decided to stay at the university and remain an artist",artist,0

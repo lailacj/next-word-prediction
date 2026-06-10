@@ -1,4 +1,4 @@
-sentence_num,FullText,target_word,cloz
+sentence_number,sentence,word,cloze_prob
 1,She was glad she had accompanied her friend because she was enjoying the party except for the music,music,0.182194616977226
 2,Shuffle the cards before you forget,forget,0
 3,Most men cannot understand why women wear makeup,makeup,0.34375

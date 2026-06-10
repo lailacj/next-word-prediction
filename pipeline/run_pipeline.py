@@ -1,8 +1,12 @@
 """
 IMPORT LINES
 """
-from language_models import QwenModel, LlamaModel, DeepSeekModel
+from pathlib import Path
+
+from language_models import BertModel, QwenModel, LlamaModel, DeepSeekModel
 from data_organization import load_cloze_data
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
 def get_list_words_given_sentence(my_list):
@@ -17,27 +21,8 @@ def get_list_words_given_sentence(my_list):
 # main function to run the pipeline
 def main():
     # load the data in the peelee data cloze dataset
-    file_path = "../data/peelle_data/cloze_data.csv"
+    file_path = PROJECT_ROOT / "data" / "parsed_data" / "michaelov_2024.csv"
     masked, sentences = load_cloze_data(file_path)
-
-    #Initialize the language models list
-    # models = [QwenModel(), LlamaModel(), DeepSeekModel()]
-   
-    # for model in models:
-    #     for idx, sentence in enumerate(sentences, start=1):
-    #         word_list = get_list_words_given_sentence(masked[str(idx)])
-    #         sentence_token_ids = model.tokenize_sentense(sentence)
-
-    #         for word in word_list:
-    #             word_token_ids = model.tokenize_word(word)
-    #             if not word_token_ids:
-    #                 continue
-    #             # get the prob numbers
-    #             prob = model.predict_next_word(sentence_token_ids, word_token_ids)
-
-    #             # write in the output file 
-    #             with open(model.get_ouptut_file(), 'a') as f:
-    #                 f.write(f"{idx},'{sentence}',{word},{prob}\n")
 
     model = LlamaModel()
     for idx, sentence in enumerate(sentences, start=1):
@@ -50,6 +35,8 @@ def main():
                  continue
             # get the prob numbers
             prob = model.predict_next_word(sentence_token_ids, word_token_ids)
+            if prob is None:
+                 continue
             # write in the output file 
             with open(model.get_ouptut_file(), 'a') as f:
                 f.write(f"{idx},'{sentence}',{word},{prob}\n")
@@ -57,4 +44,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
