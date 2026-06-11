@@ -21,10 +21,11 @@ def get_list_words_given_sentence(my_list):
 # main function to run the pipeline
 def main():
     # load the data in the peelee data cloze dataset
-    file_path = PROJECT_ROOT / "data" / "parsed_data" / "szewczyk_2022.csv"
+    file_path = PROJECT_ROOT / "data" / "peelle_data" / "cloze_data.csv"
+
     masked, sentences = load_cloze_data(file_path)
 
-    model = DeepSeekModel()
+    model = BertModel()
     for idx, sentence in enumerate(sentences, start=1):
         word_list = get_list_words_given_sentence(masked[str(idx)])
         sentence_token_ids = model.tokenize_sentense(sentence)
