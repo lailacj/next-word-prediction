@@ -1,501 +1,501 @@
 sentence_number,sentence,word,cloze_prob
-1,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major raise",raise,0.2258064516129032
-2,The cigar burned a hole in the couch,couch,0.1875
-3,"His first film was a failure, but he learned some techniques in that first try",try,0.03448275862068965
-4,He was hired for the job because of his fresh new look,look,0.03125
-5,The journal issue that has the new article about diseases of the eye is still in print,print,0.06896551724137931
-6,Every spring they held the annual ball,ball,0.03125
-7,"Penelope started to assemble her new bicycle, but was missing the wheels",wheels,0.09375
-8,The restaurant will reopen with new management,management,0.1875
-9,Jennifer disliked walking under the trees at the edge of the park because they were always full of bugs,bugs,0
-10,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or pretty",pretty,0.3125
-11,I don't know why people like to see their initials in print,print,0.06896551724137931
-12,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very rare,rare,0.15625
-13,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's temple,temple,0.2903225806451613
-14,He took a job training dogs for the police,police,0.2413793103448276
-15,The conductor gave detailed instructions to the orchestra,orchestra,0.26666666666666666
-16,"Down in the basement, Steve and Robert were playing cards",cards,0.125
-17,"After the most recent price increase, the small business owner decided to order his office supplies from another company",company,0.41379310344827586
-18,Sharon was sad that she had lost her dog,dog,0.21875
-19,"All of armed services will admit women, but females are barred from combat",combat,0.4482758620689655
-20,"After the divorce, she had to move out of the expensive house to an apartment that was cheap",cheap,0.1724137931034483
-21,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his morals",morals,0.41379310344827586
-22,"Some of his jokes were crummy, but those one-liners were hilarious",hilarious,0.35714285714285715
-23,The inspector from the health department found a roach in a very expensive restaurant,restaurant,0.4827586206896552
-24,The conductor had no idea that the train had been boarded by a known felon,felon,0.14285714285714285
-25,The nurse brought him a glass of juice and his medicine,medicine,0.28125
-26,The teacher was not looking forward to another year of school,school,0.2857142857142857
-27,Steve skipped his annual checkup for another year,year,0.2857142857142857
-28,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately vague",vague,0.3103448275862069
-29,She poured water on the plants,plants,0.17857142857142858
-30,"Mark liked the older houses, but Susan wanted to buy one that was new and modern",modern,0.5
-31,"In an old sitcom, he was the wise family doctor",doctor,0.14285714285714285
-32,"The government controlled the news media, so most of the reports from the war zone were censored",censored,0.1875
-33,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold medal",medal,0.28125
-34,"During the summer, the children hung out at the pool",pool,0.25
-35,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be heroic",heroic,0.0625
-36,The little girl kept a lock on her diary,diary,0.5517241379310345
-37,"Flying low above her, Bernice could hear the plane",plane,0.2
-38,Perry heard a grinding noise coming from his car,car,0.3
-39,"If Jim's manager is incompetent, he has a legitimate right to complain",complain,0.53125
-40,"In the best part of the movie, the hero has to impersonate the villain",villain,0.6333333333333333
-41,The princess wore a crown,crown,0.46875
-42,Jason was disappointed when the other scouts scared off the elk by loudly beating the drum,drum,0.25
-43,"After the flood, the house smelled of mildew and everything in it was ruined",ruined,0.09375
-44,Everyone on the scene gathered around to look at the accident,accident,0.2413793103448276
-45,The final score of the game was tied,tied,0.5357142857142857
-46,"After swimming the English Channel, Bonita was cold and completely exhausted",exhausted,0.3333333333333333
-47,"She had the data to back up everything she said, so the hostile questions did not shake her confidence",confidence,0.46875
-48,"The new dress was very pretty, but it was cut from an unusual fabric",fabric,0.2857142857142857
-49,"When the little girl saw the big dog lumbering towards her, she began to run",run,0.27586206896551724
-50,"From her house a half mile away, Diana could still hear the loud cheers coming from the stadium",stadium,0.4482758620689655
-51,Five ships did not survive the storm,storm,0.43333333333333335
-52,The paramedics on the scene helped the passengers after the big car accident,accident,0.4642857142857143
-53,The pilot spoke to an air traffic controller just before the crash,crash,0.23333333333333336
-54,The boy scouts started a long hike through the forest after having a big lunch,lunch,0.2857142857142857
-55,"When traveling, Roger prefers to stick to major roads",roads,0.17857142857142858
-56,"While hemming a pair of pants, Bridget accidentally dropped her needle",needle,0.6785714285714286
-57,The rangers say that somewhere in the state park is a bear,bear,0.41379310344827586
-58,The doctor told him his headaches were due to stress,stress,0.4642857142857143
-59,"The groups in the parade walked by slowly, each waving their hands",hands,0.5333333333333333
-60,"The little girl was very sick, but unfortunately there was no cure",cure,0.5
-61,"The meteor shower should have been spectacular, but the city lights blocked the view",view,0.5666666666666667
-62,She was unsure how the book would end,end,0.6206896551724138
-63,"He was desperate for a job, so finally took something doing door to door sales",sales,0.5333333333333333
-64,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical terms,terms,0.6785714285714286
-65,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were young",young,0.8275862068965517
-66,"In the window, they posted the hours they were open for business",business,0.625
-67,They sent the kids with measles home from school because they were contagious,contagious,0.5517241379310345
-68,"Outside, Cora could hear the running water",water,0.6896551724137931
-69,At night they often took a short walk,walk,0.4642857142857143
-70,The wealthy author always points out that she wrote four novels before one was published,published,0.5483870967741935
-71,The kitten waited patiently because behind the refrigerator was a mouse,mouse,0.9285714285714286
-72,Norton hates getting up on winter mornings because it is always cold,cold,0.7931034482758621
-73,The fertilizer enriched the soil,soil,0.8620689655172413
-74,The young girl passed her friend a note,note,0.6333333333333333
-75,He tinkered with the engine every weekend until it was absolutely perfect,perfect,0.4827586206896552
-76,"When Diane heard the shark warning, she swam as fast as she could for shore",shore,0.5625
-77,Michael could hear the bells ringing in the tower of the church,church,0.7241379310344828
-78,"When he got home from work on the construction site, his clothes were always dirty",dirty,0.875
-79,Kevin propped his head up with a pillow as he basked in the hot sun,sun,0.7666666666666667
-80,He bought it without even asking the price,price,0.5357142857142857
-81,"Barry has considered proposing to his girlfriend, but he wants to wait until he is ready",ready,0.6206896551724138
-82,John was disappointed to discover a scratch on his new car,car,0.71875
-83,He was afraid that doing drugs would damage his brain,brain,0.6666666666666666
-84,"They've been living together for a long time, but don't think they're actually married",married,0.3448275862068966
-85,Dennis the Menance was known for making trouble,trouble,0.65625
-86,When the shooting started they ran for cover,cover,0.65625
-87,The federal agents examined the hundred dollar bill with a microscope to see if it was real,real,0.4482758620689655
-88,Eva turned down the heat and left the sauce on the stove to simmer,simmer,0.6551724137931034
-89,"Alone in the canyon, he was so spooked he was scared by his own shadow",shadow,0.8214285714285714
-90,Betsy could never tell a lie,lie,0.8571428571428571
-91,The bad boy was sent to his room,room,0.84375
-92,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his scars",scars,0.7241379310344828
-93,"Trying to evade their captors, the escaped prisoners of war lived in constant fear",fear,0.65625
-94,The tip of the knife was sharp,sharp,0.6551724137931034
-95,The little girl pulled on the rubber band to see how far it would stretch,stretch,0.5
-96,The soldiers had special night vision goggles so they could see the enemy,enemy,0.34375
-97,George was born into a wealthy family and has no idea what it's like to be poor,poor,0.9
-98,"Looking for bats, Karen descended into the depths of the cave",cave,0.7586206896551724
-99,We finally got a decent picture on the TV after an hour of adjusting the antenna,antenna,0.6071428571428571
-100,It took a week to get his car fixed because the parts were out of stock,stock,0.7241379310344828
-101,The dispute was settled by a third party,party,0.875
-102,Our guests should be arriving soon,soon,0.8333333333333334
-103,The dough was put in the hot oven,oven,0.896551724137931
-104,Andrew was glad that the meeting was very short,short,0.5625
-105,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour bus",bus,0.9
-106,Most shark attacks occur very close to shore,shore,0.9
-107,He didn't have to spend much money on the car because he found an incredible deal,deal,0.8620689655172413
-108,The wealthy child went to a private school,school,0.875
-109,"When you go to bed, turn off the lights",lights,0.65625
-110,George must keep his pet on a leash,leash,0.90625
-111,"He didn't have time to file everything on his desk, so he organized it into two piles",piles,0.7241379310344828
-112,The whole town came to hear their mayor speak,speak,0.8571428571428571
-113,Josie found she could not bend the elbow of her broken arm,arm,0.9642857142857144
-114,It's hard to admit when one is wrong,wrong,0.6428571428571429
-115,Vic asked her to repeat what she had said,said,0.8666666666666667
-116,When they were in London they visited Buckingham palace,palace,0.8275862068965517
-117,The agent was sent to South America on a secret mission,mission,0.8620689655172413
-118,Sam knew that rain was coming because he could smell it in the air,air,0.9310344827586208
-119,His boss refused to give him a raise,raise,0.9333333333333332
-120,She flew in late last night and really didn't get much sleep,sleep,0.9642857142857144
-121,"After a week, they gave up on the missing hikers and called off the search",search,0.8620689655172413
-122,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major bonus",bonus,0
-123,The cigar burned a hole in the sofa,sofa,0.03125
-124,"His first film was a failure, but he learned some techniques in that first effort",effort,0
-125,He was hired for the job because of his fresh new image,image,0
-126,The journal issue that has the new article about diseases of the eye is still in press,press,0.03448275862068965
-127,Every spring they held the annual dance,dance,0
-128,"Penelope started to assemble her new bicycle, but was missing the tires",tires,0.0625
-129,The restaurant will reopen with new ownership,ownership,0
-130,Jennifer disliked walking under the trees at the edge of the park because they were always full of insects,insects,0
-131,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or attractive",attractive,0
-132,I don't know why people like to see their initials in ink,ink,0.03448275862068965
-133,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very unique,unique,0
-134,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's shrine,shrine,0
-135,He took a job training dogs for the military,military,0
-136,The conductor gave detailed instructions to the choir,choir,0
-137,"Down in the basement, Steve and Robert were playing poker",poker,0.09375
-138,"After the most recent price increase, the small business owner decided to order his office supplies from another business",business,0
-139,Sharon was sad that she had lost her puppy,puppy,0.09375
-140,"All of armed services will admit women, but females are barred from fighting",fighting,0.06896551724137931
-141,"After the divorce, she had to move out of the expensive house to an apartment that was affordable",affordable,0.10344827586206896
-142,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his values",values,0.06896551724137931
-143,"Some of his jokes were crummy, but those one-liners were humorous",humorous,0
-144,The inspector from the health department found a roach in a very expensive cafe,cafe,0
-145,The conductor had no idea that the train had been boarded by a known convict,convict,0.03571428571428571
-146,The nurse brought him a glass of juice and his pills,pills,0.0625
-147,The teacher was not looking forward to another year of classes,classes,0
-148,Steve skipped his annual checkup for another month,month,0
-149,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately ambiguous",ambiguous,0.06896551724137931
-150,She poured water on the roses,roses,0
-151,"Mark liked the older houses, but Susan wanted to buy one that was new and contemporary",contemporary,0.03333333333333333
-152,"In an old sitcom, he was the wise family physician",physician,0
-153,"The government controlled the news media, so most of the reports from the war zone were screened",screened,0
-154,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold trophy",trophy,0.03125
-155,"During the summer, the children hung out at the lake",lake,0
-156,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be courageous",courageous,0
-157,The little girl kept a lock on her journal,journal,0
-158,"Flying low above her, Bernice could hear the jet",jet,0.03333333333333333
-159,Perry heard a grinding noise coming from his engine,engine,0.1
-160,"If Jim's manager is incompetent, he has a legitimate right to argue",argue,0
-161,"In the best part of the movie, the hero has to impersonate the criminal",criminal,0.06666666666666667
-162,The princess wore a hat,hat,0
-163,Jason was disappointed when the other scouts scared off the elk by loudly beating the pans,pans,0
-164,"After the flood, the house smelled of mildew and everything in it was destroyed",destroyed,0.03125
-165,Everyone on the scene gathered around to look at the crash,crash,0
-166,The final score of the game was even,even,0
-167,"After swimming the English Channel, Bonita was cold and completely beat",beat,0
-168,"She had the data to back up everything she said, so the hostile questions did not shake her composure",composure,0
-169,"The new dress was very pretty, but it was cut from an unusual material",material,0.10714285714285714
-170,"When the little girl saw the big dog lumbering towards her, she began to flee",flee,0
-171,"From her house a half mile away, Diana could still hear the loud cheers coming from the stands",stands,0.03448275862068965
-172,Five ships did not survive the tsunami,tsunami,0.06666666666666667
-173,The paramedics on the scene helped the passengers after the big car wreck,wreck,0.03571428571428571
-174,The pilot spoke to an air traffic controller just before the collision,collision,0
-175,The boy scouts started a long hike through the forest after having a big dinner,dinner,0
-176,"When traveling, Roger prefers to stick to major streets",streets,0
-177,"While hemming a pair of pants, Bridget accidentally dropped her pin",pin,0.03571428571428571
-178,The rangers say that somewhere in the state park is a cub,cub,0
-179,The doctor told him his headaches were due to tension,tension,0
-180,"The groups in the parade walked by slowly, each waving their arms",arms,0
-181,"The little girl was very sick, but unfortunately there was no remedy",remedy,0.0625
-182,"The meteor shower should have been spectacular, but the city lights blocked the sight",sight,0
-183,She was unsure how the book would conclude,conclude,0
-184,"He was desperate for a job, so finally took something doing door to door solicitation",solicitation,0
-185,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical words,words,0
-186,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were older",older,0
-187,"In the window, they posted the hours they were open for service",service,0.03125
-188,They sent the kids with measles home from school because they were infectious,infectious,0
-189,"Outside, Cora could hear the running river",river,0
-190,At night they often took a short stroll,stroll,0.10714285714285714
-191,The wealthy author always points out that she wrote four novels before one was printed,printed,0
-192,The kitten waited patiently because behind the refrigerator was a rat,rat,0
-193,Norton hates getting up on winter mornings because it is always chilly,chilly,0.03448275862068965
-194,The fertilizer enriched the dirt,dirt,0
-195,The young girl passed her friend a letter,letter,0
-196,He tinkered with the engine every weekend until it was absolutely correct,correct,0
-197,"When Diane heard the shark warning, she swam as fast as she could for land",land,0.09375
-198,Michael could hear the bells ringing in the tower of the cathedral,cathedral,0.10344827586206896
-199,"When he got home from work on the construction site, his clothes were always filthy",filthy,0.03125
-200,Kevin propped his head up with a pillow as he basked in the hot lamp,lamp,0
-201,He bought it without even asking the cost,cost,0
-202,"Barry has considered proposing to his girlfriend, but he wants to wait until he is prepared",prepared,0
-203,John was disappointed to discover a scratch on his new truck,truck,0
-204,He was afraid that doing drugs would damage his mind,mind,0
-205,"They've been living together for a long time, but don't think they're actually engaged",engaged,0
-206,Dennis the Menance was known for making mischief,mischief,0.0625
-207,When the shooting started they ran for shelter,shelter,0
-208,The federal agents examined the hundred dollar bill with a microscope to see if it was genuine,genuine,0
-209,Eva turned down the heat and left the sauce on the stove to cook,cook,0.10344827586206896
-210,"Alone in the canyon, he was so spooked he was scared by his own reflection",reflection,0
-211,Betsy could never tell a fib,fib,0
-212,The bad boy was sent to his bedroom,bedroom,0
-213,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his wounds",wounds,0.06896551724137931
-214,"Trying to evade their captors, the escaped prisoners of war lived in constant terror",terror,0.03125
-215,The tip of the knife was pointed,pointed,0.03448275862068965
-216,The little girl pulled on the rubber band to see how far it would extend,extend,0
-217,The soldiers had special night vision goggles so they could see the invaders,invaders,0
-218,George was born into a wealthy family and has no idea what it's like to be needy,needy,0
-219,"Looking for bats, Karen descended into the depths of the cavern",cavern,0.10344827586206896
-220,We finally got a decent picture on the TV after an hour of adjusting the wires,wires,0
-221,It took a week to get his car fixed because the parts were out of supply,supply,0
-222,The dispute was settled by a third person,person,0.03125
-223,Our guests should be arriving shortly,shortly,0.06666666666666667
-224,The dough was put in the hot stove,stove,0
-225,Andrew was glad that the meeting was very brief,brief,0.09375
-226,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour van",van,0
-227,Most shark attacks occur very close to land,land,0.06666666666666667
-228,He didn't have to spend much money on the car because he found an incredible bargain,bargain,0
-229,The wealthy child went to a private college,college,0
-230,"When you go to bed, turn off the lamp",lamp,0
-231,George must keep his pet on a chain,chain,0
-232,"He didn't have time to file everything on his desk, so he organized it into two stacks",stacks,0.03448275862068965
-233,The whole town came to hear their mayor talk,talk,0.03571428571428571
-234,Josie found she could not bend the elbow of her broken limb,limb,0
-235,It's hard to admit when one is incorrect,incorrect,0
-236,Vic asked her to repeat what she had uttered,uttered,0
-237,When they were in London they visited Buckingham castle,castle,0
-238,The agent was sent to South America on a secret assignment,assignment,0
-239,Sam knew that rain was coming because he could smell it in the wind,wind,0
-240,His boss refused to give him a bonus,bonus,0
-241,She flew in late last night and really didn't get much rest,rest,0.03571428571428571
-242,"After a week, they gave up on the missing hikers and called off the hunt",hunt,0.03448275862068965
-243,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major project",project,0
-244,The cigar burned a hole in the jacket,jacket,0.03125
-245,"His first film was a failure, but he learned some techniques in that first role",role,0
-246,He was hired for the job because of his fresh new ideas,ideas,0.15625
-247,The journal issue that has the new article about diseases of the eye is still in stores,stores,0.03448275862068965
-248,Every spring they held the annual meeting,meeting,0
-249,"Penelope started to assemble her new bicycle, but was missing the instructions",instructions,0
-250,The restaurant will reopen with new menus,menus,0.15625
-251,Jennifer disliked walking under the trees at the edge of the park because they were always full of sap,sap,0.03333333333333333
-252,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or abstract",abstract,0.03125
-253,I don't know why people like to see their initials in cement,cement,0.03448275862068965
-254,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very fragile,fragile,0.125
-255,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's statue,statue,0.06451612903225806
-256,He took a job training dogs for the disabled,disabled,0
-257,The conductor gave detailed instructions to the engineer,engineer,0
-258,"Down in the basement, Steve and Robert were playing music",music,0
-259,"After the most recent price increase, the small business owner decided to order his office supplies from another country",country,0
-260,Sharon was sad that she had lost her keys,keys,0.03125
-261,"All of armed services will admit women, but females are barred from ships",ships,0
-262,"After the divorce, she had to move out of the expensive house to an apartment that was ugly",ugly,0
-263,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his marriage",marriage,0.03448275862068965
-264,"Some of his jokes were crummy, but those one-liners were terrible",terrible,0
-265,The inspector from the health department found a roach in a very expensive meal,meal,0.03448275862068965
-266,The conductor had no idea that the train had been boarded by a known politician,politician,0
-267,The nurse brought him a glass of juice and his pillow,pillow,0.03125
-268,The teacher was not looking forward to another year of chaos,chaos,0
-269,Steve skipped his annual checkup for another event,event,0
-270,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately short",short,0.10344827586206896
-271,She poured water on the dishes,dishes,0
-272,"Mark liked the older houses, but Susan wanted to buy one that was new and expensive",expensive,0.03333333333333333
-273,"In an old sitcom, he was the wise family neighbor",neighbor,0
-274,"The government controlled the news media, so most of the reports from the war zone were wrong",wrong,0
-275,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold tooth",tooth,0.09375
-276,"During the summer, the children hung out at the theatre",theatre,0
-277,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be king",king,0.03125
-278,The little girl kept a lock on her bicycle,bicycle,0
-279,"Flying low above her, Bernice could hear the bees",bees,0.03333333333333333
-280,Perry heard a grinding noise coming from his jaw,jaw,0
-281,"If Jim's manager is incompetent, he has a legitimate right to leave",leave,0
-282,"In the best part of the movie, the hero has to impersonate the princess",princess,0
-283,The princess wore a gown,gown,0.03125
-284,Jason was disappointed when the other scouts scared off the elk by loudly beating the bushes,bushes,0.03571428571428571
-285,"After the flood, the house smelled of mildew and everything in it was damp",damp,0.03125
-286,Everyone on the scene gathered around to look at the celebrity,celebrity,0
-287,The final score of the game was posted,posted,0
-288,"After swimming the English Channel, Bonita was cold and completely blue",blue,0
-289,"She had the data to back up everything she said, so the hostile questions did not shake her opinion",opinion,0
-290,"The new dress was very pretty, but it was cut from an unusual pattern",pattern,0.03571428571428571
-291,"When the little girl saw the big dog lumbering towards her, she began to smile",smile,0.03448275862068965
-292,"From her house a half mile away, Diana could still hear the loud cheers coming from the parade",parade,0.06896551724137931
-293,Five ships did not survive the battle,battle,0.1
-294,The paramedics on the scene helped the passengers after the big car exploded,exploded,0
-295,The pilot spoke to an air traffic controller just before the takeoff,takeoff,0.06666666666666667
-296,The boy scouts started a long hike through the forest after having a big meeting,meeting,0.14285714285714285
-297,"When traveling, Roger prefers to stick to major airlines",airlines,0.07142857142857142
-298,"While hemming a pair of pants, Bridget accidentally dropped her glasses",glasses,0.03571428571428571
-299,The rangers say that somewhere in the state park is a mine,mine,0
-300,The doctor told him his headaches were due to tumors,tumors,0
-301,"The groups in the parade walked by slowly, each waving their banners",banners,0
-302,"The little girl was very sick, but unfortunately there was no hospital",hospital,0
-303,"The meteor shower should have been spectacular, but the city lights blocked the sky",sky,0.1
-304,She was unsure how the book would sell,sell,0.03448275862068965
-305,"He was desperate for a job, so finally took something doing door to door delivery",delivery,0
-306,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical procedures,procedures,0
-307,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were female",female,0
-308,"In the window, they posted the hours they were open for today",today,0.0625
-309,They sent the kids with measles home from school because they were scratching,scratching,0
-310,"Outside, Cora could hear the running horses",horses,0.03448275862068965
-311,At night they often took a short swim,swim,0
-312,The wealthy author always points out that she wrote four novels before one was banned,banned,0
-313,The kitten waited patiently because behind the refrigerator was a ball,ball,0
-314,Norton hates getting up on winter mornings because it is always dark,dark,0.03448275862068965
-315,The fertilizer enriched the plants,plants,0
-316,The young girl passed her friend a doll,doll,0
-317,He tinkered with the engine every weekend until it was absolutely ruined,ruined,0
-318,"When Diane heard the shark warning, she swam as fast as she could for safety",safety,0.1875
-319,Michael could hear the bells ringing in the tower of the castle,castle,0
-320,"When he got home from work on the construction site, his clothes were always torn",torn,0
-321,Kevin propped his head up with a pillow as he basked in the hot tub,tub,0
-322,He bought it without even asking the boss,boss,0
-323,"Barry has considered proposing to his girlfriend, but he wants to wait until he is older",older,0.03448275862068965
-324,John was disappointed to discover a scratch on his new watch,watch,0
-325,He was afraid that doing drugs would damage his reputation,reputation,0
-326,"They've been living together for a long time, but don't think they're actually happy",happy,0.06896551724137931
-327,Dennis the Menance was known for making jokes,jokes,0
-328,When the shooting started they ran for help,help,0.03125
-329,The federal agents examined the hundred dollar bill with a microscope to see if it was contaminated,contaminated,0
-330,Eva turned down the heat and left the sauce on the stove to cool,cool,0.10344827586206896
-331,"Alone in the canyon, he was so spooked he was scared by his own horse",horse,0
-332,Betsy could never tell a joke,joke,0.03571428571428571
-333,The bad boy was sent to his principal,principal,0.03125
-334,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his tattoos",tattoos,0.03448275862068965
-335,"Trying to evade their captors, the escaped prisoners of war lived in constant hiding",hiding,0.03125
-336,The tip of the knife was broken,broken,0
-337,The little girl pulled on the rubber band to see how far it would fly,fly,0.125
-338,The soldiers had special night vision goggles so they could see the camp,camp,0
-339,George was born into a wealthy family and has no idea what it's like to be hungry,hungry,0
-340,"Looking for bats, Karen descended into the depths of the castle",castle,0
-341,We finally got a decent picture on the TV after an hour of adjusting the contrast,contrast,0
-342,It took a week to get his car fixed because the parts were out of state,state,0
-343,The dispute was settled by a third vote,vote,0
-344,Our guests should be arriving separately,separately,0
-345,The dough was put in the hot grease,grease,0
-346,Andrew was glad that the meeting was very productive,productive,0.03125
-347,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour group",group,0
-348,Most shark attacks occur very close to dusk,dusk,0
-349,He didn't have to spend much money on the car because he found an incredible mechanic,mechanic,0.03448275862068965
-350,The wealthy child went to a private hospital,hospital,0
-351,"When you go to bed, turn off the stereo",stereo,0
-352,George must keep his pet on a diet,diet,0
-353,"He didn't have time to file everything on his desk, so he organized it into two boxes",boxes,0
-354,The whole town came to hear their mayor resign,resign,0
-355,Josie found she could not bend the elbow of her broken doll,doll,0
-356,It's hard to admit when one is lonely,lonely,0
-357,Vic asked her to repeat what she had heard,heard,0.03333333333333333
-358,When they were in London they visited Buckingham twice,twice,0
-359,The agent was sent to South America on a secret jet,jet,0
-360,Sam knew that rain was coming because he could smell it in the morning,morning,0
-361,His boss refused to give him a vacation,vacation,0
-362,She flew in late last night and really didn't get much dinner,dinner,0
-363,"After a week, they gave up on the missing hikers and called off the helicopters",helicopters,0
-364,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major pillow",pillow,0
-365,The cigar burned a hole in the chaos,chaos,0
-366,"His first film was a failure, but he learned some techniques in that first umbrella",umbrella,0
-367,He was hired for the job because of his fresh new autumn,autumn,0
-368,The journal issue that has the new article about diseases of the eye is still in treason,treason,0
-369,Every spring they held the annual disorder,disorder,0
-370,"Penelope started to assemble her new bicycle, but was missing the king",king,0
-371,The restaurant will reopen with new treason,treason,0
-372,Jennifer disliked walking under the trees at the edge of the park because they were always full of weekends,weekends,0
-373,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or allergic",allergic,0
-374,I don't know why people like to see their initials in dusk,dusk,0
-375,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very disqualified,disqualified,0
-376,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's bicycle,bicycle,0
-377,He took a job training dogs for the blankets,blankets,0
-378,The conductor gave detailed instructions to the dishes,dishes,0
-379,"Down in the basement, Steve and Robert were playing banners",banners,0
-380,"After the most recent price increase, the small business owner decided to order his office supplies from another gown",gown,0
-381,Sharon was sad that she had lost her takeoff,takeoff,0
-382,"All of armed services will admit women, but females are barred from metal",metal,0
-383,"After the divorce, she had to move out of the expensive house to an apartment that was fired",fired,0
-384,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his ditch",ditch,0
-385,"Some of his jokes were crummy, but those one-liners were torn",torn,0
-386,The inspector from the health department found a roach in a very expensive speech,speech,0
-387,The conductor had no idea that the train had been boarded by a known bottle,bottle,0
-388,The nurse brought him a glass of juice and his taxis,taxis,0
-389,The teacher was not looking forward to another year of cargo,cargo,0
-390,Steve skipped his annual checkup for another forest,forest,0
-391,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately endangered",endangered,0
-392,She poured water on the takeoff,takeoff,0
-393,"Mark liked the older houses, but Susan wanted to buy one that was new and embarrassed",embarrassed,0
-394,"In an old sitcom, he was the wise family highway",highway,0
-395,"The government controlled the news media, so most of the reports from the war zone were hungry",hungry,0
-396,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold pedestrians",pedestrians,0
-397,"During the summer, the children hung out at the gown",gown,0
-398,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be chilly",chilly,0
-399,The little girl kept a lock on her cement,cement,0
-400,"Flying low above her, Bernice could hear the arena",arena,0
-401,Perry heard a grinding noise coming from his cure,cure,0
-402,"If Jim's manager is incompetent, he has a legitimate right to water",water,0
-403,"In the best part of the movie, the hero has to impersonate the business",business,0
-404,The princess wore a sound,sound,0
-405,Jason was disappointed when the other scouts scared off the elk by loudly beating the diamond,diamond,0
-406,"After the flood, the house smelled of mildew and everything in it was young",young,0
-407,Everyone on the scene gathered around to look at the temper,temper,0
-408,The final score of the game was bugs,bugs,0
-409,"After swimming the English Channel, Bonita was cold and completely affordable",affordable,0
-410,"She had the data to back up everything she said, so the hostile questions did not shake her music",music,0
-411,"The new dress was very pretty, but it was cut from an unusual porch",porch,0
-412,"When the little girl saw the big dog lumbering towards her, she began to attend",attend,0
-413,"From her house a half mile away, Diana could still hear the loud cheers coming from the mistakes",mistakes,0
-414,Five ships did not survive the eyes,eyes,0
-415,The paramedics on the scene helped the passengers after the big car rest,rest,0
-416,The pilot spoke to an air traffic controller just before the fortune,fortune,0
-417,The boy scouts started a long hike through the forest after having a big end,end,0
-418,"When traveling, Roger prefers to stick to major plants",plants,0
-419,"While hemming a pair of pants, Bridget accidentally dropped her horse",horse,0
-420,The rangers say that somewhere in the state park is a contrast,contrast,0
-421,The doctor told him his headaches were due to safety,safety,0
-422,"The groups in the parade walked by slowly, each waving their jokes",jokes,0
-423,"The little girl was very sick, but unfortunately there was no joke",joke,0
-424,"The meteor shower should have been spectacular, but the city lights blocked the doll",doll,0
-425,She was unsure how the book would camp,camp,0
-426,"He was desperate for a job, so finally took something doing door to door hiding",hiding,0
-427,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical pedestrians,pedestrians,0
-428,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were bullets",bullets,0
-429,"In the window, they posted the hours they were open for texture",texture,0
-430,They sent the kids with measles home from school because they were hard,hard,0
-431,"Outside, Cora could hear the running chapel",chapel,0
-432,At night they often took a short reputation,reputation,0
-433,The wealthy author always points out that she wrote four novels before one was hungry,hungry,0
-434,The kitten waited patiently because behind the refrigerator was a savior,savior,0
-435,Norton hates getting up on winter mornings because it is always broken,broken,0
-436,The fertilizer enriched the legs,legs,0
-437,The young girl passed her friend a mechanic,mechanic,0
-438,He tinkered with the engine every weekend until it was absolutely forgiven,forgiven,0
-439,"When Diane heard the shark warning, she swam as fast as she could for relaxing",relaxing,0
-440,Michael could hear the bells ringing in the tower of the deer,deer,0
-441,"When he got home from work on the construction site, his clothes were always sick",sick,0
-442,Kevin propped his head up with a pillow as he basked in the hot size,size,0
-443,He bought it without even asking the helicopters,helicopters,0
-444,"Barry has considered proposing to his girlfriend, but he wants to wait until he is flooded",flooded,0
-445,John was disappointed to discover a scratch on his new taxes,taxes,0
-446,He was afraid that doing drugs would damage his fever,fever,0
-447,"They've been living together for a long time, but don't think they're actually people",people,0
-448,Dennis the Menance was known for making apples,apples,0
-449,When the shooting started they ran for convenience,convenience,0
-450,The federal agents examined the hundred dollar bill with a microscope to see if it was quiet,quiet,0
-451,Eva turned down the heat and left the sauce on the stove to state,state,0
-452,"Alone in the canyon, he was so spooked he was scared by his own hospital",hospital,0
-453,Betsy could never tell a ditch,ditch,0
-454,The bad boy was sent to his dusk,dusk,0
-455,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his boxes",boxes,0
-456,"Trying to evade their captors, the escaped prisoners of war lived in constant size",size,0
-457,The tip of the knife was chatting,chatting,0
-458,The little girl pulled on the rubber band to see how far it would yell,yell,0
-459,The soldiers had special night vision goggles so they could see the temper,temper,0
-460,George was born into a wealthy family and has no idea what it's like to be pointed,pointed,0
-461,"Looking for bats, Karen descended into the depths of the doll",doll,0
-462,We finally got a decent picture on the TV after an hour of adjusting the ceremonies,ceremonies,0
-463,It took a week to get his car fixed because the parts were out of bread,bread,0
-464,The dispute was settled by a third lifestyle,lifestyle,0
-465,Our guests should be arriving disabled,disabled,0
-466,The dough was put in the hot project,project,0
-467,Andrew was glad that the meeting was very pale,pale,0
-468,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour puppy",puppy,0
-469,Most shark attacks occur very close to ideas,ideas,0
-470,He didn't have to spend much money on the car because he found an incredible stream,stream,0
-471,The wealthy child went to a private material,material,0
-472,"When you go to bed, turn off the stores",stores,0
-473,George must keep his pet on a meeting,meeting,0
-474,"He didn't have time to file everything on his desk, so he organized it into two cartoons",cartoons,0
-475,The whole town came to hear their mayor scratch,scratch,0
-476,Josie found she could not bend the elbow of her broken absence,absence,0
-477,It's hard to admit when one is screened,screened,0
-478,Vic asked her to repeat what she had vanished,vanished,0
-479,When they were in London they visited Buckingham bait,bait,0
-480,The agent was sent to South America on a secret cow,cow,0
-481,Sam knew that rain was coming because he could smell it in the robbery,robbery,0
-482,His boss refused to give him a cliff,cliff,0
-483,She flew in late last night and really didn't get much music,music,0
-484,"After a week, they gave up on the missing hikers and called off the boss",boss,0
-485,The salesman made the mistake of talking down to Jane because he thought she was stupid,stupid,0.07142857142857142
-486,Water was leaking out from the hole in the ceiling,ceiling,0.0625
-487,"Rushing out, he forgot to take his coat",coat,0.06666666666666667
-488,"At that time, the boys lived down by the river in a shack",shack,0.03448275862068965
-489,The salesman made the mistake of talking down to Jane because he thought she was dumb,dumb,0.17857142857142858
-490,Water was leaking out from the hole in the roof,roof,0.15625
-491,"Rushing out, he forgot to take his jacket",jacket,0.1
-492,"At that time, the boys lived down by the river in a hut",hut,0.13793103448275862
-493,The salesman made the mistake of talking down to Jane because he thought she was poor,poor,0.03571428571428571
-494,Water was leaking out from the hole in the balloon,balloon,0
-495,"Rushing out, he forgot to take his umbrella",umbrella,0
-496,"At that time, the boys lived down by the river in a van",van,0.10344827586206896
-497,The salesman made the mistake of talking down to Jane because he thought she was abstract,abstract,0
-498,Water was leaking out from the hole in the reward,reward,0
-499,"Rushing out, he forgot to take his country",country,0
-500,"At that time, the boys lived down by the river in a letter",letter,0
+1,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major",raise,0.2258064516129032
+2,The cigar burned a hole in the,couch,0.1875
+3,"His first film was a failure, but he learned some techniques in that first",try,0.03448275862068965
+4,He was hired for the job because of his fresh new,look,0.03125
+5,The journal issue that has the new article about diseases of the eye is still in,print,0.06896551724137931
+6,Every spring they held the annual,ball,0.03125
+7,"Penelope started to assemble her new bicycle, but was missing the",wheels,0.09375
+8,The restaurant will reopen with new,management,0.1875
+9,Jennifer disliked walking under the trees at the edge of the park because they were always full of,bugs,0
+10,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or",pretty,0.3125
+11,I don't know why people like to see their initials in,print,0.06896551724137931
+12,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very,rare,0.15625
+13,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's,temple,0.2903225806451613
+14,He took a job training dogs for the,police,0.2413793103448276
+15,The conductor gave detailed instructions to the,orchestra,0.26666666666666666
+16,"Down in the basement, Steve and Robert were playing",cards,0.125
+17,"After the most recent price increase, the small business owner decided to order his office supplies from another",company,0.41379310344827586
+18,Sharon was sad that she had lost her,dog,0.21875
+19,"All of armed services will admit women, but females are barred from",combat,0.4482758620689655
+20,"After the divorce, she had to move out of the expensive house to an apartment that was",cheap,0.1724137931034483
+21,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his",morals,0.41379310344827586
+22,"Some of his jokes were crummy, but those one-liners were",hilarious,0.35714285714285715
+23,The inspector from the health department found a roach in a very expensive,restaurant,0.4827586206896552
+24,The conductor had no idea that the train had been boarded by a known,felon,0.14285714285714285
+25,The nurse brought him a glass of juice and his,medicine,0.28125
+26,The teacher was not looking forward to another year of,school,0.2857142857142857
+27,Steve skipped his annual checkup for another,year,0.2857142857142857
+28,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately",vague,0.3103448275862069
+29,She poured water on the,plants,0.17857142857142858
+30,"Mark liked the older houses, but Susan wanted to buy one that was new and",modern,0.5
+31,"In an old sitcom, he was the wise family",doctor,0.14285714285714285
+32,"The government controlled the news media, so most of the reports from the war zone were",censored,0.1875
+33,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold",medal,0.28125
+34,"During the summer, the children hung out at the",pool,0.25
+35,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be",heroic,0.0625
+36,The little girl kept a lock on her,diary,0.5517241379310345
+37,"Flying low above her, Bernice could hear the",plane,0.2
+38,Perry heard a grinding noise coming from his,car,0.3
+39,"If Jim's manager is incompetent, he has a legitimate right to",complain,0.53125
+40,"In the best part of the movie, the hero has to impersonate the",villain,0.6333333333333333
+41,The princess wore a,crown,0.46875
+42,Jason was disappointed when the other scouts scared off the elk by loudly beating the,drum,0.25
+43,"After the flood, the house smelled of mildew and everything in it was",ruined,0.09375
+44,Everyone on the scene gathered around to look at the,accident,0.2413793103448276
+45,The final score of the game was,tied,0.5357142857142857
+46,"After swimming the English Channel, Bonita was cold and completely",exhausted,0.3333333333333333
+47,"She had the data to back up everything she said, so the hostile questions did not shake her",confidence,0.46875
+48,"The new dress was very pretty, but it was cut from an unusual",fabric,0.2857142857142857
+49,"When the little girl saw the big dog lumbering towards her, she began to",run,0.27586206896551724
+50,"From her house a half mile away, Diana could still hear the loud cheers coming from the",stadium,0.4482758620689655
+51,Five ships did not survive the,storm,0.43333333333333335
+52,The paramedics on the scene helped the passengers after the big car,accident,0.4642857142857143
+53,The pilot spoke to an air traffic controller just before the,crash,0.23333333333333336
+54,The boy scouts started a long hike through the forest after having a big,lunch,0.2857142857142857
+55,"When traveling, Roger prefers to stick to major",roads,0.17857142857142858
+56,"While hemming a pair of pants, Bridget accidentally dropped her",needle,0.6785714285714286
+57,The rangers say that somewhere in the state park is a,bear,0.41379310344827586
+58,The doctor told him his headaches were due to,stress,0.4642857142857143
+59,"The groups in the parade walked by slowly, each waving their",hands,0.5333333333333333
+60,"The little girl was very sick, but unfortunately there was no",cure,0.5
+61,"The meteor shower should have been spectacular, but the city lights blocked the",view,0.5666666666666667
+62,She was unsure how the book would,end,0.6206896551724138
+63,"He was desperate for a job, so finally took something doing door to door",sales,0.5333333333333333
+64,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical,terms,0.6785714285714286
+65,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were",young,0.8275862068965517
+66,"In the window, they posted the hours they were open for",business,0.625
+67,They sent the kids with measles home from school because they were,contagious,0.5517241379310345
+68,"Outside, Cora could hear the running",water,0.6896551724137931
+69,At night they often took a short,walk,0.4642857142857143
+70,The wealthy author always points out that she wrote four novels before one was,published,0.5483870967741935
+71,The kitten waited patiently because behind the refrigerator was a,mouse,0.9285714285714286
+72,Norton hates getting up on winter mornings because it is always,cold,0.7931034482758621
+73,The fertilizer enriched the,soil,0.8620689655172413
+74,The young girl passed her friend a,note,0.6333333333333333
+75,He tinkered with the engine every weekend until it was absolutely,perfect,0.4827586206896552
+76,"When Diane heard the shark warning, she swam as fast as she could for",shore,0.5625
+77,Michael could hear the bells ringing in the tower of the,church,0.7241379310344828
+78,"When he got home from work on the construction site, his clothes were always",dirty,0.875
+79,Kevin propped his head up with a pillow as he basked in the hot,sun,0.7666666666666667
+80,He bought it without even asking the,price,0.5357142857142857
+81,"Barry has considered proposing to his girlfriend, but he wants to wait until he is",ready,0.6206896551724138
+82,John was disappointed to discover a scratch on his new,car,0.71875
+83,He was afraid that doing drugs would damage his,brain,0.6666666666666666
+84,"They've been living together for a long time, but don't think they're actually",married,0.3448275862068966
+85,Dennis the Menance was known for making,trouble,0.65625
+86,When the shooting started they ran for,cover,0.65625
+87,The federal agents examined the hundred dollar bill with a microscope to see if it was,real,0.4482758620689655
+88,Eva turned down the heat and left the sauce on the stove to,simmer,0.6551724137931034
+89,"Alone in the canyon, he was so spooked he was scared by his own",shadow,0.8214285714285714
+90,Betsy could never tell a,lie,0.8571428571428571
+91,The bad boy was sent to his,room,0.84375
+92,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his",scars,0.7241379310344828
+93,"Trying to evade their captors, the escaped prisoners of war lived in constant",fear,0.65625
+94,The tip of the knife was,sharp,0.6551724137931034
+95,The little girl pulled on the rubber band to see how far it would,stretch,0.5
+96,The soldiers had special night vision goggles so they could see the,enemy,0.34375
+97,George was born into a wealthy family and has no idea what it's like to be,poor,0.9
+98,"Looking for bats, Karen descended into the depths of the",cave,0.7586206896551724
+99,We finally got a decent picture on the TV after an hour of adjusting the,antenna,0.6071428571428571
+100,It took a week to get his car fixed because the parts were out of,stock,0.7241379310344828
+101,The dispute was settled by a third,party,0.875
+102,Our guests should be arriving,soon,0.8333333333333334
+103,The dough was put in the hot,oven,0.896551724137931
+104,Andrew was glad that the meeting was very,short,0.5625
+105,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour",bus,0.9
+106,Most shark attacks occur very close to,shore,0.9
+107,He didn't have to spend much money on the car because he found an incredible,deal,0.8620689655172413
+108,The wealthy child went to a private,school,0.875
+109,"When you go to bed, turn off the",lights,0.65625
+110,George must keep his pet on a,leash,0.90625
+111,"He didn't have time to file everything on his desk, so he organized it into two",piles,0.7241379310344828
+112,The whole town came to hear their mayor,speak,0.8571428571428571
+113,Josie found she could not bend the elbow of her broken,arm,0.9642857142857144
+114,It's hard to admit when one is,wrong,0.6428571428571429
+115,Vic asked her to repeat what she had,said,0.8666666666666667
+116,When they were in London they visited Buckingham,palace,0.8275862068965517
+117,The agent was sent to South America on a secret,mission,0.8620689655172413
+118,Sam knew that rain was coming because he could smell it in the,air,0.9310344827586208
+119,His boss refused to give him a,raise,0.9333333333333332
+120,She flew in late last night and really didn't get much,sleep,0.9642857142857144
+121,"After a week, they gave up on the missing hikers and called off the",search,0.8620689655172413
+122,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major",bonus,0
+123,The cigar burned a hole in the,sofa,0.03125
+124,"His first film was a failure, but he learned some techniques in that first",effort,0
+125,He was hired for the job because of his fresh new,image,0
+126,The journal issue that has the new article about diseases of the eye is still in,press,0.03448275862068965
+127,Every spring they held the annual,dance,0
+128,"Penelope started to assemble her new bicycle, but was missing the",tires,0.0625
+129,The restaurant will reopen with new,ownership,0
+130,Jennifer disliked walking under the trees at the edge of the park because they were always full of,insects,0
+131,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or",attractive,0
+132,I don't know why people like to see their initials in,ink,0.03448275862068965
+133,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very,unique,0
+134,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's,shrine,0
+135,He took a job training dogs for the,military,0
+136,The conductor gave detailed instructions to the,choir,0
+137,"Down in the basement, Steve and Robert were playing",poker,0.09375
+138,"After the most recent price increase, the small business owner decided to order his office supplies from another",business,0
+139,Sharon was sad that she had lost her,puppy,0.09375
+140,"All of armed services will admit women, but females are barred from",fighting,0.06896551724137931
+141,"After the divorce, she had to move out of the expensive house to an apartment that was",affordable,0.10344827586206896
+142,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his",values,0.06896551724137931
+143,"Some of his jokes were crummy, but those one-liners were",humorous,0
+144,The inspector from the health department found a roach in a very expensive,cafe,0
+145,The conductor had no idea that the train had been boarded by a known,convict,0.03571428571428571
+146,The nurse brought him a glass of juice and his,pills,0.0625
+147,The teacher was not looking forward to another year of,classes,0
+148,Steve skipped his annual checkup for another,month,0
+149,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately",ambiguous,0.06896551724137931
+150,She poured water on the,roses,0
+151,"Mark liked the older houses, but Susan wanted to buy one that was new and",contemporary,0.03333333333333333
+152,"In an old sitcom, he was the wise family",physician,0
+153,"The government controlled the news media, so most of the reports from the war zone were",screened,0
+154,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold",trophy,0.03125
+155,"During the summer, the children hung out at the",lake,0
+156,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be",courageous,0
+157,The little girl kept a lock on her,journal,0
+158,"Flying low above her, Bernice could hear the",jet,0.03333333333333333
+159,Perry heard a grinding noise coming from his,engine,0.1
+160,"If Jim's manager is incompetent, he has a legitimate right to",argue,0
+161,"In the best part of the movie, the hero has to impersonate the",criminal,0.06666666666666667
+162,The princess wore a,hat,0
+163,Jason was disappointed when the other scouts scared off the elk by loudly beating the,pans,0
+164,"After the flood, the house smelled of mildew and everything in it was",destroyed,0.03125
+165,Everyone on the scene gathered around to look at the,crash,0
+166,The final score of the game was,even,0
+167,"After swimming the English Channel, Bonita was cold and completely",beat,0
+168,"She had the data to back up everything she said, so the hostile questions did not shake her",composure,0
+169,"The new dress was very pretty, but it was cut from an unusual",material,0.10714285714285714
+170,"When the little girl saw the big dog lumbering towards her, she began to",flee,0
+171,"From her house a half mile away, Diana could still hear the loud cheers coming from the",stands,0.03448275862068965
+172,Five ships did not survive the,tsunami,0.06666666666666667
+173,The paramedics on the scene helped the passengers after the big car,wreck,0.03571428571428571
+174,The pilot spoke to an air traffic controller just before the,collision,0
+175,The boy scouts started a long hike through the forest after having a big,dinner,0
+176,"When traveling, Roger prefers to stick to major",streets,0
+177,"While hemming a pair of pants, Bridget accidentally dropped her",pin,0.03571428571428571
+178,The rangers say that somewhere in the state park is a,cub,0
+179,The doctor told him his headaches were due to,tension,0
+180,"The groups in the parade walked by slowly, each waving their",arms,0
+181,"The little girl was very sick, but unfortunately there was no",remedy,0.0625
+182,"The meteor shower should have been spectacular, but the city lights blocked the",sight,0
+183,She was unsure how the book would,conclude,0
+184,"He was desperate for a job, so finally took something doing door to door",solicitation,0
+185,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical,words,0
+186,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were",older,0
+187,"In the window, they posted the hours they were open for",service,0.03125
+188,They sent the kids with measles home from school because they were,infectious,0
+189,"Outside, Cora could hear the running",river,0
+190,At night they often took a short,stroll,0.10714285714285714
+191,The wealthy author always points out that she wrote four novels before one was,printed,0
+192,The kitten waited patiently because behind the refrigerator was a,rat,0
+193,Norton hates getting up on winter mornings because it is always,chilly,0.03448275862068965
+194,The fertilizer enriched the,dirt,0
+195,The young girl passed her friend a,letter,0
+196,He tinkered with the engine every weekend until it was absolutely,correct,0
+197,"When Diane heard the shark warning, she swam as fast as she could for",land,0.09375
+198,Michael could hear the bells ringing in the tower of the,cathedral,0.10344827586206896
+199,"When he got home from work on the construction site, his clothes were always",filthy,0.03125
+200,Kevin propped his head up with a pillow as he basked in the hot,lamp,0
+201,He bought it without even asking the,cost,0
+202,"Barry has considered proposing to his girlfriend, but he wants to wait until he is",prepared,0
+203,John was disappointed to discover a scratch on his new,truck,0
+204,He was afraid that doing drugs would damage his,mind,0
+205,"They've been living together for a long time, but don't think they're actually",engaged,0
+206,Dennis the Menance was known for making,mischief,0.0625
+207,When the shooting started they ran for,shelter,0
+208,The federal agents examined the hundred dollar bill with a microscope to see if it was,genuine,0
+209,Eva turned down the heat and left the sauce on the stove to,cook,0.10344827586206896
+210,"Alone in the canyon, he was so spooked he was scared by his own",reflection,0
+211,Betsy could never tell a,fib,0
+212,The bad boy was sent to his,bedroom,0
+213,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his",wounds,0.06896551724137931
+214,"Trying to evade their captors, the escaped prisoners of war lived in constant",terror,0.03125
+215,The tip of the knife was,pointed,0.03448275862068965
+216,The little girl pulled on the rubber band to see how far it would,extend,0
+217,The soldiers had special night vision goggles so they could see the,invaders,0
+218,George was born into a wealthy family and has no idea what it's like to be,needy,0
+219,"Looking for bats, Karen descended into the depths of the",cavern,0.10344827586206896
+220,We finally got a decent picture on the TV after an hour of adjusting the,wires,0
+221,It took a week to get his car fixed because the parts were out of,supply,0
+222,The dispute was settled by a third,person,0.03125
+223,Our guests should be arriving,shortly,0.06666666666666667
+224,The dough was put in the hot,stove,0
+225,Andrew was glad that the meeting was very,brief,0.09375
+226,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour",van,0
+227,Most shark attacks occur very close to,land,0.06666666666666667
+228,He didn't have to spend much money on the car because he found an incredible,bargain,0
+229,The wealthy child went to a private,college,0
+230,"When you go to bed, turn off the",lamp,0
+231,George must keep his pet on a,chain,0
+232,"He didn't have time to file everything on his desk, so he organized it into two",stacks,0.03448275862068965
+233,The whole town came to hear their mayor,talk,0.03571428571428571
+234,Josie found she could not bend the elbow of her broken,limb,0
+235,It's hard to admit when one is,incorrect,0
+236,Vic asked her to repeat what she had,uttered,0
+237,When they were in London they visited Buckingham,castle,0
+238,The agent was sent to South America on a secret,assignment,0
+239,Sam knew that rain was coming because he could smell it in the,wind,0
+240,His boss refused to give him a,bonus,0
+241,She flew in late last night and really didn't get much,rest,0.03571428571428571
+242,"After a week, they gave up on the missing hikers and called off the",hunt,0.03448275862068965
+243,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major",project,0
+244,The cigar burned a hole in the,jacket,0.03125
+245,"His first film was a failure, but he learned some techniques in that first",role,0
+246,He was hired for the job because of his fresh new,ideas,0.15625
+247,The journal issue that has the new article about diseases of the eye is still in,stores,0.03448275862068965
+248,Every spring they held the annual,meeting,0
+249,"Penelope started to assemble her new bicycle, but was missing the",instructions,0
+250,The restaurant will reopen with new,menus,0.15625
+251,Jennifer disliked walking under the trees at the edge of the park because they were always full of,sap,0.03333333333333333
+252,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or",abstract,0.03125
+253,I don't know why people like to see their initials in,cement,0.03448275862068965
+254,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very,fragile,0.125
+255,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's,statue,0.06451612903225806
+256,He took a job training dogs for the,disabled,0
+257,The conductor gave detailed instructions to the,engineer,0
+258,"Down in the basement, Steve and Robert were playing",music,0
+259,"After the most recent price increase, the small business owner decided to order his office supplies from another",country,0
+260,Sharon was sad that she had lost her,keys,0.03125
+261,"All of armed services will admit women, but females are barred from",ships,0
+262,"After the divorce, she had to move out of the expensive house to an apartment that was",ugly,0
+263,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his",marriage,0.03448275862068965
+264,"Some of his jokes were crummy, but those one-liners were",terrible,0
+265,The inspector from the health department found a roach in a very expensive,meal,0.03448275862068965
+266,The conductor had no idea that the train had been boarded by a known,politician,0
+267,The nurse brought him a glass of juice and his,pillow,0.03125
+268,The teacher was not looking forward to another year of,chaos,0
+269,Steve skipped his annual checkup for another,event,0
+270,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately",short,0.10344827586206896
+271,She poured water on the,dishes,0
+272,"Mark liked the older houses, but Susan wanted to buy one that was new and",expensive,0.03333333333333333
+273,"In an old sitcom, he was the wise family",neighbor,0
+274,"The government controlled the news media, so most of the reports from the war zone were",wrong,0
+275,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold",tooth,0.09375
+276,"During the summer, the children hung out at the",theatre,0
+277,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be",king,0.03125
+278,The little girl kept a lock on her,bicycle,0
+279,"Flying low above her, Bernice could hear the",bees,0.03333333333333333
+280,Perry heard a grinding noise coming from his,jaw,0
+281,"If Jim's manager is incompetent, he has a legitimate right to",leave,0
+282,"In the best part of the movie, the hero has to impersonate the",princess,0
+283,The princess wore a,gown,0.03125
+284,Jason was disappointed when the other scouts scared off the elk by loudly beating the,bushes,0.03571428571428571
+285,"After the flood, the house smelled of mildew and everything in it was",damp,0.03125
+286,Everyone on the scene gathered around to look at the,celebrity,0
+287,The final score of the game was,posted,0
+288,"After swimming the English Channel, Bonita was cold and completely",blue,0
+289,"She had the data to back up everything she said, so the hostile questions did not shake her",opinion,0
+290,"The new dress was very pretty, but it was cut from an unusual",pattern,0.03571428571428571
+291,"When the little girl saw the big dog lumbering towards her, she began to",smile,0.03448275862068965
+292,"From her house a half mile away, Diana could still hear the loud cheers coming from the",parade,0.06896551724137931
+293,Five ships did not survive the,battle,0.1
+294,The paramedics on the scene helped the passengers after the big car,exploded,0
+295,The pilot spoke to an air traffic controller just before the,takeoff,0.06666666666666667
+296,The boy scouts started a long hike through the forest after having a big,meeting,0.14285714285714285
+297,"When traveling, Roger prefers to stick to major",airlines,0.07142857142857142
+298,"While hemming a pair of pants, Bridget accidentally dropped her",glasses,0.03571428571428571
+299,The rangers say that somewhere in the state park is a,mine,0
+300,The doctor told him his headaches were due to,tumors,0
+301,"The groups in the parade walked by slowly, each waving their",banners,0
+302,"The little girl was very sick, but unfortunately there was no",hospital,0
+303,"The meteor shower should have been spectacular, but the city lights blocked the",sky,0.1
+304,She was unsure how the book would,sell,0.03448275862068965
+305,"He was desperate for a job, so finally took something doing door to door",delivery,0
+306,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical,procedures,0
+307,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were",female,0
+308,"In the window, they posted the hours they were open for",today,0.0625
+309,They sent the kids with measles home from school because they were,scratching,0
+310,"Outside, Cora could hear the running",horses,0.03448275862068965
+311,At night they often took a short,swim,0
+312,The wealthy author always points out that she wrote four novels before one was,banned,0
+313,The kitten waited patiently because behind the refrigerator was a,ball,0
+314,Norton hates getting up on winter mornings because it is always,dark,0.03448275862068965
+315,The fertilizer enriched the,plants,0
+316,The young girl passed her friend a,doll,0
+317,He tinkered with the engine every weekend until it was absolutely,ruined,0
+318,"When Diane heard the shark warning, she swam as fast as she could for",safety,0.1875
+319,Michael could hear the bells ringing in the tower of the,castle,0
+320,"When he got home from work on the construction site, his clothes were always",torn,0
+321,Kevin propped his head up with a pillow as he basked in the hot,tub,0
+322,He bought it without even asking the,boss,0
+323,"Barry has considered proposing to his girlfriend, but he wants to wait until he is",older,0.03448275862068965
+324,John was disappointed to discover a scratch on his new,watch,0
+325,He was afraid that doing drugs would damage his,reputation,0
+326,"They've been living together for a long time, but don't think they're actually",happy,0.06896551724137931
+327,Dennis the Menance was known for making,jokes,0
+328,When the shooting started they ran for,help,0.03125
+329,The federal agents examined the hundred dollar bill with a microscope to see if it was,contaminated,0
+330,Eva turned down the heat and left the sauce on the stove to,cool,0.10344827586206896
+331,"Alone in the canyon, he was so spooked he was scared by his own",horse,0
+332,Betsy could never tell a,joke,0.03571428571428571
+333,The bad boy was sent to his,principal,0.03125
+334,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his",tattoos,0.03448275862068965
+335,"Trying to evade their captors, the escaped prisoners of war lived in constant",hiding,0.03125
+336,The tip of the knife was,broken,0
+337,The little girl pulled on the rubber band to see how far it would,fly,0.125
+338,The soldiers had special night vision goggles so they could see the,camp,0
+339,George was born into a wealthy family and has no idea what it's like to be,hungry,0
+340,"Looking for bats, Karen descended into the depths of the",castle,0
+341,We finally got a decent picture on the TV after an hour of adjusting the,contrast,0
+342,It took a week to get his car fixed because the parts were out of,state,0
+343,The dispute was settled by a third,vote,0
+344,Our guests should be arriving,separately,0
+345,The dough was put in the hot,grease,0
+346,Andrew was glad that the meeting was very,productive,0.03125
+347,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour",group,0
+348,Most shark attacks occur very close to,dusk,0
+349,He didn't have to spend much money on the car because he found an incredible,mechanic,0.03448275862068965
+350,The wealthy child went to a private,hospital,0
+351,"When you go to bed, turn off the",stereo,0
+352,George must keep his pet on a,diet,0
+353,"He didn't have time to file everything on his desk, so he organized it into two",boxes,0
+354,The whole town came to hear their mayor,resign,0
+355,Josie found she could not bend the elbow of her broken,doll,0
+356,It's hard to admit when one is,lonely,0
+357,Vic asked her to repeat what she had,heard,0.03333333333333333
+358,When they were in London they visited Buckingham,twice,0
+359,The agent was sent to South America on a secret,jet,0
+360,Sam knew that rain was coming because he could smell it in the,morning,0
+361,His boss refused to give him a,vacation,0
+362,She flew in late last night and really didn't get much,dinner,0
+363,"After a week, they gave up on the missing hikers and called off the",helicopters,0
+364,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major",pillow,0
+365,The cigar burned a hole in the,chaos,0
+366,"His first film was a failure, but he learned some techniques in that first",umbrella,0
+367,He was hired for the job because of his fresh new,autumn,0
+368,The journal issue that has the new article about diseases of the eye is still in,treason,0
+369,Every spring they held the annual,disorder,0
+370,"Penelope started to assemble her new bicycle, but was missing the",king,0
+371,The restaurant will reopen with new,treason,0
+372,Jennifer disliked walking under the trees at the edge of the park because they were always full of,weekends,0
+373,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or",allergic,0
+374,I don't know why people like to see their initials in,dusk,0
+375,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very,disqualified,0
+376,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's,bicycle,0
+377,He took a job training dogs for the,blankets,0
+378,The conductor gave detailed instructions to the,dishes,0
+379,"Down in the basement, Steve and Robert were playing",banners,0
+380,"After the most recent price increase, the small business owner decided to order his office supplies from another",gown,0
+381,Sharon was sad that she had lost her,takeoff,0
+382,"All of armed services will admit women, but females are barred from",metal,0
+383,"After the divorce, she had to move out of the expensive house to an apartment that was",fired,0
+384,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his",ditch,0
+385,"Some of his jokes were crummy, but those one-liners were",torn,0
+386,The inspector from the health department found a roach in a very expensive,speech,0
+387,The conductor had no idea that the train had been boarded by a known,bottle,0
+388,The nurse brought him a glass of juice and his,taxis,0
+389,The teacher was not looking forward to another year of,cargo,0
+390,Steve skipped his annual checkup for another,forest,0
+391,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately",endangered,0
+392,She poured water on the,takeoff,0
+393,"Mark liked the older houses, but Susan wanted to buy one that was new and",embarrassed,0
+394,"In an old sitcom, he was the wise family",highway,0
+395,"The government controlled the news media, so most of the reports from the war zone were",hungry,0
+396,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold",pedestrians,0
+397,"During the summer, the children hung out at the",gown,0
+398,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be",chilly,0
+399,The little girl kept a lock on her,cement,0
+400,"Flying low above her, Bernice could hear the",arena,0
+401,Perry heard a grinding noise coming from his,cure,0
+402,"If Jim's manager is incompetent, he has a legitimate right to",water,0
+403,"In the best part of the movie, the hero has to impersonate the",business,0
+404,The princess wore a,sound,0
+405,Jason was disappointed when the other scouts scared off the elk by loudly beating the,diamond,0
+406,"After the flood, the house smelled of mildew and everything in it was",young,0
+407,Everyone on the scene gathered around to look at the,temper,0
+408,The final score of the game was,bugs,0
+409,"After swimming the English Channel, Bonita was cold and completely",affordable,0
+410,"She had the data to back up everything she said, so the hostile questions did not shake her",music,0
+411,"The new dress was very pretty, but it was cut from an unusual",porch,0
+412,"When the little girl saw the big dog lumbering towards her, she began to",attend,0
+413,"From her house a half mile away, Diana could still hear the loud cheers coming from the",mistakes,0
+414,Five ships did not survive the,eyes,0
+415,The paramedics on the scene helped the passengers after the big car,rest,0
+416,The pilot spoke to an air traffic controller just before the,fortune,0
+417,The boy scouts started a long hike through the forest after having a big,end,0
+418,"When traveling, Roger prefers to stick to major",plants,0
+419,"While hemming a pair of pants, Bridget accidentally dropped her",horse,0
+420,The rangers say that somewhere in the state park is a,contrast,0
+421,The doctor told him his headaches were due to,safety,0
+422,"The groups in the parade walked by slowly, each waving their",jokes,0
+423,"The little girl was very sick, but unfortunately there was no",joke,0
+424,"The meteor shower should have been spectacular, but the city lights blocked the",doll,0
+425,She was unsure how the book would,camp,0
+426,"He was desperate for a job, so finally took something doing door to door",hiding,0
+427,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical,pedestrians,0
+428,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were",bullets,0
+429,"In the window, they posted the hours they were open for",texture,0
+430,They sent the kids with measles home from school because they were,hard,0
+431,"Outside, Cora could hear the running",chapel,0
+432,At night they often took a short,reputation,0
+433,The wealthy author always points out that she wrote four novels before one was,hungry,0
+434,The kitten waited patiently because behind the refrigerator was a,savior,0
+435,Norton hates getting up on winter mornings because it is always,broken,0
+436,The fertilizer enriched the,legs,0
+437,The young girl passed her friend a,mechanic,0
+438,He tinkered with the engine every weekend until it was absolutely,forgiven,0
+439,"When Diane heard the shark warning, she swam as fast as she could for",relaxing,0
+440,Michael could hear the bells ringing in the tower of the,deer,0
+441,"When he got home from work on the construction site, his clothes were always",sick,0
+442,Kevin propped his head up with a pillow as he basked in the hot,size,0
+443,He bought it without even asking the,helicopters,0
+444,"Barry has considered proposing to his girlfriend, but he wants to wait until he is",flooded,0
+445,John was disappointed to discover a scratch on his new,taxes,0
+446,He was afraid that doing drugs would damage his,fever,0
+447,"They've been living together for a long time, but don't think they're actually",people,0
+448,Dennis the Menance was known for making,apples,0
+449,When the shooting started they ran for,convenience,0
+450,The federal agents examined the hundred dollar bill with a microscope to see if it was,quiet,0
+451,Eva turned down the heat and left the sauce on the stove to,state,0
+452,"Alone in the canyon, he was so spooked he was scared by his own",hospital,0
+453,Betsy could never tell a,ditch,0
+454,The bad boy was sent to his,dusk,0
+455,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his",boxes,0
+456,"Trying to evade their captors, the escaped prisoners of war lived in constant",size,0
+457,The tip of the knife was,chatting,0
+458,The little girl pulled on the rubber band to see how far it would,yell,0
+459,The soldiers had special night vision goggles so they could see the,temper,0
+460,George was born into a wealthy family and has no idea what it's like to be,pointed,0
+461,"Looking for bats, Karen descended into the depths of the",doll,0
+462,We finally got a decent picture on the TV after an hour of adjusting the,ceremonies,0
+463,It took a week to get his car fixed because the parts were out of,bread,0
+464,The dispute was settled by a third,lifestyle,0
+465,Our guests should be arriving,disabled,0
+466,The dough was put in the hot,project,0
+467,Andrew was glad that the meeting was very,pale,0
+468,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour",puppy,0
+469,Most shark attacks occur very close to,ideas,0
+470,He didn't have to spend much money on the car because he found an incredible,stream,0
+471,The wealthy child went to a private,material,0
+472,"When you go to bed, turn off the",stores,0
+473,George must keep his pet on a,meeting,0
+474,"He didn't have time to file everything on his desk, so he organized it into two",cartoons,0
+475,The whole town came to hear their mayor,scratch,0
+476,Josie found she could not bend the elbow of her broken,absence,0
+477,It's hard to admit when one is,screened,0
+478,Vic asked her to repeat what she had,vanished,0
+479,When they were in London they visited Buckingham,bait,0
+480,The agent was sent to South America on a secret,cow,0
+481,Sam knew that rain was coming because he could smell it in the,robbery,0
+482,His boss refused to give him a,cliff,0
+483,She flew in late last night and really didn't get much,music,0
+484,"After a week, they gave up on the missing hikers and called off the",boss,0
+485,The salesman made the mistake of talking down to Jane because he thought she was,stupid,0.07142857142857142
+486,Water was leaking out from the hole in the,ceiling,0.0625
+487,"Rushing out, he forgot to take his",coat,0.06666666666666667
+488,"At that time, the boys lived down by the river in a",shack,0.03448275862068965
+489,The salesman made the mistake of talking down to Jane because he thought she was,dumb,0.17857142857142858
+490,Water was leaking out from the hole in the,roof,0.15625
+491,"Rushing out, he forgot to take his",jacket,0.1
+492,"At that time, the boys lived down by the river in a",hut,0.13793103448275862
+493,The salesman made the mistake of talking down to Jane because he thought she was,poor,0.03571428571428571
+494,Water was leaking out from the hole in the,balloon,0
+495,"Rushing out, he forgot to take his",umbrella,0
+496,"At that time, the boys lived down by the river in a",van,0.10344827586206896
+497,The salesman made the mistake of talking down to Jane because he thought she was,abstract,0
+498,Water was leaking out from the hole in the,reward,0
+499,"Rushing out, he forgot to take his",country,0
+500,"At that time, the boys lived down by the river in a",letter,0
