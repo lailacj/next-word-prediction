@@ -113,7 +113,7 @@ class BertModel(LanguageModel):
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
         self.model = AutoModelForMaskedLM.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
-        self.output_file = PROJECT_ROOT / "data" / "Model_peelle" / "bert" / "bert_data.csv"
+        self.output_file = PROJECT_ROOT / "data" / "Model_peelle" / "bert" / "bert_data1.csv"
         self.output_file.parent.mkdir(parents=True, exist_ok=True)
 
         with open(self.output_file, "w", encoding="utf-8") as f:
