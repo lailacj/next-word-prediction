@@ -39,7 +39,7 @@ class QwenModel(LanguageModel):
     def __init__(self):
         # initilialize the qwen model and the tokenizer
         self.model_name = "Qwen/Qwen2.5-7B"
-        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "qwen" / "qwen_data.csv"
+        self.output_file = PROJECT_ROOT / "data" / "Model_michaelov" / "qwen" / "qwen_data.csv"
         self.output_file.parent.mkdir(parents=True, exist_ok=True)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
@@ -113,7 +113,7 @@ class BertModel(LanguageModel):
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
         self.model = AutoModelForMaskedLM.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
-        self.output_file = PROJECT_ROOT / "data" / "Model_peelle" / "bert" / "bert_data1.csv"
+        self.output_file = PROJECT_ROOT / "data" / "Model_michaelov" / "bert" / "bert_data.csv"
         self.output_file.parent.mkdir(parents=True, exist_ok=True)
 
         with open(self.output_file, "w", encoding="utf-8") as f:
@@ -189,7 +189,7 @@ class DeepSeekModel(LanguageModel):
         self.model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name, trust_remote_code=True)
-        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "deepseek" / "deepseek_data.csv"
+        self.output_file = PROJECT_ROOT / "data" / "Model_michaelov" / "deepseek" / "deepseek_data.csv"
         self.output_file.parent.mkdir(parents=True, exist_ok=True)
 
         # write up the header of the outpul as you initialized the model
@@ -262,7 +262,7 @@ class LlamaModel(LanguageModel):
         self.model_name = "meta-llama/Llama-3.2-1B"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
-        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "llama" / "llama_data.csv"
+        self.output_file = PROJECT_ROOT / "data" / "Model_michaelov" / "llama" / "llama_data.csv"
         self.output_file.parent.mkdir(parents=True, exist_ok=True)
 
         # write up the header of the outpul as you initialized the model
