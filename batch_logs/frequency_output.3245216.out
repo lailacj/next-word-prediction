@@ -1,10 +1,10 @@
 ## SLURM PROLOG ###############################################################
-##    Job ID : 3142633
+##    Job ID : 3245216
 ##  Job Name : next-word-prediction-pipeline
-##  Nodelist : gpu3005
+##  Nodelist : gpu3002
 ##      CPUs : 
 ##  Mem/Node : 65536 MB
 ## Directory : /oscar/data/rfeiman/diriho/next-word-prediction/pipeline
-##   Job Started : Wed Jun 10 03:26:52 PM EDT 2026
+##   Job Started : Mon Jun 15 03:38:20 PM EDT 2026
 ###############################################################################
 Running the next word prediction pipeline...

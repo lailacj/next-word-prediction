@@ -1,161 +1,161 @@
 sentence_num,sentence,word,llama_prob
-1,'When her husband started staying late at the office every night, Joanne began to suspect that he was having an affair',affair,-11.733826637268066
-2,'Her grandfather always stressed how important it was for Sophia to go to school, because he had never had the opportunity to receive an education',education,-11.740029335021973
-3,'Betsy had no desire to enter the working world, so decided to stay at the university and remain an artist',artist,-9.857239723205566
-4,'The tweeting in the treetops sounded like an echo',echo,-8.218422889709473
-5,'When the scuba diver saw the tentacle, he quickly realized that the creature under the rock was an octopus',octopus,-8.404246479272842
-6,'Dale was very sorry for what he had said to Bernadette and he knew that he owed her a cheque',cheque,-8.323991775512695
-7,'When the representative retired in the middle of his term, the state was forced to hold a parade',parade,-8.747404098510742
-8,'Katie did not like to say words with the letter s because she spoke with a lisp',lisp,-11.390028983354568
-9,'On a street corner in Paris Kim had her portrait painted by a student',student,-7.137364864349365
-10,'It was difficult to understand the foreign professor because he had an accent',accent,-8.546969413757324
-11,'James is an avid reader, so for his birthday his sister decided to give him a book',book,-8.156935691833496
-12,'The old wives' tale says that if you want to keep the doctor away then you should eat a carrot',carrot,-9.968657493591309
-13,'The bakery did not accept credit cards so Peter would have to write an apology',apology,-9.387882232666016
-14,'Although the idea of flight was as old as the hills, the Wright Brothers were the first people to build an aeroplane',aeroplane,-10.7106958682416
-15,'Marge hated baiting the hook, but she knew that it was the only way to catch a fish',fish,-11.224533081054688
-16,'Surrounded by mountains, Lola shouted across the valley and heard a bird',bird,-8.240910530090332
-17,'Without the floats and the marching bands it wasn't much of an election',election,-9.586841583251953
-18,'For the snowman's eyes the children used two pieces of coal, and for its nose they used an apple',apple,-7.20443058013916
-19,'As he walked past the corner drugstore on his way to work Carl skimmed the headlines and decided to go ahead and buy a newspaper',newspaper,-9.892057418823242
-20,'Margot had finally decided to buy a house in the suburbs after a year of renting a flat',flat,-9.691933631896973
-21,'Margot had finally decided to buy a house in the suburbs after a year of renting an apartment',apartment,-8.054859161376953
-22,'You never forget how to ride an elephant',elephant,-9.90804672241211
-23,'The Hell's Angel rolled up the sleeve of his leather jacket to show the girls where he had gotten a tattoo',tattoo,-8.697977066040039
-24,'Frank wanted to design a very modern house so he sought advice from a plumber',plumber,-6.795137405395508
-25,'Instead of giving her money whenever she asked for it, Rachel's father thought that it would be a real lesson in economics for her if every week she received a pound',pound,-8.612142562866211
-26,'Sue had wanted to go to Tim's birthday party but she was still waiting for an invitation',invitation,-9.226280212402344
-27,'Andrew complained that the only place he could afford was Poundland, after his grandmother gave him an allowance',allowance,-9.427860260009766
-28,'The highlight of Jack's trip to India was when he got to ride a bicycle',bicycle,-9.641231536865234
-29,'When we saw the finish line and the pylons sectioning off part of the road we knew that there must have been a race',race,-9.297558784484863
-30,'Instead of recording a live album the band decided they would have more control if they recorded in an apartment',apartment,-7.147846698760986
-31,'When she was filling out the paperwork, Merrill had to write down the name of someone who could be contacted in case of an emergency',emergency,-9.001163482666016
-32,'I wanted to put my coat in the closet but I could not find an iron',iron,-7.649730682373047
-33,'When I called his house Nolan was not home but his mother said she could relay a message',message,-9.96718978881836
-34,'Charlie's wife told him that she was tired of pressing his shirts and that he would have to learn how to use a hanger',hanger,-10.809031665325165
-35,'Because Bart did not clean his wound properly he ended up getting an infection',infection,-9.352641105651855
-36,'Because it frequently rains in London it's a good idea to always carry an umbrella',umbrella,-10.688228607177734
-37,'Harris saw smoke billowing out of his neighbours' home and immediately got on the phone to report a fire',fire,-9.406333923339844
-38,'No matter how safely you drive your car chances are someday you'll be involved in an accident',accident,-9.684490203857422
-39,'Jeffrey mailed the letter without a stamp',stamp,-7.283990859985352
-40,'There are always ways to improve your game whether you're an advanced tennis player or merely an amateur',amateur,-6.400501251220703
-41,'From a young age Steven had an interest in filmmaking and had always dreamed of being an actor',actor,-10.389497756958008
-42,'The pilot had to make an emergency landing in the middle of the desert because he was nowhere near an airport',airport,-9.248689651489258
-43,'Marie wanted to sample a tiny bit of the sauce so she daintily dipped an onion',onion,-9.85730266571045
-44,'After Joanne's first book was published she finally felt she could call herself an author',author,-11.049025535583496
-45,'Alicia's first client was a failure but her second was a success',success,-10.880183219909668
-46,'Dana enjoyed singing in private but was scared to death at the thought of performing in front of an audience',audience,-12.184465408325195
-47,'The professional photographer was disqualified from the photo contest because the rules explicitly state that you must be a beginner',beginner,-10.509867668151855
-48,'Older children often have a harder time than younger children dealing with the loss of an adult',adult,-8.165780067443848
-49,'In order to get into an R-rated movie children under 17 must be accompanied by a parent',parent,-11.24985122680664
-50,'Before little Gloria went to sleep she wanted to hear a story',story,-10.630480766296387
-51,'Carrie's father had always joked that two is company but three is a crowd',crowd,-15.199771881103516
-52,'Hannah wanted to live in a small town but her husband preferred to live closer to a city',city,-10.071043968200684
-53,'Amelia did not want to go to the bar with her friends after seeing the movie so she made up an excuse',excuse,-9.389299392700195
-54,'When Wendy went to pay for the birthday card the clerk pointed out that she had forgotten to pick up an envelope',envelope,-8.985603332519531
-55,'At first Victoria did not know why her brother was crying over the sink but then she noticed that he had just sliced a finger',finger,-6.8787922859191895
-56,'With his khaki shorts and his loud Hawaiian shirt and the camera around his neck you could definitely tell that the man was a tourist',tourist,-7.887949466705322
-57,'Orlando thought that glass was a solid but when he held it under the Bunsen burner it melted and turned into a liquid',liquid,-7.771674633026123
-58,'The first time Timmy saw the Pacific he thought it was a lake but his brother laughed and explained to him that it was a mirage',mirage,-9.743797294795513
-59,'As the men stumbled across the desert they thought they saw an oasis on the horizon but it turned out to be an ocean',ocean,-10.483658790588379
-60,'Violet was just learning how to make an omelette so her father began by showing her how to crack a window',window,-10.24397087097168
-61,'As Elizabeth climbed the ladder in the barn she heard a hooting sound coming from the rafters and looked up to see an owl',owl,-6.893341541290283
-62,'Because they were playing baseball so close to the house the children ended up shattering an egg',egg,-9.39543342590332
-63,'Carly wasn't sure if the Venus flytrap was classified as a plant or as a flower',flower,-9.166489601135254
-64,'The chemistry teacher explained to the class that water and salt were both compounds but that nitrogen was just an element',element,-11.774125099182129
-65,'The guys didn't know what to call their band so Trent told everyone to come up with a name',name,-10.231376647949219
-66,'Sandra decided that she would work for a cruise line for a year before starting university although she had never been on an island',island,-6.961185455322266
-67,'Although the basketball team's defence was very strong they did not have so much of a coach',coach,-10.367417335510254
-68,'Bob claims to be from outer space but nobody believes that he is actually an alien',alien,-6.899882793426514
-69,'Being from the mainland Karen never got used to the feeling of living on a ship',ship,-8.317109107971191
-70,'While Natasha was strolling through the colourful gardens she reached down and picked an animal',animal,-8.999351501464844
-71,'Marcy did not deal well with praise and had never really learned how to take a compliment',compliment,-10.558379173278809
-72,'Ever since Mr.Barnes had moved away Bobby's football team had been left without an offense',offense,-9.428019523620605
-73,'The waitress at the next table was trying to scribble everything down but it was obvious that she did not know how to take an order',order,-9.537766456604004
-74,'Whenever Josh had too much to drink, he became belligerent and would try to start a fight',fight,-11.31141185760498
-75,'The day was breezy so the boy went outside to fly a kite',kite,-10.786983489990234
-76,'When the pipe broke in the bathroom Felicia looked through the phonebook to find an architect',architect,-10.938578605651855
-77,'The doctors told Monica not to use her legs too much so soon after her surgery so she often used an escalator',escalator,-10.28727786615491
-78,'Lance had moved to Hollywood in hopes of becoming a director',director,-11.15524673461914
-79,'Damon preferred climbing stairs over going up a wheelchair',wheelchair,-9.415099143981934
-80,'The group had been brainstorming all day but they still didn't have an idea',idea,-10.136698722839355
-81,'Every time they went for walks Sylvia's dog Rex would break into a run as soon as he spotted a cat',cat,-8.691643714904785
-82,'Whenever Josh had too much to drink, he became belligerent and would try to start an affair',affair,-12.805632591247559
-83,'For the snowman's eyes the children used two pieces of coal, and for its nose they used a carrot',carrot,-9.316864967346191
-84,'Katie did not like to say words with the letter s because she spoke with an accent',accent,-7.691274642944336
-85,'The tweeting in the treetops sounded like a bird',bird,-9.083579063415527
-86,'It was difficult to understand the foreign professor because he had a lisp',lisp,-11.793931603431702
-87,'The bakery did not accept credit cards so Peter would have to write a cheque',cheque,-9.581101417541504
-88,'Without the floats and the marching bands it wasn't much of a parade',parade,-8.241098403930664
-89,'On a street corner in Paris Kim had her portrait painted by an artist',artist,-9.381585121154785
-90,'Although the idea of flight was as old as the hills, the Wright Brothers were the first people to build a kite',kite,-10.185032844543457
-91,'Dale was very sorry for what he had said to Bernadette and he knew that he owed her an apology',apology,-12.447922706604004
-92,'When the representative retired in the middle of his term, the state was forced to hold an election',election,-9.663215637207031
-93,'Marge hated baiting the hook, but she knew that it was the only way to catch an octopus',octopus,-8.714247301220894
-94,'The day was breezy so the boy went outside to fly an aeroplane',aeroplane,-10.334329864592291
-95,'James is an avid reader, so for his birthday his sister decided to give him an education',education,-10.8648681640625
-96,'When her husband started staying late at the office every night, Joanne began to suspect that he was having a fight',fight,-12.70545482635498
-97,'Her grandfather always stressed how important it was for Sophia to go to school, because he had never had the opportunity to receive a book',book,-13.120884895324707
-98,'When the scuba diver saw the tentacle, he quickly realized that the creature under the rock was a fish',fish,-10.041476249694824
-99,'The old wives' tale says that if you want to keep the doctor away then you should eat an apple',apple,-10.838725090026855
-100,'Surrounded by mountains, Lola shouted across the valley and heard an echo',echo,-6.64415168762207
-101,'Betsy had no desire to enter the working world, so decided to stay at the university and remain a student',student,-9.4576997756958
-102,'Charlie's wife told him that she was tired of pressing his shirts and that he would have to learn how to use an iron',iron,-10.98021125793457
-103,'When I called his house Nolan was not home but his mother said she could relay an invitation',invitation,-9.466899871826172
-104,'Because it frequently rains in London it's a good idea to always carry a newspaper',newspaper,-8.042304039001465
-105,'Instead of recording a live album the band decided they would have more control if they recorded in a studio',studio,-8.529132843017578
-106,'As he walked past the corner drugstore on his way to work Carl skimmed the headlines and decided to go ahead and buy an umbrella',umbrella,-7.694905757904053
-107,'When she was filling out the paperwork, Merrill had to write down the name of someone who could be contacted in case of a fire',fire,-11.684138298034668
-108,'Instead of giving her money whenever she asked for it, Rachel's father thought that it would be a real lesson in economics for her if every week she received an allowance',allowance,-11.035857200622559
-109,'When we saw the finish line and the pylons sectioning off part of the road we knew that there must have been an accident',accident,-12.119817733764648
-110,'Because Bart did not clean his wound properly he ended up getting a tattoo',tattoo,-7.833131313323975
-111,'Harris saw smoke billowing out of his neighbours' home and immediately got on the phone to report an emergency',emergency,-9.104043006896973
-112,'No matter how safely you drive your car chances are someday you'll be involved in a race',race,-9.802531242370605
-113,'The highlight of Jack's trip to India was when he got to ride an elephant',elephant,-9.498477935791016
-114,'Frank wanted to design a very modern house so he sought advice from an architect',architect,-10.80486011505127
-115,'Sue had wanted to go to Tim's birthday party but she was still waiting for a message',message,-11.528987884521484
-116,'Andrew complained that the only place he could afford was Poundland, after his grandmother gave him a pound',pound,-6.87851619720459
-117,'When the pipe broke in the bathroom Felicia looked through the phonebook to find a plumber',plumber,-11.317560195922852
-118,'I wanted to put my coat in the closet but I could not find a hanger',hanger,-9.390588343143463
-119,'The Hell's Angel rolled up the sleeve of his leather jacket to show the girls where he had gotten an infection',infection,-9.395379066467285
-120,'There are always ways to improve your game whether you're an advanced tennis player or merely a beginner',beginner,-7.947713375091553
-121,'Before little Gloria went to sleep she wanted to hear an excuse',excuse,-6.597490310668945
-122,'The professional photographer was disqualified from the photo contest because the rules explicitly state that you must be an amateur',amateur,-5.679206371307373
-123,'When Wendy went to pay for the birthday card the clerk pointed out that she had forgotten to pick up a stamp',stamp,-8.759852409362793
-124,'Dana enjoyed singing in private but was scared to death at the thought of performing in front of a crowd',crowd,-12.501616477966309
-125,'Carrie's father had always joked that two is company but three is an audience',audience,-12.981986999511719
-126,'Jeffrey mailed the letter without an envelope',envelope,-10.556378364562988
-127,'The pilot had to make an emergency landing in the middle of the desert because he was nowhere near a city',city,-10.830087661743164
-128,'After Joanne's first book was published she finally felt she could call herself a success',success,-13.27505874633789
-129,'Alicia's first client was a failure but her second was an author',author,-10.167985916137695
-130,'The doctors told Monica not to use her legs too much so soon after her surgery so she often used a wheelchair',wheelchair,-8.683292388916016
-131,'From a young age Steven had an interest in filmmaking and had always dreamed of being a director',director,-11.941242218017578
-132,'Marie wanted to sample a tiny bit of the sauce so she daintily dipped a finger',finger,-8.899102210998535
-133,'Older children often have a harder time than younger children dealing with the loss of a parent',parent,-12.098021507263184
-134,'Hannah wanted to live in a small town but her husband preferred to live closer to an airport',airport,-7.390427589416504
-135,'Damon preferred climbing stairs over going up an escalator',escalator,-13.123731404542923
-136,'At first Victoria did not know why her brother was crying over the sink but then she noticed that he had just sliced an onion',onion,-10.488968849182129
-137,'As Elizabeth climbed the ladder in the barn she heard a hooting sound coming from the rafters and looked up to see a cat',cat,-6.436519145965576
-138,'Every time they went for walks Sylvia's dog Rex would break into a run as soon as he spotted an owl',owl,-8.51661491394043
-139,'The chemistry teacher explained to the class that water and salt were both compounds but that nitrogen was just a liquid',liquid,-8.459403038024902
-140,'The first time Timmy saw the Pacific he thought it was a lake but his brother laughed and explained to him that it was an ocean',ocean,-9.575766563415527
-141,'Because they were playing baseball so close to the house the children ended up shattering a window',window,-6.9252848625183105
-142,'The waitress at the next table was trying to scribble everything down but it was obvious that she did not know how to take a compliment',compliment,-10.651253700256348
-143,'While Natasha was strolling through the colourful gardens she reached down and picked a flower',flower,-10.07707405090332
-144,'Violet was just learning how to make an omelette so her father began by showing her how to crack an egg',egg,-9.035955429077148
-145,'Marcy did not deal well with praise and had never really learned how to take an order',order,-11.727919578552246
-146,'You never forget how to ride a bicycle',bicycle,-12.334346771240234
-147,'Lance had moved to Hollywood in hopes of becoming an actor',actor,-10.521780014038086
-148,'Amelia did not want to go to the bar with her friends after seeing the movie so she made up a story',story,-12.409575462341309
-149,'In order to get into an R-rated movie children under 17 must be accompanied by an adult',adult,-9.692404747009277
-150,'Bob claims to be from outer space but nobody believes that he is actually a tourist',tourist,-7.397846221923828
-151,'Being from the mainland Karen never got used to the feeling of living on an island',island,-7.4685282707214355
-152,'The guys didn't know what to call their band so Trent told everyone to come up with an idea',idea,-10.497369766235352
-153,'Orlando thought that glass was a solid but when he held it under the Bunsen burner it melted and turned into an element',element,-10.306710243225098
-154,'As the men stumbled across the desert they thought they saw an oasis on the horizon but it turned out to be a mirage',mirage,-8.381141938269138
-155,'Carly wasn't sure if the Venus flytrap was classified as a plant or as an animal',animal,-9.321181297302246
-156,'Sandra decided that she would work for a cruise line for a year before starting university although she had never been on a ship',ship,-9.704446792602539
-157,'Although the basketball team's defence was very strong they did not have so much of an offense',offense,-8.240540504455566
-158,'With his khaki shorts and his loud Hawaiian shirt and the camera around his neck you could definitely tell that the man was an alien',alien,-7.0922040939331055
-159,'The group had been brainstorming all day but they still didn't have a name',name,-12.564399719238281
-160,'Ever since Mr.Barnes had moved away Bobby's football team had been left without a coach',coach,-9.764259338378906
+1,'When her husband started staying late at the office every night, Joanne began to suspect that he was having an',affair,-0.027962179854512215
+2,'Her grandfather always stressed how important it was for Sophia to go to school, because he had never had the opportunity to receive an',education,-0.010579690337181091
+3,'Betsy had no desire to enter the working world, so decided to stay at the university and remain an',artist,-4.505899429321289
+4,'The tweeting in the treetops sounded like an',echo,-4.7483367919921875
+5,'When the scuba diver saw the tentacle, he quickly realized that the creature under the rock was an',octopus,-0.8527277605608106
+6,'Dale was very sorry for what he had said to Bernadette and he knew that he owed her a',cheque,-12.169014930725098
+7,'When the representative retired in the middle of his term, the state was forced to hold a',parade,-14.029605865478516
+8,'Katie did not like to say words with the letter s because she spoke with a',lisp,-2.7950118696317077
+9,'On a street corner in Paris Kim had her portrait painted by a',student,-4.79419469833374
+10,'It was difficult to understand the foreign professor because he had an',accent,-0.5370734930038452
+11,'James is an avid reader, so for his birthday his sister decided to give him a',book,-1.7067699432373047
+12,'The old wives' tale says that if you want to keep the doctor away then you should eat a',carrot,-4.385182857513428
+13,'The bakery did not accept credit cards so Peter would have to write an',apology,-8.341008186340332
+14,'Although the idea of flight was as old as the hills, the Wright Brothers were the first people to build an',aeroplane,-3.6252284099391545
+15,'Marge hated baiting the hook, but she knew that it was the only way to catch a',fish,-1.4060418605804443
+16,'Surrounded by mountains, Lola shouted across the valley and heard a',bird,-5.434446334838867
+17,'Without the floats and the marching bands it wasn't much of an',election,-5.884279727935791
+18,'For the snowman's eyes the children used two pieces of coal, and for its nose they used an',apple,-2.494302272796631
+19,'As he walked past the corner drugstore on his way to work Carl skimmed the headlines and decided to go ahead and buy a',newspaper,-4.194947242736816
+20,'Margot had finally decided to buy a house in the suburbs after a year of renting a',flat,-3.348175048828125
+21,'Margot had finally decided to buy a house in the suburbs after a year of renting an',apartment,-0.20040564239025116
+22,'You never forget how to ride an',elephant,-1.985997200012207
+23,'The Hell's Angel rolled up the sleeve of his leather jacket to show the girls where he had gotten a',tattoo,-1.4199519157409668
+24,'Frank wanted to design a very modern house so he sought advice from a',plumber,-8.807252883911133
+25,'Instead of giving her money whenever she asked for it, Rachel's father thought that it would be a real lesson in economics for her if every week she received a',pound,-6.007678031921387
+26,'Sue had wanted to go to Tim's birthday party but she was still waiting for an',invitation,-1.879918098449707
+27,'Andrew complained that the only place he could afford was Poundland, after his grandmother gave him an',allowance,-1.5906752347946167
+28,'The highlight of Jack's trip to India was when he got to ride a',bicycle,-4.007791042327881
+29,'When we saw the finish line and the pylons sectioning off part of the road we knew that there must have been a',race,-4.081876754760742
+30,'Instead of recording a live album the band decided they would have more control if they recorded in an',apartment,-5.908836364746094
+31,'When she was filling out the paperwork, Merrill had to write down the name of someone who could be contacted in case of an',emergency,-0.06375036388635635
+32,'I wanted to put my coat in the closet but I could not find an',iron,-5.831113815307617
+33,'When I called his house Nolan was not home but his mother said she could relay a',message,-0.04902692139148712
+34,'Charlie's wife told him that she was tired of pressing his shirts and that he would have to learn how to use a',hanger,-6.115978226065636
+35,'Because Bart did not clean his wound properly he ended up getting an',infection,-0.22492238879203796
+36,'Because it frequently rains in London it's a good idea to always carry an',umbrella,-0.019323084503412247
+37,'Harris saw smoke billowing out of his neighbours' home and immediately got on the phone to report a',fire,-0.313430517911911
+38,'No matter how safely you drive your car chances are someday you'll be involved in an',accident,-0.12774565815925598
+39,'Jeffrey mailed the letter without a',stamp,-1.320904016494751
+40,'There are always ways to improve your game whether you're an advanced tennis player or merely an',amateur,-1.510683298110962
+41,'From a young age Steven had an interest in filmmaking and had always dreamed of being an',actor,-0.26668208837509155
+42,'The pilot had to make an emergency landing in the middle of the desert because he was nowhere near an',airport,-0.15725483000278473
+43,'Marie wanted to sample a tiny bit of the sauce so she daintily dipped an',onion,-2.8799843788146973
+44,'After Joanne's first book was published she finally felt she could call herself an',author,-0.17803050577640533
+45,'Alicia's first client was a failure but her second was a',success,-0.8501582145690918
+46,'Dana enjoyed singing in private but was scared to death at the thought of performing in front of an',audience,-0.028285086154937744
+47,'The professional photographer was disqualified from the photo contest because the rules explicitly state that you must be a',beginner,-8.741192817687988
+48,'Older children often have a harder time than younger children dealing with the loss of an',adult,-3.0412282943725586
+49,'In order to get into an R-rated movie children under 17 must be accompanied by a',parent,-0.10743819177150726
+50,'Before little Gloria went to sleep she wanted to hear a',story,-0.7392401099205017
+51,'Carrie's father had always joked that two is company but three is a',crowd,-0.08996936678886414
+52,'Hannah wanted to live in a small town but her husband preferred to live closer to a',city,-1.3227380514144897
+53,'Amelia did not want to go to the bar with her friends after seeing the movie so she made up an',excuse,-0.03902659937739372
+54,'When Wendy went to pay for the birthday card the clerk pointed out that she had forgotten to pick up an',envelope,-1.4146815538406372
+55,'At first Victoria did not know why her brother was crying over the sink but then she noticed that he had just sliced a',finger,-3.3469409942626953
+56,'With his khaki shorts and his loud Hawaiian shirt and the camera around his neck you could definitely tell that the man was a',tourist,-2.906545877456665
+57,'Orlando thought that glass was a solid but when he held it under the Bunsen burner it melted and turned into a',liquid,-0.4226417541503906
+58,'The first time Timmy saw the Pacific he thought it was a lake but his brother laughed and explained to him that it was a',mirage,-11.308041140437126
+59,'As the men stumbled across the desert they thought they saw an oasis on the horizon but it turned out to be an',ocean,-7.714179992675781
+60,'Violet was just learning how to make an omelette so her father began by showing her how to crack a',window,-9.280977249145508
+61,'As Elizabeth climbed the ladder in the barn she heard a hooting sound coming from the rafters and looked up to see an',owl,-0.2081419676542282
+62,'Because they were playing baseball so close to the house the children ended up shattering an',egg,-2.746720314025879
+63,'Carly wasn't sure if the Venus flytrap was classified as a plant or as a',flower,-3.9746475219726562
+64,'The chemistry teacher explained to the class that water and salt were both compounds but that nitrogen was just an',element,-0.17048557102680206
+65,'The guys didn't know what to call their band so Trent told everyone to come up with a',name,-0.68604975938797
+66,'Sandra decided that she would work for a cruise line for a year before starting university although she had never been on an',island,-5.3403239250183105
+67,'Although the basketball team's defence was very strong they did not have so much of a',coach,-9.475580215454102
+68,'Bob claims to be from outer space but nobody believes that he is actually an',alien,-0.18377886712551117
+69,'Being from the mainland Karen never got used to the feeling of living on a',ship,-3.9381744861602783
+70,'While Natasha was strolling through the colourful gardens she reached down and picked an',animal,-6.748825550079346
+71,'Marcy did not deal well with praise and had never really learned how to take a',compliment,-0.040847133845090866
+72,'Ever since Mr.Barnes had moved away Bobby's football team had been left without an',offense,-9.04766845703125
+73,'The waitress at the next table was trying to scribble everything down but it was obvious that she did not know how to take an',order,-0.10265699774026871
+74,'Whenever Josh had too much to drink, he became belligerent and would try to start a',fight,-0.13103944063186646
+75,'The day was breezy so the boy went outside to fly a',kite,-0.03090238943696022
+76,'When the pipe broke in the bathroom Felicia looked through the phonebook to find an',architect,-6.433575630187988
+77,'The doctors told Monica not to use her legs too much so soon after her surgery so she often used an',escalator,-9.105303227901459
+78,'Lance had moved to Hollywood in hopes of becoming a',director,-3.893176555633545
+79,'Damon preferred climbing stairs over going up a',wheelchair,-8.630653381347656
+80,'The group had been brainstorming all day but they still didn't have an',idea,-0.6802080869674683
+81,'Every time they went for walks Sylvia's dog Rex would break into a run as soon as he spotted a',cat,-3.373793125152588
+82,'Whenever Josh had too much to drink, he became belligerent and would try to start an',affair,-8.452452659606934
+83,'For the snowman's eyes the children used two pieces of coal, and for its nose they used a',carrot,-5.09782075881958
+84,'Katie did not like to say words with the letter s because she spoke with an',accent,-1.117909550666809
+85,'The tweeting in the treetops sounded like a',bird,-3.6076409816741943
+86,'It was difficult to understand the foreign professor because he had a',lisp,-5.152971174567938
+87,'The bakery did not accept credit cards so Peter would have to write a',cheque,-3.3516969680786133
+88,'Without the floats and the marching bands it wasn't much of a',parade,-0.3801501393318176
+89,'On a street corner in Paris Kim had her portrait painted by an',artist,-1.019607663154602
+90,'Although the idea of flight was as old as the hills, the Wright Brothers were the first people to build a',kite,-8.260601997375488
+91,'Dale was very sorry for what he had said to Bernadette and he knew that he owed her an',apology,-0.31011709570884705
+92,'When the representative retired in the middle of his term, the state was forced to hold an',election,-0.06033657118678093
+93,'Marge hated baiting the hook, but she knew that it was the only way to catch an',octopus,-4.14412010088563
+94,'The day was breezy so the boy went outside to fly an',aeroplane,-2.851669939031126
+95,'James is an avid reader, so for his birthday his sister decided to give him an',education,-7.020541191101074
+96,'When her husband started staying late at the office every night, Joanne began to suspect that he was having a',fight,-8.822183609008789
+97,'Her grandfather always stressed how important it was for Sophia to go to school, because he had never had the opportunity to receive a',book,-9.10118293762207
+98,'When the scuba diver saw the tentacle, he quickly realized that the creature under the rock was a',fish,-4.7920074462890625
+99,'The old wives' tale says that if you want to keep the doctor away then you should eat an',apple,-0.3001346290111542
+100,'Surrounded by mountains, Lola shouted across the valley and heard an',echo,-2.1886749267578125
+101,'Betsy had no desire to enter the working world, so decided to stay at the university and remain a',student,-0.5473246574401855
+102,'Charlie's wife told him that she was tired of pressing his shirts and that he would have to learn how to use an',iron,-0.04706566035747528
+103,'When I called his house Nolan was not home but his mother said she could relay an',invitation,-5.553562641143799
+104,'Because it frequently rains in London it's a good idea to always carry a',newspaper,-9.381882667541504
+105,'Instead of recording a live album the band decided they would have more control if they recorded in a',studio,-0.4474148452281952
+106,'As he walked past the corner drugstore on his way to work Carl skimmed the headlines and decided to go ahead and buy an',umbrella,-4.859050273895264
+107,'When she was filling out the paperwork, Merrill had to write down the name of someone who could be contacted in case of a',fire,-1.8736176490783691
+108,'Instead of giving her money whenever she asked for it, Rachel's father thought that it would be a real lesson in economics for her if every week she received an',allowance,-0.6348779797554016
+109,'When we saw the finish line and the pylons sectioning off part of the road we knew that there must have been an',accident,-1.3747278451919556
+110,'Because Bart did not clean his wound properly he ended up getting a',tattoo,-5.979191780090332
+111,'Harris saw smoke billowing out of his neighbours' home and immediately got on the phone to report an',emergency,-1.178732991218567
+112,'No matter how safely you drive your car chances are someday you'll be involved in a',race,-11.384984016418457
+113,'The highlight of Jack's trip to India was when he got to ride an',elephant,-0.14388003945350647
+114,'Frank wanted to design a very modern house so he sought advice from an',architect,-0.3696087896823883
+115,'Sue had wanted to go to Tim's birthday party but she was still waiting for a',message,-6.053890228271484
+116,'Andrew complained that the only place he could afford was Poundland, after his grandmother gave him a',pound,-3.261575222015381
+117,'When the pipe broke in the bathroom Felicia looked through the phonebook to find a',plumber,-0.19662633538246155
+118,'I wanted to put my coat in the closet but I could not find a',hanger,-2.696330264909193
+119,'The Hell's Angel rolled up the sleeve of his leather jacket to show the girls where he had gotten an',infection,-2.2721545696258545
+120,'There are always ways to improve your game whether you're an advanced tennis player or merely a',beginner,-0.6270548701286316
+121,'Before little Gloria went to sleep she wanted to hear an',excuse,-9.210257530212402
+122,'The professional photographer was disqualified from the photo contest because the rules explicitly state that you must be an',amateur,-1.80394446849823
+123,'When Wendy went to pay for the birthday card the clerk pointed out that she had forgotten to pick up a',stamp,-1.5497848987579346
+124,'Dana enjoyed singing in private but was scared to death at the thought of performing in front of a',crowd,-1.1014666557312012
+125,'Carrie's father had always joked that two is company but three is an',audience,-3.639899492263794
+126,'Jeffrey mailed the letter without an',envelope,-0.9242434501647949
+127,'The pilot had to make an emergency landing in the middle of the desert because he was nowhere near a',city,-3.8235716819763184
+128,'After Joanne's first book was published she finally felt she could call herself a',success,-6.3492350578308105
+129,'Alicia's first client was a failure but her second was an',author,-7.708300590515137
+130,'The doctors told Monica not to use her legs too much so soon after her surgery so she often used a',wheelchair,-1.2571711540222168
+131,'From a young age Steven had an interest in filmmaking and had always dreamed of being a',director,-1.4573851823806763
+132,'Marie wanted to sample a tiny bit of the sauce so she daintily dipped a',finger,-3.1920981407165527
+133,'Older children often have a harder time than younger children dealing with the loss of a',parent,-1.2616159915924072
+134,'Hannah wanted to live in a small town but her husband preferred to live closer to an',airport,-0.6794751286506653
+135,'Damon preferred climbing stairs over going up an',escalator,-1.152425550390035
+136,'At first Victoria did not know why her brother was crying over the sink but then she noticed that he had just sliced an',onion,-1.0509852170944214
+137,'As Elizabeth climbed the ladder in the barn she heard a hooting sound coming from the rafters and looked up to see a',cat,-5.475021839141846
+138,'Every time they went for walks Sylvia's dog Rex would break into a run as soon as he spotted an',owl,-3.2697482109069824
+139,'The chemistry teacher explained to the class that water and salt were both compounds but that nitrogen was just a',liquid,-8.150178909301758
+140,'The first time Timmy saw the Pacific he thought it was a lake but his brother laughed and explained to him that it was an',ocean,-0.031743355095386505
+141,'Because they were playing baseball so close to the house the children ended up shattering a',window,-0.6582667827606201
+142,'The waitress at the next table was trying to scribble everything down but it was obvious that she did not know how to take a',compliment,-7.715768814086914
+143,'While Natasha was strolling through the colourful gardens she reached down and picked a',flower,-1.866341471672058
+144,'Violet was just learning how to make an omelette so her father began by showing her how to crack an',egg,-0.0030599460005760193
+145,'Marcy did not deal well with praise and had never really learned how to take an',order,-7.062765121459961
+146,'You never forget how to ride a',bicycle,-1.6435062885284424
+147,'Lance had moved to Hollywood in hopes of becoming an',actor,-0.0959877297282219
+148,'Amelia did not want to go to the bar with her friends after seeing the movie so she made up a',story,-0.8931530714035034
+149,'In order to get into an R-rated movie children under 17 must be accompanied by an',adult,-0.02976326085627079
+150,'Bob claims to be from outer space but nobody believes that he is actually a',tourist,-6.896239280700684
+151,'Being from the mainland Karen never got used to the feeling of living on an',island,-0.05472194403409958
+152,'The guys didn't know what to call their band so Trent told everyone to come up with an',idea,-1.5728394985198975
+153,'Orlando thought that glass was a solid but when he held it under the Bunsen burner it melted and turned into an',element,-3.757018566131592
+154,'As the men stumbled across the desert they thought they saw an oasis on the horizon but it turned out to be a',mirage,-0.14065167517401278
+155,'Carly wasn't sure if the Venus flytrap was classified as a plant or as an',animal,-0.13567891716957092
+156,'Sandra decided that she would work for a cruise line for a year before starting university although she had never been on a',ship,-2.4231069087982178
+157,'Although the basketball team's defence was very strong they did not have so much of an',offense,-6.962946891784668
+158,'With his khaki shorts and his loud Hawaiian shirt and the camera around his neck you could definitely tell that the man was an',alien,-5.596099853515625
+159,'The group had been brainstorming all day but they still didn't have a',name,-2.0885071754455566
+160,'Ever since Mr.Barnes had moved away Bobby's football team had been left without a',coach,-0.6397260427474976

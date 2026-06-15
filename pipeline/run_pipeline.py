@@ -18,10 +18,10 @@ def get_list_words_given_sentence(my_list):
     return words
 
 
-# main function to run the pipeline
+# main function to run the pipelinemy 
 def main():
     # load the data in the parsed data cloze dataset
-    file_path = PROJECT_ROOT / "data" / "parsed_data" / "michaelov_2024.csv"
+    file_path = PROJECT_ROOT / "data" / "parsed_data" / "szewczyk_2022.csv"
 
     masked, sentences = load_cloze_data(file_path)
 
