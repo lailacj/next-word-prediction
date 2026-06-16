@@ -39,7 +39,7 @@ class QwenModel(LanguageModel):
     def __init__(self):
         # initilialize the qwen model and the tokenizer
         self.model_name = "Qwen/Qwen2.5-7B"
-        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "qwen" / "qwen_data.csv"
+        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "qwen" / "qwen_datas.csv"
         self.output_file.parent.mkdir(parents=True, exist_ok=True)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name)

@@ -15,3 +15,5 @@ __pycache__/
 .vscode/     
 .env
 venv/
+/batch_logs
+.batch_logs/

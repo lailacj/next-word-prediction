@@ -77,3 +77,1255 @@ sentence_num,sentence,word,llama_prob
 76,'As usual, he didn't do well because he had not prepared his',plan,-6.752732276916504
 77,'I could not remember his',name,-0.32574859261512756
 78,'The officials tried to evacuate everyone from the area before the',explosion,-3.774747371673584
+79,'Before she arrived he opened a bottle of wine and put on some soft',slippers,-10.570843830704689
+80,'Sharon dried the bowls with a',towel,-1.6124593019485474
+81,'The little girl refused to go to sleep until he told her a',story,-0.5886397957801819
+82,'Seth was uneasy because he had never liked to',lie,-5.345285892486572
+83,'He bought her a pearl necklace for her',birthday,-0.3951099216938019
+84,'Tracy and her husband weren't Catholic, but she was glad when the priest warmly welcomed their three',children,-1.0628283023834229
+85,'Kim was relieved to see that ample food had been made for the',hungry,-6.270737171173096
+86,'Phil put some drops in his',fishtank,-14.0537443831563
+87,'He grew corn to feed his',children,-4.497605323791504
+88,'They stood on the bridge tossing stale bread to the',ducks,-3.537574052810669
+89,'The young boy asked for another',drink,-3.0700089931488037
+90,'Whether it is true or not, most women think that men don't know how to',cook,-1.9329349994659424
+91,'He looked worried because he might have broken his',collection,-9.640891075134277
+92,'The queen waited patiently for the man to',crack,-9.482343673706055
+93,'Larry chose not to join the',army,-4.108041763305664
+94,'Most shark attacks occur very close to',winter,-12.73735523223877
+95,'You can't open the door with the wrong',key,-0.5264366865158081
+96,'He positioned the violin under his',chair,-6.592807292938232
+97,'The two hold-up men carried guns but didn't',shoot,-2.663830280303955
+98,'Joe went to the hardware store and bought a replacement window at twice the original',thickness,-9.267876625061035
+99,'As a punishment, his parents immediately took away his',toys,-3.435316324234009
+100,'They were surprised that Jack thought that it was',funny,-4.35556697845459
+101,'It was time to hang the new',pictures,-4.974595069885254
+102,'At night the old woman locked the',refrigerator,-8.89621353149414
+103,'Marsha wasn't worried about dinner because she knew the guests could remain eating appetizers for at least another',hour,-0.5147091746330261
+104,'In his day, that old guy was one of the best',athletes,-5.493054389953613
+105,'Cold damp weather makes her joints ache so she's been taking a lot of aspirin for the',race,-15.398385047912598
+106,'It's hard to admit when one is',scared,-9.038107872009277
+107,'There was a moth caught in the',light,-3.7294318675994873
+108,'All of their friends have noted that Joe and his wife are always',late,-4.006843090057373
+109,'Rushing out he forgot to take his',keys,-4.1007890701293945
+110,'Rafael wants to preserve the national forest by guarding every',tree,-1.3734458684921265
+111,'The exit was marked by a large',sign,-3.8375601768493652
+112,'The piano was out of',place,-4.333853244781494
+113,'They decided to buy a small place and build an addition with two more',rooms,-1.947231411933899
+114,'He really wanted to go, but decided to stay home to wait for the',timer,-11.246618270874023
+115,'As a reminder of his cat's first bath, he had a scratch on his',arm,-3.550644874572754
+116,'They raised pigs on their',farm,-0.9470342993736267
+117,'Although she heard it ringing, Nancy was too busy cleaning the chimney to get the',phone,-2.748690128326416
+118,'Most of the trees died after last year's',drought,-2.3428404331207275
+119,'She decided to start a new',diet,-5.0949859619140625
+120,'He was so busy and overwhelmed that he had forgotten to respond to the',card,-6.058073997497559
+121,'Alfonso has started biking to work instead of driving his',friends,-10.168620109558105
+122,'Paul painted the clown's suit blue and gave him a big red',nose,-0.821739673614502
+123,'Most kids think that adults are',old,-5.0498552322387695
+124,'He wrote himself a note so that he wouldn't',forget,-0.459577739238739
+125,'She wished she had brought something to',eat,-1.962537407875061
+126,'All of her neighbors thought the old woman was a',witch,-1.4954020977020264
+127,'Richard was afraid to walk near the edge of the cliff because he was afraid he would',fall,-0.26414528489112854
+128,'He knew that he could call Chris even if it was the middle of the',night,-0.04403692111372948
+129,'She took the baby out when he started to cry and had to miss the rest of the',game,-1.8087327480316162
+130,'Nora couldn't take the message because she didn't have a pencil or a piece of',chalk,-6.220953941345215
+131,'They carelessly dumped the toxic waste into the',trunk,-8.17393684387207
+132,'She cleaned the dirt from her',shoes,-3.5783495903015137
+133,'Simon thinks it's ok to listen to loud music even if the door to his bedroom is',broken,-6.848725318908691
+134,'The problem with Christine is that she can't take a',joke,-0.8420113921165466
+135,'He drove the nail into the',wood,-2.208836078643799
+136,'They waited a long time to see the',show,-4.8771867752075195
+137,'Ron bought a board for the window that was too long and then he bought one that was too',ugly,-10.932875633239746
+138,'Pam did not have any clothes to',mend,-10.547393798828125
+139,'The lady felt proud to look at her',meal,-10.01511001586914
+140,'The last thing they were expecting on their wedding day was a raging',panic,-8.588607788085938
+141,'He mailed the letter without a',hesitation,-9.367145538330078
+142,'The only food in the refrigerator was a moldy',sandwich,-4.694418907165527
+143,'As a child he used to collect',stamps,-2.651742458343506
+144,'The squirrel stored some nuts in the',basement,-6.4384942054748535
+145,'Every winter you see the Hernandez house and its huge chimney with puffs of billowing',snow,-3.7174623012542725
+146,'The rude waiter was not given a',tray,-7.929726600646973
+147,'When you go to bed turn off the',sarcasm,-14.491966724395752
+148,'You could tell from the way he reacted that he did not like',vomit,-14.136303175240755
+149,'He fell on the floor after tripping on the',log,-8.960733413696289
+150,'She was glad she had brought a good book with her since there was nothing to read at the',office,-5.205965995788574
+151,'He tried to put the pieces of the broken plate back together with',care,-6.361537933349609
+152,'They went to see the famous',clock,-7.8343963623046875
+153,'The Italian chef was known for his fabulous',pasta,-3.2054331302642822
+154,'While the national anthem is played, everyone is expected to',behave,-10.424332618713379
+155,'Although John felt some remorse he decided to return the',money,-1.7225388288497925
+156,'None of his books made any',fans,-11.544065475463867
+157,'They both have jobs but they get some extra income by raising',chickens,-1.8560289144515991
+158,'It was important to be on',time,-1.165607213973999
+159,'The last thing he expected was to have such a',blast,-5.491930961608887
+160,'No matter how hard she tried, she could not remember the',suggestions,-13.682443618774414
+161,'Don't touch the wet',clothes,-7.106961250305176
+162,'The construction worker had developed very powerful arms from unloading bags of cement from the',truck,-0.7928311228752136
+163,'It was drafty because of the cold air leaking in through the front door and all the side',paneling,-8.760573863983154
+164,'No one wanted to make any decisions until after the',trial,-5.724188327789307
+165,'I couldn't go, so I sent my secretary to the lawyers to pick up the',papers,-3.048351764678955
+166,'They had to shampoo the new beige rug after the accident with the',wine,-6.251025199890137
+167,'In the mysterious wooden box the girl found a',doll,-5.060308456420898
+168,'The shirt was stained with',sauce,-6.670380592346191
+169,'Cindy taught her two-year old that the pictures are square and that the plates are',white,-6.683220386505127
+170,'At first the woman refused, but eventually she changed her',medication,-13.329017639160156
+171,'The little puppy grew up to be a huge',responsibility,-8.62398910522461
+172,'He made a holster for his',gun,-1.6252855062484741
+173,'He quit his job and left his family so that he could sail around the',world,-0.059206120669841766
+174,'The young couple reluctantly ordered new',rackets,-12.459821701049805
+175,'She left the tiny baby alone in the',crib,-2.44227933883667
+176,'Quite predictably, the first thing the doctor asked for was a',cast,-7.711382865905762
+177,'He crept into the room without a',sound,-0.23316587507724762
+178,'The rules did not allow visitors to feed the',animals,-1.73112154006958
+179,'The fertilizer enriched the',soil,-1.1237390041351318
+180,'Joan fed her baby some warm',peas,-7.884989261627197
+181,'After two hours of hard work they decided to take a short',break,-0.26080191135406494
+182,'They installed an extremely expensive alarm system to protect their',home,-1.7582039833068848
+183,'She was quite surprised that Bill didn't keep his',secret,-5.6250715255737305
+184,'She helped him put the finishing touches on the',painting,-5.068869113922119
+185,'I sat far off to the side of the auditorium and my line of sight was blocked by a',pillar,-3.861971139907837
+186,'His skin was red from spending the day at the',beach,-1.2481120824813843
+187,'The journalist reported that many collapsed during the',praying,-12.793414115905762
+188,'He slipped and fell on the',rock,-6.934688568115234
+189,'The person who caught the thief deserves our',loyalty,-6.968435287475586
+190,'It was difficult to decide which bills to pay and which to',ignore,-2.7509071826934814
+191,'The cigar stank and burned a hole in the',couch,-4.447702407836914
+192,'It was a dream come true because Jane had always wanted to visit Europe with her',father,-3.934366226196289
+193,'One thing the old man lacked was',confidence,-4.500958442687988
+194,'I started to put new plants in my garden but ran out of',room,-2.9915401935577393
+195,'The boys played marbles and the girls jumped',together,-8.534451484680176
+196,'Our guests should be arriving',soon,-2.9545083045959473
+197,'He was cold most of the night and finally got up to get another',blanket,-1.2367494106292725
+198,'Will played his stereo much too',loud,-0.19608570635318756
+199,'After dinner they washed the',dog,-6.093852519989014
+200,'He always seemed to be interested in looking at the',tattoos,-9.83959674835205
+201,'She was docked one hour's pay for coming to work',late,-2.379533529281616
+202,'The wealthy couple's three little girls enjoyed playing together in the',pool,-4.803518772125244
+203,'Esther didn't think the sword was that dangerous because it wasn't very',sharp,-0.5402136445045471
+204,'Tricia had never seen a spider get tangled up in its own',web,-0.05392877757549286
+205,'Everyone was honking at the old man who was driving too',slowly,-1.0804436206817627
+206,'He hated to move, but Richard wanted to live closer to his',parents,-2.7530789375305176
+207,'Before going out on the open seas they always checked the',weather,-1.1733208894729614
+208,'The university wouldn't let him register until he paid the overdue fines on the borrowed',books,-0.5740920901298523
+209,'He was packing his books and moving to a new',office,-4.996266841888428
+210,'The truck that Dave drove crashed into the',tree,-3.4928219318389893
+211,'At the park next to the beach she saw a man with a',balloon,-7.615075588226318
+212,'The ship disappeared into the thick',smoke,-4.616962432861328
+213,'They decided to declaw the cat so he wouldn't tear up the',carpeting,-3.8486764430999756
+214,'In his haste, the young man had forgotten to sign the',waiver,-4.677382469177246
+215,'After the long day at work, he lay down on the',couch,-1.337844729423523
+216,'The technician never comes to work before',noon,-2.8838226795196533
+217,'He was knocked off his surfboard by the first',bully,-11.631559371948242
+218,'It is not legal for an employer to consider a person's',attitude,-8.224393844604492
+219,'Bill jumped in the lake and made a big',commotion,-8.013392378110439
+220,'Joy was too frightened to',look,-3.2904863357543945
+221,'The police had never seen a man so',drunk,-3.382173776626587
+222,'He liked lemon and sugar in his',tea,-1.1108018159866333
+223,'The papers were sorted into piles of varying',sizes,-0.8847664594650269
+224,'The dispute was settled by a third',party,-0.8182808756828308
+225,'Since the water was unsafe they decided to drink',scotch,-10.001952767372131
+226,'They left the dirty dishes in the',sink,-0.15165507793426514
+227,'Nicole could not read very well without her',glasses,-0.33714398741722107
+228,'During years of drudgery, the man had derived comfort from a single',song,-6.636072158813477
+229,'There were brightly colored pictures on every',wall,-0.9330499768257141
+230,'Whatever he did it was unusual for him to be',erratic,-9.792295455932617
+231,'You could tell he had grown up in the South by his',truck,-9.390957832336426
+232,'Father carved the turkey with a',smile,-6.736534595489502
+233,'Cathy worked overtime to finish her',work,-4.5490570068359375
+234,'She had to leave the movie when the baby started to',cry,-0.26833152770996094
+235,'His ring fell into a hole in the',couch,-7.398033142089844
+236,'Helen reached up to dust the',dresser,-8.002775192260742
+237,'The children went outside to',play,-0.6519550681114197
+238,'She bought several colorful postcards to send to her',family,-2.2480320930480957
+239,'Sam could not believe her story was',true,-1.5008434057235718
+240,'The cat was curled up in Jill's',lap,-0.4208461344242096
+241,'No one at the reunion recognized Dan because he had grown a',foot,-7.833437442779541
+242,'He had just enough time to buy a cake from the store and change his clothes before the guests',phoned,-11.816352115012705
+243,'In the distance they heard the',sigh,-8.482311248779297
+244,'He smiled nervously as he searched through his pockets for a',key,-5.0003814697265625
+245,'She wanted a roommate who would be quiet and',clean,-3.826983690261841
+246,'Within minutes of arriving at the office, the detective spilled his thermos full of',coffee,-0.651187539100647
+247,'The manila folder that contained her manuscript had been',stolen,-3.770611047744751
+248,'The surface of the water was nice and',cold,-3.6445417404174805
+249,'Sandy always wished that she had had a',dog,-4.79840087890625
+250,'The candidate had spent most of his funds on',drugs,-7.194526672363281
+251,'He put a clean sheet on the',clipboard,-11.538651466369629
+252,'The other driver was so angry he threatened him with a',reprimand,-13.575266605243087
+253,'Every year he takes a vacation in',Hawaii,-4.198888301849365
+254,'Their picnic was ruined by the',bees,-6.8518877029418945
+255,'The schools closed down because the teachers decided to go on',strike,-0.10992234200239182
+256,'After realizing he forgot utensils for his salad, the doctor went back to get himself a',napkin,-5.029215944930911
+257,'Mike felt sorry, but it was not his',car,-7.834584712982178
+258,'His boss refused to give him a',raise,-1.3506598472595215
+259,'The long test left the class',unprepared,-7.810621857643127
+260,'She finished the second load of laundry and started to',scream,-10.269248962402344
+261,'The peaches she had bought at the market were very ripe and',juicy,-1.8218257427215576
+262,'He was grouchy because he was having trouble with his',homework,-6.757411003112793
+263,'Steve spilled coffee all over his clean white',shirt,-0.400231271982193
+264,'The county decided to tear down the gas station by the',dock,-8.982953071594238
+265,'It's raining, and I forgot my coat, hat, and',umbrella,-1.4717845916748047
+266,'Keith read a story to his little girl but after only a short time she started to get',sleepy,-3.8350043296813965
+267,'The child was born with a rare',gift,-9.655627250671387
+268,'When the two met, one of them held out his',badge,-10.690387725830078
+269,'Mary went into her room to look at her',clothes,-4.837657928466797
+270,'I had lost the ticket I needed to pick up my',glasses,-7.842329025268555
+271,'The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his',scars,-2.4749197959899902
+272,'They had to drive for another hour before finding a place to',jog,-13.152304649353027
+273,'He shouted at the top of his',staircase,-12.862970352172852
+274,'They rested under a tree in the',campsite,-9.779772758483887
+275,'A dog has a good sense of',smell,-0.4314579963684082
+276,'The newspaper review recommended the film, and the lead actor was praised for being very',good,-1.5172234773635864
+277,'Maria remembered to shut the front window and lock the back',door,-0.27767014503479004
+278,'It was a very exciting story because the last thing you would expect them to do was',misspeak,-13.499501705169678
+279,'There were a lot of old boxes stored in the',attic,-1.75496244430542
+280,'Every morning before school his mother laid out his clothes and packed his',clarinet,-15.67220911104232
+281,'Most people spend December 25th with their',presents,-10.307149887084961
+282,'Shuffle the cards before you',deal,-2.2113218307495117
+283,'The county decided to tear down the gas station by the',park,-5.9966278076171875
+284,'The long test left the class',tired,-7.269769191741943
+285,'Most men cannot understand why women wear',underwear,-5.011134624481201
+286,'Cats loved to be scratched behind the',ears,-0.0984463319182396
+287,'She thought she had seen a',ship,-7.582486152648926
+288,'She pulled her head out from under the faucet and reached for a',towel,-0.9465892314910889
+289,'The tenants decided to take their landlord to',court,-0.24989880621433258
+290,'In caring for hospitalized patients, a doctor often needs the help of a',drug,-8.693719863891602
+291,'I was finally able to make an appointment for the',doctor,-5.078301906585693
+292,'He was soothed by the gentle',medication,-10.166759490966797
+293,'When the power went out the house became',cold,-4.207852363586426
+294,'The death of his dog was a great',tragedy,-3.0050976276397705
+295,'He scraped the cold food from his',plate,-0.41165512800216675
+296,'The prisoners were planning their',escape,-0.4315890073776245
+297,'I didn't like the show so I changed the',cast,-7.135624885559082
+298,'I added my name to the',list,-1.461862325668335
+299,'While skiing, Randy broke his',glasses,-8.789985656738281
+300,'He decided to travel in Iran even though he knew it could be',expensive,-6.635547637939453
+301,'Their picnic was ruined by the',rain,-2.4768617153167725
+302,'Giraffes are known for their long necks and zebras for their',stripes,-0.41090577840805054
+303,'The approaching storm made the air very',cold,-1.7343565225601196
+304,'The baby cried and upset her',mother,-2.2649688720703125
+305,'She couldn't find anything she wanted to',do,-1.9669309854507446
+306,'Although Jan was usually careful she had forgotten to turn off the',stove,-3.123929977416992
+307,'She wore heavy wool socks and her sturdiest boots to go walking in the',snow,-2.7600581645965576
+308,'I think that my stockbroker is a',pill,-10.582426071166992
+309,'A dog has a good sense of',loyalty,-7.684107303619385
+310,'As the weather got warmer, Mark started wearing his lighter jacket instead of his heavy winter',coat,-0.49747613072395325
+311,'Although this film was an exception, she generally went to see movies that were',long,-8.136885643005371
+312,'His seat was next to the',fishtank,-14.141976879909635
+313,'The bad boy was sent to his',room,-0.6006828546524048
+314,'Liz and Marie sat at the conference table and discussed the topic for the next',meeting,-2.6346254348754883
+315,'Ruby's grandchildren hired a live-in nurse because they thought she was too old to live',alone,-1.2813085317611694
+316,'Be careful because the top of the stove is very',hot,-0.1227513998746872
+317,'Every morning Susan braids her little girl's hair then helps her dress for',school,-0.3326607346534729
+318,'The hinges were rusted shut, so he had to pry it open with a',crowbar,-1.657386600971222
+319,'It didn't get completed because he could not locate the right',tools,-3.9988250732421875
+320,'John swept the floor with a',flourish,-7.317127227783203
+321,'The schools closed down because the teachers decided to go on',praying,-18.588947296142578
+322,'They saw the lightening and heard the',screams,-6.64070987701416
+323,'It was a very exciting story because the last thing you would expect them to do was',die,-6.41536283493042
+324,'The colonel wished the sergeant would treat his command not as a polite request but as a direct',reprimand,-8.221281313104555
+325,'The man could not believe that they were all',staring,-5.117229461669922
+326,'I just had a new sound system installed in my',office,-4.092060089111328
+327,'The cows moved from the sun into the',mud,-8.926078796386719
+328,'The old woman was the only one to see the',hesitation,-11.042701721191406
+329,'I was impressed by how much he',knew,-2.2110538482666016
+330,'Ken built his new house on a quiet',hill,-4.693732261657715
+331,'When she got there she found that most of the people were',white,-5.645458221435547
+332,'The teacher saw that some students were cheating and wrote down their',names,-0.269954651594162
+333,'Peter painted the walls of the bird exhibit light blue to resemble the',carpeting,-12.617532968521118
+334,'The hikers wanted to camp close to the',igloo,-11.387312769889832
+335,'Each night the campers built a huge',fire,-1.8871101140975952
+336,'The white gull dove down and caught a',fish,-0.8764070272445679
+337,'When George couldn't get into his car, he got down on one knee and reached under the bumper for the spare',key,-2.6434807777404785
+338,'The other driver was so angry he threatened him with a',gun,-1.4711573123931885
+339,'On hot days, many people sun themselves on the',beach,-0.4856265187263489
+340,'As soon as they reached the sand he stopped to take off his',shoes,-1.085986852645874
+341,'The sewer backed up and caused a',flood,-2.6619176864624023
+342,'After the hurricane, the area around the window was filled with broken',toys,-8.826449394226074
+343,'She dropped the glass and woke up the',bully,-10.062601089477539
+344,'Every year he takes a vacation in',Ohio,-8.096481323242188
+345,'When Drew arrived unexpectedly at the restaurant, Laurie got him a chair from the adjacent',table,-0.8734805583953857
+346,'The luggage handler seemed to take great delight in tossing the boxes marked',fragile,-9.412041664123535
+347,'Mr. Smith enjoyed showing people his newly installed',refrigerator,-6.5954132080078125
+348,'Every day, rain or shine, the joggers ran up and down the',staircase,-6.563300132751465
+349,'Our government was secretly supplying the rebels with arms and',money,-3.0273871421813965
+350,'George must keep his pet on a',diet,-4.324583530426025
+351,'When she came back from the restroom she found him in deep conversation with a',friend,-4.197093486785889
+352,'That ramp has been closed for construction for several',feet,-10.786630630493164
+353,'The man who was carried into the emergency room had been stabbed in a',car,-4.5804948806762695
+354,'After dinner, they spent a long time over coffee just',talking,-1.0773066282272339
+355,'Rachel loves the smell of tobacco but she can't stand all the',lectures,-9.78203296661377
+356,'As usual, he didn't do well because he had not prepared his',speech,-2.7833073139190674
+357,'I could not remember his',song,-8.036109924316406
+358,'The officials tried to evacuate everyone from the area before the',race,-7.522111415863037
+359,'I had lost the ticket I needed to pick up my',clothes,-7.81341552734375
+360,'Before she arrived he opened a bottle of wine and put on some soft',music,-0.4843365252017975
+361,'Sharon dried the bowls with a',sigh,-12.0108003616333
+362,'The little girl refused to go to sleep until he told her a',secret,-4.079326152801514
+363,'Seth was uneasy because he had never liked to',phone,-10.629851341247559
+364,'He bought her a pearl necklace for her',collection,-9.708507537841797
+365,'Tracy and her husband weren't Catholic, but she was glad when the priest warmly welcomed their three',suggestions,-13.184490203857422
+366,'Kim was relieved to see that ample food had been made for the',party,-2.982944965362549
+367,'Phil put some drops in his',eyes,-1.2545820474624634
+368,'They stood on the bridge tossing stale bread to the',dogs,-4.368569374084473
+369,'The young boy asked for another',cookie,-2.5766408443450928
+370,'Whether it is true or not, most women think that men don't know how to',care,-4.068488121032715
+371,'The queen waited patiently for the man to',bow,-6.912418365478516
+372,'Larry chose not to join the',party,-4.984419822692871
+373,'Most shark attacks occur very close to',shore,-0.2815272808074951
+374,'The two hold-up men carried guns but didn't',panic,-8.551122665405273
+375,'Joe went to the hardware store and bought a replacement window at twice the original',price,-0.5825527906417847
+376,'The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his',tattoos,-5.208427906036377
+377,'There were a lot of old boxes stored in the',basement,-1.3984789848327637
+378,'Most people spend December 25th with their',family,-1.2393687963485718
+379,'He was grouchy because he was having trouble with his',clarinet,-9.902863262221217
+380,'They were surprised that Jack thought that it was',chalk,-12.084508895874023
+381,'They rested under a tree in the',shade,-1.0723875761032104
+382,'At night the old woman locked the',door,-0.6409929990768433
+383,'Marsha wasn't worried about dinner because she knew the guests could remain eating appetizers for at least another',story,-13.911293029785156
+384,'In his day, that old guy was one of the best',counselors,-9.554723739624023
+385,'Cold damp weather makes her joints ache so she's been taking a lot of aspirin for the',pain,-2.555220127105713
+386,'Maria remembered to shut the front window and lock the back',room,-8.091329574584961
+387,'It's hard to admit when one is',wrong,-0.23871561884880066
+388,'All of their friends have noted that Joe and his wife are always',together,-3.000070095062256
+389,'The peaches she had bought at the market were very ripe and',dirty,-9.048832893371582
+390,'Rushing out he forgot to take his',camera,-4.377070426940918
+391,'Rafael wants to preserve the national forest by guarding every',campsite,-9.067420899868011
+392,'The piano was out of',tune,-0.5421299338340759
+393,'They decided to buy a small place and build an addition with two more',freezers,-12.863367438316345
+394,'He really wanted to go, but decided to stay home to wait for the',mail,-5.0362043380737305
+395,'As a reminder of his cat's first bath, he had a scratch on his',stomach,-4.975131034851074
+396,'They raised pigs on their',own,-2.3988261222839355
+397,'Although she heard it ringing, Nancy was too busy cleaning the chimney to get the',timer,-10.333246231079102
+398,'Most of the trees died after last year's',winter,-3.4633162021636963
+399,'After realizing he forgot utensils for his salad, the doctor went back to get himself a',fork,-1.5376766920089722
+400,'She decided to start a new',life,-1.510770559310913
+401,'He was so busy and overwhelmed that he had forgotten to respond to the',question,-3.9879467487335205
+402,'Alfonso has started biking to work instead of driving his',car,-0.21425223350524902
+403,'Paul painted the clown's suit blue and gave him a big red',balloon,-3.7128586769104004
+404,'Most kids think that adults are',bitter,-9.37122631072998
+405,'He wrote himself a note so that he wouldn't',misspeak,-12.956114053726196
+406,'She wished she had brought something to',mend,-8.18735122680664
+407,'All of her neighbors thought the old woman was a',success,-10.295084953308105
+408,'Richard was afraid to walk near the edge of the cliff because he was afraid he would',vomit,-10.084272418287583
+409,'He knew that he could call Chris even if it was the middle of the',game,-8.43570327758789
+410,'She took the baby out when he started to cry and had to miss the rest of the',movie,-3.45267653465271
+411,'Nora couldn't take the message because she didn't have a pencil or a piece of',paper,-0.015954218804836273
+412,'They carelessly dumped the toxic waste into the',ocean,-2.8151602745056152
+413,'She cleaned the dirt from her',slippers,-8.548662632703781
+414,'The problem with Christine is that she can't take a',test,-8.625658988952637
+415,'He drove the nail into the',roof,-5.314789295196533
+416,'They waited a long time to see the',grades,-12.608226776123047
+417,'Ron bought a board for the window that was too long and then he bought one that was too',short,-0.2841607928276062
+418,'Pam did not have any clothes to',wear,-0.37697917222976685
+419,'The lady felt proud to look at her',daughter,-3.3385069370269775
+420,'The last thing they were expecting on their wedding day was a raging',storm,-2.1996188163757324
+421,'He mailed the letter without a',stamp,-1.5804827213287354
+422,'The only food in the refrigerator was a moldy',pea,-8.697504043579102
+423,'As a child he used to collect',napkins,-9.404482290148735
+424,'The squirrel stored some nuts in the',tree,-2.901175022125244
+425,'Every winter you see the Hernandez house and its huge chimney with puffs of billowing',smoke,-0.22323386371135712
+426,'The rude waiter was not given a',tip,-2.5494775772094727
+427,'When you go to bed turn off the',lights,-1.0387715101242065
+428,'He fell on the floor after tripping on the',crack,-7.08452844619751
+429,'She was glad she had brought a good book with her since there was nothing to read at the',place,-5.105534553527832
+430,'He tried to put the pieces of the broken plate back together with',glue,-3.503633737564087
+431,'They went to see the famous',actor,-4.939959526062012
+432,'The Italian chef was known for his fabulous',smile,-9.245272636413574
+433,'None of his books made any',sense,-2.6134748458862305
+434,'They both have jobs but they get some extra income by raising',bees,-4.439563274383545
+435,'It was important to be on',guard,-7.33864688873291
+436,'The last thing he expected was to have such a',commotion,-10.779703583568335
+437,'No matter how hard she tried, she could not remember the',name,-1.6278910636901855
+438,'Don't touch the wet',paint,-1.99427330493927
+439,'No one wanted to make any decisions until after the',game,-5.613549709320068
+440,'I couldn't go, so I sent my secretary to the lawyers to pick up the',cash,-5.754820346832275
+441,'They had to shampoo the new beige rug after the accident with the',tray,-8.610873222351074
+442,'In the mysterious wooden box the girl found a',ring,-4.911882400512695
+443,'Mary went into her room to look at her',gift,-6.917601585388184
+444,'Cindy taught her two-year old that the pictures are square and that the plates are',round,-1.3108686208724976
+445,'The child was born with a rare',disease,-2.9459621906280518
+446,'At first the woman refused, but eventually she changed her',mind,-0.06234939768910408
+447,'The little puppy grew up to be a huge',dog,-1.1101614236831665
+448,'He made a holster for his',father,-4.952888011932373
+449,'He quit his job and left his family so that he could sail around the',clock,-9.884360313415527
+450,'The young couple reluctantly ordered new',furniture,-2.7609105110168457
+451,'She left the tiny baby alone in the',basket,-5.5355448722839355
+452,'Quite predictably, the first thing the doctor asked for was a',symptom,-9.069025039672852
+453,'He crept into the room without a',plan,-10.170988082885742
+454,'The rules did not allow visitors to feed the',children,-7.041097164154053
+455,'The fertilizer enriched the',stink,-10.806799411773682
+456,'Joan fed her baby some warm',milk,-0.6357866525650024
+457,'After two hours of hard work they decided to take a short',jog,-9.886359214782715
+458,'She was quite surprised that Bill didn't keep his',promise,-1.1793317794799805
+459,'She helped him put the finishing touches on the',presents,-10.407073974609375
+460,'I sat far off to the side of the auditorium and my line of sight was blocked by a',chair,-5.581476211547852
+461,'His skin was red from spending the day at the',farm,-4.905328273773193
+462,'The journalist reported that many collapsed during the',earthquake,-3.179309129714966
+463,'The person who caught the thief deserves our',reward,-4.51908016204834
+464,'The cigar stank and burned a hole in the',paneling,-10.975475072860718
+465,'It was a dream come true because Jane had always wanted to visit Europe with her',boyfriend,-3.7030563354492188
+466,'The boys played marbles and the girls jumped',rope,-0.3606128990650177
+467,'Our guests should be arriving',hungry,-12.782835960388184
+468,'Will played his stereo much too',late,-4.567601203918457
+469,'When the two met, one of them held out his',hand,-0.46240851283073425
+470,'After dinner they washed the',dishes,-0.4566282033920288
+471,'He always seemed to be interested in looking at the',sky,-4.006269454956055
+472,'She was docked one hour's pay for coming to work',unprepared,-7.89948582649231
+473,'Keith read a story to his little girl but after only a short time she started to get',scared,-4.119187831878662
+474,'The wealthy couple's three little girls enjoyed playing together in the',snow,-4.476084232330322
+475,'Mike felt sorry, but it was not his',fault,-0.8114446401596069
+476,'He shouted at the top of his',lungs,-0.6234484314918518
+477,'Esther didn't think the sword was that dangerous because it wasn't very',heavy,-3.331355094909668
+478,'Tricia had never seen a spider get tangled up in its own',meal,-11.207773208618164
+479,'He hated to move, but Richard wanted to live closer to his',friends,-3.7121529579162598
+480,'Before going out on the open seas they always checked the',speed,-7.184205055236816
+481,'The university wouldn't let him register until he paid the overdue fines on the borrowed',rackets,-13.323611497879028
+482,'He was packing his books and moving to a new',place,-2.7744803428649902
+483,'The truck that Dave drove crashed into the',patio,-8.84829044342041
+484,'The newspaper review recommended the film, and the lead actor was praised for being very',together,-10.717342376708984
+485,'It's raining, and I forgot my coat, hat, and',keys,-7.770627975463867
+486,'The ship disappeared into the thick',fog,-1.0659998655319214
+487,'They decided to declaw the cat so he wouldn't tear up the',couch,-3.0808799266815186
+488,'In his haste, the young man had forgotten to sign the',clipboard,-8.748554229736328
+489,'After the long day at work, he lay down on the',floor,-4.292804718017578
+490,'The technician never comes to work before',breakfast,-8.413812637329102
+491,'He was knocked off his surfboard by the first',wave,-0.49125227332115173
+492,'It is not legal for an employer to consider a person's',race,-2.0287630558013916
+493,'Bill jumped in the lake and made a big',splash,-0.06998391449451447
+494,'Joy was too frightened to',move,-3.0937929153442383
+495,'The police had never seen a man so',ugly,-5.603616714477539
+496,'He liked lemon and sugar in his',sauce,-8.364066123962402
+497,'The papers were sorted into piles of varying',thickness,-3.5227251052856445
+498,'The dispute was settled by a third',trial,-7.588500499725342
+499,'Since the water was unsafe they decided to drink',soda,-4.567121505737305
+500,'They left the dirty dishes in the',trunk,-13.537352561950684
+501,'Nicole could not read very well without her',dictionary,-9.373429298400879
+502,'There were brightly colored pictures on every',card,-7.703336715698242
+503,'Whatever he did it was unusual for him to be',late,-3.7271504402160645
+504,'You could tell he had grown up in the South by his',accent,-1.8780344724655151
+505,'Every morning before school his mother laid out his clothes and packed his',lunch,-0.46478956937789917
+506,'Father carved the turkey with a',knife,-2.308990955352783
+507,'They had to drive for another hour before finding a place to',eat,-3.576779365539551
+508,'Cathy worked overtime to finish her',responsibility,-12.237926483154297
+509,'His ring fell into a hole in the',sink,-7.7120819091796875
+510,'The children went outside to',look,-4.3310112953186035
+511,'Sam could not believe her story was',published,-5.193352222442627
+512,'The cat was curled up in Jill's',hamper,-10.7565578520298
+513,'No one at the reunion recognized Dan because he had grown a',beard,-0.9214118719100952
+514,'He had just enough time to buy a cake from the store and change his clothes before the guests',arrived,-0.3621208667755127
+515,'In the distance they heard the',sound,-1.424120306968689
+516,'He smiled nervously as he searched through his pockets for a',quarter,-5.282534599304199
+517,'She wanted a roommate who would be quiet and',behave,-7.888827323913574
+518,'Within minutes of arriving at the office, the detective spilled his thermos full of',scotch,-7.964812994003296
+519,'The surface of the water was nice and',smooth,-1.921483039855957
+520,'Sandy always wished that she had had a',badge,-11.991388320922852
+521,'The candidate had spent most of his funds on',campaigning,-5.127135276794434
+522,'She had to leave the movie when the baby started to',smell,-8.552066802978516
+523,'We followed the path up the hill, and there under the tree was a',collar,-11.77477741241455
+524,'During years of drudgery, the man had derived comfort from a single',book,-4.997724533081055
+525,'He slipped and fell on the',floor,-3.241940498352051
+526,'You can't open the door with the wrong',attitude,-8.529741287231445
+527,'You could tell from the way he reacted that he did not like',her,-2.878495693206787
+528,'I started to put new plants in my garden but ran out of',soil,-3.9048855304718018
+529,'Everyone was honking at the old man who was driving too',erratically,-6.54295358993113
+530,'While the national anthem is played, everyone is expected to',stand,-0.08159969002008438
+531,'One thing the old man lacked was',sarcasm,-8.863869396504015
+532,'As a punishment, his parents immediately took away his',car,-5.049875259399414
+533,'She was glad she had accompanied her friend because she was enjoying the party except for the',smoke,-5.933813095092773
+534,'Josie found she could not bend the elbow of her broken',doll,-8.609883308410645
+535,'The exit was marked by a large',rock,-4.972236156463623
+536,'His boss refused to give him a',drink,-7.188485622406006
+537,'It was difficult to decide which bills to pay and which to',forget,-5.031249046325684
+538,'Simon thinks it's ok to listen to loud music even if the door to his bedroom is',open,-1.2289773225784302
+539,'He grew corn to feed his',chickens,-4.241650581359863
+540,'It was time to hang the new',clothes,-6.814661026000977
+541,'Although John felt some remorse he decided to return the',watch,-5.720108985900879
+542,'Helen reached up to dust the',shelf,-5.913621425628662
+543,'The shirt was stained with',blood,-1.7795408964157104
+544,'There was a moth caught in the',draft,-9.209675788879395
+545,'The groom took the bride's hand and placed the ring on her',dresser,-11.648300170898438
+546,'He put a clean sheet on the',bed,-7.441845417022705
+547,'He looked worried because he might have broken his',arm,-3.94853138923645
+548,'She was having a hard time because she didn't know the',answer,-2.8946115970611572
+549,'She bought several colorful postcards to send to her',fans,-6.277267932891846
+550,'He positioned the violin under his',chin,-0.47171714901924133
+551,'He was cold most of the night and finally got up to get another',log,-6.507804870605469
+552,'The construction worker had developed very powerful arms from unloading bags of cement from the',dock,-7.8304572105407715
+553,'Tim's friend pushed him into a',pool,-2.5317225456237793
+554,'It was drafty because of the cold air leaking in through the front door and all the side',windows,-0.34074684977531433
+555,'He settled for California champagne because the imported stuff was too',expensive,-1.0562160015106201
+556,'The breeze lifted the',leaves,-3.3959949016571045
+557,'The jeweler was asked if he would examine the ring's huge',crack,-5.325584888458252
+558,'She finished the second load of laundry and started to',fold,-2.1770544052124023
+559,'Tim threw a rock and broke the',window,-1.5412757396697998
+560,'They installed an extremely expensive alarm system to protect their',truck,-7.611001491546631
+561,'Steve spilled coffee all over his clean white',couch,-5.423810005187988
+562,'At the park next to the beach she saw a man with a',dog,-2.545280933380127
+563,'The manila folder that contained her manuscript had been',broken,-6.579833030700684
+564,'He decided to travel in Iran even though he knew it could be',dangerous,-0.44585397839546204
+565,'She called her husband at his',work,-1.5458425283432007
+566,'She found the steady drumming of rain on the roof very',soothing,-0.8909275531768799
+567,'His ring fell into a dark hole in the',sink,-8.074685096740723
+568,'Steve invited his girlfriend to a',party,-1.904935359954834
+569,'The insurance company refused to pay the claim when they found out that he'd been',lying,-5.620030403137207
+570,'Betsy could never tell a',lie,-0.5677945613861084
+571,'The bully punched him on the playground and broke his',nose,-1.0206172466278076
+572,'They stood with the others and chatted while waiting for the',bus,-2.6324574947357178
+573,'Next year my little son will be going to',school,-1.716351866722107
+574,'He decided to apply for a student',loan,-0.8235441446304321
+575,'My sister bought tickets for the opening',show,-4.047776222229004
+576,'He hated to move, but John wanted to live closer to his',friends,-3.7693464756011963
+577,'The papers were sorted into several piles of varying',sizes,-0.8752689957618713
+578,'During the volley someone stepped on Joe's',foot,-0.7348089218139648
+579,'Jim was saving boxes for a friend who was',moving,-0.6128849983215332
+580,'He was tired and grouchy because he was having trouble with his',homework,-7.230471611022949
+581,'He took the money from his leather',wallet,-1.6413066387176514
+582,'Mrs. Stevens said that little Dennis was the loudest boy in the',class,-1.232019066810608
+583,'She cleaned the sink with a',sponge,-2.413285255432129
+584,'Since they saw that the water was unsafe they decided to drink',soda,-6.14534854888916
+585,'Gary could absolutely not believe his son stole a',car,-2.1000964641571045
+586,'Ida wanted to sing folk songs at the picnic, so she brought her',guitar,-1.4005602598190308
+587,'He finally bought some poison to kill the',rats,-3.7114052772521973
+588,'She was feeling quite cold so she put on her',jacket,-2.6734485626220703
+589,'The final score of the game was',tied,-5.19972038269043
+590,'They had been wandering in circles because nobody had a',map,-2.7382705211639404
+591,'The man was caught selling an illegal',drug,-4.102112770080566
+592,'Jenny boiled the eggs in',water,-2.5721144676208496
+593,'The lawyer really feared that his client was',guilty,-4.189403057098389
+594,'At the park next to the beach she saw a man with a big',dog,-2.593684673309326
+595,'The peaches she had bought at the market yesterday were very ripe and',juicy,-1.8987536430358887
+596,'She was named after her',mother,-1.8176809549331665
+597,'Bob thought the best time to talk to the priest would probably be on Sunday in',church,-0.9558873176574707
+598,'The extremely long test left the class',tired,-7.371236801147461
+599,'The lady felt very proud to look at her',daughter,-3.3950188159942627
+600,'He was caught stealing a',car,-3.17326283454895
+601,'Upon locating the suspect, the detective left quickly and called the',police,-1.6521371603012085
+602,'They took her car because he hated to drive in the',rain,-0.941484808921814
+603,'The satellite orbited the',earth,-1.577681064605713
+604,'They asked Dave to play tennis but he was too',tired,-2.83821964263916
+605,'I couldn't go myself, so I sent my secretary to the lawyers to pick up the',papers,-3.0283396244049072
+606,'The bridesmaid had an ugly',dress,-1.7713452577590942
+607,'As reminder of his cat's first bath, he had a scratch on his',arm,-2.980520486831665
+608,'Every month Rick had to clean his',room,-3.204068183898926
+609,'Every single day, rain or shine, the joggers ran up and down the',hill,-3.1058123111724854
+610,'His hands shook because he was very',nervous,-1.4829633235931396
+611,'He always hid an extra set of keys under a',mat,-4.026950359344482
+612,'Her cold drink was served with a slice of',lemon,-0.8360452055931091
+613,'Upon mother's strict orders, the cat's smelly litter box was kept in the',garage,-3.1598544120788574
+614,'Dillinger once robbed that',store,-4.093727111816406
+615,'She felt dinner would definitely not be complete unless she made',dessert,-5.460672378540039
+616,'They rested for a while under a tree in the',shade,-1.1974573135375977
+617,'He looked very worried because he might have broken his',arm,-3.7705607414245605
+618,'Mary was excited to see if the new toy with the colored blocks and square buttons would make the child',happy,-2.2770960330963135
+619,'The car accident five years ago left an ugly scar on his',face,-1.7676063776016235
+620,'They asked Dave to play tennis but he was too',late,-5.452666282653809
+621,'Gary could not believe his son stole a',car,-1.8494898080825806
+622,'He always hid an extra set of keys under a',bed,-6.189738750457764
+623,'She was feeling cold so she put on her',jacket,-2.5747451782226562
+624,'She called her husband at his',spa,-10.962678909301758
+625,'Barry wisely chose to pay the',bills,-4.210634231567383
+626,'Bob thought the best time to talk to the priest would probably be on Sunday in',private,-7.446455478668213
+627,'Jim was saving boxes for a friend who was',recycling,-10.323835372924805
+628,'Randy froze when he saw a shadow at the end of the',pier,-5.490466594696045
+629,'As reminder of his cat's first bath, he had a scratch on his',stomach,-5.104425430297852
+630,'Upon locating the suspect, the detective left quickly and called the',father,-9.1066255569458
+631,'Each night he built a huge',igloo,-6.423036605119705
+632,'Fred put the worm on the',hook,-1.875311017036438
+633,'The airline had lost her',business,-6.766228199005127
+634,'Cats love to be scratched behind the',ears,-0.06641536206007004
+635,'Gary could not believe his son stole a',peek,-10.00832748413086
+636,'He took the money from his leather',coat,-4.47159481048584
+637,'She was feeling cold so she put on her',furnace,-11.261058807373047
+638,'Smith enjoyed showing people his newly installed',stereo,-8.17195987701416
+639,'Barry wisely chose to pay the',mechanic,-10.556511878967285
+640,'He decided to apply for a student',position,-4.867199420928955
+641,'Steve invited his girlfriend to a',church,-6.7570013999938965
+642,'Betsy could never tell a',difference,-6.82337760925293
+643,'Fred put the worm on the',leaf,-10.395946502685547
+644,'Ida wanted to sing folk songs at the picnic, so she brought her',partner,-9.950446128845215
+645,'Cats love to be scratched behind the',collar,-10.640490531921387
+646,'Smith enjoyed showing people his newly installed',refrigerator,-7.653957366943359
+647,'Every month Rick had to clean his',teeth,-3.920578956604004
+648,'Randy froze when he saw a shadow at the end of the',hall,-1.7886329889297485
+649,'Each night he built a huge',fire,-1.456229329109192
+650,'The airline had lost her',luggage,-2.111693859100342
+651,'They had been wandering in circles because nobody had a',light,-7.4297051429748535
+652,'They stood with the others and chatted while waiting for the',doctor,-5.1494340896606445
+653,'She cleaned the sink with a',solvent,-8.813114166259766
+654,'They saw the lightning and heard the',screams,-10.92951774597168
+655,'They saw the lightning and heard the',thunder,-0.12181096524000168
+656,'The final score of the game was',disputed,-9.653958320617676
+657,'It is time to hang the new',pictures,-4.956238746643066
+658,'Every day, rain or shine, the jogger ran up and down the',hill,-2.9166805744171143
+659,'He returned the hole punch to the computer',teacher,-9.999225616455078
+660,'Rafael wants to preserve the national forest by guarding every cedar',tree,-0.9687654376029968
+661,'Jessie left without his toolbox or his packed',keys,-10.394301414489746
+662,'The car accident five years ago left an ugly scar on his hairy',face,-2.417996883392334
+663,'We sprayed the yard to keep away the nasty',bugs,-2.506545066833496
+664,'Gary could not believe his son stole that fast',watch,-7.712067127227783
+665,'Although she heard it ringing, Nancy was too busy cleaning the chimney to get the cell',phone,-0.10542536526918411
+666,'The hinges were rusted shut, so he had to pry it open with a sharp',crowbar,-4.307846622541547
+667,'Fred put the worm on the wet',grass,-4.163153648376465
+668,'She decided to start a new temporary',business,-3.420346736907959
+669,'He positioned the violin under his bearded',chin,-0.08016884326934814
+670,'He always seemed to be interested in looking at the blue',sky,-1.518367886543274
+671,'She was having a hard time because she didn't know the English',answer,-7.525404930114746
+672,'It didn't get completed because he could not locate the right diagnostic',tool,-2.0418612957000732
+673,'He always hid an extra set of keys under a Persian',rug,-0.2906149923801422
+674,'No one at the reunion recognized Dan because he had grown a long',mustache,-4.858710351283662
+675,'The fertilizer enriched the dry',soil,-1.5575608015060425
+676,'She was named after her famous',mother,-2.3188066482543945
+677,'I sat far off to the side of the auditorium and my line of sight was blocked by a tall',beam,-7.988099575042725
+678,'He was caught stealing a borrowed',car,-2.6102559566497803
+679,'She flipped through the stations in search of some global',news,-0.6651687026023865
+680,'I could hear the loud telephone ringing through the concrete',door,-7.145752906799316
+681,'Paul painted the clown's suit blue and gave him a big red snotty',balloon,-7.64354133605957
+682,'The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his bulging',muscles,-2.471489191055298
+683,'He was cold most of the night and finally got up to get another thick',blanket,-0.7754983305931091
+684,'Mary went into her room to look at her illustrated',painting,-7.976530075073242
+685,'The county decided to tear down the gas station by the elementary',highway,-13.450154304504395
+686,'They couldn't decide on a name for their new premature',dog,-8.096379280090332
+687,'They stood on the bridge tossing stale bread to the wild',ducks,-2.848450183868408
+688,'In the mysterious wooden box the girl found the topographical',ring,-11.139232635498047
+689,'As soon as they reached the sand, he stopped to take off his striped',shoes,-3.6811516284942627
+690,'The jeweler was asked if he would examine the ring's huge black',stone,-2.1967053413391113
+691,'She took the baby out when he started to cry and had to miss the rest of the tea',party,-0.7758015990257263
+692,'I just had a new sound system installed in my living',room,-0.05045584589242935
+693,'You could tell he had grown up in the South by his racist',attitude,-2.8552587032318115
+694,'She was glad she had brought a good book with her since there was nothing to read at the post',office,-0.07929155230522156
+695,'Upon mother's strict orders, the cat's smelly litter box was kept in the outdoor',shed,-1.6483973264694214
+696,'Rushing out he forgot to take his thin',jacket,-3.7236452102661133
+697,'They decided to declaw the cat so he wouldn't tear up the thick',couch,-5.298405647277832
+698,'Their neighbors were surprised to find out that the Smiths had never visited that national',town,-10.773109436035156
+699,'The breeze lifted the short',air,-9.059285163879395
+700,'Barry wisely chose to pay the monthly',fee,-2.4380924701690674
+701,'The house at the end of the narrow road was built of red',wood,-6.044344425201416
+702,'Betsy could never tell a funny',joke,-1.0516949892044067
+703,'Randy froze when he saw a shadow at the end of the narrow',alley,-2.7597177028656006
+704,'She cleaned the dirt from her blonde',hair,-0.4152204990386963
+705,'Steve invited his girlfriend to a formal',party,-2.630202531814575
+706,'Every day, rain or shine, the joggers ran up and down the tall',path,-7.493563652038574
+707,'Every month Rick had to clean his whole',car,-4.21177339553833
+708,'Their picnic was ruined by the bad',rain,-6.174471378326416
+709,'The applause could be heard throughout the echoey',auditorium,-2.6637612312915735
+710,'He drove the nail into the rotten',door,-5.036036968231201
+711,'Dillinger once robbed that federal',bank,-2.605128765106201
+712,'She was quite surprised that Bill didn't keep his pocket',watch,-0.8420955538749695
+713,'He really wanted to go but decided to stay home to wait for the important',call,-2.7225494384765625
+714,'At the park next to the beach she saw a man with a loyal',dog,-0.5306116342544556
+715,'They waited a long time to see the animated',movie,-2.344059944152832
+716,'She left the tiny baby alone in the waiting',room,-0.06312483549118042
+717,'The person who caught the thief deserves our loudest',applause,-0.6996816992759705
+718,'It was time to hang the new advent',picture,-7.915829658508301
+719,'As usual, he didn't do well because he had not prepared his subconscious',mind,-1.081715703010559
+720,'The cigar stank and burned a hole in the leather',shirt,-6.854318618774414
+721,'She felt dinner would not be complete unless she made decadent',dessert,-3.344200611114502
+722,'They left the dirty dishes in the kitchen',sink,-1.2005380392074585
+723,'It's raining, and I forgot my coat, hat, and waterproof',umbrella,-4.542263984680176
+724,'Her cold drink was served with a slice of fresh',lemon,-1.8971608877182007
+725,'The last thing they were expecting on their wedding day was a raging dark',bull,-7.223715305328369
+726,'Although John felt some remorse he decided to return the library',gift,-5.45639705657959
+727,'As a punishment, his parents immediately took away his favorite',toy,-1.2031220197677612
+728,'After getting out of the shower he sat down to have instant',breakfast,-2.6182284355163574
+729,'The only food in the refrigerator was a moldy sub',sandwich,-1.0390022993087769
+730,'He was so busy and overwhelmed that he had forgotten to respond to the important',email,-2.6800315380096436
+731,'They took her car because he hated to drive in the heavy',city,-5.191597938537598
+732,'The white gull dove down and caught a slimy',worm,-2.0889313220977783
+733,'Ken built his new house on a quiet wooded',street,-2.0458714962005615
+734,'He was soothed by the gentle instrumental',wind,-7.779768466949463
+735,'Liz and Marie sat at the conference table and discussed the topic for the next work',meeting,-2.2475361824035645
+736,'They carelessly dumped the toxic waste into the winding',ocean,-6.272072792053223
+737,'He looked worried because he might have broken his right',glasses,-9.284255981445312
+738,'I think that my stockbroker is a habitual',thief,-3.9860191345214844
+739,'Our government was secretly supplying the rebels with arms and live',ammunition,-0.20519696176052094
+740,'I don't know what his secret was, but my brother always managed to get the best academic',grades,-1.3391938209533691
+741,'While they were eating pancakes, Albert noticed a bee swimming in the tonic',water,-1.2429344654083252
+742,'Within minutes of arriving at the office, the detective spilled his thermos full of hot',soup,-4.942255973815918
+743,'There were a lot of old boxes stored in the unfinished',basement,-0.5181776285171509
+744,'He hated to move, but Richard wanted to live closer to his single',cousin,-6.211513519287109
+745,'The officials tried to evacuate everyone from the area before the developing',storm,-1.490282416343689
+746,'The truck that Dave drove crashed into the solid',wall,-2.052478790283203
+747,'The man was caught selling an illegal unregistered',gun,-2.889279365539551
+748,'He finally bought some poison to kill the diseased',rats,-3.979264974594116
+749,'She pulled her head out from under the faucet and reached for a monkey',wrench,-0.3864351809024811
+750,'She was glad she had accompanied her friend because she was enjoying the party except for the bland',music,-4.208015441894531
+751,'She was feeling cold so she put on her cashmere',slippers,-5.452140241861343
+752,'It was a dream come true because Jane had always wanted to visit Europe with her younger',sister,-0.6524236798286438
+753,'She usually let her very competent secretary handle the difficult',calls,-2.9040720462799072
+754,'His seat was next to the revolving',window,-5.212547302246094
+755,'If he strained his eyes he could see a tiny',bird,-5.386460304260254
+756,'Coming in, he took off his smelly',hat,-3.321521520614624
+757,'Steve spilled coffee all over his clean white polo',shirt,-0.39757129549980164
+758,'Mr. Smith enjoyed showing people his newly installed satellite',dish,-0.5953155755996704
+759,'They decided to buy a small place and build an addition with two more upper',rooms,-3.3604750633239746
+760,'Larry chose not to join the Confederate',army,-2.345050573348999
+761,'They rested under a tree in the local',park,-1.3361340761184692
+762,'The shirt was stained with frying',oil,-0.4748848080635071
+763,'The Italian chef was known for his fabulous bowtie',sauce,-7.712361812591553
+764,'Phil put some drops in his soft',drink,-1.0619629621505737
+765,'Every morning before school his mother laid out his clothes and packed his messenger',lunch,-6.590121746063232
+766,'Sam practiced every day in anticipation of the philharmonic',concert,-1.3648474216461182
+767,'The hikers wanted to camp close to the frozen',river,-2.4521145820617676
+768,'Quite predictably, the first thing the doctor asked for was the specific',symptoms,-4.533178806304932
+769,'The old woman was the only one to see the eerie',murder,-9.475358963012695
+770,'The rude waiter was not given a generous',chance,-8.619967460632324
+771,'Tim's friend pushed him into a kiddie',pool,-0.02468782104551792
+772,'Since the water was unsafe they decided to drink orange',juice,-0.14735567569732666
+773,'Before she arrived he opened a bottle of wine and put on some soft classical',music,-0.06688521057367325
+774,'There was a moth caught in the bright',light,-1.0622344017028809
+775,'Peter painted the walls of the bird exhibit light blue to resemble the Pacific',ocean,-2.7667646408081055
+776,'He bought her a pearl necklace for her eighteenth',anniversary,-5.781926155090332
+777,'Most of the trees died after last year's dreadful',drought,-2.0377678871154785
+778,'He slipped and fell on the uneven',ice,-3.648442268371582
+779,'There were brightly colored pictures on every interior',wall,-0.40419575572013855
+780,'The bad boy was sent to his intimidating',father,-2.7237460613250732
+781,'He grew corn to feed his dairy',cows,-0.5042791366577148
+782,'Each night the campers built a huge bright',fire,-2.1993772983551025
+783,'The other driver was so angry he threatened him with a civil',gun,-9.86206340789795
+784,'Sharon dried the bowls with a filthy',towel,-1.6704031229019165
+785,'We followed the path up the hill, and there, under the tree, was a gray',snake,-5.559037208557129
+786,'No one wanted to make any decisions until after the corporate',party,-5.320466995239258
+787,'As a child he used to collect glass',stamps,-7.822856903076172
+788,'The cat was crouched in the tall grass down by the lazy',river,-0.3084629774093628
+789,'He fell on the floor after tripping on the oriental',cord,-10.11388874053955
+790,'The bridesmaid had an ugly revealing',face,-6.500337600708008
+791,'No matter how hard she tried, she could not remember the serial',name,-7.964071273803711
+792,'The wealthy couple's three little girls enjoyed playing together in the front',yard,-0.4143860936164856
+793,'His skin was red from spending the day at the neighborhood',beach,-4.615002632141113
+794,'The journalist reported that many collapsed during the intense',heat,-0.3910777270793915
+795,'The cows moved from the sun into the wooden',shade,-3.464315414428711
+796,'Helen reached up to dust the topmost',lamp,-6.635181427001953
+797,'He liked lemon and sugar in his herbal',water,-5.1693501472473145
+798,'Ida wanted to sing folk songs at the picnic, so she brought her wireless',microphone,-3.8838284015655518
+799,'Most men cannot understand why women wear ugly',shoes,-3.4323368072509766
+800,'After dinner they washed the family',dishes,-1.5790796279907227
+801,'In his day, that old guy was one of the best soccer',athletes,-8.22765827178955
+802,'They had been wandering in circles because nobody had a detailed',map,-1.262182354927063
+803,'I had lost the ticket I needed to pick up my rental',clothes,-10.026388168334961
+804,'They had to shampoo the new beige rug after the accident with the mangy',wine,-9.896865844726562
+805,'The Democrats seemed to focus on defense while the Republicans talked about the booming',budget,-6.8269362449646
+806,'Sandy always wished that she had had a Persian',sister,-6.519070148468018
+807,'Mrs. Stevens said that little Dennis was the loudest boy in the fictional',story,-4.446037769317627
+808,'Joan fed her baby some warm breast',milk,-0.3380680978298187
+809,'She wore heavy wool socks and her sturdiest boots to go walking in the melting',forest,-8.092975616455078
+810,'Kim was relieved to see that ample food had been made for the special',occasion,-1.1563854217529297
+811,'Every spring they held the annual onion',parade,-4.520320415496826
+812,'The squirrel stored some nuts in the dead',ground,-9.220646858215332
+813,'The sewer backed up and caused a unpleasant',flood,-4.601158142089844
+814,'During years of drudgery, the man had derived comfort from a single catchy',book,-7.510406017303467
+815,'They installed an extremely expensive alarm system to protect their suburban',home,-0.6253807544708252
+816,'Although Jan was usually careful, she had forgotten to turn off the ultraviolet',light,-0.9170987606048584
+817,'The university wouldn't let him register until he paid the overdue fines on the borrowed comic',books,-0.3433728814125061
+818,'She helped him put the finishing touches on the haunted',house,-0.5637059211730957
+819,'His ring fell into a hole in the tiled',floor,-0.1828649491071701
+820,'He put a clean sheet on the twin',bed,-3.6972851753234863
+821,'When Drew arrived unexpectedly at the restaurant, Laurie got him a chair from the adjacent dining',table,-3.715644598007202
+822,'At night the old woman locked the frosty',door,-1.4417802095413208
+823,'The young boy asked for another tasty',treat,-1.7275738716125488
+824,'He was grouchy because he was having trouble with his nightmarish',sleep,-4.754505157470703
+825,'The senator had once been a preschool',teacher,-0.3515833020210266
+826,'He smiled nervously as he searched through his pockets for a fresh',mint,-3.9422292709350586
+827,'The house at the end of the narrow road was built of red',bricks,-1.9270453453063965
+828,'Within minutes of arriving at the office, the detective spilled his thermos full of hot',coffee,-0.4845379590988159
+829,'The person who caught the thief deserves our loudest',respect,-5.977485179901123
+830,'They rested under a tree in the dim',light,-1.7248942852020264
+831,'Since the water was unsafe they decided to drink sweet',tea,-1.488926649093628
+832,'They had to shampoo the new beige rug after the accident with the mangy',dog,-1.3459724187850952
+833,'The breeze lifted the short',skirt,-3.8048064708709717
+834,'The bad boy was sent to his intimidating',room,-3.4689414501190186
+835,'We followed the path up the hill, and there, under the tree, was a gray',cat,-3.0321133136749268
+836,'She was glad she had accompanied her friend because she was enjoying the party except for the loud',food,-8.92385482788086
+837,'The hinges were rusted shut, so he had to pry it open with a steel',knife,-4.68968391418457
+838,'She took the baby out when he started to cry and had to miss the rest of the tea',movie,-12.38146686553955
+839,'Liz and Marie sat at the conference table and discussed the topic for the next board',week,-8.758360862731934
+840,'I just had a new sound system installed in my living',car,-12.008183479309082
+841,'The squirrel stored some nuts in the dead',tree,-2.09446382522583
+842,'There were a lot of old boxes stored in the unfinished',attic,-2.035400867462158
+843,'Her cold drink was served with a slice of homemade',pie,-2.9969887733459473
+844,'The Democrats seemed to focus on defense while the Republicans talked about the booming',economy,-0.08462308347225189
+845,'It's raining, and I forgot my coat, hat, and wide',boots,-7.108039855957031
+846,'He bought her a pearl necklace for her eighteenth',birthday,-0.02581671066582203
+847,'He was so busy and overwhelmed that he had forgotten to respond to the footer',note,-5.62435245513916
+848,'The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his bulging',scars,-1.3363001346588135
+849,'She flipped through the stations in search of some global',music,-3.3303146362304688
+850,'Every spring they held the annual onion',festival,-2.5183863639831543
+851,'The wealthy couple's three little girls enjoyed playing together in the nearby',park,-1.630691409111023
+852,'The fertilizer enriched the green',grass,-2.6786630153656006
+853,'He grew corn to feed his poor',family,-1.4420467615127563
+854,'She cleaned the dirt from her blonde',shoes,-8.392145156860352
+855,'The last thing they were expecting on their wedding day was a raging dark',storm,-0.7762132883071899
+856,'Quite predictably, the first thing the doctor asked for was the pregnancy',test,-0.373142808675766
+857,'His seat was next to the glass',door,-2.23995304107666
+858,'The only food in the refrigerator was a moldy aged',cheese,-1.3155895471572876
+859,'As a child he used to collect postage',marbles,-13.18205552175641
+860,'Before she arrived he opened a bottle of wine and put on some soft clean',clothes,-2.7136871814727783
+861,'Ken built his new house on a quiet residential',lot,-4.5193190574646
+862,'Steve invited his girlfriend to a pajama',dance,-4.83685302734375
+863,'Dillinger once robbed that antique',store,-1.1120209693908691
+864,'The white gull dove down and caught a slimy',fish,-1.6665489673614502
+865,'He really wanted to go but decided to stay home to wait for the important',bus,-6.889649391174316
+866,'Every day, rain or shine, the joggers ran up and down the tall',hill,-4.190720558166504
+867,'There were brightly colored pictures on every title',page,-0.6229543685913086
+868,'I could hear the loud telephone ringing through the concrete',wall,-2.7868640422821045
+869,'The applause could be heard throughout the packed',hall,-3.4216861724853516
+870,'You could tell he had grown up in the South by his racist',accent,-6.815607070922852
+871,'No one wanted to make any decisions until after the corporate',meeting,-3.2848663330078125
+872,'When Drew arrived unexpectedly at the restaurant, Laurie got him a chair from the adjacent dinner',room,-1.608718991279602
+873,'Jessie left without his toolbox or his office',lunch,-8.77004623413086
+874,'He liked lemon and sugar in his herbal',tea,-0.23214556276798248
+875,'At night the old woman locked the front',window,-7.281065464019775
+876,'Larry chose not to join the terrorist',group,-1.4046881198883057
+877,'They installed an extremely expensive alarm system to protect their extended',family,-0.8056590557098389
+878,'They had been wandering in circles because nobody had a magnetic',compass,-0.5530064105987549
+879,'She pulled her head out from under the faucet and reached for a monkey',towel,-3.001763105392456
+880,'It was a dream come true because Jane had always wanted to visit Europe with her younger',boyfriend,-6.934091567993164
+881,'The truck that Dave drove crashed into the solid',tree,-5.801041603088379
+882,'No one at the reunion recognized Dan because he had grown a long',beard,-0.4452846348285675
+883,'It was time to hang the new framed',calendar,-5.431926250457764
+884,'I had lost the ticket I needed to pick up my washed',car,-1.2865203619003296
+885,'She was glad she had brought a good book with her since there was nothing to read at the retail',store,-0.93146151304245
+886,'The county decided to tear down the gas station by the major',school,-7.243410587310791
+887,'He was grouchy because he was having trouble with his fitful',dreams,-3.8812427520751953
+888,'He returned the hole punch to the computer',desk,-2.08760404586792
+889,'Joan fed her baby some warm broccoli',soup,-1.576390266418457
+890,'The car accident five years ago left an ugly scar on his handsome',chest,-8.686034202575684
+891,'She was quite surprised that Bill didn't keep his pocket',promise,-10.829405784606934
+892,'Rafael wants to preserve the national forest by guarding every living',creature,-2.2884819507598877
+893,'We sprayed the yard to keep away the wild',animals,-1.6938741207122803
+894,'Coming in, he took off his smelly',shoes,-2.3757970333099365
+895,'She helped him put the finishing touches on the haunted',painting,-7.049607753753662
+896,'Kim was relieved to see that ample food had been made for the special',party,-4.943122863769531
+897,'The senator had once been a municipal',judge,-3.866730213165283
+898,'He finally bought some poison to kill the stray',cat,-2.433418035507202
+899,'The officials tried to evacuate everyone from the area before the rapid',flood,-3.926445960998535
+900,'Every morning before school his mother laid out his clothes and packed his delicious',bag,-4.434586048126221
+901,'They stood on the bridge tossing stale bread to the yellow',geese,-5.792118936777115
+902,'He was caught stealing a mountain',bike,-0.9960055947303772
+903,'The shirt was stained with frying',blood,-6.648708343505859
+904,'Their picnic was ruined by the intermittent',weather,-6.564349174499512
+905,'No matter how hard she tried, she could not remember the maiden',number,-8.07711410522461
+906,'While they were eating pancakes, Albert noticed a bee swimming in the tonic',syrup,-3.3120319843292236
+907,'Peter painted the walls of the bird exhibit light blue to resemble the Pacific',sky,-2.999405860900879
+908,'Randy froze when he saw a shadow at the end of the narrow',hallway,-1.410409688949585
+909,'The university wouldn't let him register until he paid the overdue fines on the borrowed student',loan,-2.7963342666625977
+910,'She was named after her surrogate',aunt,-4.499675750732422
+911,'The Italian chef was known for his fabulous bowtie',pasta,-4.6918463706970215
+912,'The other driver was so angry he threatened him with a loaded',lawsuit,-14.341543197631836
+913,'Sharon dried the bowls with a paper',rag,-8.37098217010498
+914,'Barry wisely chose to pay the monthly',bill,-3.0204784870147705
+915,'He put a clean sheet on the picnic',table,-0.9200431704521179
+916,'The hikers wanted to camp close to the frozen',lake,-1.2657781839370728
+917,'She left the tiny baby alone in the waiting',crib,-11.247634887695312
+918,'After dinner they washed the dirty',car,-9.280405044555664
+919,'They couldn't decide on a name for their new premature',baby,-0.34463292360305786
+920,'Steve spilled coffee all over his clean white cargo',pants,-0.5065120458602905
+921,'During years of drudgery, the man had derived comfort from a single holy',tune,-7.789547443389893
+922,'He smiled nervously as he searched through his pockets for a fresh',dollar,-6.268503189086914
+923,'As a punishment, his parents immediately took away his favorite',phone,-6.72801399230957
+924,'There was a moth caught in the bright',web,-9.158697128295898
+925,'The old woman was the only one to see the eerie',ghost,-5.664192199707031
+926,'I sat far off to the side of the auditorium and my line of sight was blocked by a tall',man,-1.6734470129013062
+927,'Although Jan was usually careful, she had forgotten to turn off the ultraviolet',stove,-8.468681335449219
+928,'Sandy always wished that she had had a twin',cat,-13.838025093078613
+929,'Our government was secretly supplying the rebels with arms and live',money,-12.372773170471191
+930,'The bridesmaid had an ugly revealing',dress,-0.7788659930229187
+931,'Most of the trees died after last year's blazing',fire,-1.6439827680587769
+932,'Phil put some drops in his soft',eyes,-4.417142868041992
+933,'Rushing out he forgot to take his thin',keys,-9.345026969909668
+934,'He slipped and fell on the thin',pavement,-6.4240851402282715
+935,'He always hid an extra set of keys under a Persian',mat,-8.596365928649902
+936,'They waited a long time to see the live',show,-2.1774253845214844
+937,'The jeweler was asked if he would examine the ring's huge black',diamond,-1.3707603216171265
+938,'Although John felt some remorse he decided to return the library',book,-1.0682059526443481
+939,'I think that my stockbroker is a petty',liar,-6.005514144897461
+940,'If he strained his eyes he could see a flying',speck,-7.026576915755868
+941,'The cows moved from the sun into the partial',barn,-11.735786437988281
+942,'They decided to buy a small place and build an addition with two more furnished',floors,-4.744574069976807
+943,'The rude waiter was not given a generous',tip,-0.05747456103563309
+944,'At the park next to the beach she saw a man with a funny',hat,-1.1158561706542969
+945,'The sewer backed up and caused a massive',smell,-6.464951515197754
+946,'The young boy asked for another tasty',cookie,-3.8387341499328613
+947,'Mrs. Stevens said that little Dennis was the loudest boy in the fictional',class,-4.2301201820373535
+948,'Ida wanted to sing folk songs at the picnic, so she brought her wireless',guitar,-3.4246132373809814
+949,'He always seemed to be interested in looking at the gorgeous',women,-3.521111488342285
+950,'In his day, that old guy was one of the best soccer',players,-0.16845998167991638
+951,'Every month Rick had to clean his speedy',house,-6.6450347900390625
+952,'She decided to start a new temporary',job,-0.8283058404922485
+953,'His skin was red from spending the day at the sandy',pool,-6.038517951965332
+954,'He positioned the violin under his outstretched',arm,-0.928718626499176
+955,'He hated to move, but Richard wanted to live closer to his single',mother,-1.007211446762085
+956,'Tim's friend pushed him into a brick',wall,-0.08750815689563751
+957,'His ring fell into a hole in the tiled',sink,-7.439022064208984
+958,'The man was caught selling an illegal unregistered',drug,-6.285543441772461
+959,'He was soothed by the gentle instrumental',music,-1.4119685888290405
+960,'He was cold most of the night and finally got up to get another knitted',sweater,-2.3187685012817383
+961,'As usual, he didn't do well because he had not prepared his subconscious',speech,-9.617193222045898
+962,'She usually let her very competent secretary handle the phone',tasks,-8.251172065734863
+963,'The journalist reported that many collapsed during the tropical',storm,-0.4766341745853424
+964,'I don't know what his secret was, but my brother always managed to get the best looking',girls,-1.629774570465088
+965,'She was having a hard time because she didn't know the correct',language,-5.800356864929199
+966,'Mary went into her room to look at her impressionist',books,-8.075737953186035
+967,'Most men cannot understand why women wear ugly',heels,-5.537036895751953
+968,'She wore heavy wool socks and her sturdiest boots to go walking in the melting',snow,-0.1993839591741562
+969,'Each night the campers built a huge improvised',tent,-4.133618354797363
+970,'In the mysterious wooden box the girl found the brass',map,-7.201470851898193
+971,'Upon mother's strict orders, the cat's smelly litter box was kept in the outdoor',basement,-5.240949630737305
+972,'Fred put the worm on the wet',hook,-5.22409725189209
+973,'The cat was crouched in the tall grass down by the shady',tree,-3.6116957664489746
+974,'They decided to declaw the cat so he wouldn't tear up the comfortable',carpet,-2.0279157161712646
+975,'He fell on the floor after tripping on the oriental',rug,-0.6316357254981995
+976,'Betsy could never tell a funny',lie,-6.866300582885742
+977,'After getting out of the shower he sat down to have continental',coffee,-6.905285835266113
+978,'It didn't get completed because he could not locate the right ink',pen,-5.118757247924805
+979,'Paul painted the clown's suit blue and gave him a big red snotty',nose,-0.12495600432157516
+980,'Their neighbors were surprised to find out that the Smiths had never visited that national',park,-0.27313679456710815
+981,'They carelessly dumped the toxic waste into the winding',river,-1.1484144926071167
+982,'As soon as they reached the sand, he stopped to take off his clean',shirt,-2.414834976196289
+983,'The cigar stank and burned a hole in the leather',couch,-3.0596752166748047
+984,'Sam practiced every day in anticipation of the homecoming',dance,-3.2583184242248535
+985,'Although she heard it ringing, Nancy was too busy cleaning the chimney to get the locked',door,-0.9096266031265259
+986,'Gary could not believe his son stole that fast',car,-4.246065616607666
+987,'They took her car because he hated to drive in the heavy',rain,-1.440331220626831
+988,'They left the dirty dishes in the compact',dishwasher,-2.527195930480957
+989,'She felt dinner would not be complete unless she made blueberry',pie,-2.4954519271850586
+990,'He drove the nail into the rotten',wood,-1.1394476890563965
+991,'She was feeling cold so she put on her cashmere',sweater,-1.0683759450912476
+992,'He looked worried because he might have broken his right',arm,-1.3680955171585083
+993,'Mr. Smith enjoyed showing people his newly installed satellite',television,-3.5220446586608887
+994,'Helen reached up to dust the topmost',shelf,-2.7884957790374756
+995,'She wore heavy wool socks and her sturdiest boots to go walking in the pine',forest,-1.6247785091400146
+996,'She decided to start a new entrepreneurial',business,-2.4438905715942383
+997,'They couldn't decide on a name for their new trained',dog,-1.9338622093200684
+998,'The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his gruesome',muscles,-12.336710929870605
+999,'Barry wisely chose to pay the electric',fee,-7.4380998611450195
+1000,'Fred put the worm on the dangling',grass,-9.072378158569336
+1001,'Gary could not believe his son stole that expensive',watch,-1.8962883949279785
+1002,'We sprayed the yard to keep away the wild',bugs,-6.418832778930664
+1003,'I could hear the loud telephone ringing through the sliding',door,-1.4387812614440918
+1004,'Mary went into her room to look at her impressionist',painting,-1.495920181274414
+1005,'Rafael wants to preserve the national forest by guarding every living',tree,-1.3854038715362549
+1006,'It didn't get completed because he could not locate the right ink',tool,-10.839635848999023
+1007,'Rushing out he forgot to take his spare',jacket,-6.139445781707764
+1008,'They stood on the bridge tossing stale bread to the yellow',ducks,-4.478625297546387
+1009,'Joan fed her baby some warm broccoli',milk,-7.517585754394531
+1010,'The hinges were rusted shut, so he had to pry it open with a steel',crowbar,-3.323680691421032
+1011,'He was caught stealing a mountain',car,-5.713573932647705
+1012,'The jeweler was asked if he would examine the ring's huge artificial',stone,-3.579479694366455
+1013,'He always seemed to be interested in looking at the gorgeous',sky,-6.181227684020996
+1014,'I just had a new sound system installed in my compact',room,-9.979029655456543
+1015,'He returned the hole punch to the substitute',teacher,-1.844119668006897
+1016,'He positioned the violin under his outstretched',chin,-5.683454513549805
+1017,'The car accident five years ago left an ugly scar on his handsome',face,-0.1684248298406601
+1018,'He was cold most of the night and finally got up to get another knitted',blanket,-1.8607474565505981
+1019,'The fertilizer enriched the green',soil,-4.795183181762695
+1020,'I sat far off to the side of the auditorium and my line of sight was blocked by a supporting',beam,-2.6221067905426025
+1021,'In the mysterious wooden box the girl found the brass',ring,-3.7822508811950684
+1022,'As soon as they reached the sand, he stopped to take off his clean',shoes,-2.470052719116211
+1023,'No one at the reunion recognized Dan because he had grown a twisted',mustache,-2.7331720227957703
+1024,'She flipped through the stations in search of some loud',news,-5.671555995941162
+1025,'She was having a hard time because she didn't know the correct',answer,-2.75199031829834
+1026,'Jessie left without his toolbox or his office',keys,-2.8630728721618652
+1027,'Their neighbors were surprised to find out that the Smiths had never visited that sleepy',town,-1.8718730211257935
+1028,'Mrs. Stevens said that little Dennis was the loudest boy in the entire',story,-7.6392502784729
+1029,'She was named after her surrogate',mother,-0.7056390047073364
+1030,'Paul painted the clown's suit blue and gave him a big red inflated',balloon,-1.53694748878479
+1031,'The house at the end of the narrow road was built of sunburned',wood,-2.4708025455474854
+1032,'The county decided to tear down the gas station by the major',highway,-2.848231792449951
+1033,'Upon mother's strict orders, the cat's smelly litter box was kept in the damp',shed,-6.427656173706055
+1034,'She was glad she had brought a good book with her since there was nothing to read at the retail',office,-7.035369873046875
+1035,'Although she heard it ringing, Nancy was too busy cleaning the chimney to get the locked',phone,-6.112629413604736
+1036,'You could tell he had grown up in the South by his strong',attitude,-8.315770149230957
+1037,'She took the baby out when he started to cry and had to miss the rest of the scary',party,-5.765765190124512
+1038,'The breeze lifted the dry',air,-4.541134834289551
+1039,'The applause could be heard throughout the packed',auditorium,-2.1860380099969916
+1040,'He was grouchy because he was having trouble with his fitful',sleep,-0.6905994415283203
+1041,'As a punishment, his parents immediately took away his smart',toy,-6.300599098205566
+1042,'Kim was relieved to see that ample food had been made for the bachelorette',occasion,-9.80891227722168
+1043,'The senator had once been a municipal',teacher,-7.407119274139404
+1044,'Every spring they held the annual military',parade,-1.8552058935165405
+1045,'The white gull dove down and caught a floppy',worm,-4.2776875495910645
+1046,'Betsy could never tell a deliberate',joke,-4.982671737670898
+1047,'During years of drudgery, the man had derived comfort from a single holy',book,-1.8554548025131226
+1048,'They left the dirty dishes in the compact',sink,-5.225987434387207
+1049,'The squirrel stored some nuts in the cold',ground,-3.8536109924316406
+1050,'Although John felt some remorse he decided to return the generous',gift,-0.7355664968490601
+1051,'The last thing they were expecting on their wedding day was a raging Spanish',bull,-0.9474095702171326
+1052,'They waited a long time to see the live',movie,-6.875722885131836
+1053,'At the park next to the beach she saw a man with a funny',dog,-5.487478256225586
+1054,'Every month Rick had to clean his speedy',car,-3.084756851196289
+1055,'Randy froze when he saw a shadow at the end of the dark',alley,-2.625823497772217
+1056,'He drove the nail into the garage',door,-1.542825698852539
+1057,'She felt dinner would not be complete unless she made blueberry',dessert,-6.040175437927246
+1058,'The only food in the refrigerator was a moldy aged',sandwich,-6.636312961578369
+1059,'Steve invited his girlfriend to a pajama',party,-0.15880602598190308
+1060,'It's raining, and I forgot my coat, hat, and wide',umbrella,-4.332611083984375
+1061,'Her cold drink was served with a slice of homemade',lemon,-1.0931247472763062
+1062,'She cleaned the dirt from her muddy',hair,-6.341456413269043
+1063,'He really wanted to go but decided to stay home to wait for the school',call,-7.688924312591553
+1064,'Dillinger once robbed that antique',bank,-3.7307629585266113
+1065,'It was time to hang the new framed',picture,-2.9454150199890137
+1066,'Their picnic was ruined by the intermittent',rain,-0.96980881690979
+1067,'He was so busy and overwhelmed that he had forgotten to respond to the footer',email,-4.363981246948242
+1068,'The cigar stank and burned a hole in the Hawaiian',shirt,-0.8074070811271667
+1069,'She was quite surprised that Bill didn't keep his solemn',watch,-9.320237159729004
+1070,'As usual, he didn't do well because he had not prepared his impassioned',mind,-7.979217529296875
+1071,'After getting out of the shower he sat down to have continental',breakfast,-0.07230451703071594
+1072,'Every day, rain or shine, the joggers ran up and down the narrow',path,-3.6492197513580322
+1073,'Although Jan was usually careful, she had forgotten to turn off the cooking',light,-3.098921060562134
+1074,'The Italian chef was known for his fabulous pesto',sauce,-2.5280861854553223
+1075,'Sam practiced every day in anticipation of the homecoming',concert,-6.480531215667725
+1076,'The university wouldn't let him register until he paid the overdue fines on the borrowed student',books,-3.88918399810791
+1077,'His ring fell into a hole in the porcelain',floor,-2.3189687728881836
+1078,'The man was caught selling an illegal psychiatric',gun,-7.194581031799316
+1079,'He put a clean sheet on the picnic',bed,-7.202056884765625
+1080,'He finally bought some poison to kill the stray',rats,-5.623979568481445
+1081,'She pulled her head out from under the faucet and reached for a dry',wrench,-8.697758674621582
+1082,'He looked worried because he might have broken his stylish',glasses,-3.4240708351135254
+1083,'They decided to buy a small place and build an addition with two more furnished',rooms,-1.1510968208312988
+1084,'Phil put some drops in his red',drink,-4.953695297241211
+1085,'If he strained his eyes he could see a flying',bird,-4.328987121582031
+1086,'Within minutes of arriving at the office, the detective spilled his thermos full of hearty',soup,-3.438599109649658
+1087,'There were a lot of old boxes stored in the dusty',basement,-1.8622503280639648
+1088,'Every morning before school his mother laid out his clothes and packed his delicious',lunch,-1.5667976140975952
+1089,'I don't know what his secret was, but my brother always managed to get the best looking',grades,-9.079008102416992
+1090,'Steve spilled coffee all over his clean white cargo',shirt,-5.783213138580322
+1091,'While they were eating pancakes, Albert noticed a bee swimming in the sticky',water,-6.304887771606445
+1092,'The truck that Dave drove crashed into the hickory',wall,-7.831984996795654
+1093,'Liz and Marie sat at the conference table and discussed the topic for the next board',meeting,-0.10885526984930038
+1094,'They installed an extremely expensive alarm system to protect their extended',home,-3.918001890182495
+1095,'Larry chose not to join the terrorist',army,-4.700803756713867
+1096,'It was a dream come true because Jane had always wanted to visit Europe with her new',sister,-7.332483768463135
+1097,'She was feeling cold so she put on her fuzzy',slippers,-2.828820504480973
+1098,'They rested under a tree in the dim',park,-6.179165840148926
+1099,'They carelessly dumped the toxic waste into the deep',ocean,-2.221693277359009
+1100,'Mr. Smith enjoyed showing people his newly installed large',dish,-9.271596908569336
+1101,'He hated to move, but Richard wanted to live closer to his distant',cousin,-2.452944755554199
+1102,'She helped him put the finishing touches on the abstract',house,-7.709782600402832
+1103,'Our government was secretly supplying the rebels with arms and counterfeit',ammunition,-5.720450401306152
+1104,'She was glad she had accompanied her friend because she was enjoying the party except for the loud',music,-0.2228057086467743
+1105,'She usually let her very competent secretary handle the phone',calls,-0.7548509836196899
+1106,'Coming in, he took off his hard',hat,-0.3431696593761444
+1107,'Quite predictably, the first thing the doctor asked for was the pregnancy',symptoms,-7.475518703460693
+1108,'I think that my stockbroker is a petty',thief,-0.6907098293304443
+1109,'He grew corn to feed his poor',cows,-7.288663387298584
+1110,'Sharon dried the bowls with a paper',towel,-0.03455214947462082
+1111,'The old woman was the only one to see the gruesome',murder,-3.3636586666107178
+1112,'Since the water was unsafe they decided to drink sweet',juice,-5.86823844909668
+1113,'The rude waiter was not given a second',chance,-0.21030882000923157
+1114,'They had to shampoo the new beige rug after the accident with the expensive',wine,-4.78916072845459
+1115,'No matter how hard she tried, she could not remember the maiden',name,-0.2858291268348694
+1116,'We followed the path up the hill, and there, under the tree, was a poisonous',snake,-0.9594745635986328
+1117,'When Drew arrived unexpectedly at the restaurant, Laurie got him a chair from the adjacent dinner',table,-0.5319615602493286
+1118,'The Democrats seemed to focus on defense while the Republicans talked about the balanced',budget,-0.05515388399362564
+1119,'Peter painted the walls of the bird exhibit light blue to resemble the cloudless',ocean,-7.066121578216553
+1120,'I had lost the ticket I needed to pick up my washed',clothes,-2.4121155738830566
+1121,'The cat was crouched in the tall grass down by the shady',river,-2.78242826461792
+1122,'His skin was red from spending the day at the sandy',beach,-0.5612419247627258
+1123,'No one wanted to make any decisions until after the birthday',party,-0.7743192911148071
+1124,'Helen reached up to dust the halogen',lamp,-1.6862518787384033
+1125,'He bought her a pearl necklace for her first',anniversary,-1.9951190948486328
+1126,'Tim's friend pushed him into a brick',pool,-9.383101463317871
+1127,'He fell on the floor after tripping on the power',cord,-1.173952341079712
+1128,'The bridesmaid had an ugly pale',face,-2.6051242351531982
+1129,'The wealthy couple's three little girls enjoyed playing together in the nearby',yard,-5.233585357666016
+1130,'At night the old woman locked the front',door,-0.12970970571041107
+1131,'There was a moth caught in the spider',light,-8.186741828918457
+1132,'The other driver was so angry he threatened him with a loaded',gun,-0.608482837677002
+1133,'The cows moved from the sun into the partial',shade,-0.4582441449165344
+1134,'Most of the trees died after last year's blazing',drought,-4.540041923522949
+1135,'Sandy always wished that she had had a twin',sister,-0.5520660281181335
+1136,'The young boy asked for another homemade',treat,-3.893242120742798
+1137,'Most men cannot understand why women wear high',shoes,-7.9976420402526855
+1138,'Before she arrived he opened a bottle of wine and put on some soft clean',music,-0.4540017247200012
+1139,'Ida wanted to sing folk songs at the picnic, so she brought her acoustic',microphone,-10.311044692993164
+1140,'In his day, that old guy was one of the best collegiate',athletes,-4.922665119171143
+1141,'There were brightly colored pictures on every title',wall,-7.415548324584961
+1142,'They had been wandering in circles because nobody had a magnetic',map,-3.7215092182159424
+1143,'As a child he used to collect postage',stamps,-0.015367435291409492
+1144,'He slipped and fell on the thin',ice,-0.5946096181869507
+1145,'He always hid an extra set of keys under a rubber',rug,-8.971041679382324
+1146,'They decided to declaw the cat so he wouldn't tear up the comfortable',couch,-3.008657217025757
+1147,'The sewer backed up and caused a massive',flood,-2.635575532913208
+1148,'They took her car because he hated to drive in the big',city,-0.25539615750312805
+1149,'Ken built his new house on a quiet residential',street,-0.16638535261154175
+1150,'She left the tiny baby alone in the little',room,-2.504725933074951
+1151,'The officials tried to evacuate everyone from the area before the rapid',storm,-3.9582033157348633
+1152,'His seat was next to the glass',window,-2.5971879959106445
+1153,'He smiled nervously as he searched through his pockets for a single',mint,-5.731389045715332
+1154,'The shirt was stained with dried',oil,-5.949251174926758
+1155,'He liked lemon and sugar in his sparkling',water,-0.47550666332244873
+1156,'The journalist reported that many collapsed during the tropical',heat,-5.246521949768066
+1157,'The bad boy was sent to his own',father,-5.7737603187561035
+1158,'Each night the campers built a huge improvised',fire,-2.661931276321411
+1159,'After dinner they washed the dirty',dishes,-0.3375638425350189
+1160,'He was soothed by the gentle southerly',wind,-1.4484204053878784
+1161,'The person who caught the thief deserves our utmost',applause,-5.7215166091918945
+1162,'The hikers wanted to camp close to the mighty',river,-3.3846871852874756
+1163,'Quite predictably, the first thing the doctor asked for was the specific',test,-5.893594264984131
+1164,'Since the water was unsafe they decided to drink orange',tea,-9.420808792114258
+1165,'Her cold drink was served with a slice of fresh',pie,-7.920320987701416
+1166,'The squirrel stored some nuts in the cold',tree,-5.713822364807129
+1167,'No one wanted to make any decisions until after the birthday',meeting,-8.144905090332031
+1168,'Every day, rain or shine, the joggers ran up and down the narrow',hill,-5.123908996582031
+1169,'He bought her a pearl necklace for her first',birthday,-1.328683853149414
+1170,'Within minutes of arriving at the office, the detective spilled his thermos full of hearty',coffee,-1.2587836980819702
+1171,'She was feeling cold so she put on her fuzzy',sweater,-2.9802255630493164
+1172,'Steve invited his girlfriend to a formal',dance,-2.8745930194854736
+1173,'The wealthy couple's three little girls enjoyed playing together in the front',park,-8.582196235656738
+1174,'They had to shampoo the new beige rug after the accident with the expensive',dog,-4.861313819885254
+1175,'The last thing they were expecting on their wedding day was a raging Spanish',storm,-2.21939754486084
+1176,'The person who caught the thief deserves our utmost',respect,-1.0737769603729248
+1177,'His seat was next to the revolving',door,-0.6014975905418396
+1178,'The fertilizer enriched the dry',grass,-3.142977714538574
+1179,'He really wanted to go but decided to stay home to wait for the school',bus,-0.9827417731285095
+1180,'Ken built his new house on a quiet wooded',lot,-0.6675240397453308
+1181,'Every spring they held the annual military',festival,-5.24661111831665
+1182,'The house at the end of the narrow road was built of sunburned',bricks,-2.7372686862945557
+1183,'He was so busy and overwhelmed that he had forgotten to respond to the important',note,-4.375260353088379
+1184,'She cleaned the dirt from her muddy',shoes,-1.9312077760696411
+1185,'She flipped through the stations in search of some loud',music,-0.9420591592788696
+1186,'The breeze lifted the dry',skirt,-8.42332935333252
+1187,'You could tell he had grown up in the South by his strong',accent,-1.3976315259933472
+1188,'As a child he used to collect glass',marbles,-3.7958657476119697
+1189,'They rested under a tree in the local',light,-11.086590766906738
+1190,'Dillinger once robbed that federal',store,-7.481945514678955
+1191,'It's raining, and I forgot my coat, hat, and waterproof',boots,-1.4362715482711792
+1192,'The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his gruesome',scars,-3.22125244140625
+1193,'There were brightly colored pictures on every interior',page,-5.67730712890625
+1194,'The hinges were rusted shut, so he had to pry it open with a sharp',knife,-1.3926360607147217
+1195,'She took the baby out when he started to cry and had to miss the rest of the scary',movie,-1.4619319438934326
+1196,'The bad boy was sent to his own',room,-2.5615782737731934
+1197,'She was glad she had accompanied her friend because she was enjoying the party except for the bland',food,-1.1907713413238525
+1198,'Liz and Marie sat at the conference table and discussed the topic for the next work',week,-3.771240711212158
+1199,'There were a lot of old boxes stored in the dusty',attic,-1.7044973373413086
+1200,'Before she arrived he opened a bottle of wine and put on some soft classical',clothes,-13.992871284484863
+1201,'The white gull dove down and caught a floppy',fish,-2.917288303375244
+1202,'We followed the path up the hill, and there, under the tree, was a poisonous',cat,-7.480289459228516
+1203,'The applause could be heard throughout the echoey',hall,-2.4220664501190186
+1204,'The only food in the refrigerator was a moldy sub',cheese,-11.871747970581055
+1205,'He grew corn to feed his dairy',family,-5.358696937561035
+1206,'She helped him put the finishing touches on the abstract',painting,-2.6456594467163086
+1207,'Kim was relieved to see that ample food had been made for the bachelorette',party,-0.4844173192977905
+1208,'At night the old woman locked the frosty',window,-2.3817062377929688
+1209,'It was a dream come true because Jane had always wanted to visit Europe with her new',boyfriend,-2.453051805496216
+1210,'Larry chose not to join the Confederate',group,-7.180256366729736
+1211,'Coming in, he took off his hard',shoes,-7.13869047164917
+1212,'She was named after her famous',aunt,-2.743624687194824
+1213,'While they were eating pancakes, Albert noticed a bee swimming in the sticky',syrup,-0.44608962535858154
+1214,'They stood on the bridge tossing stale bread to the wild',geese,-2.3738052749686176
+1215,'She pulled her head out from under the faucet and reached for a dry',towel,-0.5841072797775269
+1216,'Joan fed her baby some warm breast',soup,-12.555449485778809
+1217,'He finally bought some poison to kill the diseased',cat,-4.803871154785156
+1218,'She was quite surprised that Bill didn't keep his solemn',promise,-0.6881667971611023
+1219,'He was caught stealing a borrowed',bike,-3.2294423580169678
+1220,'Jessie left without his toolbox or his packed',lunch,-0.6777705550193787
+1221,'They had been wandering in circles because nobody had a detailed',compass,-6.988012313842773
+1222,'We sprayed the yard to keep away the nasty',animals,-6.3726806640625
+1223,'The car accident five years ago left an ugly scar on his hairy',chest,-1.6155238151550293
+1224,'He was grouchy because he was having trouble with his nightmarish',dreams,-4.598950386047363
+1225,'He returned the hole punch to the substitute',desk,-6.5259928703308105
+1226,'The shirt was stained with dried',blood,-0.46213361620903015
+1227,'It was time to hang the new advent',calendar,-0.5952358841896057
+1228,'I had lost the ticket I needed to pick up my rental',car,-0.14171794056892395
+1229,'The senator had once been a preschool',judge,-10.979267120361328
+1230,'The county decided to tear down the gas station by the elementary',school,-0.04444316774606705
+1231,'Their picnic was ruined by the bad',weather,-0.24016597867012024
+1232,'The other driver was so angry he threatened him with a civil',lawsuit,-1.9446874856948853
+1233,'When Drew arrived unexpectedly at the restaurant, Laurie got him a chair from the adjacent dining',room,-0.22288478910923004
+1234,'The university wouldn't let him register until he paid the overdue fines on the borrowed comic',loan,-12.124112129211426
+1235,'No one at the reunion recognized Dan because he had grown a twisted',beard,-2.0786242485046387
+1236,'The truck that Dave drove crashed into the hickory',tree,-0.3256002962589264
+1237,'The officials tried to evacuate everyone from the area before the developing',flood,-3.2884621620178223
+1238,'Every morning before school his mother laid out his clothes and packed his messenger',bag,-0.03458186239004135
+1239,'As a punishment, his parents immediately took away his smart',phone,-0.19350896775722504
+1240,'Mrs. Stevens said that little Dennis was the loudest boy in the entire',class,-2.307774066925049
+1241,'The hikers wanted to camp close to the mighty',lake,-6.1315107345581055
+1242,'Most of the trees died after last year's dreadful',fire,-2.6607308387756348
+1243,'Phil put some drops in his red',eyes,-3.604081392288208
+1244,'Helen reached up to dust the halogen',shelf,-7.855134010314941
+1245,'He always hid an extra set of keys under a rubber',mat,-0.8752347826957703
+1246,'They waited a long time to see the animated',show,-4.248784065246582
+1247,'There was a moth caught in the spider',web,-1.7762668132781982
+1248,'I sat far off to the side of the auditorium and my line of sight was blocked by a supporting',man,-9.247096061706543
+1249,'After dinner they washed the family',car,-3.372807502746582
+1250,'Sharon dried the bowls with a filthy',rag,-1.6436792612075806
+1251,'They decided to buy a small place and build an addition with two more upper',floors,-1.7644742727279663
+1252,'The rude waiter was not given a second',tip,-7.72669792175293
+1253,'He slipped and fell on the uneven',pavement,-2.304224967956543
+1254,'She left the tiny baby alone in the little',crib,-3.592576503753662
+1255,'Although John felt some remorse he decided to return the generous',book,-8.211685180664062
+1256,'In his day, that old guy was one of the best collegiate',players,-2.672550678253174
+1257,'Sandy always wished that she had had a Persian',cat,-0.8868890404701233
+1258,'They couldn't decide on a name for their new trained',baby,-6.072694301605225
+1259,'He looked worried because he might have broken his stylish',arm,-7.52660608291626
+1260,'Ida wanted to sing folk songs at the picnic, so she brought her acoustic',guitar,-0.07857374101877213
+1261,'If he strained his eyes he could see a tiny',speck,-4.0079017505049706
+1262,'Rushing out he forgot to take his spare',keys,-1.843712329864502
+1263,'The sewer backed up and caused a unpleasant',smell,-1.3980616331100464
+1264,'Although Jan was usually careful, she had forgotten to turn off the cooking',stove,-1.674318552017212
+1265,'The bridesmaid had an ugly pale',dress,-3.3520591259002686
+1266,'The old woman was the only one to see the gruesome',ghost,-7.802299499511719
+1267,'I think that my stockbroker is a habitual',liar,-0.7917612791061401
+1268,'He always seemed to be interested in looking at the blue',women,-11.316073417663574
+1269,'The cows moved from the sun into the wooden',barn,-2.043851852416992
+1270,'During years of drudgery, the man had derived comfort from a single catchy',tune,-1.4825483560562134
+1271,'He put a clean sheet on the twin',table,-4.757530689239502
+1272,'The young boy asked for another homemade',cookie,-2.7071478366851807
+1273,'He smiled nervously as he searched through his pockets for a single',dollar,-2.4835379123687744
+1274,'Every month Rick had to clean his whole',house,-0.9726775288581848
+1275,'Our government was secretly supplying the rebels with arms and counterfeit',money,-1.464571237564087
+1276,'Barry wisely chose to pay the electric',bill,-0.5287562012672424
+1277,'Although she heard it ringing, Nancy was too busy cleaning the chimney to get the cell',door,-7.317874431610107
+1278,'The cat was crouched in the tall grass down by the lazy',tree,-8.44299030303955
+1279,'They left the dirty dishes in the kitchen',dishwasher,-9.110231399536133
+1280,'After getting out of the shower he sat down to have instant',coffee,-0.949605405330658
+1281,'The man was caught selling an illegal psychiatric',drug,-0.6535577774047852
+1282,'Most men cannot understand why women wear high',heels,-0.16309890151023865
+1283,'Fred put the worm on the dangling',hook,-1.4505387544631958
+1284,'The cigar stank and burned a hole in the Hawaiian',couch,-8.876893043518066
+1285,'His ring fell into a hole in the porcelain',sink,-2.1870927810668945
+1286,'As soon as they reached the sand, he stopped to take off his striped',shirt,-1.2019436359405518
+1287,'In the mysterious wooden box the girl found the topographical',map,-0.3079148232936859
+1288,'Gary could not believe his son stole that expensive',car,-2.303467273712158
+1289,'She felt dinner would not be complete unless she made decadent',pie,-6.90195894241333
+1290,'Tim's friend pushed him into a kiddie',wall,-11.797571182250977
+1291,'Each night the campers built a huge bright',tent,-5.00284481048584
+1292,'Mary went into her room to look at her illustrated',books,-3.6583948135375977
+1293,'They took her car because he hated to drive in the big',rain,-6.053869724273682
+1294,'He hated to move, but Richard wanted to live closer to his distant',mother,-3.6131715774536133
+1295,'Paul painted the clown's suit blue and gave him a big red inflated',nose,-0.8428099751472473
+1296,'She wore heavy wool socks and her sturdiest boots to go walking in the pine',snow,-8.114823341369629
+1297,'They carelessly dumped the toxic waste into the deep',river,-3.3859941959381104
+1298,'His skin was red from spending the day at the neighborhood',pool,-1.1691139936447144
+1299,'He fell on the floor after tripping on the power',rug,-9.390832901000977
+1300,'She decided to start a new entrepreneurial',job,-5.778088569641113
+1301,'Their neighbors were surprised to find out that the Smiths had never visited that sleepy',park,-8.808204650878906
+1302,'He was cold most of the night and finally got up to get another thick',sweater,-3.487921714782715
+1303,'It didn't get completed because he could not locate the right diagnostic',pen,-9.666544914245605
+1304,'He positioned the violin under his bearded',arm,-6.560025215148926
+1305,'Sam practiced every day in anticipation of the philharmonic',dance,-8.105449676513672
+1306,'She was having a hard time because she didn't know the English',language,-1.438828706741333
+1307,'She usually let her very competent secretary handle the difficult',tasks,-3.338754892349243
+1308,'Upon mother's strict orders, the cat's smelly litter box was kept in the damp',basement,-1.4084464311599731
+1309,'I just had a new sound system installed in my compact',car,-1.0355809926986694
+1310,'The Democrats seemed to focus on defense while the Republicans talked about the balanced',economy,-8.540772438049316
+1311,'I could hear the loud telephone ringing through the sliding',wall,-6.383363246917725
+1312,'No matter how hard she tried, she could not remember the serial',number,-0.2662980854511261
+1313,'She was glad she had brought a good book with her since there was nothing to read at the post',store,-9.830307960510254
+1314,'Randy froze when he saw a shadow at the end of the dark',hallway,-1.1671385765075684
+1315,'Peter painted the walls of the bird exhibit light blue to resemble the cloudless',sky,-0.6254324913024902
+1316,'He liked lemon and sugar in his sparkling',tea,-4.879590034484863
+1317,'Rafael wants to preserve the national forest by guarding every cedar',creature,-11.919635772705078
+1318,'The Italian chef was known for his fabulous pesto',pasta,-4.229197025299072
+1319,'They installed an extremely expensive alarm system to protect their suburban',family,-5.594468116760254
+1320,'The jeweler was asked if he would examine the ring's huge artificial',diamond,-0.6439023613929749
+1321,'At the park next to the beach she saw a man with a loyal',hat,-9.128849029541016
+1322,'Mr. Smith enjoyed showing people his newly installed large',television,-5.753877639770508
+1323,'Steve spilled coffee all over his clean white polo',pants,-7.9243035316467285
+1324,'They decided to declaw the cat so he wouldn't tear up the thick',carpet,-0.76665198802948
+1325,'He drove the nail into the garage',wood,-5.832313537597656
+1326,'As usual, he didn't do well because he had not prepared his impassioned',speech,-0.5992792844772339
+1327,'The journalist reported that many collapsed during the intense',storm,-4.756678104400635
+1328,'He was soothed by the gentle southerly',music,-11.658798217773438
+1329,'Betsy could never tell a deliberate',lie,-0.25152960419654846
+1330,'I don't know what his secret was, but my brother always managed to get the best academic',girls,-12.262033462524414
