@@ -12,4 +12,4 @@
 
 echo "Running the next word prediction pipeline..."
 
-python /users/diriho/data/diriho/next-word-prediction/pipeline/run_pipeline.py
+python /users/diriho/data/diriho/next-word-prediction/pipeline/run_pipeline.py "$@"

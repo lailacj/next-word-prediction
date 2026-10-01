@@ -66,17 +66,33 @@ The model module imports `dotenv` and `huggingface_hub`; `python-dotenv` is curr
 
 ### Choose an input and model
 
-Configuration currently requires editing Python files:
+Select a prepared CSV and model from the command line:
 
-1. In [pipeline/run_pipeline.py](pipeline/run_pipeline.py), set `file_path` to a prepared dataset and choose `QwenModel`, `BertModel`, `DeepSeekModel`, or `LlamaModel`. The current defaults are `szewczyk_2022.csv` and `QwenModel()`.
-2. In [pipeline/language_models.py](pipeline/language_models.py), set the selected model's `self.output_file` to the matching dataset directory. All four wrappers currently target `data/Model_szewczyk/`.
-3. Run one dataset/model combination at a time:
+```sh
+python pipeline/run_pipeline.py --dataset data/parsed_data/szewczyk_2022.csv --model qwen
+python pipeline/run_pipeline.py --dataset data/parsed_data/michaelov_2024.csv --model bert
+python pipeline/run_pipeline.py --dataset data/peelle_data/cloze_data.csv --model llama
+```
 
-   ```sh
-   python pipeline/run_pipeline.py
-   ```
+Supported models are `qwen`, `bert`, `deepseek`, and `llama`. Any CSV with the [prepared input schema](data/README.md#prepared-pipeline-inputs) can be supplied; no Python edits are needed.
 
-Prepared inputs and output locations are documented in the [dataset guide](data/README.md). Model initialization overwrites the selected output file with a new header, so preserve any results you need before rerunning.
+By default, scores are written to `results/<dataset stem>/<model>.csv` under the project root. Use `--output` to choose another path:
+
+```sh
+python pipeline/run_pipeline.py --dataset data/parsed_data/nieuwland_2018.csv --model deepseek --output results/my_run.csv
+```
+
+Input and explicit output paths are relative to your working directory. Existing output files are preserved unless you pass `--overwrite`. Datasets with the same filename stem share a default output location, so use `--output` to distinguish them.
+
+The runner reports the number of scored and skipped candidates. Use `python pipeline/run_pipeline.py --help` for options; help works without installing model dependencies. Module invocation (`python -m pipeline.run_pipeline`) also works with the same arguments.
+
+### Runner tests
+
+```sh
+python3 -m unittest discover -s tests -v
+```
+
+These tests use a stand-in model and dataset loader to check output handling and command-line configuration without downloading weights.
 
 ### Current limitations
 

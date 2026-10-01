@@ -88,7 +88,7 @@ sentence_number,sentence,word,cloze_prob
 | `word` | Candidate continuation to score |
 | `cloze_prob` | Human cloze value from the source dataset |
 
-The loader groups words by sentence identifier. The current runner assumes identifiers are consecutive integers beginning at 1, encountered in that order.
+The loader groups words by sentence identifier. The runner preserves these identifiers in the output; they do not need to be consecutive.
 
 **Cloze values need normalization before cross-dataset analysis.** For example, the Nieuwland input contains values such as `100` and `90`, while the Michaelov and Szewczyk inputs contain fractional values. The loader retains these values as strings and does not normalize them.
 
@@ -96,18 +96,20 @@ The source [data_parsing.py](james-michaelov_data/data_organization/data_parsing
 
 ## Model outputs
 
-Outputs are organized as:
+New runs write to the project root's `results/` directory by default:
 
 ```text
-Model_<dataset>/<model>/<model>_data.csv
+results/<dataset stem>/<model>.csv
 ```
 
-The current Qwen wrapper instead writes `qwen_datas.csv`, while the checked-in Qwen files are named `qwen_data.csv`.
+For example, scoring `parsed_data/szewczyk_2022.csv` with Qwen produces `results/szewczyk_2022/qwen.csv`. Pass `--output` to choose another location and `--overwrite` to replace an existing file. The runner owns output writing; constructing a model does not create or truncate result files.
 
-Output headers follow this pattern:
+Existing results remain in the `Model_*` directories, using `<model>_data.csv` filenames.
+
+Output headers retain the existing schema:
 
 ```csv
 sentence_num,sentence,word,<model>_prob
 ```
 
-Despite the `*_prob` names, the current wrappers return natural log probabilities. Surprisal in nats is the negative of that value. Model initialization overwrites its output file; select the appropriate path before running a new dataset/model combination.
+Despite the `*_prob` names, the current wrappers return natural log probabilities. Surprisal in nats is the negative of that value. Candidates the model cannot score are omitted and counted in the runner's summary.

@@ -5,10 +5,7 @@ import torch.nn.functional as F
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModelForMaskedLM
 from huggingface_hub import login
 import os
-from pathlib import Path
 from dotenv import load_dotenv
-
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 # ABSTRACT INTERFACE FOR LANGUAGE MODELS
 class LanguageModel(ABC):
@@ -29,24 +26,14 @@ class LanguageModel(ABC):
     def predict_next_word(self, sentence_token_ids, word_token_ids):
         pass
 
-    @abstractmethod
-    def get_ouptut_file(self):
-        pass
-
 
 # QWEN MODEL IMPLEMENTATION
 class QwenModel(LanguageModel):
     def __init__(self):
         # initilialize the qwen model and the tokenizer
         self.model_name = "Qwen/Qwen2.5-7B"
-        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "qwen" / "qwen_datas.csv"
-        self.output_file.parent.mkdir(parents=True, exist_ok=True)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
-
-        # write up the header of the outpul as you initialized the model
-        with open(self.output_file, "w", encoding="utf-8") as f:
-            f.write("sentence_num,sentence,word,qwen_prob\n")
 
     @property
     def priority(self):
@@ -104,20 +91,12 @@ class QwenModel(LanguageModel):
         # Return the total log probability of the target word given the sentence
         return total_logp
 
-    def get_ouptut_file(self):
-        return self.output_file
-
 
 # BERT MODEL IMPLEMENTATION
 class BertModel(LanguageModel):
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
         self.model = AutoModelForMaskedLM.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
-        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "bert" / "bert_data.csv"
-        self.output_file.parent.mkdir(parents=True, exist_ok=True)
-
-        with open(self.output_file, "w", encoding="utf-8") as f:
-            f.write("sentence_num,sentence,word,bert_prob\n")
 
     @property
     def priority(self):
@@ -151,16 +130,6 @@ class BertModel(LanguageModel):
         # Return the results as a list of (token, probability) tuples
         return list(zip(predicted_tokens, probs.tolist()))
 
-    def get_specific_word_probability(self, sentence_num, sentence, word_list, next_word_probabilities):
-        '''This function searches the BERT probability distribution for specific words and
-        stores the results in a dictionary.'''
-        for token, prob in next_word_probabilities:
-            if token not in word_list:
-                continue
-            else:
-                with open(self.output_file, "a", encoding="utf-8") as f:
-                    f.write(f"{sentence_num},{sentence},{token},{prob}\n")
-
     def predict_next_word(self, sentence, word_token_ids):
         if len(word_token_ids) != 1:
             return None
@@ -176,11 +145,6 @@ class BertModel(LanguageModel):
 
         return log_probs[word_token_ids[0]].item()
 
-    def get_ouptut_file(self):
-        return self.output_file
-
-    
-
 
 # DEEPSEEK MODEL IMPLEMENTATION
 class DeepSeekModel(LanguageModel):
@@ -189,15 +153,7 @@ class DeepSeekModel(LanguageModel):
         self.model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name, trust_remote_code=True)
-        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "deepseek" / "deepseek_data.csv"
-        self.output_file.parent.mkdir(parents=True, exist_ok=True)
 
-        # write up the header of the outpul as you initialized the model
-        with open(self.output_file, "w", encoding="utf-8") as f:
-            f.write("sentence_num,sentence,word,deepseek_prob\n")
-       
-        
-        
     @property
     def priority(self):
         return 3
@@ -243,9 +199,6 @@ class DeepSeekModel(LanguageModel):
 
         return total_logp
 
-    def get_ouptut_file(self):
-        return self.output_file
-
 
 # LLAMA MODEL IMPLEMENTATION
 class LlamaModel(LanguageModel):
@@ -262,12 +215,6 @@ class LlamaModel(LanguageModel):
         self.model_name = "meta-llama/Llama-3.2-1B"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
-        self.output_file = PROJECT_ROOT / "data" / "Model_szewczyk" / "llama" / "llama_data.csv"
-        self.output_file.parent.mkdir(parents=True, exist_ok=True)
-
-        # write up the header of the outpul as you initialized the model
-        with open(self.output_file, "w", encoding="utf-8") as f:
-            f.write("sentence_num,sentence,word,llama_prob\n")
 
     @property
     def priority(self):
@@ -322,6 +269,3 @@ class LlamaModel(LanguageModel):
             input_ids = torch.tensor([[token_id]], device=input_ids.device)
 
         return total_log_prob
-
-    def get_ouptut_file(self):
-        return self.output_file
