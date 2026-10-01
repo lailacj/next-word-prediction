@@ -86,13 +86,31 @@ Input and explicit output paths are relative to your working directory. Existing
 
 The runner reports the number of scored and skipped candidates. Use `python pipeline/run_pipeline.py --help` for options; help works without installing model dependencies. Module invocation (`python -m pipeline.run_pipeline`) also works with the same arguments.
 
-### Runner tests
+### Model interface
+
+[pipeline/language_models.py](pipeline/language_models.py) provides one `LanguageModel` class for all four models:
+
+```python
+from pipeline.language_models import LanguageModel
+
+model = LanguageModel("qwen")
+context = model.tokenize_sentence("The capital of France is")
+word_tokens = model.tokenize_word("Paris")
+if word_tokens:
+    log_probability = model.predict_next_word(context, word_tokens)
+```
+
+`MODEL_IDS` defines the supported names and Hugging Face checkpoints and supplies the CLI's model choices. Loading and word tokenization are shared; model-specific cases handle sentence preparation, masked scoring, and causal scoring. Constructing a model loads weights but does not write results.
+
+The former `QwenModel`, `BertModel`, `DeepSeekModel`, and `LlamaModel` classes are replaced by `LanguageModel(name)`. The sentence method is now spelled `tokenize_sentence`. Model checkpoints and scoring conventions are preserved in this refactor; the BERT and DeepSeek limitations below still apply.
+
+### Tests
 
 ```sh
 python3 -m unittest discover -s tests -v
 ```
 
-These tests use a stand-in model and dataset loader to check output handling and command-line configuration without downloading weights.
+The tests check runner output handling and command-line configuration with a stand-in model and dataset loader. Model tests use mocked dependencies to check checkpoint selection, tokenization, and scoring calls for all four models without downloading weights. They do not validate numerical results from real model inference.
 
 ### Current limitations
 

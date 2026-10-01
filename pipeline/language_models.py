@@ -1,271 +1,111 @@
-from abc import ABC, abstractmethod
+"""One interface for the model families supported by the scoring pipeline."""
 
-import torch
-import torch.nn.functional as F
-from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModelForMaskedLM
-from huggingface_hub import login
 import os
-from dotenv import load_dotenv
 
-# ABSTRACT INTERFACE FOR LANGUAGE MODELS
-class LanguageModel(ABC):
-    @abstractmethod
-    def tokenize_sentense(self, sentence: str):
-        pass
-
-    @abstractmethod
-    def tokenize_word(self, word: str):
-        pass
-
-    @property
-    @abstractmethod
-    def priority(self):
-        pass
-
-    @abstractmethod
-    def predict_next_word(self, sentence_token_ids, word_token_ids):
-        pass
+MODEL_IDS = {
+    "qwen": "Qwen/Qwen2.5-7B",
+    "bert": "google-bert/bert-large-uncased-whole-word-masking",
+    "deepseek": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "llama": "meta-llama/Llama-3.2-1B",
+}
 
 
-# QWEN MODEL IMPLEMENTATION
-class QwenModel(LanguageModel):
-    def __init__(self):
-        # initilialize the qwen model and the tokenizer
-        self.model_name = "Qwen/Qwen2.5-7B"
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
+class LanguageModel:
+    """Load a supported model and score candidate continuations in log space.
 
-    @property
-    def priority(self):
-        return 1
+    BERT scores one masked token. Causal models retain their existing prompt
+    and scoring conventions, including DeepSeek's unchanged-context behavior.
+    """
 
-    @torch.no_grad()
-    def tokenize_sentense(self, sentence: str):
-        """
-        Prepare the input sentence, tokenize it, and return the token IDs of the tensor space.
-        We add a space before the sentence to ensure proper tokenization of the last word.
-        The
-        """
-        prompt = sentence.strip() + " "  # Ensure there's a space before the sentence
-        inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
-        input_ids = inputs["input_ids"]  # Shape: [1, sequence_length]
+    def __init__(self, name: str):
+        if name not in MODEL_IDS:
+            raise ValueError(f"Unknown model {name!r}. Choose from: {', '.join(MODEL_IDS)}")
 
-        return input_ids
+        # Keep configuration and CLI help available without ML dependencies.
+        import torch
+        from transformers import AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer
 
-    @torch.no_grad()
-    def tokenize_word(self, word: str):
-        """
-        Tokenize the word into a tensor space of token ids
-        """
-        target_word = " " + word.strip()
-        target_ids = self.tokenizer.encode(target_word, add_special_tokens=False)  # List of token IDs for the target word (provided with the context)
+        self.name = name
+        self.model_name = MODEL_IDS[name]
+        self._torch = torch
 
-        if not target_ids:
-            return None  # Handle case where the target word cannot be tokenized
+        if name == "llama":
+            from dotenv import load_dotenv
+            from huggingface_hub import login
 
-        return target_ids
+            load_dotenv()
+            login(token=os.getenv("LLAMA_TOKEN"))
 
-    @torch.no_grad()
-    def predict_next_word(self, sentenc_token_ids, word_token_ids) -> float:
-        """
-        Apply the model to the model and apply the softmax prob to the prob distribution
-        then transform the input with the model into with, for memory efficiency
-        """
-        total_logp = 0.0
+        options = {"trust_remote_code": True} if name == "deepseek" else {}
+        model_class = AutoModelForMaskedLM if name == "bert" else AutoModelForCausalLM
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, **options)
+        self.model = model_class.from_pretrained(self.model_name, **options)
 
-        for token_id in word_token_ids:
-            # We pass the full input_ids each time
-            outputs = self.model(input_ids=sentenc_token_ids)
-            logits = outputs.logits[0, -1, :]
+    def tokenize_sentence(self, sentence: str):
+        """Prepare the sentence using the selected model's existing convention."""
+        if self.name == "bert":
+            return sentence
 
-            # Use log_softmax for better stability
-            log_probs = F.log_softmax(logits, dim=-1)
-
-            # Add to our running total
-            total_logp += log_probs[token_id].item()
-
-            # Update input_ids for the next token in the phrase
-            new_id = torch.tensor([[token_id]], device=self.model.device)
-            sentenc_token_ids = torch.cat([sentenc_token_ids, new_id], dim=1)
-
-        # Return the total log probability of the target word given the sentence
-        return total_logp
-
-
-# BERT MODEL IMPLEMENTATION
-class BertModel(LanguageModel):
-    def __init__(self):
-        self.tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
-        self.model = AutoModelForMaskedLM.from_pretrained("google-bert/bert-large-uncased-whole-word-masking")
-
-    @property
-    def priority(self):
-        return 2
-
-    def tokenize_sentense(self, sentence: str):
-        return sentence
+        prompt = sentence.strip()
+        if self.name == "qwen":
+            prompt += " "
+        inputs = self.tokenizer(prompt, return_tensors="pt")
+        if self.name in ("qwen", "deepseek"):
+            inputs = inputs.to(self.model.device)
+        return inputs if self.name == "deepseek" else inputs["input_ids"]
 
     def tokenize_word(self, word: str):
-        target_word = " " + word.strip()
-        target_ids = self.tokenizer.encode(target_word, add_special_tokens=False)
-        if not target_ids:
-            return None
-        return target_ids
+        """Tokenize a continuation with a leading space and no special tokens."""
+        return self.tokenizer.encode(" " + word.strip(), add_special_tokens=False) or None
 
-    def get_next_word_probability_distribution(self, sentence):
-        '''return the probs of all next tokens/words wiht their associated probs gdiven"
-        the input sentence with a [MASK] token at the end. '''
-        # Returns all next tokens and their probabilities.
-        inputs = self.tokenizer(sentence + " [MASK].", return_tensors="pt")
+    def predict_next_word(self, context, word_token_ids):
+        """Return a natural log score, or None for unsupported BERT words."""
+        with self._torch.no_grad():
+            if self.name == "bert":
+                return self._score_masked(context, word_token_ids)
+            if self.name == "deepseek":
+                return self._score_deepseek(context, word_token_ids)
+            return self._score_causal(context, word_token_ids)
 
-        with torch.no_grad():
-            logits = self.model(**inputs).logits
-
-        mask_token_index = (inputs.input_ids == self.tokenizer.mask_token_id).nonzero(as_tuple=True)[1]
-        mask_token_logits = logits[0, mask_token_index, :].squeeze()
-
-        probs = torch.log_softmax(mask_token_logits, dim=-1)
-        predicted_tokens = self.tokenizer.convert_ids_to_tokens(range(len(mask_token_logits)))
-
-        # Return the results as a list of (token, probability) tuples
-        return list(zip(predicted_tokens, probs.tolist()))
-
-    def predict_next_word(self, sentence, word_token_ids):
+    def _score_masked(self, sentence, word_token_ids):
         if len(word_token_ids) != 1:
             return None
-
         inputs = self.tokenizer(sentence + " [MASK].", return_tensors="pt")
-
-        with torch.no_grad():
-            logits = self.model(**inputs).logits
-
-        mask_token_index = (inputs.input_ids == self.tokenizer.mask_token_id).nonzero(as_tuple=True)[1]
-        mask_token_logits = logits[0, mask_token_index, :].squeeze()
-        log_probs = F.log_softmax(mask_token_logits, dim=-1)
-
+        logits = self.model(**inputs).logits
+        mask_index = (inputs.input_ids == self.tokenizer.mask_token_id).nonzero(as_tuple=True)[1]
+        mask_logits = logits[0, mask_index, :].squeeze()
+        log_probs = self._torch.nn.functional.log_softmax(mask_logits, dim=-1)
         return log_probs[word_token_ids[0]].item()
 
-
-# DEEPSEEK MODEL IMPLEMENTATION
-class DeepSeekModel(LanguageModel):
-    def __init__(self):
-        # initilialize the deepseek model and the tokenizer
-        self.model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True)
-        self.model = AutoModelForCausalLM.from_pretrained(self.model_name, trust_remote_code=True)
-
-    @property
-    def priority(self):
-        return 3
-
-    @torch.no_grad()
-    def tokenize_sentense(self, sentence: str):
-        """
-        Tokenize the sentence with the DeepSeek chat template.
-        """
-        messages = [{"role": "user", "content": sentence.strip()}]
-        inputs = self.tokenizer(sentence.strip(), return_tensors="pt").to(self.model.device)
-        return inputs
-
-    @torch.no_grad()
-    def tokenize_word(self, word: str):
-        """
-        Tokenize the target word without special tokens.
-        """
-        #add the space prefix to symblolize that this is a continuation of the sentence (next word)
-        target_word = " " + word.strip()
-        target_ids = self.tokenizer.encode(target_word, add_special_tokens=False)
-
-        if not target_ids:
-            return None
-
-        return target_ids
-
-    @torch.no_grad()
-    def predict_next_word(self, sentence_token, word_token_ids) -> float:
-        """
-        Compute the total log probability of a word given the DeepSeek prompt.
-        """
-        total_logp = 0.0
-
+    def _score_deepseek(self, inputs, word_token_ids):
+        # Preserve the existing behavior for this structural refactor. Extending
+        # the context for multi-token words is a separate scoring correction.
+        total = 0.0
         for token_id in word_token_ids:
-            # keep updating the sentence token ids by appending the previously predicted token, so that we can get the correct probability for multi-token words
-            outputs = self.model(**sentence_token)
-            logits = outputs.logits[0, -1, :]
+            logits = self.model(**inputs).logits[0, -1, :]
+            log_probs = self._torch.nn.functional.log_softmax(logits, dim=-1)
+            total += log_probs[token_id].item()
+        return total
 
-            # calculate log probabilities and extract the log probability for the current token_id
-            log_probs = F.log_softmax(logits, dim=-1)
-            total_logp += log_probs[token_id].item()
-
-        return total_logp
-
-
-# LLAMA MODEL IMPLEMENTATION
-class LlamaModel(LanguageModel):
-    def __init__(self):
-        # Load variables from .env into the environment
-        load_dotenv()
-
-        # connect/login to the llam model using huggingface
-        LLAMA_TOKEN = os.getenv("LLAMA_TOKEN")
-        # Paste your token here
-        login(token=LLAMA_TOKEN)
-
-        # initialize the model and its tokenize
-        self.model_name = "meta-llama/Llama-3.2-1B"
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
-
-    @property
-    def priority(self):
-        return 4
-
-    @torch.no_grad()
-    def tokenize_sentense(self, sentence: str):
-        """
-        Tokenize the sentence prefix used for next-word prediction.
-        """
-        prompt = sentence.strip()
-        inputs = self.tokenizer(prompt, return_tensors="pt")
-
-        return inputs["input_ids"]
-
-    @torch.no_grad()
-    def tokenize_word(self, word: str):
-        """
-        Tokenize the target word without special tokens.
-        """
-        target_word = " " + word.strip()
-        target_ids = self.tokenizer.encode(target_word, add_special_tokens=False)
-
-        if not target_ids:
-            return None
-
-        return target_ids
-
-    @torch.no_grad()
-    def predict_next_word(self, sentence_token_ids, word_token_ids) -> float:
-        total_log_prob = 0.0
-        input_ids = sentence_token_ids
-        past_key_values = None  # This stores the "memory" of the sentence
-
+    def _score_causal(self, input_ids, word_token_ids):
+        total = 0.0
+        past_key_values = None
         for token_id in word_token_ids:
-            # We only pass the NEW token if we have a cache (past_key_values)
-            # For the first iteration, we pass the whole sentence
-            outputs = self.model(
-                input_ids=input_ids,
-                past_key_values=past_key_values,
-                use_cache=True,
-            )
+            if self.name == "llama":
+                outputs = self.model(
+                    input_ids=input_ids, past_key_values=past_key_values, use_cache=True,
+                )
+                past_key_values = outputs.past_key_values
+            else:
+                outputs = self.model(input_ids=input_ids)
 
             logits = outputs.logits[0, -1, :]
-            past_key_values = outputs.past_key_values  # Update the cache
+            log_probs = self._torch.nn.functional.log_softmax(logits, dim=-1)
+            total += log_probs[token_id].item()
 
-            # Log_softmax for numerical stability
-            log_probs = F.log_softmax(logits, dim=-1)
-            total_log_prob += log_probs[token_id].item()
-
-            # Update input_ids to ONLY the next token for the next loop
-            input_ids = torch.tensor([[token_id]], device=input_ids.device)
-
-        return total_log_prob
+            if self.name == "llama":
+                input_ids = self._torch.tensor([[token_id]], device=input_ids.device)
+            else:
+                next_id = self._torch.tensor([[token_id]], device=self.model.device)
+                input_ids = self._torch.cat([input_ids, next_id], dim=1)
+        return total

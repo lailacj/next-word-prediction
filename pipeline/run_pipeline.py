@@ -4,24 +4,17 @@ import argparse
 import csv
 from pathlib import Path
 
+if __package__:
+    from .language_models import LanguageModel, MODEL_IDS
+else:
+    from language_models import LanguageModel, MODEL_IDS
+
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-MODEL_NAMES = ("qwen", "bert", "deepseek", "llama")
+MODEL_NAMES = tuple(MODEL_IDS)
 
 
 def create_model(name):
-    # Import only when running inference so --help needs no ML dependencies.
-    if __package__:
-        from .language_models import BertModel, DeepSeekModel, LlamaModel, QwenModel
-    else:
-        from language_models import BertModel, DeepSeekModel, LlamaModel, QwenModel
-
-    model_classes = {
-        "qwen": QwenModel,
-        "bert": BertModel,
-        "deepseek": DeepSeekModel,
-        "llama": LlamaModel,
-    }
-    return model_classes[name]()
+    return LanguageModel(name)
 
 
 def load_dataset(path):
@@ -54,7 +47,7 @@ def run_pipeline(dataset, model_name, output, *, overwrite=False):
         writer = csv.writer(file)
         writer.writerow(["sentence_num", "sentence", "word", f"{model_name}_prob"])
         for (sentence_id, candidates), sentence in zip(masked.items(), sentences):
-            sentence_token_ids = model.tokenize_sentense(sentence)
+            sentence_token_ids = model.tokenize_sentence(sentence)
             for word, _cloze_prob in candidates:
                 word_token_ids = model.tokenize_word(word)
                 if not word_token_ids:

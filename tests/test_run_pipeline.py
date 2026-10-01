@@ -12,7 +12,7 @@ from pipeline import run_pipeline as runner
 
 
 class FakeModel:
-    def tokenize_sentense(self, sentence):
+    def tokenize_sentence(self, sentence):
         return sentence
 
     def tokenize_word(self, word):
