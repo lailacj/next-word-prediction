@@ -4,8 +4,9 @@ import os
 import unittest
 from unittest.mock import MagicMock, patch
 
-from pipeline.language_models import LanguageModel, MODEL_IDS
-from pipeline import run_pipeline as runner
+from next_word_prediction.models import LanguageModel, MODEL_IDS
+from next_word_prediction import pipeline as runner
+from next_word_prediction import cli
 
 
 class LanguageModelTests(unittest.TestCase):
@@ -151,7 +152,7 @@ class LanguageModelTests(unittest.TestCase):
         with patch.object(runner, "LanguageModel") as model_class:
             self.assertIs(runner.create_model("qwen"), model_class.return_value)
             model_class.assert_called_once_with("qwen")
-        self.assertEqual(runner.MODEL_NAMES, tuple(MODEL_IDS))
+        self.assertEqual(cli.MODEL_NAMES, tuple(MODEL_IDS))
 
 
 if __name__ == "__main__":

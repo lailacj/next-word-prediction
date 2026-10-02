@@ -1,17 +1,17 @@
 # Datasets
 
-This directory contains source data and analysis code, prepared cloze inputs, and language model outputs for the [Next Word Prediction project](../README.md).
+This directory contains source data and analysis code, plus prepared cloze inputs for the [Next Word Prediction project](../README.md).
 
 ## Directory layout
 
 | Directory | Contents |
 | --- | --- |
-| [james-michaelov_data/](james-michaelov_data/) | Preprocessed datasets and code for Michaelov and Bergen's N400 and reading-time comparison; see its [upstream README](james-michaelov_data/README.md) |
-| [jakub_kara_data/](jakub_kara_data/) | Analysis and procedure files associated with Szewczyk and Federmeier |
-| [james_megan_cyma_data/](james_megan_cyma_data/) | Data, scripts, and analyses for *Strong Prediction* |
-| [peelle_data/](peelle_data/) | An additional `cloze_data.csv`; its publication mapping is not specified in the supplied notes |
-| [parsed_data/](parsed_data/) | Three prepared CSV inputs for the pipeline |
-| `Model_michaelov/`, `Model_nieuwland/`, `Model_szewczyk/`, `Model_peelle/` | Model outputs, with subdirectories for individual models |
+| [sources/james-michaelov_data/](sources/james-michaelov_data/) | Preprocessed datasets and code for Michaelov and Bergen's N400 and reading-time comparison; see its [upstream README](sources/james-michaelov_data/README.md) |
+| [sources/jakub_kara_data/](sources/jakub_kara_data/) | Analysis and procedure files associated with Szewczyk and Federmeier |
+| [sources/james_megan_cyma_data/](sources/james_megan_cyma_data/) | Data, scripts, and analyses for *Strong Prediction* |
+| [sources/peelle_data/](sources/peelle_data/) | An additional `cloze_data.csv`; its publication mapping is not specified in the supplied notes |
+| [processed/](processed/) | Four prepared CSV inputs for the pipeline |
+| [../results/legacy/](../results/legacy/) | Original `Model_*` output directories, preserved unchanged |
 
 ## Studies and source links
 
@@ -23,7 +23,7 @@ The following references and summaries come from the supplied dataset notes.
 
 - [Paper](https://www.sciencedirect.com/science/article/pii/S0749596X2600032X)
 - [Code and data on OSF](https://osf.io/87gmv)
-- Local files: [james-michaelov_data/](james-michaelov_data/)
+- Local files: [sources/james-michaelov_data/](sources/james-michaelov_data/)
 
 The supplied abstract describes analyses of **four reading-time datasets and nine N400 datasets**. Larger models, models trained on more data, and models with better language-task performance better predicted N400 amplitude, while reading-time results showed a different pattern.
 
@@ -33,8 +33,8 @@ The supplied abstract describes analyses of **four reading-time datasets and nin
 
 - [Paper](https://www.sciencedirect.com/science/article/pii/S0749596X21000942)
 - [Code and N400 data on OSF](https://osf.io/urvax)
-- Local files: [jakub_kara_data/](jakub_kara_data/)
-- Prepared input: [parsed_data/szewczyk_2022.csv](parsed_data/szewczyk_2022.csv)
+- Local files: [sources/jakub_kara_data/](sources/jakub_kara_data/)
+- Prepared input: [processed/szewczyk_2022.csv](processed/szewczyk_2022.csv)
 
 The study uses cloze probabilities and GPT-2 estimates of word predictability. The supplied abstract describes a reanalysis of five datasets with 138 participants, finding graded N400 facilitation even among unpredictable words. The imported Michaelov README states that `szewczyk_2022.tsv` includes all five datasets.
 
@@ -44,10 +44,10 @@ The study uses cloze probabilities and GPT-2 estimates of word predictability. T
 
 - [Paper](https://doi.org/10.1162/nol_a_00105)
 - [Code and N400 data on OSF](https://osf.io/pysbc/overview)
-- Local files: [james_megan_cyma_data/](james_megan_cyma_data/)
-- Prepared input: [parsed_data/michaelov_2024.csv](parsed_data/michaelov_2024.csv)
+- Local files: [sources/james_megan_cyma_data/](sources/james_megan_cyma_data/)
+- Prepared input: [processed/michaelov_2024.csv](processed/michaelov_2024.csv)
 
-The local [N400_data.csv](james_megan_cyma_data/data/N400_data.csv) has these columns:
+The local [N400_data.csv](sources/james_megan_cyma_data/data/N400_data.csv) has these columns:
 
 ```text
 TargetWord,Condition,ContextCode,N400,Subject,PlausibilityJudgement,Electrode,Cloze,Sentence
@@ -61,8 +61,8 @@ TargetWord,Condition,ContextCode,N400,Subject,PlausibilityJudgement,Electrode,Cl
 
 - [Paper](https://elifesciences.org/articles/33468)
 - [Code and N400 data on OSF](https://osf.io/eyzaq/)
-- Local source: [james-michaelov_data/datasets/nieuwland_2018.tsv](james-michaelov_data/datasets/nieuwland_2018.tsv)
-- Prepared input: [parsed_data/nieuwland_2018.csv](parsed_data/nieuwland_2018.csv)
+- Local source: [sources/james-michaelov_data/datasets/nieuwland_2018.tsv](sources/james-michaelov_data/datasets/nieuwland_2018.tsv)
+- Prepared input: [processed/nieuwland_2018.csv](processed/nieuwland_2018.csv)
 
 ### 5. Additional N400 source — Citation to complete
 
@@ -75,7 +75,7 @@ Its relationship to the local directories still needs to be established.
 
 ## Prepared pipeline inputs
 
-The files in [parsed_data/](parsed_data/) share this header:
+The files in [processed/](processed/) share this header. `peelle.csv` is an unchanged copy of [the supplied Peelle cloze file](sources/peelle_data/cloze_data.csv):
 
 ```csv
 sentence_number,sentence,word,cloze_prob
@@ -92,19 +92,19 @@ The loader groups words by sentence identifier. The runner preserves these ident
 
 **Cloze values need normalization before cross-dataset analysis.** For example, the Nieuwland input contains values such as `100` and `90`, while the Michaelov and Szewczyk inputs contain fractional values. The loader retains these values as strings and does not normalize them.
 
-The source [data_parsing.py](james-michaelov_data/data_organization/data_parsing.py) writes to `james-michaelov_data/parsed_data/` with a different header (`sentence_num,FullText,target_word,cloz`). Its output is not directly compatible with the current pipeline loader.
+The source [data_parsing.py](sources/james-michaelov_data/data_organization/data_parsing.py) writes to `sources/james-michaelov_data/parsed_data/` with a different header (`sentence_num,FullText,target_word,cloz`). Its output is not directly compatible with the current pipeline loader.
 
 ## Model outputs
 
-New runs write to the project root's `results/` directory by default:
+New runs write to `results/` under the current working directory by default. Run from the repository root to keep them in this checkout:
 
 ```text
 results/<dataset stem>/<model>.csv
 ```
 
-For example, scoring `parsed_data/szewczyk_2022.csv` with Qwen produces `results/szewczyk_2022/qwen.csv`. Pass `--output` to choose another location and `--overwrite` to replace an existing file. The runner owns output writing; constructing a model does not create or truncate result files.
+For example, scoring `processed/szewczyk_2022.csv` with Qwen produces `results/szewczyk_2022/qwen.csv`. Pass `--output` to choose another location and `--overwrite` to replace an existing file. The runner owns output writing; constructing a model does not create or truncate result files.
 
-Existing results remain in the `Model_*` directories, using `<model>_data.csv` filenames.
+Existing results have moved unchanged to [../results/legacy/](../results/legacy/), retaining their `Model_*` directory names and `<model>_data.csv` filenames. See the [results guide](../results/README.md).
 
 Output headers retain the existing schema:
 

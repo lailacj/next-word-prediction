@@ -1,8 +1,2 @@
-torch
-transformers
-numpy
-pandas
-scikit-learn
-matplotlib
-seaborn
-torchview
+# Compatibility install including the optional analysis dependencies.
+-e .[analysis]

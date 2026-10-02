@@ -8,7 +8,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from pipeline import run_pipeline as runner
+from next_word_prediction import pipeline as runner
+from next_word_prediction import cli
 
 
 class FakeModel:
@@ -79,17 +80,17 @@ class PipelineTests(unittest.TestCase):
         self.assertFalse(self.output.exists())
 
     def test_cli_selects_model_and_default_or_explicit_output(self):
-        for model in runner.MODEL_NAMES:
+        for model in cli.MODEL_NAMES:
             for custom in (False, True):
                 with self.subTest(model=model, custom=custom):
                     argv = ["--dataset", str(self.dataset), "--model", model]
-                    expected = runner.PROJECT_ROOT / "results" / "input" / f"{model}.csv"
+                    expected = Path.cwd() / "results" / "input" / f"{model}.csv"
                     if custom:
                         argv += ["--output", str(self.output), "--overwrite"]
                         expected = self.output
-                    with patch.object(runner, "run_pipeline", return_value=(3, 1)) as run:
+                    with patch.object(cli, "run_pipeline", return_value=(3, 1)) as run:
                         with contextlib.redirect_stdout(io.StringIO()):
-                            runner.main(argv)
+                            cli.main(argv)
                     run.assert_called_once_with(self.dataset, model, expected, overwrite=custom)
 
 

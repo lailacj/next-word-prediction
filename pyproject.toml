@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "next-word-prediction"
+version = "0.1.0"
+description = "Compare language model predictions with human cloze data."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "pandas",
+    "huggingface-hub",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+analysis = [
+    "numpy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "torchview",
+    "tqdm",
+]
+
+[project.scripts]
+next-word-prediction = "next_word_prediction.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

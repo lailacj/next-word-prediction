@@ -1,0 +1,245 @@
+Item	ItemExpID	context	adj	noun	cond	typ
+401	169	Since Jeremy was sick, he stayed in	his	bed	3	train
+402	170	The young rider had trouble putting on the	horse's	saddle	3	train
+403	171	Before battle, the knight needed to get a	fragile	sword	3	train
+404	172	The musician plucked at the strings of his	flat-fronted	guitar	3	train
+406	174	The strict Catholic family never misses	Sunday	mass	3	filler
+409	177	The biker fell on his head, damaging his	frontal	lobe	3	filler
+17	12	He returned the hole punch to the	computer	teacher	2	exp
+160	81	Rafael wants to preserve the national forest by guarding every	cedar	tree	3	exp
+301	140	Jessie left without his toolbox or his	packed	keys	1	exp
+329	153	The car accident five years ago left an ugly scar on his	hairy	face	1	exp
+476	244	The flower patch was flawed by an	overgrown	weed	3	filler
+75	43	We sprayed the yard to keep away the	nasty	bugs	3	exp
+9	7	Gary could not believe his son stole that	fast	watch	2	exp
+51	30	Although she heard it ringing, Nancy was too busy cleaning the chimney to get the	cell	phone	3	exp
+109	61	The hinges were rusted shut, so he had to pry it open with a	sharp	crowbar	1	exp
+328	152	Fred put the worm on the	wet	grass	0	exp
+338	156	She decided to start a new	temporary	business	2	exp
+416	184	An ambitious man, Garrett started his own	consulting	firm	3	filler
+240	112	He positioned the violin under his	bearded	chin	3	exp
+293	137	He always seemed to be interested in looking at the	blue	sky	3	exp
+104	58	She was having a hard time because she didn't know the	English	answer	1	exp
+270	126	It didn't get completed because he could not locate the right	diagnostic	tool	3	exp
+434	202	The swim team's performance improved after hiring a	new	coach	3	filler
+451	219	The tracker followed the prints from the	horse's	hooves	3	filler
+16	11	He always hid an extra set of keys under a	Persian	rug	0	exp
+31	19	No one at the reunion recognized Dan because he had grown a	long	mustache	2	exp
+433	201	Eric was worried that his car didn't have	enough	gas	3	filler
+442	210	Zeke's closest friends threw him a giant	birthday	party	3	filler
+14	10	The fertilizer enriched the	dry	soil	3	exp
+49	28	She was named after her	famous	mother	1	exp
+466	234	The personal trainer took a job at the	local	gym	3	filler
+82	46	I sat far off to the side of the auditorium and my line of sight was blocked by a	tall	beam	2	exp
+26	16	He was caught stealing a	borrowed	car	3	exp
+342	157	She flipped through the stations in search of some	global	news	0	exp
+128	70	Mrs. Stevens said that little Dennis was the loudest boy in the	fictional	story	0	exp
+164	82	I could hear the loud telephone ringing through the	concrete	door	2	exp
+237	111	Paul painted the clown's suit blue and gave him a big red	snotty	balloon	2	exp
+165	83	The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his	bulging	muscles	0	exp
+246	115	He was cold most of the night and finally got up to get another	thick	blanket	3	exp
+333	154	Mary went into her room to look at her	illustrated	painting	1	exp
+87	49	The county decided to tear down the gas station by the	elementary	highway	1	exp
+305	143	They couldn't decide on a name for their new	premature	dog	2	exp
+357	160	They stood on the bridge tossing stale bread to the	wild	ducks	1	exp
+370	168	In the mysterious wooden box the girl found the	topographical	ring	1	exp
+137	73	As soon as they reached the sand, he stopped to take off his	striped	shoes	1	exp
+456	224	When he got to work, the baker prepared	fresh	bread	3	filler
+44	24	The jeweler was asked if he would examine the ring's huge	black	stone	0	exp
+248	116	Joan fed her baby some warm	breast	milk	3	exp
+263	122	She took the baby out when he started to cry and had to miss the rest of the	tea	party	0	exp
+55	32	I just had a new sound system installed in my	living	room	0	exp
+48	27	You could tell he had grown up in the South by his	racist	attitude	0	exp
+260	120	She was glad she had brought a good book with her since there was nothing to read at the	post	office	3	exp
+58	33	Upon mother's strict orders, the cat's smelly litter box was kept in the	outdoor	shed	0	exp
+71	40	Rushing out he forgot to take his	thin	jacket	0	exp
+419	187	On their doorstep was a flaming bag of	dog	poop	3	filler
+100	56	They decided to declaw the cat so he wouldn't tear up the	thick	couch	1	exp
+422	190	The couple began to brew their	own	beer	3	filler
+418	186	The soccer player was praised for the	game-winning	goal	3	filler
+92	51	Their neighbors were surprised to find out that the Smiths had never visited that	national	town	2	exp
+315	147	The breeze lifted the	short	air	2	exp
+200	99	She wore heavy wool socks and her sturdiest boots to go walking in the	melting	forest	2	exp
+455	223	The kids ran through the sprinklers on the	front	lawn	3	filler
+96	54	Barry wisely chose to pay the	monthly	fee	0	exp
+52	31	The house at the end of the narrow road was built of	red	wood	2	exp
+299	139	Betsy could never tell a	funny	joke	0	exp
+421	189	To stay warm in cold weather, wear a	winter	coat	3	filler
+268	125	Randy froze when he saw a shadow at the end of the	narrow	alley	2	exp
+437	205	Sally took her children to the	candy	store	3	filler
+95	53	She cleaned the dirt from her	blonde	hair	0	exp
+348	158	Steve invited his girlfriend to a	formal	party	1	exp
+234	109	Every day, rain or shine, the joggers ran up and down the	tall	path	2	exp
+280	130	Every month Rick had to clean his	whole	car	1	exp
+80	44	Their picnic was ruined by the	bad	rain	1	exp
+459	227	After collecting the pollen, the bee returned to	his	hive	3	filler
+462	230	Chris said his dog had always been his	best	friend	3	filler
+124	69	The applause could be heard throughout the	echoey	auditorium	1	exp
+74	42	He drove the nail into the	rotten	door	2	exp
+151	79	Dillinger once robbed that	federal	bank	3	exp
+135	71	Kim was relieved to see that ample food had been made for the	special	occasion	0	exp
+265	123	Every spring they held the annual	onion	parade	2	exp
+284	132	He was grouchy because he was having trouble with his	nightmarish	sleep	1	exp
+431	199	Martin always dreamed of being a	police	officer	3	filler
+452	220	After her house was robbed, Doris installed another	door	lock	3	filler
+65	37	She was quite surprised that Bill didn't keep his	pocket	watch	0	exp
+417	185	At the landfill, Fred cut himself on a	rusty	nail	3	filler
+453	221	To help her plants grow, Carly used a	new	fertilizer	3	filler
+139	74	He really wanted to go but decided to stay home to wait for the	important	call	0	exp
+191	94	At the park next to the beach she saw a man with a	loyal	dog	3	exp
+119	66	They waited a long time to see the	animated	movie	3	exp
+59	34	The squirrel stored some nuts in the	dead	ground	2	exp
+309	145	She left the tiny baby alone in the	waiting	room	0	exp
+73	41	The person who caught the thief deserves our	loudest	applause	0	exp
+223	104	It was time to hang the new	advent	picture	1	exp
+121	67	As usual, he didn't do well because he had not prepared his	subconscious	mind	0	exp
+461	229	Jay's plants grew poorly but decayed into	fertile	soil	3	filler
+197	97	The cigar stank and burned a hole in the	leather	shirt	2	exp
+438	206	To start the Sumo match they struck a	large	gong	3	filler
+426	194	Sofia liked riding the Ferris wheel at the	local	fair	3	filler
+469	237	The man went to the butcher to buy	some	meat	3	filler
+457	225	The stable was home to Rick's	favorite	horse	3	filler
+172	85	She felt dinner would not be complete unless she made	decadent	dessert	3	exp
+39	22	They left the dirty dishes in the	kitchen	sink	3	exp
+323	150	It's raining, and I forgot my coat, hat, and	waterproof	umbrella	1	exp
+178	87	Her cold drink was served with a slice of	fresh	lemon	3	exp
+33	20	The last thing they were expecting on their wedding day was a raging	dark	bull	2	exp
+443	211	The man bought his girlfriend a	diamond	ring	3	filler
+435	203	One of the patient's symptoms was a	persistent	cough	3	filler
+250	117	Although John felt some remorse he decided to return the	library	gift	2	exp
+290	136	As a punishment, his parents immediately took away his	favorite	toy	0	exp
+472	240	Robert could fix the bike if he had the	right	tools	3	filler
+116	65	After getting out of the shower he sat down to have	instant	breakfast	1	exp
+408	176	The rotten fruit had turned into a	soft	mush	3	filler
+458	226	After a hard workday, James liked drinking a	cold	beer	3	filler
+413	181	They waited for a windy day to use	their	kite	3	filler
+473	241	The camper's food attracted a large	mother	bear	3	filler
+267	124	The only food in the refrigerator was a moldy	sub	sandwich	3	exp
+1	1	He was so busy and overwhelmed that he had forgotten to respond to the	important	email	3	exp
+366	165	They took her car because he hated to drive in the	heavy	city	2	exp
+253	119	The white gull dove down and caught a	slimy	worm	0	exp
+359	162	The senator had once been a	preschool	teacher	3	exp
+229	107	The sewer backed up and caused a	unpleasant	flood	1	exp
+224	105	Ken built his new house on a quiet	wooded	street	1	exp
+102	57	He was soothed by the gentle	instrumental	wind	2	exp
+46	26	During years of drudgery, the man had derived comfort from a single	catchy	book	1	exp
+45	25	Liz and Marie sat at the conference table and discussed the topic for the next	work	meeting	1	exp
+69	38	They carelessly dumped the toxic waste into the	winding	ocean	2	exp
+50	29	They installed an extremely expensive alarm system to protect their	suburban	home	3	exp
+141	75	He looked worried because he might have broken his	right	glasses	2	exp
+475	243	Nicole hung the wall painting using a	small	nail	3	filler
+336	155	I think that my stockbroker is a	habitual	thief	1	exp
+42	23	Our government was secretly supplying the rebels with arms and	live	ammunition	0	exp
+436	204	The lucky explorers discovered diamonds in the	dark	cave	3	filler
+105	59	I don't know what his secret was, but my brother always managed to get the best	academic	grades	3	exp
+367	166	Although Jan was usually careful, she had forgotten to turn off the	ultraviolet	light	0	exp
+467	235	The waitress wiped the table with a	damp	cloth	3	filler
+86	48	While they were eating pancakes, Albert noticed a bee swimming in the	tonic	water	0	exp
+415	183	Just below the water, Gary could see the	shark's	fin	3	filler
+225	106	Within minutes of arriving at the office, the detective spilled his thermos full of	hot	soup	2	exp
+271	127	There were a lot of old boxes stored in the	unfinished	basement	0	exp
+142	76	He hated to move, but Richard wanted to live closer to his	single	cousin	2	exp
+311	146	The officials tried to evacuate everyone from the area before the	developing	storm	3	exp
+173	86	The truck that Dave drove crashed into the	solid	wall	0	exp
+199	98	The man was caught selling an illegal	unregistered	gun	0	exp
+242	114	He finally bought some poison to kill the	diseased	rats	3	exp
+70	39	She pulled her head out from under the faucet and reached for a	monkey	wrench	0	exp
+12	8	The university wouldn't let him register until he paid the overdue fines on the borrowed	comic	books	3	exp
+93	52	She was glad she had accompanied her friend because she was enjoying the party except for the	bland	music	1	exp
+429	197	For his calligraphy, Jordan looked for a	special	pen	3	filler
+286	133	She was feeling cold so she put on her	cashmere	slippers	2	exp
+7	5	It was a dream come true because Jane had always wanted to visit Europe with her	younger	sister	0	exp
+91	50	She helped him put the finishing touches on the	haunted	house	0	exp
+123	68	She usually let her very competent secretary handle the	difficult	calls	1	exp
+423	191	The gemstone in Emma's new ring was	green	emerald	3	filler
+362	163	His ring fell into a hole in the	tiled	floor	0	exp
+464	232	The ranch workers were startled by the charging	angry	bull	3	filler
+233	108	His seat was next to the	revolving	window	1	exp
+471	239	Nobody there could undo such a	tight	knot	3	filler
+460	228	The farmers won a blue ribbon for their	fat	pig	3	filler
+5	4	If he strained his eyes he could see a	tiny	bird	1	exp
+407	175	It's dangerous when cars get stuck on a	train	track	3	filler
+216	103	Coming in, he took off his	smelly	hat	2	exp
+13	9	Steve spilled coffee all over his clean white	polo	shirt	3	exp
+203	101	Mr. Smith enjoyed showing people his newly installed	satellite	dish	0	exp
+281	131	They decided to buy a small place and build an addition with two more	upper	rooms	1	exp
+474	242	Bill couldn't fix the car without having the	right	tools	3	filler
+465	233	To complete her painting set, Sara bought a	new	brush	3	filler
+167	84	Larry chose not to join the	Confederate	army	3	exp
+446	214	Sherry always drank hot tea out of her	favorite	mug	3	filler
+351	159	They rested under a tree in the	local	park	3	exp
+427	195	Kristin claimed to be the famous actor's	biggest	fan	3	filler
+179	88	The shirt was stained with	frying	oil	0	exp
+289	135	The Italian chef was known for his fabulous	bowtie	sauce	2	exp
+410	178	While his parents vacationed, the kid threw a	huge	party	3	filler
+302	141	He smiled nervously as he searched through his pockets for a	fresh	mint	0	exp
+24	15	Phil put some drops in his	soft	drink	0	exp
+306	144	He put a clean sheet on the	twin	bed	3	exp
+440	208	The frightened children ran from the	growling	dog	3	filler
+448	216	The mother was excited to hold her	newborn	baby	3	filler
+272	128	Every morning before school his mother laid out his clothes and packed his	messenger	lunch	1	exp
+189	93	Sam practiced every day in anticipation of the	philharmonic	concert	3	exp
+468	236	Meredith laughed loudly when she heard the	funny	joke	3	filler
+209	102	The hikers wanted to camp close to the	frozen	river	2	exp
+411	179	The troubled boy decided to join the	neighborhood	gang	3	filler
+303	142	Quite predictably, the first thing the doctor asked for was the	specific	symptoms	3	exp
+316	148	The old woman was the only one to see the	eerie	murder	2	exp
+428	196	The professor always wore a suit and a	crazy	tie	3	filler
+424	192	Steven went to market and purchased	ground	beef	3	filler
+470	238	When guests visit, the host serves drinks in	crystal	glasses	3	filler
+432	200	The pilot had trouble seeing due to the	thick	fog	3	filler
+35	21	The rude waiter was not given a	generous	chance	2	exp
+241	113	Tim's friend pushed him into a	kiddie	pool	3	exp
+152	80	When Drew arrived unexpectedly at the restaurant, Laurie got him a chair from the adjacent	dining	table	1	exp
+106	60	Since the water was unsafe they decided to drink	orange	juice	3	exp
+201	100	Before she arrived he opened a bottle of wine and put on some soft	classical	music	3	exp
+295	138	There was a moth caught in the	bright	light	0	exp
+358	161	Peter painted the walls of the bird exhibit light blue to resemble the	Pacific	ocean	0	exp
+112	63	He bought her a pearl necklace for her	eighteenth	anniversary	2	exp
+85	47	Most of the trees died after last year's	dreadful	drought	3	exp
+194	95	He slipped and fell on the	uneven	ice	1	exp
+180	89	There were brightly colored pictures on every	interior	wall	3	exp
+444	212	The unmarried man lived in a	bachelor	pad	3	filler
+368	167	The bad boy was sent to his	intimidating	father	0	exp
+235	110	He grew corn to feed his	dairy	cows	3	exp
+449	217	The parked cars were damaged by the	violent	storm	3	filler
+28	17	Each night the campers built a huge	bright	fire	3	exp
+183	91	The other driver was so angry he threatened him with a	civil	gun	1	exp
+463	231	The amusement park was popular for its	unique	rides	3	filler
+81	45	Sharon dried the bowls with a	filthy	towel	1	exp
+110	62	We followed the path up the hill, and there, under the tree, was a	gray	snake	2	exp
+251	118	No one wanted to make any decisions until after the	corporate	party	2	exp
+20	13	As a child he used to collect	glass	stamps	1	exp
+185	92	The cat was crouched in the tall grass down by the	lazy	river	3	exp
+405	173	The house filled with smells of the	freshly-baked	bread	3	filler
+445	213	Harrison didn't want to clip the wings of	his	bird	3	filler
+363	164	He fell on the floor after tripping on the	oriental	cord	2	exp
+412	180	The little girl loved making art with	colored	pencils	3	filler
+99	55	The bridesmaid had an ugly	revealing	face	2	exp
+288	134	No matter how hard she tried, she could not remember the	serial	name	1	exp
+144	78	The wealthy couple's three little girls enjoyed playing together in the	front	yard	3	exp
+454	222	She had arranged all her dolls in a	neat	row	3	filler
+2	2	His skin was red from spending the day at the	neighborhood	beach	1	exp
+414	182	Use tools to remove the lid from a	tin	can	3	filler
+439	207	The baseball player always used his lucky	catcher's	mitt	3	filler
+62	36	The journalist reported that many collapsed during the	intense	heat	3	exp
+430	198	The determined student was not discouraged by his	bad	grades	3	filler
+113	64	The cows moved from the sun into the	wooden	shade	1	exp
+420	188	Hank made a special horseshoe for Blazer's	deformed	hoof	3	filler
+61	35	Helen reached up to dust the	topmost	lamp	2	exp
+450	218	Even the mother's singing couldn't calm the	screaming	baby	3	filler
+326	151	He liked lemon and sugar in his	herbal	water	2	exp
+425	193	Karen put the grilled hamburger on a	brioche	bun	3	filler
+4	3	At night the old woman locked the	frosty	door	1	exp
+277	129	Ida wanted to sing folk songs at the picnic, so she brought her	wireless	microphone	0	exp
+181	90	Most men cannot understand why women wear	ugly	shoes	0	exp
+447	215	Every day, the family worked in their	vegetable	garden	3	filler
+441	209	Every year the neighborhood had a	holiday	party	3	filler
+136	72	After dinner they washed the	family	dishes	1	exp
+262	121	In his day, that old guy was one of the best	soccer	athletes	2	exp
+8	6	The young boy asked for another	tasty	treat	0	exp
+322	149	They had been wandering in circles because nobody had a	detailed	map	3	exp
+21	14	I had lost the ticket I needed to pick up my	rental	clothes	1	exp
+143	77	They had to shampoo the new beige rug after the accident with the	mangy	wine	2	exp
+195	96	The Democrats seemed to focus on defense while the Republicans talked about the	booming	budget	2	exp
+30	18	Sandy always wished that she had had a	Persian	sister	1	exp

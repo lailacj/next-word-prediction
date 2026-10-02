@@ -41,13 +41,20 @@ The work has two main parts:
 1. **Literature review:** reading times, cloze probability, reaction times, priming, surprisal theory, N400, and model logits.
 2. **Computational pipeline:** score candidate words in sentence contexts with language models for comparison with human measures.
 
-| Path                                 | Contents                                                              |
-| ------------------------------------ | --------------------------------------------------------------------- |
-| [pipeline/](pipeline/)               | Dataset loading, model wrappers, and the pipeline entry point         |
-| [data/](data/)                       | Source datasets, analysis scripts, prepared inputs, and model outputs |
-| [playground/](playground/)           | Exploratory model and analysis scripts                                |
-| [docs/](docs/)                       | Project document shortcut                                             |
-| [requirements.txt](requirements.txt) | Python dependencies                                                   |
+```text
+src/next_word_prediction/   Reusable package: models, datasets, pipeline, CLI
+scripts/                   Cluster launcher and workflow scripts
+data/sources/              Imported datasets and upstream code
+data/processed/            Prepared pipeline inputs
+results/legacy/            Existing scores preserved from data/Model_*
+tests/                     Automated correctness tests
+playground/                New experiments using the shared package
+archive/                   Original standalone runners and one-off scripts
+docs/                      Project document and original notes
+pyproject.toml             Package metadata, dependencies, and CLI entry point
+```
+
+See the [dataset guide](data/README.md), [results guide](results/README.md), [playground guide](playground/README.md), and [script instructions](scripts/README.md).
 
 ## Running the current pipeline
 
@@ -58,40 +65,39 @@ From the repository root:
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m pip install python-dotenv huggingface-hub
+python -m pip install -e .
 ```
 
-The model module imports `dotenv` and `huggingface_hub`; `python-dotenv` is currently missing from `requirements.txt`. Model weights are loaded from Hugging Face and require sufficient memory and an initial download. The Llama wrapper reads a Hugging Face token from `LLAMA_TOKEN` in the environment or a `.env` file.
+Dependencies are defined in [pyproject.toml](pyproject.toml). For plotting and exploratory analysis, use `python -m pip install -e ".[analysis]"`. The compatibility `requirements.txt` installs the package with those extras. Model weights are loaded from Hugging Face and require sufficient memory and an initial download. The Llama wrapper reads a Hugging Face token from `LLAMA_TOKEN` in the environment or a `.env` file.
 
 ### Choose an input and model
 
 Select a prepared CSV and model from the command line:
 
 ```sh
-python pipeline/run_pipeline.py --dataset data/parsed_data/szewczyk_2022.csv --model qwen
-python pipeline/run_pipeline.py --dataset data/parsed_data/michaelov_2024.csv --model bert
-python pipeline/run_pipeline.py --dataset data/peelle_data/cloze_data.csv --model llama
+next-word-prediction --dataset data/processed/szewczyk_2022.csv --model qwen
+next-word-prediction --dataset data/processed/michaelov_2024.csv --model bert
+next-word-prediction --dataset data/processed/peelle.csv --model llama
 ```
 
 Supported models are `qwen`, `bert`, `deepseek`, and `llama`. Any CSV with the [prepared input schema](data/README.md#prepared-pipeline-inputs) can be supplied; no Python edits are needed.
 
-By default, scores are written to `results/<dataset stem>/<model>.csv` under the project root. Use `--output` to choose another path:
+By default, scores are written to `results/<dataset stem>/<model>.csv` under the current working directory. Use `--output` to choose another path:
 
 ```sh
-python pipeline/run_pipeline.py --dataset data/parsed_data/nieuwland_2018.csv --model deepseek --output results/my_run.csv
+next-word-prediction --dataset data/processed/nieuwland_2018.csv --model deepseek --output results/my_run.csv
 ```
 
 Input and explicit output paths are relative to your working directory. Existing output files are preserved unless you pass `--overwrite`. Datasets with the same filename stem share a default output location, so use `--output` to distinguish them.
 
-The runner reports the number of scored and skipped candidates. Use `python pipeline/run_pipeline.py --help` for options; help works without installing model dependencies. Module invocation (`python -m pipeline.run_pipeline`) also works with the same arguments.
+The runner reports the number of scored and skipped candidates. Use `next-word-prediction --help` for options; help works without installing model dependencies. Module invocation (`python -m next_word_prediction`) also works with the same arguments.
 
 ### Model interface
 
-[pipeline/language_models.py](pipeline/language_models.py) provides one `LanguageModel` class for all four models:
+[src/next_word_prediction/models.py](src/next_word_prediction/models.py) provides one `LanguageModel` class for all four models:
 
 ```python
-from pipeline.language_models import LanguageModel
+from next_word_prediction import LanguageModel
 
 model = LanguageModel("qwen")
 context = model.tokenize_sentence("The capital of France is")
@@ -102,12 +108,21 @@ if word_tokens:
 
 `MODEL_IDS` defines the supported names and Hugging Face checkpoints and supplies the CLI's model choices. Loading and word tokenization are shared; model-specific cases handle sentence preparation, masked scoring, and causal scoring. Constructing a model loads weights but does not write results.
 
-The former `QwenModel`, `BertModel`, `DeepSeekModel`, and `LlamaModel` classes are replaced by `LanguageModel(name)`. The sentence method is now spelled `tokenize_sentence`. Model checkpoints and scoring conventions are preserved in this refactor; the BERT and DeepSeek limitations below still apply.
+Model checkpoints and scoring conventions are preserved during the directory reorganization; the BERT and DeepSeek limitations below still apply.
 
 ### Tests
 
+After installing the package:
+
 ```sh
-python3 -m unittest discover -s tests -v
+python -m unittest discover -s tests -v
+```
+
+For the mocked tests and CLI help alone, you can skip ML dependency installation:
+
+```sh
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+PYTHONPATH=src python3 -m next_word_prediction --help
 ```
 
 The tests check runner output handling and command-line configuration with a stand-in model and dataset loader. Model tests use mocked dependencies to check checkpoint selection, tokenization, and scoring calls for all four models without downloading weights. They do not validate numerical results from real model inference.
@@ -117,4 +132,13 @@ The tests check runner output handling and command-line configuration with a sta
 - Output columns named `*_prob` contain natural log probabilities.
 - BERT skips words that tokenize into more than one token.
 - DeepSeek currently scores each target token against the unchanged context; its multi-token scores need review before comparison with the other models.
-- The SLURM launcher, [pipeline/run_pipeline.sh](pipeline/run_pipeline.sh), contains author-specific paths and cluster settings that need updating before use.
+- The [SLURM launcher](scripts/run_pipeline.sh) uses cluster-specific resource settings; see [scripts/README.md](scripts/README.md) before submitting a job.
+
+## Migration from the previous layout
+
+- Replace `python pipeline/run_pipeline.py` with `next-word-prediction` after installing the package.
+- Replace `from pipeline.language_models import LanguageModel` with `from next_word_prediction import LanguageModel`.
+- Replace `data/parsed_data/` paths with `data/processed/`; Peelle's prepared input is `data/processed/peelle.csv`.
+- Imported source collections are under `data/sources/`; existing `Model_*` outputs are under `results/legacy/`.
+- Default output paths are relative to the working directory, so installed commands work outside this checkout. Run from the repository root to keep results here.
+- Original temporary README notes are preserved in [docs/notes/](docs/notes/).
