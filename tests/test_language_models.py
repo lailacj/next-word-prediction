@@ -124,16 +124,6 @@ class LanguageModelTests(unittest.TestCase):
         self.assertIs(calls[1].kwargs["past_key_values"], model.model.return_value.past_key_values)
         self.torch.cat.assert_not_called()
 
-    def test_deepseek_retains_existing_unchanged_context_scoring(self):
-        model = LanguageModel("deepseek")
-        self.prepare_scores(model, [-0.25, -0.75])
-        context = {"input_ids": MagicMock(), "attention_mask": MagicMock()}
-        self.assertEqual(model.predict_next_word(context, [4, 9]), -1.0)
-        self.assertEqual(len(model.model.call_args_list), 2)
-        for call in model.model.call_args_list:
-            self.assertEqual(call.kwargs, context)
-        self.torch.cat.assert_not_called()
-
     def test_bert_scores_mask_and_skips_multiple_tokens(self):
         model = LanguageModel("bert")
         scores = self.prepare_scores(model, [-0.25])

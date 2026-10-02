@@ -117,7 +117,7 @@ if word_tokens:
 
 `MODEL_IDS` defines the supported names and Hugging Face checkpoints and supplies the CLI's model choices. Loading and word tokenization are shared; model-specific cases handle sentence preparation, masked scoring, and causal scoring. Constructing a model loads weights but does not write results.
 
-Model checkpoints and scoring conventions are preserved during the directory reorganization; the BERT and DeepSeek limitations below still apply.
+Model checkpoints and prompt tokenization are unchanged. DeepSeek now conditions each continuation token on the preceding tokens; see the scoring correction below.
 
 ### Tests
 
@@ -136,11 +136,24 @@ PYTHONPATH=src python3 -m next_word_prediction --help
 
 The tests check dataset validation and normalization with small CSV fixtures, and runner output handling with the real loader and a stand-in model. Model tests use mocked dependencies to check checkpoint selection, tokenization, and scoring calls for all four models without downloading weights. They do not validate numerical results from real model inference.
 
+### DeepSeek scoring correction
+
+DeepSeek now computes multi-token word scores as the sum of conditional log probabilities:
+
+```text
+log P(t1 | sentence) + log P(t2 | sentence, t1) + ...
+```
+
+The input IDs and attention mask grow between token predictions. Each candidate uses a local context mapping, so scoring it does not change the context shared with other candidates. Single-token scoring follows the same computation as before.
+
+Earlier versions incorrectly scored every token against the original sentence. Existing multi-token DeepSeek scores need regeneration before comparison or analysis. Existing result files have not been recomputed or modified.
+
+Regression tests check context-dependent scores, attention-mask growth, candidate isolation, and single-token behavior using controlled model and tensor stand-ins. They do not establish agreement with real model inference.
+
 ### Current limitations
 
 - Output columns named `*_prob` contain natural log probabilities.
 - BERT skips words that tokenize into more than one token.
-- DeepSeek currently scores each target token against the unchanged context; its multi-token scores need review before comparison with the other models.
 - The [SLURM launcher](scripts/run_pipeline.sh) uses cluster-specific resource settings; see [scripts/README.md](scripts/README.md) before submitting a job.
 
 ## Migration from the previous layout

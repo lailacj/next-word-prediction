@@ -13,8 +13,8 @@ MODEL_IDS = {
 class LanguageModel:
     """Load a supported model and score candidate continuations in log space.
 
-    BERT scores one masked token. Causal models retain their existing prompt
-    and scoring conventions, including DeepSeek's unchanged-context behavior.
+    BERT scores one masked token. Causal models condition each continuation
+    token on the sentence and the preceding continuation tokens.
     """
 
     def __init__(self, name: str):
@@ -78,13 +78,23 @@ class LanguageModel:
         return log_probs[word_token_ids[0]].item()
 
     def _score_deepseek(self, inputs, word_token_ids):
-        # Preserve the existing behavior for this structural refactor. Extending
-        # the context for multi-token words is a separate scoring correction.
+        # Rebind tensors in a local mapping so candidates can share a context.
+        inputs = dict(inputs)
         total = 0.0
-        for token_id in word_token_ids:
+        for index, token_id in enumerate(word_token_ids):
             logits = self.model(**inputs).logits[0, -1, :]
             log_probs = self._torch.nn.functional.log_softmax(logits, dim=-1)
             total += log_probs[token_id].item()
+
+            if index + 1 < len(word_token_ids):
+                input_ids = inputs["input_ids"]
+                next_id = input_ids.new_tensor([[token_id]])
+                inputs["input_ids"] = self._torch.cat([input_ids, next_id], dim=1)
+                if "attention_mask" in inputs:
+                    mask = inputs["attention_mask"]
+                    inputs["attention_mask"] = self._torch.cat(
+                        [mask, mask.new_ones((1, 1))], dim=1,
+                    )
         return total
 
     def _score_causal(self, input_ids, word_token_ids):
