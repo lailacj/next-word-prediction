@@ -115,26 +115,33 @@ if word_tokens:
     log_probability = model.predict_next_word(context, word_tokens)
 ```
 
-`MODEL_IDS` defines the supported names and Hugging Face checkpoints and supplies the CLI's model choices. Loading and word tokenization are shared; model-specific cases handle sentence preparation, masked scoring, and causal scoring. Constructing a model loads weights but does not write results.
+`MODEL_IDS` defines the supported names and Hugging Face checkpoints and supplies the CLI's model choices. Loading and word tokenization are shared; model-specific cases handle sentence preparation, masked scoring, and causal scoring. Constructing a model loads weights and explicitly sets evaluation mode, disabling training-time dropout. It does not write results.
 
 Model checkpoints and prompt tokenization are unchanged. DeepSeek now conditions each continuation token on the preceding tokens; see the scoring correction below.
 
 ### Tests
 
-After installing the package:
+After installing the package, run both suites:
 
 ```sh
 python -m unittest discover -s tests -v
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python -m unittest discover -s tests/integration -v
 ```
 
-For the tests and CLI help alone, you can skip ML dependency installation:
+The integration suite is run separately and requires PyTorch and Transformers. It creates tiny randomly initialized Qwen2 and Llama models locally; no pretrained weights or tokenizers are downloaded. Missing dependencies cause this suite to fail rather than silently skip validation.
+
+For the lightweight suite and CLI help alone, you can skip ML dependency installation:
 
 ```sh
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 PYTHONPATH=src python3 -m next_word_prediction --help
 ```
 
-The tests check dataset validation and normalization with small CSV fixtures, and runner output handling with the real loader and a stand-in model. Model tests use mocked dependencies to check checkpoint selection, tokenization, and scoring calls for all four models without downloading weights. They do not validate numerical results from real model inference.
+The lightweight tests check dataset validation, runner output handling, and model dispatch using fixtures and stand-ins.
+
+The numerical integration tests exercise the production Qwen, DeepSeek, and Llama scoring methods with real CPU tensors and tiny models. They compare single-token and multi-token scores against an independent, uncached forward pass over the entire prompt and continuation, with an absolute tolerance of `1e-5` in summed natural log probability. They also check DeepSeek attention masks, Llama's cache, candidate-order independence, unchanged context tensors, and evaluation mode.
+
+Validation passed with Python 3.14, PyTorch 2.14.1, and Transformers 5.18.0: 30 lightweight tests and four integration tests. This validates causal scoring for supplied token IDs; it does not validate pretrained tokenizers, sentence–word boundaries, full-size checkpoints, GPU execution, or BERT numerical scoring.
 
 ### DeepSeek scoring correction
 
@@ -148,7 +155,7 @@ The input IDs and attention mask grow between token predictions. Each candidate 
 
 Earlier versions incorrectly scored every token against the original sentence. Existing multi-token DeepSeek scores need regeneration before comparison or analysis. Existing result files have not been recomputed or modified.
 
-Regression tests check context-dependent scores, attention-mask growth, candidate isolation, and single-token behavior using controlled model and tensor stand-ins. They do not establish agreement with real model inference.
+Regression tests cover context-dependent scores, attention-mask growth, candidate isolation, and single-token behavior. The integration suite also compares DeepSeek scores with an independent full-sequence calculation using a tiny random Qwen2 model.
 
 ### Current limitations
 

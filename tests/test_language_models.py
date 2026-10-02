@@ -42,6 +42,7 @@ class LanguageModelTests(unittest.TestCase):
                 other = (self.transformers.AutoModelForCausalLM if name == "bert"
                          else self.transformers.AutoModelForMaskedLM)
                 selected.from_pretrained.assert_called_once_with(checkpoint, **options)
+                model.model.eval.assert_called_once_with()
                 other.from_pretrained.assert_not_called()
                 self.assertEqual(model.model_name, checkpoint)
                 if name == "llama":

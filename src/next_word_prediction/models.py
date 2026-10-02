@@ -40,6 +40,7 @@ class LanguageModel:
         model_class = AutoModelForMaskedLM if name == "bert" else AutoModelForCausalLM
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, **options)
         self.model = model_class.from_pretrained(self.model_name, **options)
+        self.model.eval()
 
     def tokenize_sentence(self, sentence: str):
         """Prepare the sentence using the selected model's existing convention."""
