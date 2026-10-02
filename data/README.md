@@ -88,9 +88,48 @@ sentence_number,sentence,word,cloze_prob
 | `word` | Candidate continuation to score |
 | `cloze_prob` | Human cloze value from the source dataset |
 
-The loader groups words by sentence identifier. The runner preserves these identifiers in the output; they do not need to be consecutive.
+### Scale settings and normalized records
 
-**Cloze values need normalization before cross-dataset analysis.** For example, the Nieuwland input contains values such as `100` and `90`, while the Michaelov and Szewczyk inputs contain fractional values. The loader retains these values as strings and does not normalize them.
+The loader uses explicit settings in `DATASET_SCALES` in [datasets.py](../src/next_word_prediction/datasets.py):
+
+| Input filename | Input scale | Normalization |
+| --- | --- | --- |
+| `michaelov_2024.csv` | Proportion, 0–1 | Retain value |
+| `nieuwland_2018.csv` | Percent, 0–100 | Divide by 100 |
+| `szewczyk_2022.csv` | Proportion, 0–1 | Retain value |
+| `peelle.csv` | Proportion, 0–1 | Retain value |
+
+Settings match the exact filename, regardless of its directory. Unknown filenames require `--cloze-scale proportion` or `--cloze-scale percent`. An explicit scale overrides the registered setting; use it for renamed files or already-normalized copies. The loader never guesses a scale from the observed range: a percentage of `1` means `0.01`, even when all observed values are below `1`.
+
+For Python analysis:
+
+```python
+from next_word_prediction.datasets import load_cloze_data
+
+records = load_cloze_data("data/processed/nieuwland_2018.csv")
+# For custom inputs: load_cloze_data("custom.csv", cloze_scale="percent")
+for record in records:
+    for candidate in record.candidates:
+        print(record.sentence_id, candidate.word, candidate.cloze_prob)
+```
+
+The loader returns `SentenceRecord` objects with `sentence_id`, `sentence`, and a tuple of `Candidate` objects (`word`, `cloze_prob`). Cloze probabilities are floats in 0–1. Sentence IDs remain strings and need not be consecutive or numeric. Sentences follow first appearance in the CSV; candidates retain their order within each sentence. Duplicate candidate rows are retained.
+
+### Validation and text handling
+
+Before loading a model or writing scores, the loader rejects:
+
+- Missing, blank, or duplicate column names; all four required columns must be present.
+- Rows whose field counts do not match the header, and malformed CSV quoting.
+- Blank required fields or a file with no candidate rows.
+- Nonnumeric, nonfinite, or out-of-range cloze values for the selected scale.
+- A sentence ID associated with conflicting sentence text.
+
+Errors identify the file and physical line (the ending line for multiline records). Extra named columns are allowed and ignored, and UTF-8 files with a byte-order mark are accepted.
+
+Text and IDs are preserved after normal CSV decoding, including literal quotes, apostrophes, and whitespace. The previous loader stripped boundary quotes and apostrophes. Preserving them changes one context in the supplied Peelle data, so scores for that context can differ on rerun even though the model scoring code is unchanged.
+
+Source files are never rewritten. Normalization happens in memory; the score output schema remains unchanged and does not include the normalized cloze values. Use the structured records above for analysis.
 
 The source [data_parsing.py](sources/james-michaelov_data/data_organization/data_parsing.py) writes to `sources/james-michaelov_data/parsed_data/` with a different header (`sentence_num,FullText,target_word,cloz`). Its output is not directly compatible with the current pipeline loader.
 

@@ -82,6 +82,15 @@ next-word-prediction --dataset data/processed/peelle.csv --model llama
 
 Supported models are `qwen`, `bert`, `deepseek`, and `llama`. Any CSV with the [prepared input schema](data/README.md#prepared-pipeline-inputs) can be supplied; no Python edits are needed.
 
+The four prepared filenames have explicit cloze-scale settings: Nieuwland uses percentages, and Michaelov, Szewczyk, and Peelle use proportions. For another filename, specify its input scale:
+
+```sh
+next-word-prediction --dataset my_cloze.csv --cloze-scale percent --model bert
+```
+
+`--cloze-scale proportion` expects 0–1; `--cloze-scale percent` expects 0–100. An explicit flag overrides the registered filename setting, including for an already-normalized copy. Scale is never inferred from observed values. All rows are validated before model loading or output writing.
+
+
 By default, scores are written to `results/<dataset stem>/<model>.csv` under the current working directory. Use `--output` to choose another path:
 
 ```sh
@@ -118,14 +127,14 @@ After installing the package:
 python -m unittest discover -s tests -v
 ```
 
-For the mocked tests and CLI help alone, you can skip ML dependency installation:
+For the tests and CLI help alone, you can skip ML dependency installation:
 
 ```sh
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 PYTHONPATH=src python3 -m next_word_prediction --help
 ```
 
-The tests check runner output handling and command-line configuration with a stand-in model and dataset loader. Model tests use mocked dependencies to check checkpoint selection, tokenization, and scoring calls for all four models without downloading weights. They do not validate numerical results from real model inference.
+The tests check dataset validation and normalization with small CSV fixtures, and runner output handling with the real loader and a stand-in model. Model tests use mocked dependencies to check checkpoint selection, tokenization, and scoring calls for all four models without downloading weights. They do not validate numerical results from real model inference.
 
 ### Current limitations
 
