@@ -8,7 +8,10 @@ import unittest
 from unittest.mock import patch
 
 import torch
-from transformers import LlamaConfig, LlamaForCausalLM, Qwen2Config, Qwen2ForCausalLM
+from transformers import (
+    BertConfig, BertForMaskedLM, LlamaConfig, LlamaForCausalLM,
+    PreTrainedTokenizerFast, Qwen2Config, Qwen2ForCausalLM,
+)
 
 from next_word_prediction.models import LanguageModel
 
@@ -110,6 +113,42 @@ class NumericalScoringTests(unittest.TestCase):
         prompt = torch.tensor([[1, 5, 8]])
         self.assertEqual(wrapper.predict_next_word(prompt, [4, 9]),
                          wrapper.predict_next_word(prompt, [4, 9]))
+
+    def test_bert_masked_score_with_local_wordpiece_tokenizer(self):
+        from tokenizers import Tokenizer, models, pre_tokenizers, processors
+
+        vocab = {word: i for i, word in enumerate(
+            ("[PAD]", "[UNK]", "[CLS]", "[SEP]", "[MASK]", "A", "context", ".", "answer"),
+        )}
+        backend = Tokenizer(models.WordPiece(vocab, unk_token="[UNK]"))
+        backend.pre_tokenizer = pre_tokenizers.BertPreTokenizer()
+        backend.post_processor = processors.TemplateProcessing(
+            single="[CLS] $A [SEP]", special_tokens=[("[CLS]", 2), ("[SEP]", 3)],
+        )
+        wrapper = LanguageModel.__new__(LanguageModel)
+        wrapper.name, wrapper._torch = "bert", torch
+        wrapper.tokenizer = PreTrainedTokenizerFast(
+            tokenizer_object=backend, unk_token="[UNK]", mask_token="[MASK]",
+            cls_token="[CLS]", sep_token="[SEP]", pad_token="[PAD]",
+        )
+        with torch.random.fork_rng():
+            torch.manual_seed(1234)
+            wrapper.model = BertForMaskedLM(BertConfig(
+                vocab_size=len(vocab), hidden_size=32, intermediate_size=64,
+                num_hidden_layers=2, num_attention_heads=4, max_position_embeddings=32,
+            )).eval()
+        context = wrapper.tokenize_sentence("A context")
+        candidate = wrapper.tokenize_word("answer")
+        self.assertEqual(candidate, [8])
+        actual = wrapper.predict_next_word(context, candidate)
+        # Explicit IDs specify [CLS] A context [MASK] . [SEP], independently of
+        # the production prompt preparation and mask-position lookup.
+        ids = torch.tensor([[2, 5, 6, 4, 7, 3]])
+        with torch.no_grad():
+            logits = wrapper.model(input_ids=ids, attention_mask=torch.ones_like(ids)).logits
+            expected = logits[0, 3].log_softmax(-1)[8].item()
+        self.assertAlmostEqual(actual, expected, delta=1e-5)
+        self.assertIsNone(wrapper.predict_next_word(context, [8, 8]))
 
 
 if __name__ == "__main__":

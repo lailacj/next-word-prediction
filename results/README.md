@@ -9,3 +9,7 @@ New result files are ignored by Git by default. To preserve a selected result in
 ## DeepSeek results produced before the scoring correction
 
 Earlier DeepSeek code scored every token of a multi-token continuation against the original sentence. The maintained scorer now appends preceding tokens and extends the attention mask. Regenerate affected multi-token DeepSeek results before using them in comparisons; the files preserved here have not been recomputed. The single-token scoring calculation is unchanged.
+
+## Qwen results produced before the tokenization correction
+
+Earlier Qwen preparation added a trailing space to the prompt as well as a leading space to the candidate. The corrected preparation uses one separating space and matches joint tokenization on all supplied candidate rows. Regenerate scores produced with the old Qwen preparation before comparison; historical files remain unchanged.

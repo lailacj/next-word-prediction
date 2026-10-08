@@ -117,7 +117,7 @@ if word_tokens:
 
 `MODEL_IDS` defines the supported names and Hugging Face checkpoints and supplies the CLI's model choices. Loading and word tokenization are shared; model-specific cases handle sentence preparation, masked scoring, and causal scoring. Constructing a model loads weights and explicitly sets evaluation mode, disabling training-time dropout. It does not write results.
 
-Model checkpoints and prompt tokenization are unchanged. DeepSeek now conditions each continuation token on the preceding tokens; see the scoring correction below.
+Model checkpoints are unchanged. Qwen now uses one separating space between the prompt and candidate, and DeepSeek conditions each continuation token on the preceding tokens; see the corrections below.
 
 ### Tests
 
@@ -128,7 +128,7 @@ python -m unittest discover -s tests -v
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python -m unittest discover -s tests/integration -v
 ```
 
-The integration suite is run separately and requires PyTorch and Transformers. It creates tiny randomly initialized Qwen2 and Llama models locally; no pretrained weights or tokenizers are downloaded. Missing dependencies cause this suite to fail rather than silently skip validation.
+The integration suite is run separately and requires PyTorch and Transformers. It creates tiny randomly initialized Qwen2, Llama, and BERT models plus a small local WordPiece tokenizer; no pretrained weights or tokenizers are downloaded. Missing dependencies cause this suite to fail rather than silently skip validation.
 
 For the lightweight suite and CLI help alone, you can skip ML dependency installation:
 
@@ -139,9 +139,30 @@ PYTHONPATH=src python3 -m next_word_prediction --help
 
 The lightweight tests check dataset validation, runner output handling, and model dispatch using fixtures and stand-ins.
 
-The numerical integration tests exercise the production Qwen, DeepSeek, and Llama scoring methods with real CPU tensors and tiny models. They compare single-token and multi-token scores against an independent, uncached forward pass over the entire prompt and continuation, with an absolute tolerance of `1e-5` in summed natural log probability. They also check DeepSeek attention masks, Llama's cache, candidate-order independence, unchanged context tensors, and evaluation mode.
+The numerical integration tests exercise the production Qwen, DeepSeek, and Llama scoring methods with real CPU tensors and tiny models. They compare single-token and multi-token scores against an independent, uncached forward pass over the entire prompt and continuation, with an absolute tolerance of `1e-5` in summed natural log probability. They also check DeepSeek attention masks, Llama's cache, candidate-order independence, unchanged context tensors, and evaluation mode. A separate BERT test compares the masked-word score with a direct calculation at an independently specified mask position.
 
-Validation passed with Python 3.14, PyTorch 2.14.1, and Transformers 5.18.0: 30 lightweight tests and four integration tests. This validates causal scoring for supplied token IDs; it does not validate pretrained tokenizers, sentence–word boundaries, full-size checkpoints, GPU execution, or BERT numerical scoring.
+Validation passed with Python 3.14, PyTorch 2.14.1, and Transformers 5.18.0: 31 lightweight tests and five integration tests. These validate scoring on tiny models; full-size checkpoints and GPU execution have not been tested. The separate pretrained-tokenizer audit below checks the supplied dataset boundaries.
+
+### Tokenization and inference settings
+
+For causal models, the prompt is `sentence.strip()` and the continuation is `" " + word.strip()`: one separating space, with the tokenizer's configured special tokens on the prompt only. Candidates have no added special tokens. The scorer uses raw text, without a chat template. Empty or whitespace-only candidates return no token IDs.
+
+Previously, Qwen also appended a space to the prompt, so its prompt and candidate tokens decoded to text with two separating spaces. **Regenerate Qwen scores produced with the previous preparation.** The change affects all 58,146 candidates in the supplied inputs. Existing result files have not been modified.
+
+An audit using the actual pretrained tokenizers found:
+
+| Model | Boundary audit across 58,146 candidates | Candidate coverage |
+| --- | --- | --- |
+| Qwen | Zero mismatches between separate and joint tokenization after the fix | 48,175 single-token; 9,971 multi-token |
+| DeepSeek | Zero mismatches between separate and joint tokenization | 48,175 single-token; 9,971 multi-token |
+| BERT | Uses masked scoring, so the causal boundary comparison does not apply | 48,078 single-token; 10,068 multi-token candidates skipped; zero unknown tokens |
+| Llama | Pretrained tokenizer unavailable through unauthenticated access to the gated repository | Not measured |
+
+The [audit report](docs/tokenization_audit.json) records the resolved tokenizer revisions, input file hashes, and per-dataset counts. See [scripts/README.md](scripts/README.md) to reproduce it. These results apply to the supplied inputs; they do not prove that independent prompt/word tokenization matches joint tokenization for arbitrary text.
+
+BERT retains its existing `sentence + " [MASK]."` prompt, including the period to the right of the mask. It scores a single masked token with that right context; its scores should be distinguished from causal next-token scores. The period and multi-token exclusion are unchanged research choices.
+
+Inference uses evaluation mode and `no_grad()`. All tokenized inputs move to the model's device. Qwen and DeepSeek disable cache creation because they pass the full growing context each time; Llama reuses its cache. Model loading has no device-map or precision override, so this code does not automatically use an allocated GPU or select mixed precision. Tokenization does not request padding or truncation; long inputs still need to fit the model's context window.
 
 ### DeepSeek scoring correction
 

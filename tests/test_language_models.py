@@ -69,12 +69,10 @@ class LanguageModelTests(unittest.TestCase):
                     self.assertEqual(result, "  Some context  ")
                     model.tokenizer.assert_not_called()
                 else:
-                    prompt = "Some context " if name == "qwen" else "Some context"
-                    model.tokenizer.assert_called_once_with(prompt, return_tensors="pt")
-                    if name in ("qwen", "deepseek"):
-                        inputs.to.assert_called_once_with(model.model.device)
-                    else:
-                        inputs.to.assert_not_called()
+                    model.tokenizer.assert_called_once_with(
+                        "Some context", return_tensors="pt", add_special_tokens=True,
+                    )
+                    inputs.to.assert_called_once_with(model.model.device)
                     self.assertIs(result, inputs if name == "deepseek" else inputs["input_ids"])
 
     def test_word_tokenization_is_shared(self):
@@ -87,6 +85,12 @@ class LanguageModelTests(unittest.TestCase):
                 model.tokenizer.encode.assert_called_once_with(" word", add_special_tokens=False)
                 model.tokenizer.encode.return_value = []
                 self.assertIsNone(model.tokenize_word(""))
+
+    def test_blank_words_do_not_become_space_tokens(self):
+        model = LanguageModel("qwen")
+        for word in ("", " ", "\n\t"):
+            self.assertIsNone(model.tokenize_word(word))
+        model.tokenizer.encode.assert_not_called()
 
     def prepare_scores(self, model, values):
         distributions = []
@@ -107,6 +111,7 @@ class LanguageModelTests(unittest.TestCase):
         self.assertIs(calls[0].kwargs["input_ids"], context)
         self.assertIs(calls[1].kwargs["input_ids"], self.torch.cat.return_value)
         self.assertEqual(len(calls), 2)
+        self.assertTrue(all(c.kwargs["use_cache"] is False for c in calls))
         self.assertEqual(self.torch.cat.call_args_list[0].args[0], [context, self.torch.tensor.return_value])
         scores[0].__getitem__.assert_called_once_with(4)
         scores[1].__getitem__.assert_called_once_with(9)
@@ -130,12 +135,16 @@ class LanguageModelTests(unittest.TestCase):
         scores = self.prepare_scores(model, [-0.25])
         model.tokenizer.reset_mock()
         inputs = model.tokenizer.return_value
+        inputs.to.return_value = inputs
         inputs.input_ids.__eq__.return_value = MagicMock()
         self.assertIsNone(model.predict_next_word("A context", [4, 9]))
         model.model.assert_not_called()
         model.tokenizer.assert_not_called()
         self.assertEqual(model.predict_next_word("A context", [4]), -0.25)
-        model.tokenizer.assert_called_once_with("A context [MASK].", return_tensors="pt")
+        model.tokenizer.assert_called_once_with(
+            "A context [MASK].", return_tensors="pt", add_special_tokens=True,
+        )
+        inputs.to.assert_called_once_with(model.model.device)
         scores[0].__getitem__.assert_called_once_with(4)
         inputs.input_ids.__eq__.assert_called_once_with(model.tokenizer.mask_token_id)
 

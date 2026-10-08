@@ -43,21 +43,22 @@ class LanguageModel:
         self.model.eval()
 
     def tokenize_sentence(self, sentence: str):
-        """Prepare the sentence using the selected model's existing convention."""
+        """Prepare a context; the candidate supplies the separating space."""
         if self.name == "bert":
             return sentence
 
         prompt = sentence.strip()
-        if self.name == "qwen":
-            prompt += " "
-        inputs = self.tokenizer(prompt, return_tensors="pt")
-        if self.name in ("qwen", "deepseek"):
-            inputs = inputs.to(self.model.device)
+        inputs = self.tokenizer(
+            prompt, return_tensors="pt", add_special_tokens=True,
+        ).to(self.model.device)
         return inputs if self.name == "deepseek" else inputs["input_ids"]
 
     def tokenize_word(self, word: str):
         """Tokenize a continuation with a leading space and no special tokens."""
-        return self.tokenizer.encode(" " + word.strip(), add_special_tokens=False) or None
+        word = word.strip()
+        if not word:
+            return None
+        return self.tokenizer.encode(" " + word, add_special_tokens=False) or None
 
     def predict_next_word(self, context, word_token_ids):
         """Return a natural log score, or None for unsupported BERT words."""
@@ -71,7 +72,9 @@ class LanguageModel:
     def _score_masked(self, sentence, word_token_ids):
         if len(word_token_ids) != 1:
             return None
-        inputs = self.tokenizer(sentence + " [MASK].", return_tensors="pt")
+        inputs = self.tokenizer(
+            sentence + " [MASK].", return_tensors="pt", add_special_tokens=True,
+        ).to(self.model.device)
         logits = self.model(**inputs).logits
         mask_index = (inputs.input_ids == self.tokenizer.mask_token_id).nonzero(as_tuple=True)[1]
         mask_logits = logits[0, mask_index, :].squeeze()
@@ -83,7 +86,7 @@ class LanguageModel:
         inputs = dict(inputs)
         total = 0.0
         for index, token_id in enumerate(word_token_ids):
-            logits = self.model(**inputs).logits[0, -1, :]
+            logits = self.model(**inputs, use_cache=False).logits[0, -1, :]
             log_probs = self._torch.nn.functional.log_softmax(logits, dim=-1)
             total += log_probs[token_id].item()
 
@@ -108,7 +111,7 @@ class LanguageModel:
                 )
                 past_key_values = outputs.past_key_values
             else:
-                outputs = self.model(input_ids=input_ids)
+                outputs = self.model(input_ids=input_ids, use_cache=False)
 
             logits = outputs.logits[0, -1, :]
             log_probs = self._torch.nn.functional.log_softmax(logits, dim=-1)

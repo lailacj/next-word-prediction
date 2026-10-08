@@ -1,0 +1,186 @@
+{
+  "torch": "2.14.1",
+  "transformers": "5.18.0",
+  "models": {
+    "qwen": {
+      "model_id": "Qwen/Qwen2.5-7B",
+      "requested_revision": "main",
+      "resolved_revision": "d149729398750b98c0af14eb82c78cfe92750796",
+      "status": "ok",
+      "boundary_check": "separate_vs_joint",
+      "special_tokens": {
+        "eos_token": "<|endoftext|>",
+        "pad_token": "<|endoftext|>"
+      },
+      "datasets": [
+        {
+          "dataset": "data/processed/michaelov_2024.csv",
+          "candidates": 500,
+          "single_token": 493,
+          "sha256": "e1ff3a9915b41f6f8683d42e33d069f5f854d04d32c8420e6dc5f63d781757af",
+          "multi_token": 7,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/nieuwland_2018.csv",
+          "candidates": 160,
+          "single_token": 148,
+          "sha256": "ec6b17b320d5d66ddc556605e4d36f282e4241e23be8ce5b66d1e5322ec9c86f",
+          "multi_token": 12,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/peelle.csv",
+          "candidates": 56156,
+          "single_token": 46262,
+          "sha256": "1b7230388ae90c3fd6f9075be51dd1352d9fd559ce5ae31c546920cbf823014c",
+          "multi_token": 9894,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/szewczyk_2022.csv",
+          "candidates": 1330,
+          "single_token": 1272,
+          "sha256": "7c6281f511b008f47172fb2af3cbe6820321bac25ab29c238dbac1ffe8732cb8",
+          "multi_token": 58,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        }
+      ]
+    },
+    "deepseek": {
+      "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+      "requested_revision": "main",
+      "resolved_revision": "ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562",
+      "status": "ok",
+      "boundary_check": "separate_vs_joint",
+      "special_tokens": {
+        "bos_token": "<\uff5cbegin\u2581of\u2581sentence\uff5c>",
+        "eos_token": "<\uff5cend\u2581of\u2581sentence\uff5c>",
+        "pad_token": "<\uff5cend\u2581of\u2581sentence\uff5c>"
+      },
+      "datasets": [
+        {
+          "dataset": "data/processed/michaelov_2024.csv",
+          "candidates": 500,
+          "single_token": 493,
+          "sha256": "e1ff3a9915b41f6f8683d42e33d069f5f854d04d32c8420e6dc5f63d781757af",
+          "multi_token": 7,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/nieuwland_2018.csv",
+          "candidates": 160,
+          "single_token": 148,
+          "sha256": "ec6b17b320d5d66ddc556605e4d36f282e4241e23be8ce5b66d1e5322ec9c86f",
+          "multi_token": 12,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/peelle.csv",
+          "candidates": 56156,
+          "single_token": 46262,
+          "sha256": "1b7230388ae90c3fd6f9075be51dd1352d9fd559ce5ae31c546920cbf823014c",
+          "multi_token": 9894,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/szewczyk_2022.csv",
+          "candidates": 1330,
+          "single_token": 1272,
+          "sha256": "7c6281f511b008f47172fb2af3cbe6820321bac25ab29c238dbac1ffe8732cb8",
+          "multi_token": 58,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        }
+      ]
+    },
+    "bert": {
+      "model_id": "google-bert/bert-large-uncased-whole-word-masking",
+      "requested_revision": "main",
+      "resolved_revision": "bf1420893378c390773c9452c3602fcee89f9241",
+      "status": "ok",
+      "boundary_check": "not_applicable_masked_model",
+      "special_tokens": {
+        "unk_token": "[UNK]",
+        "sep_token": "[SEP]",
+        "pad_token": "[PAD]",
+        "cls_token": "[CLS]",
+        "mask_token": "[MASK]"
+      },
+      "datasets": [
+        {
+          "dataset": "data/processed/michaelov_2024.csv",
+          "candidates": 500,
+          "single_token": 492,
+          "sha256": "e1ff3a9915b41f6f8683d42e33d069f5f854d04d32c8420e6dc5f63d781757af",
+          "multi_token": 8,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": null,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/nieuwland_2018.csv",
+          "candidates": 160,
+          "single_token": 146,
+          "sha256": "ec6b17b320d5d66ddc556605e4d36f282e4241e23be8ce5b66d1e5322ec9c86f",
+          "multi_token": 14,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": null,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/peelle.csv",
+          "candidates": 56156,
+          "single_token": 46163,
+          "sha256": "1b7230388ae90c3fd6f9075be51dd1352d9fd559ce5ae31c546920cbf823014c",
+          "multi_token": 9993,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": null,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/szewczyk_2022.csv",
+          "candidates": 1330,
+          "single_token": 1277,
+          "sha256": "7c6281f511b008f47172fb2af3cbe6820321bac25ab29c238dbac1ffe8732cb8",
+          "multi_token": 53,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": null,
+          "examples": []
+        }
+      ]
+    },
+    "llama": {
+      "model_id": "meta-llama/Llama-3.2-1B",
+      "status": "unavailable",
+      "message": "Tokenizer unavailable; check cache, network, and gated-model access."
+    }
+  }
+}

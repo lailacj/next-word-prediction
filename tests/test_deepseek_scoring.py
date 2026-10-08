@@ -53,7 +53,8 @@ class DeepSeekScoringTests(unittest.TestCase):
         self.model.model = MagicMock(side_effect=self.forward)
         self.context = {"input_ids": Tensor([0, 2]), "attention_mask": Tensor([0, 1], dtype="bool")}
 
-    def forward(self, input_ids, attention_mask=None):
+    def forward(self, input_ids, attention_mask=None, use_cache=True):
+        self.assertFalse(use_cache)
         if attention_mask is not None:
             self.assertEqual(len(input_ids.values), len(attention_mask.values))
         distribution = MagicMock()
@@ -90,7 +91,7 @@ class DeepSeekScoringTests(unittest.TestCase):
 
     def test_single_token_keeps_original_score_and_inputs(self):
         self.assertAlmostEqual(self.model.predict_next_word(self.context, [9]), math.log(.1))
-        self.model.model.assert_called_once_with(**self.context)
+        self.model.model.assert_called_once_with(**self.context, use_cache=False)
         self.model._torch.cat.assert_not_called()
 
     def test_context_without_attention_mask(self):
