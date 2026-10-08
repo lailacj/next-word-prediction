@@ -1,7 +1,9 @@
 """Check model dispatch and scoring conventions without downloading weights."""
 
 import os
+import json
 import unittest
+from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
 from next_word_prediction.models import LanguageModel, MODEL_IDS
@@ -12,7 +14,13 @@ from next_word_prediction import cli
 class LanguageModelTests(unittest.TestCase):
     def setUp(self):
         self.torch = MagicMock()
+        self.torch.cuda.device_count.return_value = 2
+        self.torch.device.side_effect = lambda value: SimpleNamespace(
+            type=value.split(":")[0], index=int(value.split(":")[1]) if ":" in value else None,
+        )
         self.transformers = MagicMock()
+        for factory in (self.transformers.AutoModelForCausalLM, self.transformers.AutoModelForMaskedLM):
+            factory.from_pretrained.return_value.config._commit_hash = "a" * 40
         self.hub = MagicMock()
         self.dotenv = MagicMock()
         modules = {
@@ -33,29 +41,56 @@ class LanguageModelTests(unittest.TestCase):
                 self.dotenv.reset_mock()
                 with patch.dict(os.environ, {"LLAMA_TOKEN": "test-token"}):
                     model = LanguageModel(name)
-                options = {"trust_remote_code": True} if name == "deepseek" else {}
+                options = {"token": "test-token"} if name == "llama" else {}
                 self.transformers.AutoTokenizer.from_pretrained.assert_called_once_with(
-                    checkpoint, **options,
+                    checkpoint, revision="a" * 40, **options,
                 )
                 selected = (self.transformers.AutoModelForMaskedLM if name == "bert"
                             else self.transformers.AutoModelForCausalLM)
                 other = (self.transformers.AutoModelForCausalLM if name == "bert"
                          else self.transformers.AutoModelForMaskedLM)
-                selected.from_pretrained.assert_called_once_with(checkpoint, **options)
+                selected.from_pretrained.assert_called_once_with(
+                    checkpoint, revision="main", dtype=self.torch.float32, **options,
+                )
+                model.model.to.assert_called_once()
                 model.model.eval.assert_called_once_with()
                 other.from_pretrained.assert_not_called()
                 self.assertEqual(model.model_name, checkpoint)
                 if name == "llama":
                     self.dotenv.load_dotenv.assert_called_once_with()
-                    self.hub.login.assert_called_once_with(token="test-token")
+                    self.hub.login.assert_not_called()
                 else:
                     self.dotenv.load_dotenv.assert_not_called()
                     self.hub.login.assert_not_called()
+
+    def test_metadata_excludes_authentication_token(self):
+        with patch.dict(os.environ, {"LLAMA_TOKEN": "private-test-token"}):
+            model = LanguageModel("llama")
+        metadata = model.run_metadata()
+        self.assertEqual(metadata["model_revision"], "a" * 40)
+        self.assertEqual(metadata["tokenizer_revision"], "a" * 40)
+        self.assertNotIn("private-test-token", json.dumps(metadata))
 
     def test_unknown_model_fails_before_loading(self):
         with self.assertRaisesRegex(ValueError, "Unknown model"):
             LanguageModel("unknown")
         self.transformers.AutoTokenizer.from_pretrained.assert_not_called()
+
+    def test_explicit_precision_revision_and_unavailable_device(self):
+        LanguageModel("qwen", device="cuda:1", dtype="bfloat16", revision="requested-commit")
+        self.transformers.AutoModelForCausalLM.from_pretrained.assert_called_once_with(
+            MODEL_IDS["qwen"], revision="requested-commit", dtype=self.torch.bfloat16,
+        )
+
+    def test_unavailable_accelerator_fails_before_download(self):
+        self.torch.cuda.is_available.return_value = False
+        with self.assertRaisesRegex(ValueError, "CUDA"):
+            LanguageModel("qwen", device="cuda")
+        self.transformers.AutoModelForCausalLM.from_pretrained.assert_not_called()
+        with self.assertRaises(ValueError):
+            LanguageModel("qwen", device="tpu")
+        with self.assertRaises(ValueError):
+            LanguageModel("qwen", dtype="int8")
 
     def test_sentence_tokenization_preserves_model_conventions(self):
         for name in MODEL_IDS:

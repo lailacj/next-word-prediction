@@ -13,3 +13,19 @@ Earlier DeepSeek code scored every token of a multi-token continuation against t
 ## Qwen results produced before the tokenization correction
 
 Earlier Qwen preparation added a trailing space to the prompt as well as a leading space to the candidate. The corrected preparation uses one separating space and matches joint tokenization on all supplied candidate rows. Regenerate scores produced with the old Qwen preparation before comparison; historical files remain unchanged.
+
+## Run metadata and completion
+
+Each new score CSV has a sibling `<filename>.metadata.json` recording:
+
+- Run ID, UTC start/end times, and status (`loading_model`, `running`, `complete`, `failed`, or `interrupted`).
+- Input path/hash, cloze scale, and sentence/candidate counts.
+- Requested and resolved model/tokenizer revisions, device, precision, evaluation mode, and scoring method.
+- Installed package versions, Python/platform information, source-file hashes, Git commit, and whether the checkout had changes.
+- Scored/skipped counts, skip reasons, and the completed output's SHA-256 hash.
+
+No authentication tokens are included. `main` is resolved when loading the model; its resolved commit is also used for the tokenizer. If a revision cannot be resolved to a commit, the metadata reports null rather than implying it was pinned.
+
+The runner stages scores in a temporary file and publishes them after successful inference. Invalid/nonfinite scores cause failure. Model-loading failures and handled interruptions are recorded; a hard process kill can leave a `running` record and temporary file. Treat an output as complete only when its metadata status is `complete` and its hash matches the CSV.
+
+`--overwrite` explicitly replaces a previous run's metadata. If the replacement fails, the old score CSV is preserved, but the sidecar describes the failed new attempt and has no completed output hash. Use a new `--output` path when retaining earlier runs matters. Concurrent runs must use different output paths; do not share a path with `--overwrite`.

@@ -5,6 +5,10 @@ Requires torch and transformers, unlike the stand-in tests in tests/.
 """
 
 import unittest
+import csv
+import json
+from pathlib import Path
+import tempfile
 from unittest.mock import patch
 
 import torch
@@ -14,6 +18,7 @@ from transformers import (
 )
 
 from next_word_prediction.models import LanguageModel
+from next_word_prediction.pipeline import run_pipeline
 
 
 def tiny_model(name):
@@ -149,6 +154,24 @@ class NumericalScoringTests(unittest.TestCase):
             expected = logits[0, 3].log_softmax(-1)[8].item()
         self.assertAlmostEqual(actual, expected, delta=1e-5)
         self.assertIsNone(wrapper.predict_next_word(context, [8, 8]))
+        # Exercise the complete CSV -> real tiny model -> CSV + metadata path.
+        wrapper.model_name = "test/tiny-bert"
+        wrapper.requested_revision = "local-random-test"
+        wrapper.model_revision = wrapper.tokenizer_revision = None
+        with tempfile.TemporaryDirectory() as directory:
+            dataset = Path(directory) / "peelle.csv"
+            dataset.write_text("sentence_number,sentence,word,cloze_prob\n1,A context,answer,0.5\n")
+            output = Path(directory) / "bert.csv"
+            with patch("next_word_prediction.pipeline.create_model", return_value=wrapper):
+                self.assertEqual(run_pipeline(dataset, "bert", output), (1, 0))
+            with output.open() as file:
+                row = next(csv.DictReader(file))
+            self.assertAlmostEqual(float(row["bert_prob"]), expected, delta=1e-5)
+            metadata = json.loads(output.with_suffix(".csv.metadata.json").read_text())
+            self.assertEqual(metadata["status"], "complete")
+            self.assertEqual(metadata["model"]["dtype"], "torch.float32")
+            self.assertEqual(metadata["model"]["scoring_method"], "masked_token_with_period")
+
 
 
 if __name__ == "__main__":

@@ -9,15 +9,15 @@ description = "Compare language model predictions with human cloze data."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "torch",
-    "transformers",
-    "pandas",
+    "torch>=2.2,<3",
+    "transformers>=4.56,<6",
     "huggingface-hub",
     "python-dotenv",
 ]
 
 [project.optional-dependencies]
 analysis = [
+    "pandas",
     "numpy",
     "scikit-learn",
     "matplotlib",
@@ -28,6 +28,7 @@ analysis = [
 
 [project.scripts]
 next-word-prediction = "next_word_prediction.cli:main"
+prepare-cloze-data = "next_word_prediction.prepare:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

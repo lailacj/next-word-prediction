@@ -17,30 +17,66 @@ class LanguageModel:
     token on the sentence and the preceding continuation tokens.
     """
 
-    def __init__(self, name: str):
+    def __init__(self, name: str, *, device="cpu", dtype="float32", revision="main"):
         if name not in MODEL_IDS:
             raise ValueError(f"Unknown model {name!r}. Choose from: {', '.join(MODEL_IDS)}")
+        if dtype not in ("float32", "float16", "bfloat16"):
+            raise ValueError(f"Unsupported dtype: {dtype}")
 
-        # Keep configuration and CLI help available without ML dependencies.
         import torch
         from transformers import AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer
+
+        requested_device = torch.device(device)
+        if requested_device.type not in ("cpu", "cuda", "mps"):
+            raise ValueError("Device must be cpu, cuda, cuda:N, or mps.")
+        if requested_device.type == "cuda":
+            if not torch.cuda.is_available():
+                raise ValueError("CUDA was requested but is unavailable.")
+            if requested_device.index is not None and requested_device.index >= torch.cuda.device_count():
+                raise ValueError(f"CUDA device index is unavailable: {device}")
+        if requested_device.type == "mps" and not torch.backends.mps.is_available():
+            raise ValueError("MPS was requested but is unavailable.")
 
         self.name = name
         self.model_name = MODEL_IDS[name]
         self._torch = torch
-
+        self.requested_revision = revision
+        options = {}
         if name == "llama":
             from dotenv import load_dotenv
-            from huggingface_hub import login
 
             load_dotenv()
-            login(token=os.getenv("LLAMA_TOKEN"))
+            # Keep the existing alias without changing the user's global login.
+            token = os.getenv("LLAMA_TOKEN")
+            if token:
+                options["token"] = token
 
-        options = {"trust_remote_code": True} if name == "deepseek" else {}
         model_class = AutoModelForMaskedLM if name == "bert" else AutoModelForCausalLM
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, **options)
-        self.model = model_class.from_pretrained(self.model_name, **options)
+        self.model = model_class.from_pretrained(
+            self.model_name, revision=revision, dtype=getattr(torch, dtype), **options,
+        )
+        self.model.to(requested_device)
         self.model.eval()
+        self.model_revision = getattr(self.model.config, "_commit_hash", None)
+        # Pin the tokenizer to the revision actually loaded for the model.
+        tokenizer_revision = self.model_revision or revision
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            self.model_name, revision=tokenizer_revision, **options,
+        )
+        self.tokenizer_revision = self.model_revision
+
+    def run_metadata(self):
+        """Describe inference without including authentication credentials."""
+        return {
+            "name": self.name, "model_id": self.model_name,
+            "requested_revision": self.requested_revision,
+            "model_revision": self.model_revision,
+            "tokenizer_revision": self.tokenizer_revision,
+            "device": str(self.model.device), "dtype": str(self.model.dtype),
+            "evaluation_mode": not self.model.training,
+            "scoring_method": "masked_token_with_period" if self.name == "bert" else "causal_log_probability",
+            "tokenization_policy": "masked_context_period_v1" if self.name == "bert" else "stripped_context_single_space_continuation_v1",
+        }
 
     def tokenize_sentence(self, sentence: str):
         """Prepare a context; the candidate supplies the separating space."""

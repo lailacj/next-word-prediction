@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J next-word-prediction-pipeline
 #SBATCH -p gpu
-#SBATCH --gres=gpu:2
+#SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=64G
 #SBATCH --time 20:00:00

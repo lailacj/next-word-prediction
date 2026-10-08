@@ -3,6 +3,8 @@
 import contextlib
 import csv
 import io
+import json
+import hashlib
 from pathlib import Path
 import tempfile
 import unittest
@@ -13,6 +15,10 @@ from next_word_prediction import cli
 
 
 class FakeModel:
+    def run_metadata(self):
+        return {"model_id": "fake/model", "model_revision": "abc", "tokenizer_revision": "abc",
+                "device": "cpu", "dtype": "torch.float32"}
+
     def tokenize_sentence(self, sentence):
         return sentence
 
@@ -50,6 +56,8 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual([row["sentence_num"] for row in rows], ["42", "7"])
         self.assertEqual(rows[0]["sentence"], sentence)
         self.assertEqual(rows[0]["bert_prob"], "-1.25")
+        meta = json.loads(self.output.with_suffix(".csv.metadata.json").read_text())
+        self.assertEqual(meta["counts"]["skip_reasons"], {"empty_tokens": 1, "unsupported_word": 1})
 
     def test_existing_output_is_preserved_before_loading_model(self):
         self.output.parent.mkdir()
@@ -95,6 +103,63 @@ class PipelineTests(unittest.TestCase):
                 cli.main(["--dataset", str(self.dataset), "--model", "bert", "--cloze-scale", "percent"])
         self.assertEqual(run.call_args.kwargs["cloze_scale"], "percent")
 
+    def test_metadata_records_identity_settings_and_counts(self):
+        with patch.object(runner, "create_model", return_value=FakeModel()) as factory:
+            runner.run_pipeline(self.dataset, "qwen", self.output, device="cuda", dtype="float16", revision="abc")
+        factory.assert_called_once_with("qwen", device="cuda", dtype="float16", revision="abc")
+        meta = json.loads(self.output.with_suffix(".csv.metadata.json").read_text())
+        self.assertEqual(meta["status"], "complete")
+        self.assertEqual(meta["input"]["sha256"], hashlib.sha256(self.dataset.read_bytes()).hexdigest())
+        self.assertEqual(meta["output"]["sha256"], hashlib.sha256(self.output.read_bytes()).hexdigest())
+        self.assertEqual(meta["model"]["model_revision"], "abc")
+        self.assertEqual(meta["counts"]["scored"], 1)
+        self.assertEqual(meta["input"]["cloze_scale"], "proportion")
+        self.assertIn("python", meta["environment"])
+        self.assertIn("models.py", meta["code"]["source_sha256"])
+        self.assertIsNotNone(meta["finished_at"])
+
+    def test_failure_keeps_previous_scores_and_marks_metadata_failed(self):
+        self.output.parent.mkdir()
+        self.output.write_text("previous result")
+        model = FakeModel()
+        model.predict_next_word = lambda *args: float("nan")
+        with patch.object(runner, "create_model", return_value=model):
+            with self.assertRaisesRegex(ValueError, "Nonfinite"):
+                runner.run_pipeline(self.dataset, "qwen", self.output, overwrite=True)
+        self.assertEqual(self.output.read_text(), "previous result")
+        meta = json.loads(self.output.with_suffix(".csv.metadata.json").read_text())
+        self.assertEqual(meta["status"], "failed")
+        self.assertIsNone(meta["output"]["sha256"])
+        self.assertEqual(len(list(self.output.parent.iterdir())), 2)
+
+    def test_loading_failure_is_recorded_without_creating_scores(self):
+        with patch.object(runner, "create_model", side_effect=RuntimeError("load failed")):
+            with self.assertRaises(RuntimeError):
+                runner.run_pipeline(self.dataset, "qwen", self.output)
+        self.assertFalse(self.output.exists())
+        meta = json.loads(self.output.with_suffix(".csv.metadata.json").read_text())
+        self.assertEqual(meta["status"], "failed")
+
+    def test_metadata_collision_fails_before_loading(self):
+        self.output.parent.mkdir()
+        self.output.with_suffix(".csv.metadata.json").write_text("previous metadata")
+        with patch.object(runner, "create_model") as factory:
+            with self.assertRaises(FileExistsError):
+                runner.run_pipeline(self.dataset, "qwen", self.output)
+        factory.assert_not_called()
+
+    def test_interruption_is_recorded_and_no_partial_scores_are_published(self):
+        model = FakeModel()
+        def interrupt(*args):
+            raise KeyboardInterrupt()
+        model.predict_next_word = interrupt
+        with patch.object(runner, "create_model", return_value=model):
+            with self.assertRaises(KeyboardInterrupt):
+                runner.run_pipeline(self.dataset, "qwen", self.output)
+        self.assertFalse(self.output.exists())
+        meta = json.loads(self.output.with_suffix(".csv.metadata.json").read_text())
+        self.assertEqual(meta["status"], "interrupted")
+
     def test_cli_selects_model_and_default_or_explicit_output(self):
         for model in cli.MODEL_NAMES:
             for custom in (False, True):
@@ -107,7 +172,7 @@ class PipelineTests(unittest.TestCase):
                     with patch.object(cli, "run_pipeline", return_value=(3, 1)) as run:
                         with contextlib.redirect_stdout(io.StringIO()):
                             cli.main(argv)
-                    run.assert_called_once_with(self.dataset, model, expected, overwrite=custom, cloze_scale=None)
+                    run.assert_called_once_with(self.dataset, model, expected, overwrite=custom, cloze_scale=None, device="cpu", dtype="float32", revision="main")
 
 
 if __name__ == "__main__":

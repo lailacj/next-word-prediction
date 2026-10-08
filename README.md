@@ -68,7 +68,17 @@ source .venv/bin/activate
 python -m pip install -e .
 ```
 
-Dependencies are defined in [pyproject.toml](pyproject.toml). For plotting and exploratory analysis, use `python -m pip install -e ".[analysis]"`. The compatibility `requirements.txt` installs the package with those extras. Model weights are loaded from Hugging Face and require sufficient memory and an initial download. The Llama wrapper reads a Hugging Face token from `LLAMA_TOKEN` in the environment or a `.env` file.
+Dependencies are defined in [pyproject.toml](pyproject.toml). For plotting and exploratory analysis, use `python -m pip install -e ".[analysis]"`. The compatibility `requirements.txt` installs the package with those extras. The [validation constraints](constraints-validation.txt) record the exact package versions used for CPU checks; use `python -m pip install -e . -c constraints-validation.txt` to request that version set. Wheel availability and accelerator support depend on the platform. Model weights are loaded from Hugging Face and require sufficient memory and an initial download. For Llama, configure an authorized Hugging Face login or `HF_TOKEN`; the existing `LLAMA_TOKEN` alias (including `.env`) is also supported. Loading does not change your global login or prompt interactively.
+
+### Prepare inputs
+
+The four validated CSVs in `data/processed/` are ready to use. To rebuild them from the imported sources, use the maintained preparation command:
+
+```sh
+prepare-cloze-data --output-dir data/rebuilt
+```
+
+This writes CSVs and `.csv.preparation.json` files containing source/output hashes, source row counts, cloze scales, and transformation details. It reproduces the existing structured records exactly. Use `--datasets michaelov_2024` for one dataset or `--overwrite` to intentionally replace outputs. See the [dataset guide](data/README.md) for the conversion rules. The original source files and upstream scripts remain unchanged.
 
 ### Choose an input and model
 
@@ -97,9 +107,32 @@ By default, scores are written to `results/<dataset stem>/<model>.csv` under the
 next-word-prediction --dataset data/processed/nieuwland_2018.csv --model deepseek --output results/my_run.csv
 ```
 
-Input and explicit output paths are relative to your working directory. Existing output files are preserved unless you pass `--overwrite`. Datasets with the same filename stem share a default output location, so use `--output` to distinguish them.
+Input and explicit output paths are relative to your working directory. Existing score CSVs and metadata files are preserved unless you pass `--overwrite`. Datasets with the same filename stem share a default output location, so use `--output` to distinguish them.
+
+Each run writes a `.csv.metadata.json` sidecar with input and output hashes, model/tokenizer revisions, device and precision, package versions, source-code hashes, Git state, timestamps, and scored/skipped counts. Scores are staged and published only when inference completes successfully. Failed or interrupted runs leave a sidecar with that status; use only outputs with matching hashes and `status: complete`. See the [results guide](results/README.md).
 
 The runner reports the number of scored and skipped candidates. Use `next-word-prediction --help` for options; help works without installing model dependencies. Module invocation (`python -m next_word_prediction`) also works with the same arguments.
+
+### Device, precision, and repeat runs
+
+Defaults are explicit: CPU, `float32`, and revision `main`. Choose an accelerator and precision for your machine:
+
+```sh
+next-word-prediction --dataset data/processed/michaelov_2024.csv --model bert --device cuda --dtype float32
+next-word-prediction --dataset data/processed/szewczyk_2022.csv --model qwen --device cuda:0 --dtype bfloat16
+```
+
+`--device` accepts `cpu`, `cuda`, `cuda:N`, and `mps`; `--dtype` accepts `float32`, `float16`, and `bfloat16`. Requested accelerators must be available. Precision support and memory capacity still depend on the hardware. The runner uses one device per process; it does not shard models across GPUs.
+
+Use `--revision <commit>` to repeat the checkpoint recorded in a previous run. The tokenizer loads from the same resolved model commit. Package versions and source hashes are recorded, but exact numerical reproduction across different hardware is not guaranteed.
+
+After configuring the environment and Llama access, the complete 16-run workflow is:
+
+```sh
+bash scripts/run_all.sh --device cuda --dtype float32
+```
+
+It runs four datasets for each of BERT, DeepSeek, Qwen, and Llama sequentially and stops on the first failure. It preserves existing outputs by default. Choose device and precision for the intended machine before starting; the cleanup itself does not launch this workflow.
 
 ### Model interface
 
@@ -139,9 +172,9 @@ PYTHONPATH=src python3 -m next_word_prediction --help
 
 The lightweight tests check dataset validation, runner output handling, and model dispatch using fixtures and stand-ins.
 
-The numerical integration tests exercise the production Qwen, DeepSeek, and Llama scoring methods with real CPU tensors and tiny models. They compare single-token and multi-token scores against an independent, uncached forward pass over the entire prompt and continuation, with an absolute tolerance of `1e-5` in summed natural log probability. They also check DeepSeek attention masks, Llama's cache, candidate-order independence, unchanged context tensors, and evaluation mode. A separate BERT test compares the masked-word score with a direct calculation at an independently specified mask position.
+The numerical integration tests exercise the production Qwen, DeepSeek, and Llama scoring methods with real CPU tensors and tiny models. They compare single-token and multi-token scores against an independent, uncached forward pass over the entire prompt and continuation, with an absolute tolerance of `1e-5` in summed natural log probability. They also check DeepSeek attention masks, Llama's cache, candidate-order independence, unchanged context tensors, and evaluation mode. A separate BERT test compares the masked-word score with a direct calculation at an independently specified mask position and exercises the full CSV-to-score-and-metadata path with that tiny model.
 
-Validation passed with Python 3.14, PyTorch 2.14.1, and Transformers 5.18.0: 31 lightweight tests and five integration tests. These validate scoring on tiny models; full-size checkpoints and GPU execution have not been tested. The separate pretrained-tokenizer audit below checks the supplied dataset boundaries.
+Validation passed with Python 3.14, PyTorch 2.14.1, and Transformers 5.19.0: 47 lightweight tests and five integration tests. These validate scoring on tiny models; full-size checkpoints and GPU execution have not been tested. The separate pretrained-tokenizer audit below checks the supplied dataset boundaries.
 
 ### Tokenization and inference settings
 
@@ -162,7 +195,7 @@ The [audit report](docs/tokenization_audit.json) records the resolved tokenizer 
 
 BERT retains its existing `sentence + " [MASK]."` prompt, including the period to the right of the mask. It scores a single masked token with that right context; its scores should be distinguished from causal next-token scores. The period and multi-token exclusion are unchanged research choices.
 
-Inference uses evaluation mode and `no_grad()`. All tokenized inputs move to the model's device. Qwen and DeepSeek disable cache creation because they pass the full growing context each time; Llama reuses its cache. Model loading has no device-map or precision override, so this code does not automatically use an allocated GPU or select mixed precision. Tokenization does not request padding or truncation; long inputs still need to fit the model's context window.
+Inference uses evaluation mode and `no_grad()`. All tokenized inputs move to the model's device. Qwen and DeepSeek disable cache creation because they pass the full growing context each time; Llama reuses its cache. Device and dtype are explicit CLI settings; defaults are CPU and float32. GPU allocation alone does not change them. Tokenization does not request padding or truncation; long inputs still need to fit the model's context window.
 
 ### DeepSeek scoring correction
 

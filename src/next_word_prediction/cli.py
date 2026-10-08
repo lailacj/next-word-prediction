@@ -22,6 +22,9 @@ def build_parser():
         "--output", type=Path,
         help="Output CSV (default: <working directory>/results/<dataset stem>/<model>.csv).",
     )
+    parser.add_argument("--device", default="cpu", help="cpu (default), cuda, cuda:N, or mps.")
+    parser.add_argument("--dtype", choices=("float32", "float16", "bfloat16"), default="float32")
+    parser.add_argument("--revision", default="main", help="Hugging Face model revision; use a commit hash for repeat runs.")
     parser.add_argument("--overwrite", action="store_true", help="Replace an existing output CSV.")
     return parser
 
@@ -33,8 +36,9 @@ def main(argv=None):
     try:
         scored, skipped = run_pipeline(
             args.dataset, args.model, output, overwrite=args.overwrite, cloze_scale=args.cloze_scale,
+            device=args.device, dtype=args.dtype, revision=args.revision,
         )
-    except (OSError, ValueError) as error:
+    except (OSError, ValueError, RuntimeError) as error:
         parser.exit(1, f"Error: {error}\n")
     print(f"Wrote {scored} scores to {output}; skipped {skipped} candidates.")
 

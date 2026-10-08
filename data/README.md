@@ -131,7 +131,21 @@ Text and IDs are preserved after normal CSV decoding, including literal quotes, 
 
 Source files are never rewritten. Normalization happens in memory; the score output schema remains unchanged and does not include the normalized cloze values. Use the structured records above for analysis.
 
-The source [data_parsing.py](sources/james-michaelov_data/data_organization/data_parsing.py) writes to `sources/james-michaelov_data/parsed_data/` with a different header (`sentence_num,FullText,target_word,cloz`). Its output is not directly compatible with the current pipeline loader.
+## Preparing inputs from source
+
+Use `prepare-cloze-data` (or `python -m next_word_prediction.prepare`) from the repository root:
+
+```sh
+prepare-cloze-data --output-dir data/rebuilt
+```
+
+The default source directory is `data/sources/`. The command supports all four datasets; select a subset with `--datasets` and choose another source root with `--source-dir`. Existing output CSVs and preparation manifests require `--overwrite` to replace.
+
+For Michaelov, Nieuwland, and Szewczyk, the source TSV's `FullText` includes the target. Preparation verifies that it ends with a space followed by `TargetWords`, removes that terminal target, and deduplicates repeated participant/electrode measurements by context and target. It preserves distinct alternatives and rejects conflicting cloze values. Each distinct context/target pair receives an ID in first-seen order, matching the existing prepared files. Peelle already has the prepared schema, so its IDs and candidate rows are retained.
+
+Preparation preserves the source cloze scale; normalization remains the loader's responsibility. All generated CSVs are validated before publication. A `.csv.preparation.json` sidecar records source/output SHA-256 hashes, candidate counts, removed repeated measurements, and the context rule. Validation against the imported sources reproduced all 58,146 candidate records exactly without rewriting the checked-in files.
+
+The original [data_parsing.py](sources/james-michaelov_data/data_organization/data_parsing.py) remains an upstream reference; its schema and target handling are superseded by the maintained preparation command.
 
 ## Model outputs
 
