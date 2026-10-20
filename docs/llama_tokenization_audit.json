@@ -1,0 +1,63 @@
+{
+  "torch": "2.11.0+cu128",
+  "transformers": "5.19.0",
+  "models": {
+    "llama": {
+      "model_id": "meta-llama/Llama-3.2-1B",
+      "requested_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+      "resolved_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+      "status": "ok",
+      "boundary_check": "separate_vs_joint",
+      "special_tokens": {
+        "bos_token": "<|begin_of_text|>",
+        "eos_token": "<|end_of_text|>"
+      },
+      "datasets": [
+        {
+          "dataset": "data/processed/michaelov_2024.csv",
+          "candidates": 500,
+          "single_token": 493,
+          "sha256": "6747f65af3ffb9e50202779a6a2fdaeddc61e3e193ec7d7cecc7a77644307180",
+          "multi_token": 7,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/nieuwland_2018.csv",
+          "candidates": 160,
+          "single_token": 148,
+          "sha256": "a3e785a4270cacf55ca47f29c6048c51f603a69dd216f97778a7cf66b579e6a8",
+          "multi_token": 12,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/peelle.csv",
+          "candidates": 56156,
+          "single_token": 46284,
+          "sha256": "1b7230388ae90c3fd6f9075be51dd1352d9fd559ce5ae31c546920cbf823014c",
+          "multi_token": 9872,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        },
+        {
+          "dataset": "data/processed/szewczyk_2022.csv",
+          "candidates": 1330,
+          "single_token": 1272,
+          "sha256": "a3a7a3fec135aeeabb7be92c1882c0c6302572ae586a1870c51d9deab4227c14",
+          "multi_token": 58,
+          "empty": 0,
+          "unknown": 0,
+          "boundary_mismatches": 0,
+          "examples": []
+        }
+      ]
+    }
+  }
+}

@@ -86,6 +86,12 @@ sbatch --partition=gpu --gres=gpu:l40s:1 --cpus-per-task=4 --mem=64G --time=01:0
   scripts/run_pipeline.sh --dataset data/processed/michaelov_2024.csv \
   --model deepseek --device cuda --dtype float32 \
   --output results/pilot/michaelov_2024/deepseek.csv
+
+sbatch --partition=gpu --gres=gpu:l40s:1 --cpus-per-task=4 --mem=64G --time=01:00:00 \
+  scripts/run_pipeline.sh --dataset data/processed/michaelov_2024.csv \
+  --model llama --device cuda --dtype float32 \
+  --revision 4e20de362430cd3b72f300e6b0f18e50e7166e08 \
+  --output results/pilot/michaelov_2024/llama.csv
 ```
 
 These commands inherit the active environment. SLURM command-line options
@@ -108,7 +114,7 @@ Before accepting a pilot, verify:
 - The score sidecar has `status: complete`, the requested CUDA device and
   float32 precision, and matching input/output SHA-256 hashes.
 - BERT scores 492 Michaelov candidates and skips eight multi-token words;
-  DeepSeek scores all 500. Scores are finite natural log probabilities.
+  DeepSeek, Qwen, and Llama each score all 500. Scores are finite natural log probabilities.
 - CSV sentence IDs, contexts, and words match the prepared dataset.
 
 The [results guide](../results/README.md) describes metadata and failure states.
@@ -146,6 +152,27 @@ recorded source commit. Git normalizes the CSV's line endings, so the remote
 input's byte hash differs from the Mac working copy; their parsed records are
 identical.
 
+### Llama validation: October 20, 2026
+
+After configuring gated access, job `7662897` completed the Llama tokenizer
+audit and Michaelov pilot on `gpu3101` (NVIDIA L40S) in 1 minute 12 seconds.
+It used the same CUDA 12.8 environment and float32 inference as the earlier pilots,
+with model and tokenizer pinned to `4e20de362430cd3b72f300e6b0f18e50e7166e08`.
+
+The [Llama audit](llama_tokenization_audit.json) covers all 58,146 candidates:
+48,197 single-token and 9,949 multi-token words, with zero boundary mismatches,
+empty encodings, or unknown tokens. The pilot scored all 500 Michaelov candidates
+with zero skips. Remote and local checks verified hashes, candidate identities,
+finite nonpositive scores, CUDA float32 settings, and the requested revision.
+Local checks also confirmed Python source hashes and equivalence between the
+audited inputs and the local CSV records.
+
+The existing `--model llama` adapter needed no changes. Its cached multi-token
+scoring is now exercised with the pretrained checkpoint on CUDA. Evidence is in
+`logs/llama-validation.7662897.out`, `.err`, `logs/llama-validation.sbatch`, and
+`results/pilot/michaelov_2024/llama.csv` with its metadata sidecar. Copies are in
+the local `results/oscar-validation/` directory.
+
 ### Pin checkpoint revisions for production
 
 The automatic model/tokenizer revision fields were null in these pilot sidecars.
@@ -157,32 +184,35 @@ after the pilots match the existing tokenizer audit:
 | BERT     | `bf1420893378c390773c9452c3602fcee89f9241` |
 | DeepSeek | `ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562` |
 | Qwen     | `d149729398750b98c0af14eb82c78cfe92750796` |
+| Llama    | `4e20de362430cd3b72f300e6b0f18e50e7166e08` |
 
 Pass the corresponding `--revision <commit>` to each production job. This pins
 both model and tokenizer downloads and records the exact requested commit even
-when automatic revision extraction is unavailable. Resolve and audit Llama's
-commit after gaining access. The current all-model batch script cannot select
+when automatic revision extraction is unavailable. Llama's audit and pilot used
+the explicit commit above. The current all-model batch script cannot select
 different revisions per model, so use individual CLI submissions for these
 pinned runs.
 
 ## Remaining checks and full runs
 
-Run the lightweight and numerical integration suites in a compute allocation
-using the commands in the [main README](../README.md#tests). After Llama access
-is available, audit all four tokenizers against all four datasets:
+All four model pilots and tokenizer audits have passed. The full 16 production
+runs have not started. When changing dependencies or inference code, rerun the
+tests in a compute allocation using the [main README](../README.md#tests).
+To repeat the Llama tokenizer audit at its validated revision:
 
 ```sh
-python scripts/audit_tokenization.py --datasets data/processed/*.csv \
-  > logs/tokenization_audit.json
+python scripts/audit_tokenization.py --models llama \
+  --revision 4e20de362430cd3b72f300e6b0f18e50e7166e08 \
+  --datasets data/processed/*.csv > logs/llama-tokenization-audit-repeat.json
 ```
 
 Schedule that audit through SLURM as well; it loads tokenizer files but no model
 weights. Retain its report and check its exit status before Llama scoring.
 
-After validating pilots, submit individual model/dataset jobs using the same
-launcher and omit `--output` to use production paths. Measure runtime before
-choosing a time limit for Peelle's 56,156 candidates. Qwen's larger checkpoint
-also needs a pilot on the selected GPU before its full run.
+Submit individual model/dataset jobs using the same launcher, pass the model's
+validated `--revision`, and omit `--output` to use production paths. Allow for
+Peelle's 56,156 candidates when choosing a time limit; its runtime has not yet
+been measured. All four checkpoints fit the selected L40S in the Michaelov pilots.
 
 `scripts/run_all.sh` runs all 16 combinations sequentially and must itself run
 inside a GPU allocation. It stops at the first failure and does not skip existing

@@ -28,7 +28,13 @@ The first run downloads tokenizer files. Add `--local-files-only` for an offline
 
 The script prints JSON containing input hashes, resolved tokenizer revisions, candidate token counts, and separate-versus-joint tokenization mismatches. It uses the production token preparation methods. BERT reports token coverage instead of a causal boundary comparison. Exit status is nonzero if a requested tokenizer is unavailable or an input produces a boundary mismatch, an empty encoding, or an unknown token. Expected multi-token BERT exclusions do not make the audit fail.
 
-The reviewed [audit report](../docs/tokenization_audit.json) includes the unavailable Llama tokenizer explicitly. It covers Qwen, DeepSeek, and BERT across all four prepared datasets.
+The original [audit report](../docs/tokenization_audit.json) covers Qwen, DeepSeek, and BERT across all four prepared datasets and records Llama as unavailable at that time. The subsequent [Llama audit](../docs/llama_tokenization_audit.json) passed across all four datasets after gated access was configured on Oscar. Reproduce it with:
+
+```sh
+python scripts/audit_tokenization.py --models llama \
+  --revision 4e20de362430cd3b72f300e6b0f18e50e7166e08 \
+  --datasets data/processed/*.csv
+```
 
 ## Complete scoring workflow
 
