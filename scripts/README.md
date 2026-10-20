@@ -1,5 +1,7 @@
 # Scripts
 
+For the configured Brown cluster environment, see the [Oscar runbook](../docs/oscar.md).
+
 ## SLURM launcher
 
 Install the package in an environment available on the compute node, activate that environment, and submit from the repository root:
