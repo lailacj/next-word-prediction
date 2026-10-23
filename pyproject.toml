@@ -29,6 +29,7 @@ analysis = [
 [project.scripts]
 next-word-prediction = "next_word_prediction.cli:main"
 prepare-cloze-data = "next_word_prediction.prepare:main"
+combine-peelle-cloze = "next_word_prediction.combine_peelle:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

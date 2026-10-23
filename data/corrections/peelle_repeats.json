@@ -1,0 +1,841 @@
+{
+  "schema_version": 1,
+  "input_sha256": "1b7230388ae90c3fd6f9075be51dd1352d9fd559ce5ae31c546920cbf823014c",
+  "upstream": {
+    "repository": "https://github.com/jpeelle/sentence-prediction",
+    "revision": "6bdd4426c35a76b2b1eecbe904d7277d061ea134",
+    "sha256": {
+      "predict_sent_analysis.py": "3ea2358b1e44e476d5558413e2f7214425c431e62ff24dedd95083b841d3b8b5",
+      "example/replacements.csv": "894a9490dc27cd2c437c4de063d6c991085d7436c8829a58d4b9346dc93b64c1",
+      "example/anonymized_fill-in-1x35.csv": "32aca9a16bc7b97f7373080da104bf2cd09f45bf7abd577bbc0c11ac77473b75",
+      "example/anonymized_fill-in-1x50.csv": "498aa70008c830f557339301c3d837b94c7e2713dd7ddb3986f35eac2a8cb6e8",
+      "example/anonymized_fill-in-61x50.csv": "a092bcc9100132f476f4fec9bc43ffa8a7869f4c2f84de4e5ff09d02040c9209",
+      "example/censors.csv": "882c5409fa7789032a14e6e812ab3521dc686155660346fffa5fb9335abefef4",
+      "example/excluded_workers.txt": "4e7e0d6fa20ca128074d1d965e32025191c204867293760b797e007e2c8aaf63"
+    }
+  },
+  "recovery": "scripts/recover_peelle_counts.py; original upstream csv_reader and word_replacer",
+  "canonicalization": "strip boundary whitespace; replace hyphens with spaces; repeated keys only",
+  "groups": [
+    {
+      "sentence_number": "9",
+      "sentence": "Tim was very tired, so he was difficult to",
+      "word": "arouse",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "arouse",
+          "count": 3,
+          "total": 103,
+          "published_cloze": 0.03
+        },
+        {
+          "word": "arouse ",
+          "count": 1,
+          "total": 103,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "43",
+      "sentence": "The audio was normal but the video had a",
+      "word": "stutter",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "stutter ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "stutter",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "105",
+      "sentence": "The woman said the blue stone was genuine",
+      "word": "sapphire",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "sapphire",
+          "count": 53,
+          "total": 105,
+          "published_cloze": 0.5
+        },
+        {
+          "word": "sapphire ",
+          "count": 5,
+          "total": 105,
+          "published_cloze": 0.05
+        }
+      ]
+    },
+    {
+      "sentence_number": "174",
+      "sentence": "The spy agency tried to locate agents who had gone",
+      "word": "awol",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "awol",
+          "count": 4,
+          "total": 105,
+          "published_cloze": 0.04
+        },
+        {
+          "word": "awol ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "207",
+      "sentence": "The teacher told the troublemaker's parents they had to",
+      "word": "discipline",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "discipline",
+          "count": 16,
+          "total": 104,
+          "published_cloze": 0.15
+        },
+        {
+          "word": "discipline ",
+          "count": 2,
+          "total": 104,
+          "published_cloze": 0.02
+        }
+      ]
+    },
+    {
+      "sentence_number": "224",
+      "sentence": "The cranky neighbor yelled at the kids to",
+      "word": "shut up",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "shut up",
+          "count": 1,
+          "total": 104,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "shut up ",
+          "count": 4,
+          "total": 104,
+          "published_cloze": 0.04
+        }
+      ]
+    },
+    {
+      "sentence_number": "317",
+      "sentence": "The tailor fastened the pant's edge with a",
+      "word": "safety pin",
+      "cause": "hyphen_to_space",
+      "variants": [
+        {
+          "word": "safety-pin",
+          "count": 1,
+          "total": 104,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "safety pin",
+          "count": 1,
+          "total": 104,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "335",
+      "sentence": "The chef was known for his fragrant and flavorful",
+      "word": "soups",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "soups",
+          "count": 6,
+          "total": 104,
+          "published_cloze": 0.06
+        },
+        {
+          "word": "soups ",
+          "count": 5,
+          "total": 104,
+          "published_cloze": 0.05
+        }
+      ]
+    },
+    {
+      "sentence_number": "343",
+      "sentence": "At the baseball game, Isaac bought a",
+      "word": "souvenir",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "souvenir ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "souvenir",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "403",
+      "sentence": "Pat thought she looked much better with a light",
+      "word": "hair color",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "hair color ",
+          "count": 1,
+          "total": 104,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "hair color",
+          "count": 1,
+          "total": 104,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "647",
+      "sentence": "Kenneth needed a new pen after breaking the",
+      "word": "other",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "other",
+          "count": 21,
+          "total": 104,
+          "published_cloze": 0.2
+        },
+        {
+          "word": "other ",
+          "count": 1,
+          "total": 104,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "781",
+      "sentence": "The mother was angry when she realized her daughter's",
+      "word": "pregnancy",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "pregnancy",
+          "count": 2,
+          "total": 105,
+          "published_cloze": 0.02
+        },
+        {
+          "word": "pregnancy ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "785",
+      "sentence": "Ethan started coughing and he began to loudly",
+      "word": "wheeze",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "wheeze",
+          "count": 11,
+          "total": 105,
+          "published_cloze": 0.1
+        },
+        {
+          "word": "wheeze ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1013",
+      "sentence": "Most of the college students wore clothing made of",
+      "word": "cotton",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "cotton",
+          "count": 57,
+          "total": 105,
+          "published_cloze": 0.54
+        },
+        {
+          "word": "cotton ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1035",
+      "sentence": "Kelly heard that the newest gadget was sold",
+      "word": "separately",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "separately",
+          "count": 2,
+          "total": 105,
+          "published_cloze": 0.02
+        },
+        {
+          "word": "separately ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1052",
+      "sentence": "Maxwell took a shortcut and was beaten by a",
+      "word": "minute",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": " minute",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "minute",
+          "count": 2,
+          "total": 105,
+          "published_cloze": 0.02
+        }
+      ]
+    },
+    {
+      "sentence_number": "1229",
+      "sentence": "Tara preferred the bright-colored couch over the",
+      "word": "dark colored",
+      "cause": "hyphen_to_space",
+      "variants": [
+        {
+          "word": "dark-colored",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "dark colored",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1235",
+      "sentence": "The teen girl's entire outfit was made from",
+      "word": "cotton",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "cotton",
+          "count": 23,
+          "total": 105,
+          "published_cloze": 0.22
+        },
+        {
+          "word": "cotton ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1250",
+      "sentence": "The cardinals wondered which of them would become the",
+      "word": "champion",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "champion ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "champion",
+          "count": 2,
+          "total": 105,
+          "published_cloze": 0.02
+        }
+      ]
+    },
+    {
+      "sentence_number": "1570",
+      "sentence": "When Sheldon is upset, others can hear his teeth",
+      "word": "chatter",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "chatter",
+          "count": 39,
+          "total": 105,
+          "published_cloze": 0.37
+        },
+        {
+          "word": "chatter ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1686",
+      "sentence": "They perceived her as simple but her writings were",
+      "word": "extraordinary",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "extraordinary ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "extraordinary",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1735",
+      "sentence": "The elderly man's dank basement was like a",
+      "word": "prison",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "prison",
+          "count": 7,
+          "total": 105,
+          "published_cloze": 0.07
+        },
+        {
+          "word": "prison ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1909",
+      "sentence": "Daniel's attempt at the dance routine looked more like a",
+      "word": "seizure",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "seizure",
+          "count": 26,
+          "total": 105,
+          "published_cloze": 0.25
+        },
+        {
+          "word": "seizure ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "1937",
+      "sentence": "In physics lab, Roland had to calculate the",
+      "word": "number",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "number",
+          "count": 2,
+          "total": 105,
+          "published_cloze": 0.02
+        },
+        {
+          "word": "number ",
+          "count": 2,
+          "total": 105,
+          "published_cloze": 0.02
+        }
+      ]
+    },
+    {
+      "sentence_number": "2000",
+      "sentence": "Alexander just knew that he would win the big",
+      "word": "raffle",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "raffle ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "raffle",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2041",
+      "sentence": "The boy's father called the white sea bird a",
+      "word": "menace",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "menace",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "menace ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2209",
+      "sentence": "The younger kids couldn't sit still during",
+      "word": "movies",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "movies ",
+          "count": 2,
+          "total": 104,
+          "published_cloze": 0.02
+        },
+        {
+          "word": "movies",
+          "count": 2,
+          "total": 104,
+          "published_cloze": 0.02
+        }
+      ]
+    },
+    {
+      "sentence_number": "2223",
+      "sentence": "She never recovered because there was damage to a",
+      "word": "nerves",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "nerves ",
+          "count": 44,
+          "total": 104,
+          "published_cloze": 0.42
+        },
+        {
+          "word": "nerves",
+          "count": 1,
+          "total": 104,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2253",
+      "sentence": "Allison was also from Britain but from a different",
+      "word": "province",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "province ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "province",
+          "count": 3,
+          "total": 105,
+          "published_cloze": 0.03
+        }
+      ]
+    },
+    {
+      "sentence_number": "2269",
+      "sentence": "When it's hot, Liz always wears her hair in",
+      "word": "ponytail",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "ponytail",
+          "count": 10,
+          "total": 105,
+          "published_cloze": 0.1
+        },
+        {
+          "word": "ponytail ",
+          "count": 6,
+          "total": 105,
+          "published_cloze": 0.06
+        }
+      ]
+    },
+    {
+      "sentence_number": "2550",
+      "sentence": "Through the thin walls, Hank heard his mother loudly",
+      "word": "crying",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "crying ",
+          "count": 4,
+          "total": 104,
+          "published_cloze": 0.04
+        },
+        {
+          "word": "crying",
+          "count": 7,
+          "total": 104,
+          "published_cloze": 0.07
+        }
+      ]
+    },
+    {
+      "sentence_number": "2563",
+      "sentence": "After her injury, Kate took time off work to",
+      "word": "recuperate",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "recuperate",
+          "count": 10,
+          "total": 104,
+          "published_cloze": 0.1
+        },
+        {
+          "word": "recuperate ",
+          "count": 1,
+          "total": 104,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2627",
+      "sentence": "The young warrior had yet to make his first",
+      "word": "appearance",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "appearance ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "appearance",
+          "count": 2,
+          "total": 105,
+          "published_cloze": 0.02
+        }
+      ]
+    },
+    {
+      "sentence_number": "2698",
+      "sentence": "Brian was short of a dozen eggs with only",
+      "word": "eleven",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "eleven",
+          "count": 42,
+          "total": 105,
+          "published_cloze": 0.4
+        },
+        {
+          "word": "eleven ",
+          "count": 3,
+          "total": 105,
+          "published_cloze": 0.03
+        }
+      ]
+    },
+    {
+      "sentence_number": "2703",
+      "sentence": "During the crazy storm, the pedestrians hoped for a",
+      "word": "shelter",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "shelter",
+          "count": 10,
+          "total": 105,
+          "published_cloze": 0.1
+        },
+        {
+          "word": "shelter ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2703",
+      "sentence": "During the crazy storm, the pedestrians hoped for a",
+      "word": "covering",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "covering",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "covering ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2714",
+      "sentence": "The grumpy woman greeted them with a",
+      "word": "sneer",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "sneer",
+          "count": 12,
+          "total": 105,
+          "published_cloze": 0.11
+        },
+        {
+          "word": "sneer ",
+          "count": 2,
+          "total": 105,
+          "published_cloze": 0.02
+        }
+      ]
+    },
+    {
+      "sentence_number": "2716",
+      "sentence": "Grandpa couldn't stay asleep because of his",
+      "word": "snoring",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "snoring",
+          "count": 15,
+          "total": 105,
+          "published_cloze": 0.14
+        },
+        {
+          "word": "snoring ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2720",
+      "sentence": "His mother was terrified when he climbed onto the",
+      "word": "mountain",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "mountain",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        },
+        {
+          "word": "mountain ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2726",
+      "sentence": "Kelsey threw out all of his papers in a",
+      "word": "trashcan",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "trashcan",
+          "count": 3,
+          "total": 105,
+          "published_cloze": 0.03
+        },
+        {
+          "word": "trashcan ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    },
+    {
+      "sentence_number": "2728",
+      "sentence": "The little boy got scared, turned around, and",
+      "word": "screamed",
+      "cause": "boundary_whitespace",
+      "variants": [
+        {
+          "word": "screamed",
+          "count": 7,
+          "total": 105,
+          "published_cloze": 0.07
+        },
+        {
+          "word": "screamed ",
+          "count": 1,
+          "total": 105,
+          "published_cloze": 0.01
+        }
+      ]
+    }
+  ]
+}
