@@ -9,8 +9,10 @@ This directory contains source data and analysis code, plus prepared cloze input
 | [sources/james-michaelov_data/](sources/james-michaelov_data/) | Preprocessed datasets and code for Michaelov and Bergen's N400 and reading-time comparison; see its [upstream README](sources/james-michaelov_data/README.md) |
 | [sources/jakub_kara_data/](sources/jakub_kara_data/) | Analysis and procedure files associated with Szewczyk and Federmeier |
 | [sources/james_megan_cyma_data/](sources/james_megan_cyma_data/) | Data, scripts, and analyses for *Strong Prediction* |
-| [sources/peelle_data/](sources/peelle_data/) | An additional `cloze_data.csv`; its publication mapping is not specified in the supplied notes |
+| [sources/peelle_data/](sources/peelle_data/) | Imported cloze norms from Peelle and colleagues (2020) |
 | [processed/](processed/) | Four prepared CSV inputs for the pipeline |
+| [analysis/](analysis/) | Peelle cloze table with the 41 repeated candidate pairs combined |
+| [corrections/](corrections/) | Original response counts and provenance for those combinations |
 | [../results/legacy/](../results/legacy/) | Original `Model_*` output directories, preserved unchanged |
 
 ## Studies and source links
@@ -72,6 +74,15 @@ The notes include another paper and dataset without an author list or title:
 - [Code and N400 data on OSF](https://osf.io/5rtn4)
 
 Its relationship to the local directories still needs to be established.
+
+### 6. Peelle and colleagues — Sentence completion norms
+
+**Peelle JE, Miller RL, Rogers CS, Spehar B, Sommers MS, and Van Engen KJ (2020).** *Completion norms for 3085 English sentence contexts.* Behavior Research Methods, 52, 1795–1799.
+
+- [Paper](https://doi.org/10.3758/s13428-020-01351-1)
+- [Upstream data and counting code](https://github.com/jpeelle/sentence-prediction/tree/6bdd4426c35a76b2b1eecbe904d7277d061ea134)
+- Imported source: [sources/peelle_data/cloze_data.csv](sources/peelle_data/cloze_data.csv)
+- Corrected analysis input: [analysis/peelle.csv](analysis/peelle.csv)
 
 ## Prepared pipeline inputs
 
@@ -146,6 +157,45 @@ For Michaelov, Nieuwland, and Szewczyk, the source TSV's `FullText` includes the
 Preparation preserves the source cloze scale; normalization remains the loader's responsibility. All generated CSVs are validated before publication. A `.csv.preparation.json` sidecar records source/output SHA-256 hashes, candidate counts, removed repeated measurements, and the context rule. Validation against the imported sources reproduced all 58,146 candidate records exactly without rewriting the checked-in files.
 
 The original [data_parsing.py](sources/james-michaelov_data/data_organization/data_parsing.py) remains an upstream reference; its schema and target handling are superseded by the maintained preparation command.
+
+## Combining the Peelle repeats for analysis
+
+Use [analysis/peelle.csv](analysis/peelle.csv) for Peelle cloze joins. It has **56,115 unique sentence/word pairs across 3,085 sentences**. The original [processed/peelle.csv](processed/peelle.csv) remains the 56,156-row input used by the completed scoring runs.
+
+There were 41 repeated pairs: 39 came from upstream answer categories differing only in boundary whitespace, and two from `safety-pin`/`safety pin` and `dark-colored`/`dark colored`. Upstream replacement entries introduced the whitespace variants; the imported file contains the same text for both members of each pair. All 41 pairs are combined, including pairs with equal published probabilities.
+
+Each merged cloze value is **the sum of the original category counts divided by their shared sentence response total**. The counts were recovered by replaying the upstream counting functions with the original response files, replacement table, censor list, and worker exclusions. All 82 category counts reproduce the imported rounded probabilities. Examples:
+
+| Sentence | Candidate | Imported cloze values | Combined count | Recalculated cloze |
+| --- | --- | --- | --- | --- |
+| 105 | sapphire | 0.50, 0.05 | 58 / 105 | 0.552381 |
+| 2269 | ponytail | 0.10, 0.06 | 16 / 105 | 0.152381 |
+| 317 | safety pin | 0.01, 0.01 | 2 / 104 | 0.019231 |
+
+The CSV retains full floating-point precision for these merged values. The other 56,074 rows keep their original published cloze values, IDs, text, and order. Published values are rounded to two decimals, so per-sentence sums need not equal one; this step does not renormalize them or recalculate unaffected categories. A merged row occupies its first occurrence in the original file.
+
+Regenerate the corrected CSV using the checked-in count evidence; this requires neither model weights nor network access:
+
+```sh
+PYTHONPATH=src python -m next_word_prediction.combine_peelle
+# After installing the package: combine-peelle-cloze
+```
+
+Use `--output` for another destination or `--overwrite` to regenerate existing output. The command checks the input SHA-256, covers every repeated key, verifies counts against the original probabilities, and rejects conflicting contexts or denominators. The [combination audit](analysis/peelle.csv.combination.json) records input/output hashes, original row numbers, raw variants, and the count calculation for each merge. The [count evidence](corrections/peelle_repeats.json) records upstream file hashes and the pinned revision.
+
+To independently recover the counts from upstream, clone the public repository outside this checkout and use its recorded revision:
+
+```sh
+git clone https://github.com/jpeelle/sentence-prediction.git /tmp/peelle-upstream
+git -C /tmp/peelle-upstream checkout 6bdd4426c35a76b2b1eecbe904d7277d061ea134
+PYTHONPATH=src python scripts/recover_peelle_counts.py \
+  --upstream-dir /tmp/peelle-upstream --output /tmp/peelle-recovered-counts.json
+cmp data/corrections/peelle_repeats.json /tmp/peelle-recovered-counts.json
+```
+
+The recovery script verifies the upstream files before replaying its two counting functions. It uses the upstream-required file order and preserves the original denominator, including nonresponses. It only extracts corrections for repeated keys; it does not rebuild unrelated categories.
+
+Existing model scores can be reused because every emitted repeated pair has exactly equal scores. Before joining, collapse identical score rows by `(sentence_num, sentence, word)` and reject any conflicting scores. Join to `(sentence_number, sentence, word)` in the corrected cloze table. This yields 56,115 unique scores for each causal model and 46,137 for BERT; BERT's remaining 9,978 candidates have no score because they tokenize into multiple tokens. The production score files and metadata remain unchanged.
 
 ## Model outputs
 

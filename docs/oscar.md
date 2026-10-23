@@ -193,10 +193,69 @@ the explicit commit above. The current all-model batch script cannot select
 different revisions per model, so use individual CLI submissions for these
 pinned runs.
 
-## Remaining checks and full runs
+## Production batch: October 20, 2026
 
-All four model pilots and tokenizer audits have passed. The full 16 production
-runs have not started. When changing dependencies or inference code, rerun the
+All 16 production runs completed successfully as SLURM array `7664500`, limited
+to two concurrent L40S GPUs. Each task used four CPUs, 64 GB host memory,
+float32, a 20-hour time limit, and the pinned checkpoint listed above. The jobs used the
+downloaded checkpoint cache in offline mode. Preflight verified the source and
+input hashes, package versions, cached checkpoint files, and unused output paths.
+
+The submitted scripts, task manifest, logs, and validation reports are under
+`logs/production-20261020T160502Z/` on Oscar. Local copies of the launch files
+are under `results/oscar-production/launch/`, which is ignored by Git.
+
+| Task IDs | Dataset | Model order |
+| --- | --- | --- |
+| 0–3 | Michaelov | BERT, DeepSeek, Qwen, Llama |
+| 4–7 | Nieuwland | BERT, DeepSeek, Qwen, Llama |
+| 8–11 | Szewczyk | BERT, DeepSeek, Qwen, Llama |
+| 12–15 | Peelle | BERT, DeepSeek, Qwen, Llama |
+
+Each task validated its output after scoring. CPU job `7664501` completed
+successfully and verified all 16 outputs in
+`logs/production-20261020T160502Z/batch-validation.json`: **222,516 scores**
+and **10,068 expected BERT exclusions**, with no failed jobs.
+
+The scoring jobs ran from 12:12:08 to 13:25:39 on October 20, 2026 (Oscar local
+time), a span of 1 hour 13 minutes 31 seconds including scheduling gaps.
+The smaller datasets took 17–90 seconds per task. Peelle runtimes, including
+model loading and task validation, were:
+
+| Model | Peelle scores | Exclusions | Elapsed |
+| --- | ---: | ---: | --- |
+| BERT | 46,163 | 9,993 | 7m 00s |
+| DeepSeek | 56,156 | 0 | 21m 14s |
+| Qwen | 56,156 | 0 | 56m 26s |
+| Llama | 56,156 | 0 | 14m 15s |
+
+All 16 CSVs and sidecars have been copied into the local
+`results/<dataset>/<model>.csv` locations. Independent local verification checked
+SLURM completion, output and input hashes, candidate identities and multiplicity,
+expected counts, finite nonpositive scores, checkpoint pins, CUDA float32
+settings, evaluation mode, and Python source hashes. Remote input snapshots
+match the local parsed CSV records despite line-ending differences.
+
+The downloaded evidence, input snapshots, and local verification report are
+preserved under `results/oscar-production/production-20261020T160502Z/`.
+The report is `local-validation.json`; scheduler timings are in
+`logs/production-20261020T160502Z/accounting.psv` within that directory.
+These artifacts are ignored by Git. Original sidecars retain the Oscar paths
+where the runs executed.
+
+```sh
+squeue -j 7664500,7664501
+sacct -j 7664500,7664501 --format=JobID,State,ExitCode,Elapsed
+cat logs/production-20261020T160502Z/batch-validation.json
+```
+
+Individual task reports are named `task-<index>.validation.json` in the same
+directory. Preserve the completed outputs when running future comparisons.
+
+## Repeating checks and runs
+
+All four model pilots and tokenizer audits have passed. When changing
+dependencies or inference code, rerun the
 tests in a compute allocation using the [main README](../README.md#tests).
 To repeat the Llama tokenizer audit at its validated revision:
 
@@ -210,9 +269,9 @@ Schedule that audit through SLURM as well; it loads tokenizer files but no model
 weights. Retain its report and check its exit status before Llama scoring.
 
 Submit individual model/dataset jobs using the same launcher, pass the model's
-validated `--revision`, and omit `--output` to use production paths. Allow for
-Peelle's 56,156 candidates when choosing a time limit; its runtime has not yet
-been measured. All four checkpoints fit the selected L40S in the Michaelov pilots.
+validated `--revision`, and use a new `--output` path to preserve this batch.
+Use the measured runtimes above to plan resource requests, allowing additional
+time for changes in hardware, model versions, and input size.
 
 `scripts/run_all.sh` runs all 16 combinations sequentially and must itself run
 inside a GPU allocation. It stops at the first failure and does not skip existing
