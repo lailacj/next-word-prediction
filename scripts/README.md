@@ -16,6 +16,10 @@ Adjust the partition, resource requests, and time limit for your cluster. The la
 
 For data preparation, use `prepare-cloze-data`; see the [dataset guide](../data/README.md#preparing-inputs-from-source). Imported upstream scripts remain preserved as references.
 
+## Peelle response counts
+
+`recover_peelle_counts.py` reproduces the evidence for combining the 41 repeated Peelle candidates from a pinned upstream checkout. It verifies source hashes and replays the original response-counting functions. The normal `combine-peelle-cloze` command uses the checked-in evidence without downloading upstream data. See [combining the Peelle repeats](../data/README.md#combining-the-peelle-repeats-for-analysis) for commands, count provenance, and the corrected analysis CSV.
+
 ## Tokenizer audit
 
 After installing the package, audit token boundaries without loading model weights:

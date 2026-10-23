@@ -6,6 +6,37 @@ New runs default to `results/<dataset stem>/<model>.csv` relative to the working
 
 New result files are ignored by Git by default. To preserve a selected result in version control, add it explicitly with `git add -f <path>` and record how it was produced.
 
+## Completed production batch
+
+The October 20, 2026 Oscar batch completed all 16 model/dataset combinations
+with pinned checkpoints and CUDA float32 inference. The outputs are available
+both on Oscar and locally in the dataset directories below:
+
+| Dataset | BERT | DeepSeek | Qwen | Llama |
+| --- | ---: | ---: | ---: | ---: |
+| [Michaelov](michaelov_2024/) | 492 | 500 | 500 | 500 |
+| [Nieuwland](nieuwland_2018/) | 146 | 160 | 160 | 160 |
+| [Szewczyk](szewczyk_2022/) | 1,277 | 1,330 | 1,330 | 1,330 |
+| [Peelle](peelle/) | 46,163 | 56,156 | 56,156 | 56,156 |
+
+These are score counts: 222,516 total, with 10,068 expected BERT exclusions.
+The cluster's final validation and independent local verification both passed.
+Each dataset directory contains four CSVs and four metadata sidecars; sidecar
+paths describe the original execution on Oscar.
+
+The [Oscar runbook](../docs/oscar.md#production-batch-october-20-2026) records
+checkpoint pins, job IDs, runtimes, and verification details. Downloaded logs,
+input snapshots, and the local verification report are preserved in
+`oscar-production/production-20261020T160502Z/`. The source CSVs in
+`data/processed/` were not changed. Scores still need to be joined to human
+measurements for statistical analysis.
+
+For Peelle joins, use the [corrected cloze table](../data/analysis/peelle.csv),
+which combines 41 repeated candidate pairs using original response counts.
+Collapse identical model-score rows before joining; the original score CSVs
+above retain their production row counts and metadata. See the
+[combination procedure and audit](../data/README.md#combining-the-peelle-repeats-for-analysis).
+
 ## DeepSeek results produced before the scoring correction
 
 Earlier DeepSeek code scored every token of a multi-token continuation against the original sentence. The maintained scorer now appends preceding tokens and extends the attention mask. Regenerate affected multi-token DeepSeek results before using them in comparisons; the files preserved here have not been recomputed. The single-token scoring calculation is unchanged.
